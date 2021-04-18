@@ -6,27 +6,45 @@
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="@/assets/images/home/hero1.jpg"
+              srcset="@/assets/images/home/hero-1.jpg"
             />
-            <img src="@/assets/images/home/hero1-mobile.jpg" alt="" style="object-position: 0 65%" />
+            <img src="@/assets/images/home/hero-1-mobile.jpg" alt="" />
           </picture>
         </swiper-slide>
         <swiper-slide>
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="@/assets/images/home/hero2.jpg"
+              srcset="@/assets/images/home/hero-2.jpg"
             />
-            <img src="@/assets/images/home/hero2-mobile.jpg" alt="" style="object-position: 50% 100%" />
+            <img src="@/assets/images/home/hero-2-mobile.jpg" alt="" />
           </picture>
         </swiper-slide>
         <swiper-slide>
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="@/assets/images/home/hero4.jpg"
+              srcset="@/assets/images/home/hero-3.jpg"
             />
-            <img src="@/assets/images/home/hero4-mobile.jpg" alt="" style="object-position: 25% 30%"/>
+            <img src="@/assets/images/home/hero-3-mobile.jpg" alt=""/>
+          </picture>
+        </swiper-slide>
+        <swiper-slide>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="@/assets/images/home/hero-4.jpg"
+            />
+            <img src="@/assets/images/home/hero-4-mobile.jpg" alt=""/>
+          </picture>
+        </swiper-slide>
+        <swiper-slide>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="@/assets/images/home/hero-5.jpg"
+            />
+            <img src="@/assets/images/home/hero-5-mobile.jpg" alt=""/>
           </picture>
         </swiper-slide>
       </swiper>
@@ -90,12 +108,16 @@
   .swiper {
     img {
       width: 100%;
-      height: 60vh;
+      height: 30vh;
       object-fit: cover;
-      object-position: center;
+      object-position: top;
 
       @media (min-width: 1280px) {
-        height: calc(100vh - 80px);
+        height: calc(100vh - 200px);
+      }
+
+      @media (orientation: 'landscape') {
+        height: calc(100vh - 200px);
       }
     }
   }
