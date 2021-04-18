@@ -15,6 +15,9 @@
           <div class="icon">
             <img src="@/assets/icons/logo-emilla.png" alt="" />
           </div>
+          <div class="icon">
+            <img src="@/assets/icons/logo-prosharp.png" alt="" />
+          </div>
         </div>
       </section>
     </container>
