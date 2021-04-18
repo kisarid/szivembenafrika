@@ -70,12 +70,6 @@
           küldünk neked minden további szükséges információt.
         </p>
       </section>
-      <section>
-        <div class="girls">
-          <div class="sub-heading">Lányok</div>
-          <Gallery :items="girls" />
-        </div>
-      </section>
     </container>
   </div>
 </template>
