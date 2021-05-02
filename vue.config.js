@@ -1,6 +1,6 @@
 module.exports = {
   lintOnSave: false,
-  // publicPath: 'http://david.kisari.net/szivembenafrika',
+  publicPath: 'http://szivembenafrika.org/',
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
 
