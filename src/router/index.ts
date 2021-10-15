@@ -1,28 +1,83 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '@/views/Home.vue'
+import Contact from '@/views/Contact.vue'
+import About from '@/views/About.vue'
+import Principles from '@/views/how-we-help/Principles.vue'
+import Projects from '@/views/how-we-help/Projects.vue'
+import WhereWeHelp from '@/views/how-we-help/WhereWeHelp.vue'
+import Donations from '@/views/how-you-help/Donations.vue'
+import GraduateAGirl from '@/views/how-you-help/GraduateAGirl.vue'
+import SupportChildren from '@/views/how-you-help/SupportChildren.vue'
+import Volunteering from '@/views/how-you-help/Volunteering.vue'
+import Supporters from '@/views/Supporters.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home',
     component: Home
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: '/rolunk',
+    name: 'rolunk',
+    component: About
+  },
+  {
+    path: '/alapelvek',
+    name: 'alapelvek',
+    component: Principles
+  },
+  {
+    path: '/projektjeink',
+    name: 'projektjeink',
+    component: Projects
+  },
+  {
+    path: '/hol-segitunk',
+    name: 'hol-segitunk',
+    component: WhereWeHelp
+  },
+  {
+    path: '/adomanyozas',
+    name: 'adomanyozas',
+    component: Donations
+  },
+  {
+    path: '/graduate-a-girl',
+    name: 'graduate-a-girl',
+    component: GraduateAGirl
+  },
+  {
+    path: '/gyermektamogatas',
+    name: 'gyermektamogatas',
+    component: SupportChildren
+  },
+  {
+    path: '/onkentesseg',
+    name: 'onkentesseg',
+    component: Volunteering
+  },
+  {
+    path: '/tamogatok',
+    name: 'tamogatok',
+    component: Supporters
+  },
+  {
+    path: '/kapcsolat',
+    name: 'kapcsolat',
+    component: Contact
+  },
+  {
+    path: '*',
+    redirect: { name: 'home' }
   }
-];
+]
 
 const router = new VueRouter({
   routes
-});
+})
 
-export default router;
+export default router
