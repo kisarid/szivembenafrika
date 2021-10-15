@@ -18,6 +18,18 @@
           <div class="icon">
             <img src="@/assets/icons/logo-prosharp.png" alt="" />
           </div>
+          <div class="icon">
+            <img src="@/assets/icons/logo-poloneked.png" alt="" />
+          </div>
+          <div class="icon">
+            <img src="@/assets/icons/logo-digitalpress.png" alt="" />
+          </div>
+          <div class="icon">
+            <img src="@/assets/icons/logo-hoopla.jpg" alt="" />
+          </div>
+          <div class="icon">
+            <img src="@/assets/icons/logo-purelife.jpg" alt="" />
+          </div>
         </div>
       </section>
     </container>

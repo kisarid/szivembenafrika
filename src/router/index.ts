@@ -11,6 +11,7 @@ import GraduateAGirl from '@/views/how-you-help/GraduateAGirl.vue'
 import SupportChildren from '@/views/how-you-help/SupportChildren.vue'
 import Volunteering from '@/views/how-you-help/Volunteering.vue'
 import Supporters from '@/views/Supporters.vue'
+import Statement from '@/views/Statement.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,11 @@ const routes = [
     path: '/rolunk',
     name: 'rolunk',
     component: About
+  },
+  {
+    path: '/eves-beszamolok',
+    name: 'eves-beszamolok',
+    component: Statement
   },
   {
     path: '/alapelvek',

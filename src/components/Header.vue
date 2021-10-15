@@ -226,7 +226,10 @@ export default class Header extends Vue {
   menuItems: MenuItemI[] = [
     {
       text: 'Rólunk',
-      route: 'rolunk',
+      submenu: [
+        { text: 'Csapatunk', route: 'rolunk' },
+        { text: 'Éves beszámolók', route: 'eves-beszamolok' },
+      ],
     },
     {
       text: 'Így segítünk',
