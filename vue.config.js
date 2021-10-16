@@ -1,6 +1,7 @@
 module.exports = {
   lintOnSave: false,
   publicPath: 'http://szivembenafrika.org/',
+  // publicPath: 'http://localhost:8080',
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
 

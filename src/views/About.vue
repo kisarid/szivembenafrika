@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <heading>
-      <div slot="main">Rólunk</div>
+      <div slot="main">Csapatunk</div>
     </heading>
     <container>
       <section>
@@ -22,7 +22,7 @@
         </div>
       </section>
       <section>
-        <div class="sub-heading">Csapatunk</div>
+        <div class="sub-heading">Csapattagok</div>
         <Team />
       </section>
     </container>
