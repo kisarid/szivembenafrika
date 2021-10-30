@@ -186,7 +186,7 @@
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1180px) {
     .content .menu-button {
       display: none;
     }
@@ -248,6 +248,7 @@ export default class Header extends Vue {
         { text: 'Adományozás', route: 'adomanyozas' },
       ],
     },
+    { text: 'Média', route: 'media' },
     { text: 'Támogatók', route: 'tamogatok' },
     { text: 'Kapcsolat', route: 'kapcsolat' },
   ]

@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .container {
   width: 100%;
   margin: 0 auto;
@@ -21,6 +21,10 @@
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
+
+    &.wider {
+      max-width: none;
+    }
   }
 }
 

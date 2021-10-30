@@ -30,6 +30,9 @@
           <div class="icon">
             <img src="@/assets/icons/logo-purelife.jpg" alt="" />
           </div>
+          <div class="icon">
+            <img src="@/assets/icons/logo-dorinka.png" alt="" />
+          </div>
         </div>
       </section>
     </container>
