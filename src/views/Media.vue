@@ -38,6 +38,26 @@
             allowfullscreen
           ></iframe>
         </div>
+        <div class="vlog-heading">4. rész</div>
+        <div class="embed-container">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/jeaF2EjEPmQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="vlog-heading">5. rész</div>
+        <div class="embed-container">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/ucEJRKE8cHQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </section>
     </container>
   </div>
