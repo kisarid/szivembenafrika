@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="header-holder"></div>
-    <Header />
+    <Header :menuItems="menuItems" />
     <router-view />
     <Footer />
   </div>
@@ -10,7 +10,7 @@
 <script lang="ts">
 import { Component, Vue, Watch } from 'vue-property-decorator'
 
-import Header from '@/components/Header.vue'
+import Header, { MenuItemI } from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import container from '@/components/moyo/container.vue'
 import heading from '@/components/moyo/heading.vue'
@@ -23,6 +23,45 @@ export default class App extends Vue {
   @Watch('$route', { immediate: true, deep: true })
   onUrlChange() {
     window.scrollTo(0, 0)
+  }
+
+  getTranslation(path: string): string {
+    return this.$i18n.t(path) as string
+  }
+
+  get menuItems(): MenuItemI[] {
+    return [
+      {
+        text: this.getTranslation('1.menu'),
+        submenu: [
+          { text: this.getTranslation('1.submenu1'), route: 'rolunk' },
+          { text: this.getTranslation('1.submenu2'), route: 'eves-beszamolok' },
+        ],
+      },
+      {
+        text: this.getTranslation('2.menu'),
+        submenu: [
+          { text: this.getTranslation('2.submenu1'), route: 'alapelvek' },
+          { text: this.getTranslation('2.submenu2'), route: 'hol-segitunk' },
+          { text: this.getTranslation('2.submenu3'), route: 'projektjeink' },
+        ],
+      },
+      {
+        text: this.getTranslation('3.menu'),
+        submenu: [
+          { text: this.getTranslation('3.submenu1'), route: 'onkentesseg' },
+          {
+            text: this.getTranslation('3.submenu2'),
+            route: 'gyermektamogatas',
+          },
+          { text: this.getTranslation('3.submenu3'), route: 'graduate-a-girl' },
+          { text: this.getTranslation('3.submenu4'), route: 'adomanyozas' },
+        ],
+      },
+      { text: this.getTranslation('4.menu'), route: 'media' },
+      { text: this.getTranslation('5.menu'), route: 'tamogatok' },
+      { text: this.getTranslation('6.menu'), route: 'kapcsolat' },
+    ]
   }
 }
 </script>
@@ -145,3 +184,66 @@ svg {
   z-index: auto !important;
 }
 </style>
+
+<i18n>
+{
+  "hu": {
+    "1": {
+      "menu": "Rólunk",
+      "submenu1": "Csapatunk",
+      "submenu2": "Éves beszámolók"
+    },
+    "2": {
+      "menu": "Így segítünk",
+      "submenu1": "Alapelvek",
+      "submenu2": "Hol segítünk?",
+      "submenu3": "Projektjeink"
+    },
+    "3": {
+      "menu": "Így segíthetsz",
+      "submenu1": "Önkéntesség",
+      "submenu2": "Gyermektámogatás",
+      "submenu3": "Graduate a Girl!",
+      "submenu4": "Adományozás"
+    },
+    "4": {
+      "menu": "Média"
+    },
+    "5": {
+      "menu": "Támogatók"
+    },
+    "6": {
+      "menu": "Kapcsolat"
+    }
+  },
+  "en": {
+   "1": {
+      "menu": "About us",
+      "submenu1": "Our team",
+      "submenu2": "Annual reports"
+    },
+    "2": {
+      "menu": "How we help",
+      "submenu1": "Principles",
+      "submenu2": "Where do we help?",
+      "submenu3": "Our projects"
+    },
+    "3": {
+      "menu": "How you can help",
+      "submenu1": "Volunteering",
+      "submenu2": "Child support",
+      "submenu3": "Graduate a Girl!",
+      "submenu4": "Donation"
+    },
+    "4": {
+      "menu": "Media"
+    },
+    "5": {
+      "menu": "Supporters"
+    },
+    "6": {
+      "menu": "Contact"
+    }
+  }
+}
+</i18n>

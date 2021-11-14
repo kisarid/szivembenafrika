@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <heading>
-      <div slot="main">Kapcsolat</div>
+      <div slot="main">{{ $t('main') }}</div>
     </heading>
     <container>
       <section>
@@ -30,7 +30,7 @@
           >
         </div>
         <div>
-          <b>Levelezési cím: </b>1068, Budapest, Király utca 80. fszt. 11
+          <b>{{ $t('1') }}</b>1068, Budapest, Király utca 80. fszt. 11
         </div>
       </section>
     </container>
@@ -54,3 +54,16 @@ import heading from '@/components/moyo/heading.vue'
 })
 export default class Contact extends Vue {}
 </script>
+
+<i18n>
+{
+  "hu": {
+    "main": "Kapcsolat",
+    "1": "Levelezési cím: "
+  },
+  "en": {
+    "main": "Contact",
+    "1": "Mailing address: "
+  }
+}
+</i18n>

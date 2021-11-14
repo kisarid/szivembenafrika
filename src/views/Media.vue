@@ -1,14 +1,14 @@
 <template>
   <div class="content">
     <heading>
-      <div slot="main">Média</div>
+      <div slot="main">{{ $t('main') }}</div>
       <div slot="description">VLOG</div>
     </heading>
     <container>
       <section>
-        <div class="sub-heading">Szívemben Született Afrika x Czikkcakk ugandai misszió</div>
-        <p>Zsófi és Czikkcakk Panni egy hónapra Ugandába utaztak és ebben a vlog sorozatban mutatják meg nektek, hogyan telnek a missziós mindennapjaik Manafwában.</p>
-        <div class="vlog-heading">1. rész</div>
+        <div class="sub-heading">{{ $t('1.title') }}</div>
+        <p>{{ $t('1.description') }}</p>
+        <div class="vlog-heading">{{ $t('1.p1') }}</div>
         <div class="embed-container">
           <iframe
             src="https://www.youtube-nocookie.com/embed/-9CmuP4lB88"
@@ -18,7 +18,7 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="vlog-heading">2. rész</div>
+        <div class="vlog-heading">{{ $t('1.p2') }}</div>
         <div class="embed-container">
           <iframe
             src="https://www.youtube-nocookie.com/embed/2kppsBe8vss"
@@ -28,10 +28,40 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="vlog-heading">3. rész</div>
+        <div class="vlog-heading">{{ $t('1.p3') }}</div>
         <div class="embed-container">
           <iframe
             src="https://www.youtube-nocookie.com/embed/k-QZu2GQafU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="vlog-heading">{{ $t('1.p4') }}</div>
+        <div class="embed-container">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/jeaF2EjEPmQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="vlog-heading">{{ $t('1.p5') }}</div>
+        <div class="embed-container">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/ucEJRKE8cHQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="vlog-heading">{{ $t('1.p6') }}</div>
+        <div class="embed-container">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/PrHcf30Sfic"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -80,3 +110,34 @@ import heading from '@/components/moyo/heading.vue'
 })
 export default class Media extends Vue {}
 </script>
+
+<i18n>
+{
+  "hu": {
+    "main": "Média",
+    "1": {
+      "title": "Szívemben Született Afrika x Czikkcakk ugandai misszió",
+      "description": "Zsófi és Czikkcakk Panni egy hónapra Ugandába utaztak és ebben a vlog sorozatban mutatják meg nektek, hogyan telnek a missziós mindennapjaik Manafwában.",
+      "p1": "1. rész",
+      "p2": "2. rész",
+      "p3": "3. rész",
+      "p4": "4. rész",
+      "p5": "5. rész",
+      "p6": "6. rész"
+    }
+  },
+  "en": {
+    "main": "Media",
+    "1": {
+      "title": "Szívemben Született Afrika x Czikkcakk Uganda mission",
+      "description": "Zsófi and Czikkcakk Panni traveled to Uganda for a month, and they will show you how they spend their mission days through this vlog series.",
+      "p1": "Part 1",
+      "p2": "Part 2",
+      "p3": "Part 3",
+      "p4": "Part 4",
+      "p5": "Part 5",
+      "p6": "Part 6"
+    }
+  }
+}
+</i18n>
