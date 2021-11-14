@@ -58,6 +58,16 @@
             allowfullscreen
           ></iframe>
         </div>
+        <div class="vlog-heading">{{ $t('1.p6') }}</div>
+        <div class="embed-container">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/PrHcf30Sfic"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </section>
     </container>
   </div>
@@ -112,7 +122,8 @@ export default class Media extends Vue {}
       "p2": "2. rész",
       "p3": "3. rész",
       "p4": "4. rész",
-      "p5": "5. rész"
+      "p5": "5. rész",
+      "p6": "6. rész"
     }
   },
   "en": {
@@ -124,7 +135,8 @@ export default class Media extends Vue {}
       "p2": "Part 2",
       "p3": "Part 3",
       "p4": "Part 4",
-      "p5": "Part 5"
+      "p5": "Part 5",
+      "p6": "Part 6"
     }
   }
 }
