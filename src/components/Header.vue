@@ -57,8 +57,10 @@
             </router-link>
           </div>
         </template>
+        <LanguageSelector :theme="'light'"></LanguageSelector>
       </Slide>
     </container>
+    <LanguageSelector class="desktop" :theme="'dark'"></LanguageSelector>
   </div>
 </template>
 
@@ -186,7 +188,17 @@
     }
   }
 
+  .desktop {
+    display: none;
+  }
+
   @media (min-width: 1180px) {
+    display: flex;
+
+    .desktop {
+      display: flex;
+    }
+
     .content .menu-button {
       display: none;
     }
@@ -205,12 +217,14 @@
 </style>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 import { Slide } from 'vue-burger-menu'
 
 import container from '@/components/moyo/container.vue'
 import menuItem from '@/components/moyo/menu-item.vue'
+import LanguageSelector from '@/components/moyo/language-selector.vue'
 import menuButton from '@/assets/icons/menu-button.svg'
+import { Bio } from '@/interfaces/bio'
 
 export interface MenuItemI {
   text: string
@@ -220,39 +234,10 @@ export interface MenuItemI {
 
 @Component({
   name: 'Header',
-  components: { container, menuItem, Slide, menuButton },
+  components: { container, menuItem, Slide, menuButton, LanguageSelector },
 })
 export default class Header extends Vue {
-  menuItems: MenuItemI[] = [
-    {
-      text: 'Rólunk',
-      submenu: [
-        { text: 'Csapatunk', route: 'rolunk' },
-        { text: 'Éves beszámolók', route: 'eves-beszamolok' },
-      ],
-    },
-    {
-      text: 'Így segítünk',
-      submenu: [
-        { text: 'Alapelvek', route: 'alapelvek' },
-        { text: 'Hol segítünk?', route: 'hol-segitunk' },
-        { text: 'Projektjeink', route: 'projektjeink' },
-      ],
-    },
-    {
-      text: 'Így segíthetsz',
-      submenu: [
-        { text: 'Önkéntesség', route: 'onkentesseg' },
-        { text: 'Gyermektámogatás', route: 'gyermektamogatas' },
-        { text: 'Graduate a Girl!', route: 'graduate-a-girl' },
-        { text: 'Adományozás', route: 'adomanyozas' },
-      ],
-    },
-    { text: 'Média', route: 'media' },
-    { text: 'Támogatók', route: 'tamogatok' },
-    { text: 'Kapcsolat', route: 'kapcsolat' },
-  ]
-
+  @Prop() menuItems: Bio[]
   isMenuOpen = false
 
   setMenuOpen(val: boolean) {

@@ -31,6 +31,7 @@ export default class SubmenuItem extends Vue {
     text-decoration: none;
     color: var(--moyo-font-dark);
     padding: 10px 15px;
+    white-space: nowrap;
 
     &:hover {
       background-color: var(--moyo-light);

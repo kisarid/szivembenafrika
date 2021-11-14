@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <heading>
-      <div slot="main">Éves beszámolók</div>
+      <div slot="main">{{ $t('main') }}</div>
     </heading>
     <container>
       <section>
@@ -24,3 +24,14 @@ import heading from '@/components/moyo/heading.vue'
 })
 export default class Statement extends Vue {}
 </script>
+
+<i18n>
+{
+  "hu": {
+    "main": "Éves beszámolók"
+  },
+  "en": {
+    "main": "Annual reports"
+  }
+}
+</i18n>

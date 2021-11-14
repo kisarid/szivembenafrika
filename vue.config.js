@@ -1,7 +1,7 @@
 module.exports = {
   lintOnSave: false,
-  publicPath: 'http://szivembenafrika.org/',
-  // publicPath: 'http://localhost:8080',
+  // publicPath: 'http://szivembenafrika.org/',
+  publicPath: 'http://localhost:8080',
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
 
@@ -13,5 +13,15 @@ module.exports = {
       .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
+  },
+
+  pluginOptions: {
+    i18n: {
+      locale: 'hu',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: true,
+      enableBridge: false
+    }
   }
 }
