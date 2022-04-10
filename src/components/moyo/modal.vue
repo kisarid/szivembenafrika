@@ -1,12 +1,13 @@
 <template>
   <div class="modal-content">
-    <div class="close-button" v-on:click="$emit('close')">
+    <div class="close-button" v-bind:class="{ 'light': lightCloseButton }" v-on:click="$emit('close')">
       <close></close>
     </div>
     <div class="image">
       <img
         :src="require(`@/assets/images/${bio.image}`)"
         v-bind:style="{ 'object-position': bio.objectPosition }"
+        v-bind:class="{ 'fixed-height': !imageAutoHeight }"
         alt=""
       />
     </div>
@@ -14,9 +15,7 @@
       {{ bio.name }}
     </div>
     <div class="text">
-      <p v-for="(paragraph, index) in bio.longBio" :key="index">
-        {{ paragraph }}
-      </p>
+      <p v-for="(paragraph, index) in bio.longBio" :key="index" v-html="paragraph"></p>
     </div>
   </div>
 </template>
@@ -36,12 +35,17 @@
     cursor: pointer;
   }
 
-  .image {
-    img {
-      width: 100%;
+  .close-button.light * {
+    fill: var(--moyo-light);
+  }
+
+  .image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+
+    &.fixed-height {
       height: 200px;
-      object-fit: cover;
-      object-position: center top;
 
       @media (min-width: 768px) {
         height: 350px;
@@ -84,5 +88,7 @@ import close from '@/assets/icons/close.svg'
 export default class ModalComponent extends Vue {
   @Prop() bio: Bio
   @Prop() index: number
+  @Prop() imageAutoHeight: boolean
+  @Prop() lightCloseButton: boolean
 }
 </script>

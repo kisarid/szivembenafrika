@@ -14,15 +14,41 @@ import Header, { MenuItemI } from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import container from '@/components/moyo/container.vue'
 import heading from '@/components/moyo/heading.vue'
+import modal from '@/components/moyo/modal.vue'
+import { Bio } from './interfaces/bio'
+import AfrikaDayInfo from './afrika-day'
 
 @Component({
   name: 'App',
-  components: { Header, Footer, container, heading },
+  components: { Header, Footer, container, heading, modal },
 })
 export default class App extends Vue {
   @Watch('$route', { immediate: true, deep: true })
   onUrlChange() {
     window.scrollTo(0, 0)
+  }
+
+  // Afrika nap 2022.05.25-ig
+  mounted() {
+    if (this.$route.name === 'nemzetkozi-afrika-nap') {
+      return;
+    }
+    const isMobile = window.innerWidth < 768
+    const flyerInfo: Bio = {
+      name: AfrikaDayInfo.title,
+      image: 'afrika_nap_plakat.jpg',
+      shortBio: '',
+      longBio: AfrikaDayInfo.text,
+      objectPosition: ''
+    }
+    this.$modal.show(
+      modal,
+      { bio: flyerInfo, imageAutoHeight: true, lightCloseButton: true },
+      {
+        width: isMobile ? '90%' : '700px',
+        height: 'auto',
+      }
+    )
   }
 
   getTranslation(path: string): string {
