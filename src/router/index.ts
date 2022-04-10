@@ -13,6 +13,7 @@ import Volunteering from '@/views/how-you-help/Volunteering.vue'
 import Supporters from '@/views/Supporters.vue'
 import Statement from '@/views/Statement.vue'
 import Media from '@/views/Media.vue'
+import AfrikaDay from '@/views/AfrikaDay.vue'
 
 Vue.use(VueRouter)
 
@@ -81,6 +82,11 @@ const routes = [
     path: '/kapcsolat',
     name: 'kapcsolat',
     component: Contact
+  },
+  {
+    path: '/nemzetkozi-afrika-nap',
+    name: 'nemzetkozi-afrika-nap',
+    component: AfrikaDay
   },
   {
     path: '*',
