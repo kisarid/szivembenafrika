@@ -1,4 +1,4 @@
-export default {
+const info: { title: string, text: string[] } = {
     title: 'NEMZETKÖZI AFRIKA NAP - 2022.05.25.',
     text: [
         '1963 óta ünnepeljük május 25-én világszerte az Afrika napot. Ennek apropójából egy egész napos eseményre hívjuk az afrikai kultúra iránt érdeklődőket. A program saját szervezés útján valósul meg, partnerünkkel, a Márai Sándor Művelődési Ház támogatásával. ',
@@ -18,3 +18,5 @@ export default {
         'Az intézmény munkatársai elsődleges feladatuknak tartják, hogy a programok érdekesek, színvonalasak és tartalmasak legyenek, amelyek között minden korosztályú és érdeklődésű látogató megtalálja a neki leginkább tetszőt.',
     ],
 }
+
+export default info
