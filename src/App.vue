@@ -30,7 +30,7 @@ export default class App extends Vue {
 
   // Afrika nap 2022.05.25-ig
   mounted() {
-    if (this.$route.name === 'nemzetkozi-afrika-nap') {
+    if (this.$route.name?.includes('nemzetkozi-afrika-nap')) {
       return;
     }
     const isMobile = window.innerWidth < 768
@@ -38,7 +38,7 @@ export default class App extends Vue {
       name: AfrikaDayInfo.title,
       image: 'afrika_nap_plakat.jpg',
       shortBio: '',
-      longBio: AfrikaDayInfo.text,
+      longBio: [AfrikaDayInfo.text.intro, AfrikaDayInfo.text.detailsLink, ...AfrikaDayInfo.text.desc, ...AfrikaDayInfo.text.sponsor],
       objectPosition: ''
     }
     this.$modal.show(
@@ -178,6 +178,11 @@ section {
 
 a {
   color: var(--moyo-font-deep-dark);
+}
+
+a:hover {
+  color: var(--moyo-highlight);
+  transition: color 300ms ease;
 }
 
 svg {
