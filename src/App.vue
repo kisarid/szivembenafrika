@@ -28,29 +28,6 @@ export default class App extends Vue {
     window.scrollTo(0, 0)
   }
 
-  // Afrika nap 2022.05.25-ig
-  mounted() {
-    if (this.$route.name?.includes('nemzetkozi-afrika-nap')) {
-      return;
-    }
-    const isMobile = window.innerWidth < 768
-    const flyerInfo: Bio = {
-      name: AfrikaDayInfo.title,
-      image: 'afrika_nap_plakat.jpg',
-      shortBio: '',
-      longBio: [AfrikaDayInfo.text.intro, AfrikaDayInfo.text.detailsLink, ...AfrikaDayInfo.text.desc, ...AfrikaDayInfo.text.sponsor],
-      objectPosition: ''
-    }
-    this.$modal.show(
-      modal,
-      { bio: flyerInfo, imageAutoHeight: true, lightCloseButton: true },
-      {
-        width: isMobile ? '90%' : '700px',
-        height: 'auto',
-      }
-    )
-  }
-
   getTranslation(path: string): string {
     return this.$i18n.t(path) as string
   }
