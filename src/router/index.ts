@@ -89,6 +89,12 @@ const routes = [
     component: AfrikaDay
   },
   {
+    path: '/nemzetkozi-afrika-nap/:programok',
+    name: 'nemzetkozi-afrika-nap-programok',
+    component: AfrikaDay,
+    props: { programok: true }
+  },
+  {
     path: '*',
     redirect: { name: 'home' }
   }
