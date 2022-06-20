@@ -53,12 +53,10 @@ export default class App extends Vue {
         text: this.getTranslation('3.menu'),
         submenu: [
           { text: this.getTranslation('3.submenu1'), route: 'onkentesseg' },
-          {
-            text: this.getTranslation('3.submenu2'),
-            route: 'gyermektamogatas',
-          },
+          { text: this.getTranslation('3.submenu2'), route: 'gyermektamogatas' },
           { text: this.getTranslation('3.submenu3'), route: 'graduate-a-girl' },
           { text: this.getTranslation('3.submenu4'), route: 'adomanyozas' },
+          { text: this.getTranslation('3.submenu5'), route: 'esemenyek' },
         ],
       },
       { text: this.getTranslation('4.menu'), route: 'media' },
@@ -212,7 +210,8 @@ svg {
       "submenu1": "Önkéntesség",
       "submenu2": "Gyermektámogatás",
       "submenu3": "Graduate a Girl!",
-      "submenu4": "Adományozás"
+      "submenu4": "Adományozás",
+      "submenu5": "Események"
     },
     "4": {
       "menu": "Média"
@@ -241,7 +240,8 @@ svg {
       "submenu1": "Volunteering",
       "submenu2": "Child support",
       "submenu3": "Graduate a Girl!",
-      "submenu4": "Donation"
+      "submenu4": "Donation",
+      "submenu5": "Events"
     },
     "4": {
       "menu": "Media"
