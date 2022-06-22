@@ -10,6 +10,7 @@ import Donations from '@/views/how-you-help/Donations.vue'
 import GraduateAGirl from '@/views/how-you-help/GraduateAGirl.vue'
 import SupportChildren from '@/views/how-you-help/SupportChildren.vue'
 import Volunteering from '@/views/how-you-help/Volunteering.vue'
+import Events from '@/views/how-you-help/Events.vue'
 import Supporters from '@/views/Supporters.vue'
 import Statement from '@/views/Statement.vue'
 import Media from '@/views/Media.vue'
@@ -52,6 +53,11 @@ const routes = [
     path: '/adomanyozas',
     name: 'adomanyozas',
     component: Donations
+  },
+  {
+    path: '/esemenyek',
+    name: 'esemenyek',
+    component: Events
   },
   {
     path: '/graduate-a-girl',
