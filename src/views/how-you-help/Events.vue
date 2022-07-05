@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <heading>
-      <div slot="main">{{ $t('main') }}</div>
+      <div slot="main">Események</div>
     </heading>
     <container>
       <section>
@@ -72,7 +72,7 @@
         <p class="sub-heading">Jelentkezz még ma és biztosítsd be a helyedet!</p>
         <p>Jelentkezni az <a href="mailto:info@szivembenafrika.org">info@szivembenafrika.org</a> email címen tudsz.</p>
         <p>Az eseményre a belépővel adományként a Szívemben
-          Született Afrika munkáját támogatod. Azesemény a #doitforher kampányunk keretében valósul meg, amelyben a
+          Született Afrika munkáját támogatod. Az esemény a #doitforher kampányunk keretében valósul meg, amelyben a
           nőkkel foglalkozó programjainkra gyűjtünk adományt.
         </p>
         <p>Az alábbi támogatói jegyek közül tudsz választani:</p>
@@ -93,7 +93,7 @@
           <p>Magnet Bank HUF: 16200223-10126679-00000000</p>
           <p>Közlemény: résztvevő neve+ubuntu</p>
         </div>
-        <p>Segíts, hogy segíthessünk! Köszönjük!</p>
+        <p class="quote" style="font-size: 110%;">Segíts, hogy segíthessünk! Köszönjük!</p>
       </section>
     </container>
   </div>
@@ -102,6 +102,7 @@
 <style lang="scss" scoped>
 .quote {
   text-align: center;
+  font-style: italic;
 
   span {
     font-size: 90%;
