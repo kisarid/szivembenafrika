@@ -60,6 +60,11 @@ const routes = [
     component: Events
   },
   {
+    path: '/esemenyek/ubuntu',
+    name: 'esemenyekUbuntu',
+    component: Events
+  },
+  {
     path: '/graduate-a-girl',
     name: 'graduate-a-girl',
     component: GraduateAGirl
@@ -88,17 +93,6 @@ const routes = [
     path: '/kapcsolat',
     name: 'kapcsolat',
     component: Contact
-  },
-  {
-    path: '/nemzetkozi-afrika-nap',
-    name: 'nemzetkozi-afrika-nap',
-    component: AfrikaDay
-  },
-  {
-    path: '/nemzetkozi-afrika-nap/:programok',
-    name: 'nemzetkozi-afrika-nap-programok',
-    component: AfrikaDay,
-    props: { programok: true }
   },
   {
     path: '*',

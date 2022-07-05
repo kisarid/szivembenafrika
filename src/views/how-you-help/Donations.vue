@@ -50,27 +50,7 @@
 </template>
 
 <style lang="scss">
-.donation-info {
-  width: fit-content;
-  padding: 20px;
-  border: 1px solid var(--moyo-font-light);
-  border-radius: 5px;
 
-  .title {
-    margin-bottom: 15px;
-    font-size: 110%;
-  }
-
-  p {
-    margin: 0;
-    margin-bottom: 5px;
-    padding-left: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
 </style>
 
 <script lang="ts">
