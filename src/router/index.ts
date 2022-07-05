@@ -60,6 +60,11 @@ const routes = [
     component: Events
   },
   {
+    path: '/esemenyek/ubuntu',
+    name: 'esemenyekUbuntu',
+    component: Events
+  },
+  {
     path: '/graduate-a-girl',
     name: 'graduate-a-girl',
     component: GraduateAGirl
