@@ -22,7 +22,7 @@
 .gallery {
   display: grid;
   grid-template: auto / 1fr;
-  --card-padding: 0 20px 20px;
+  --card-margin: 0 20px 20px;
   --card-image-height: 350px;
 
   .short-bio p {
