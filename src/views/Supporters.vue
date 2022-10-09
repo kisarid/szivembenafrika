@@ -6,32 +6,10 @@
     <container>
       <section>
         <div class="icons">
-          <div class="icon">
-            <img src="@/assets/icons/logo-hunhelps.png" alt="" />
-          </div>
-          <div class="icon">
-            <img src="@/assets/icons/logo-mol.png" alt="" />
-          </div>
-          <div class="icon">
-            <img src="@/assets/icons/logo-emilla.png" alt="" />
-          </div>
-          <div class="icon">
-            <img src="@/assets/icons/logo-prosharp.png" alt="" />
-          </div>
-          <div class="icon">
-            <img src="@/assets/icons/logo-poloneked.png" alt="" />
-          </div>
-          <div class="icon">
-            <img src="@/assets/icons/logo-digitalpress.png" alt="" />
-          </div>
-          <div class="icon">
-            <img src="@/assets/icons/logo-hoopla.jpg" alt="" />
-          </div>
-          <div class="icon">
-            <img src="@/assets/icons/logo-purelife.jpg" alt="" />
-          </div>
-          <div class="icon">
-            <img src="@/assets/icons/logo-dorinka.png" alt="" />
+          <div class="icon" v-for="(supporter, index) in supporters" :key="index">
+            <a :href="supporter.link" target="blank" rel="noreferrer noopener">
+              <img :src="supporter.logo" alt="" />
+            </a>
           </div>
         </div>
       </section>
@@ -68,7 +46,18 @@ import heading from '@/components/moyo/heading.vue'
   name: 'Supporters',
   components: { container, heading },
 })
-export default class Supporters extends Vue {}
+export default class Supporters extends Vue {
+  supporters = [
+    { link: 'https://hungaryhelps.gov.hu/', logo: require('@/assets/icons/logo-hunhelps.png') },
+    { link: 'https://www.onkentesliga.hu/', logo: require('@/assets/icons/logo-mol.png') },
+    { link: 'https://emilla.me/', logo: require('@/assets/icons/logo-emilla.png') },
+    { link: 'https://poloneked.hu/', logo: require('@/assets/icons/logo-poloneked.png') },
+    { link: 'https://www.digitalpress.hu/', logo: require('@/assets/icons/logo-digitalpress.png') },
+    { link: 'https://hooplasewing.com/', logo: require('@/assets/icons/logo-hoopla.jpg') },
+    { link: 'https://www.purelifefoundation.eu/', logo: require('@/assets/icons/logo-purelife.jpg') },
+    { link: 'https://www.facebook.com/dorinkastudiohungary/', logo: require('@/assets/icons/logo-dorinka.png') },
+  ]
+}
 </script>
 
 <i18n>
