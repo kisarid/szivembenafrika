@@ -19,7 +19,7 @@
 
 <style lang="scss" scoped>
 .card {
-  padding: var(--card-padding, 0 40px 40px);
+  margin: var(--card-margin, 0 40px 40px);
   cursor: pointer;
 
   .image {

@@ -123,7 +123,7 @@ export default class Team extends Vue {
         objectPosition: '50% 20%',
       },
       {
-        name: 'Farkas Ferenc Balázs',
+        name: 'dr. Farkas Ferenc Balázs',
         image: 'team/FFBalazs.jpg',
         shortBio: this.$i18n.t('ffbalazs.shortBio') as string,
         longBio: this.getLongBio('ffbalazs'),
@@ -163,14 +163,7 @@ export default class Team extends Vue {
         shortBio: this.$i18n.t('vmarci.shortBio') as string,
         longBio: this.getLongBio('vmarci'),
         objectPosition: '50% 45%',
-      },
-      {
-        name: 'Smiri Nagy Barbara',
-        image: 'team/Darbi.jpg',
-        shortBio: this.$i18n.t('darby.shortBio') as string,
-        longBio: this.getLongBio('darby'),
-        objectPosition: 'auto',
-      },
+      }
     ]
   }
 }
@@ -213,10 +206,16 @@ export default class Team extends Vue {
                 "2": "A manafwai misszóban 2019 márciusában jártam először és azonnal magával ragadott a fekete kontinens varázsa. Választott hivatásomban fontosnak tartom az alázatot, valamint a helyzethez alkalmazkodó, innovatív, bizonyítékokon alapuló megközelítést. Különösen érdekel a fertőző betegségek gyógyítása valamint a népegészségügy afrikai problémái, kérdései."
             }
         },
-        "kpeter": {
-            "shortBio": "Tudományos tevékenységért felelős elnökségi tag",
+        "vmarci": {
+            "shortBio": "Elnökségi tag",
             "longBio": {
-                "1": "Király Péter vagyok, az Egyesület elnökségi tagja, politológus, nemzetközi kapcsolatok és gazdaságdiplomáciai szakértő. Egyetemi éveim alatt, valamint párizsi és prágai szakmai gyakorlatom alatt foglalkoztam az afrikai térség biztonságpolitikai kérdéseivel, illetve az afrikai kontinens és Magyarország kapcsolataival. Jelenleg a magyar közigazgatásban dolgozom nemzetközi területen.",
+                "1": "Végh Marcell vagyok, jogász. Jelenleg egy budapesti ügyvédi irodában dolgozom, mint ügyvédjelölt. Afrika gyerekkorom óta folyamatosan foglalkoztat. Jelenleg az egyesület jogi hátterét támogatom és bízom benne, hogy a közeljövőben az egyesület humanitárius tevékenységében is részt veszek majd Ugandában."
+            }
+        },
+        "kpeter": {
+            "shortBio": "Egyesületi tag",
+            "longBio": {
+                "1": "Király Péter vagyok, az Egyesület tagja, politológus, nemzetközi kapcsolatok és gazdaságdiplomáciai szakértő. Egyetemi éveim alatt, valamint párizsi és prágai szakmai gyakorlatom alatt foglalkoztam az afrikai térség biztonságpolitikai kérdéseivel, illetve az afrikai kontinens és Magyarország kapcsolataival. Jelenleg a magyar közigazgatásban dolgozom nemzetközi területen.",
                 "2": "2017/19-ben lehetőségem volt részt venni a Lakitelki Népfőiskola Afrika kollégiumán, az itt megismert emberek csak megerősítették bennem a szándékot, hogy komolyabban foglalkozzak a magyar-afrikai kapcsolatok kihívásaival és lehetőségeivel."
             }
         },
@@ -240,19 +239,6 @@ export default class Team extends Vue {
                 "1": "Tóth Liliána vagyok, 26 éves. A Budapesti Corvinus Egyetemen, nemzetközi tanulmányok szakon végeztem. A fő kutatási területem a nem politikai tevékenységet folytató civil szervezetek működése, illetve lehetőségeik, mozgásterük és korlátjaik a programjaik, célkitűzéseik megvalósítását illetően a 21. században. Kiemelten fontos terület számomra a gyermekek, nők, sérülékeny társadalmi csoportok, kisebbségek védelme és helyzetük javítása a közéletben (pl. társadalmi párbeszéd, oktatás, ismeretterjesztés, érzékenyítő programok révén) és a mindennapokban.",
                 "2": "Az elmúlt években lehetőségem volt megismerkedni az európaitól sok tekintetben különböző kultúrákkal. Éltem 6 hónapot Vietnámban 2018-ban, illetve 2019 őszén részt vettem Zambiában egy jogi-antropológiai kutatásban is, amelyben a dél-afrikai ország társadalmi és politikai berendezkedését vizsgáltuk, illetve film-hang-és képanyagokban dokumentáltuk a törzsekben élő lakosság életének, kultúráinak egyéb forrásokban nehezen felkutatható, hiányosan rögzített mozzanatait. Ez az afrikai terepkutatási élmény rendkívül meghatározó volt az Afrikáról való gondolkodásomban, és megerősítette bennem a tenni akarás, jobbítás vágyát.",
                 "3": "2020 tavaszig Törörországban éltem, ahol egy, az Európa-Mediterrán Térség közötti kultúrális kapcsolatok fejlesztésével foglalkozó civil szervezetnél dolgoztam."
-            }
-        },
-        "vmarci": {
-            "shortBio": "Egyesületi tag",
-            "longBio": {
-                "1": "Végh Marcell vagyok, jogász. Jelenleg egy budapesti ügyvédi irodában dolgozom, mint ügyvédjelölt. Afrika gyerekkorom óta folyamatosan foglalkoztat. Jelenleg az egyesület jogi hátterét támogatom és bízom benne, hogy a közeljövőben az egyesület humanitárius tevékenységében is részt veszek majd Ugandában."
-            }
-        },
-        "darby": {
-            "shortBio": "Egyesületi tag",
-            "longBio": {
-                "1": "Smiri Nagy Barbara vagyok, divat és stílustervezőként végeztem a Modell Divat Iskolában. Itt szereztem ruha és textilipari ismereteimet. Legfőbb szakterületem a szabás és a varrástechnológiák, a szervezetben a tanulmányaim tudását szeretném továbbadni és felhasználni, mert hiszek benne, hogy a tudás megosztása hasznos mankó az emberek megsegítésében.",
-                "2": "A kreatív látásmód fejleszthető, és bárhol szükségünk lehet rá az életünk folyamán, ezért ezt a szemléletet is szeretném továbbadni. Fontosnak tartom a nyitottságot, ami megannyi ablakot nyit az inspirációkra, amiből pedig alkotó ötletek százai születhetnek."
             }
         }
     },
@@ -291,11 +277,16 @@ export default class Team extends Vue {
                 "2": "I have been on a mission to Manafwa for the first time in March 2019, and I was carried away by the magic of the “Black Continent” instantly. In my chosen profession I consider humility, innovative approach, and adapting to the evidence very important. I am particularly interested in the healing of infectious diseases and in the questions and problems of national health in Africa."
             }
         },
-
-        "kpeter": {
-            "shortBio": "Board member, scientific projects",
+        "vmarci": {
+            "shortBio": "Board member",
             "longBio": {
-                "1": "I am Péter Király, the association's board member, political scientist, international relations and economic diplomacy expert. During my university years and my internships in Paris and Prague, I dealt with the questions of security policy of Africa and the relationships between Hungary and the African continent. Currently I am working in the Hungarian public administration, in an international area.",
+                "1": "I am dr. Marcell Végh, jurist. I am working in a Budapest lawyer's office currently, as an attorney-candidate. I have been preoccupied with Africa ever since my childhood. I am currently supporting the legal background of the association, and I trust that within the near future I will be able to participate in the humanitarian activity in Uganda as well."
+            }
+        },
+        "kpeter": {
+            "shortBio": "Association member",
+            "longBio": {
+                "1": "I am Péter Király, association member, political scientist, international relations and economic diplomacy expert. During my university years and my internships in Paris and Prague, I dealt with the questions of security policy of Africa and the relationships between Hungary and the African continent. Currently I am working in the Hungarian public administration, in an international area.",
                 "2": "I had an opportunity to attend an African College at the school of Lakitelki Népfőiskola in 2017/19. The people I met here only reinforced my intention to deal with the challenges and opportunities of Hungarian-African connections more sincerely."
             }
         },
@@ -321,19 +312,6 @@ export default class Team extends Vue {
                 "1": "I am Liliána Tóth, 26. I studied International Relations at the University of Corvinus in Budapest. My main research area is the functioning of non-political civil organizations, and the possibilities and limits of reaching their aims in the 21st century. I put a great emphasis on the protection of children, women and vulnerable social groups and the improvement of their situation within the public sphere (e.g., social discussion, education etc.) and everyday life.",
                 "2": "During the past few years, I had the opportunity to get to know cultures that differ from the European ones. I have lived in Vietnam for 6 months in 2018, and I participated in research focusing on law and anthropology in Zambia during the fall of 2019. During this research we investigated the country’s social and political arrangements, and we documented the local people’s everyday life, culture etc. via film, voice and photo which are rarely documented so far. This African ground research experience was exceptionally determining in my way of thinking about Africa and reinforced my desire to make an impact and improvement there. ",
                 "3": "Until Spring 2020 I have lived in Turkey, where I worked for a civil organization in improving the relations between Europe and the Mediterranean Region."
-            }
-        },
-        "vmarci": {
-            "shortBio": "Association member",
-            "longBio": {
-                "1": "I am dr. Marcell Végh, jurist. I am working in a Budapest lawyer's office currently, as an attorney-candidate. I have been preoccupied with Africa ever since my childhood. I am currently supporting the legal background of the association, and I trust that within the near future I will be able to participate in the humanitarian activity in Uganda as well."
-            }
-        },
-        "darby": {
-            "shortBio": "Association member",
-            "longBio": {
-                "1": "I am Barbara Smiri Nagy, style designer. I have studied at the School of Model Fashion, where I obtained knowledge about the industry of clothing and textile. My principal area of expertise is technologies of cutting and sewing, and I aim to give forth my knowledge within the organization as well, since I believe that sharing knowledge is a useful tool in helping others.",
-                "2": "Creativity can be improved and needed anywhere during our lives, which is also a sentiment I would like to pass on to others. I think openness is particularly important, since it can open up many windows towards inspiration, which can provide space for hundreds of creative ideas."
             }
         }
     }
