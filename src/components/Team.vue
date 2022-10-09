@@ -130,6 +130,13 @@ export default class Team extends Vue {
         objectPosition: 'auto',
       },
       {
+        name: 'dr. Végh Marcell',
+        image: 'team/Marci.jpg',
+        shortBio: this.$i18n.t('vmarci.shortBio') as string,
+        longBio: this.getLongBio('vmarci'),
+        objectPosition: '50% 45%',
+      },
+      {
         name: 'Király Péter',
         image: 'team/Peti.jpg',
         shortBio: this.$i18n.t('kpeter.shortBio') as string,
@@ -156,13 +163,6 @@ export default class Team extends Vue {
         shortBio: this.$i18n.t('tliliana.shortBio') as string,
         longBio: this.getLongBio('tliliana'),
         objectPosition: 'auto',
-      },
-      {
-        name: 'dr. Végh Marcell',
-        image: 'team/Marci.jpg',
-        shortBio: this.$i18n.t('vmarci.shortBio') as string,
-        longBio: this.getLongBio('vmarci'),
-        objectPosition: '50% 45%',
       }
     ]
   }
