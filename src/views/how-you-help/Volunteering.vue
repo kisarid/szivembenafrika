@@ -19,14 +19,10 @@
         <p>{{ $t('2.p1') }}</p>
         <ul>
           <li>
-            {{ $t('2.p2.li1.1') }}
-            <a href="/files/Infopack_Onkentesseg_SzivembenAfrika.pdf">Infopackünket</a>
-            {{ $t('2.p2.li1.2') }}
+            {{ $t('2.p2.li1.1') }}<a href="/files/Infopack_Onkentesseg_SzivembenAfrika.pdf">Infopackünket</a>{{ $t('2.p2.li1.2') }}
           </li>
           <li>
-            {{ $t('2.p2.li2.1') }}
-            <a href="https://forms.gle/kaTAhGQpjYXyTt4EA">Jelentkezési formot</a>
-            {{ $t('2.p2.li2.2') }}
+            {{ $t('2.p2.li2.1') }}<a href="https://forms.gle/kaTAhGQpjYXyTt4EA">Jelentkezési formot</a>{{ $t('2.p2.li2.2') }}
           </li>
           <li>{{ $t('2.p2.li3') }}</li>
           <li>{{ $t('2.p2.li4') }}</li>
