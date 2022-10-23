@@ -3,7 +3,7 @@
     <swiper class="swiper" :options="swiperOptions" ref="swiperRef">
       <swiper-slide v-for="(member, index) in teamMembers" :key="index"
         ><card
-          :imageName="member.image"
+          :imageName="member.imageSmall || member.image"
           :title="member.name"
           :objectPosition="member.objectPosition"
           v-on:show-modal="showModal(index)"
@@ -163,6 +163,21 @@ export default class Team extends Vue {
         shortBio: this.$i18n.t('tliliana.shortBio') as string,
         longBio: this.getLongBio('tliliana'),
         objectPosition: 'auto',
+      },
+      {
+        name: 'Makó Panna',
+        image: 'team/Panna.jpg',
+        imageSmall: 'team/Panna_s.jpg',
+        shortBio: this.$i18n.t('mpanna.shortBio') as string,
+        longBio: this.getLongBio('mpanna'),
+        objectPosition: 'center bottom',
+      },
+      {
+        name: 'Németh Júlia',
+        image: 'team/Juli.jpg',
+        shortBio: this.$i18n.t('njuli.shortBio') as string,
+        longBio: this.getLongBio('njuli'),
+        objectPosition: '50% 40%',
       }
     ]
   }
@@ -240,6 +255,22 @@ export default class Team extends Vue {
                 "2": "Az elmúlt években lehetőségem volt megismerkedni az európaitól sok tekintetben különböző kultúrákkal. Éltem 6 hónapot Vietnámban 2018-ban, illetve 2019 őszén részt vettem Zambiában egy jogi-antropológiai kutatásban is, amelyben a dél-afrikai ország társadalmi és politikai berendezkedését vizsgáltuk, illetve film-hang-és képanyagokban dokumentáltuk a törzsekben élő lakosság életének, kultúráinak egyéb forrásokban nehezen felkutatható, hiányosan rögzített mozzanatait. Ez az afrikai terepkutatási élmény rendkívül meghatározó volt az Afrikáról való gondolkodásomban, és megerősítette bennem a tenni akarás, jobbítás vágyát.",
                 "3": "2020 tavaszig Törörországban éltem, ahol egy, az Európa-Mediterrán Térség közötti kultúrális kapcsolatok fejlesztésével foglalkozó civil szervezetnél dolgoztam."
             }
+        },
+        "mpanna": {
+            "shortBio": "Egyesületi tag",
+            "longBio": {
+              "1": "Makó Panna vagyok, grafikus, webfejlesztő, vállalkozó és világvándor.",
+              "2": "Önkéntesként csatlakoztam a Szívemben Született Afrika csapatához: szerelem volt első látásra. Sok helyre sodródtam már, megannyi közösséggel foglalkoztam. Minden munkám során, amivel eddig és jelenleg is foglalkozom elsőrendűnek tartom a közösséget, akik munkám közben körbevesznek; az értékrendet, amivel működnek; valamint a célt, amit kitűznek maguk elé.",
+              "3": "Afrika kultúrája és közösségének megismerése vonz már a kezdetektől, továbbá kiemelten foglalkoztat a nők szerepe különböző társadalmakban. Vallom, hogy az embereknek kapcsolódniuk kell egymáshoz, kultúráknak találkoznia kell egymással, és hiszem, hogy fenntartható fejlődés csak úgy érhető el, ha támogatjuk egymást a különböző tudások átadásában - ez az az irány, amivel úgy érzem csatlakozni tudok a szervezet értékeihez és tevékenységeihez."
+            }
+        },
+        "njuli": {
+            "shortBio": "Egyesületi tag",
+            "longBio": {
+              "1": "Németh Júlia vagyok, az Egyesület pártolói tagja és a gyermektámogatási valamint a Graduate a Girl programok koordinátora. 2022 elején csatlakoztam a Szívemben Született Afrikához, de az Egyesület munkáját már azelőtt is figyelemmel kísértem.",
+              "2": "A Corvinus Egyetemen végeztem nemzetközi tanulmányok szakon, majd a Bécsi Egyetem politológia mesterszakán szereztem diplomát. Jelenleg a felsőoktatásban dolgozom.",
+              "3": "Afrikával az egyetemi éveim alatt kezdtem el foglalkozni, tanulmányaim befejezése után pedig Ghánában tölthettem hat hónapot egy német fejlesztési szervezet gyakornokaként. Bár szakmai pályám egyelőre másképp alakult, tudom, hogy Afrika valamilyen formában mindig szerepet fog játszani az életemben."
+            }
         }
     },
     "en": {
@@ -290,7 +321,6 @@ export default class Team extends Vue {
                 "2": "I had an opportunity to attend an African College at the school of Lakitelki Népfőiskola in 2017/19. The people I met here only reinforced my intention to deal with the challenges and opportunities of Hungarian-African connections more sincerely."
             }
         },
-        
         "kanna": {
             "shortBio": "Association member",
             "longBio": {
@@ -298,7 +328,6 @@ export default class Team extends Vue {
                 "2": "I have been to Uganda many times, I have taught dietetics within an agrarian training at the University of Kyambogo. The emphasized focus of my African work is the optimalization of nourishment of women and children, and the improvement of knowledge regarding the right perinatal nourishment."
             }
         },
-        
         "tklaudia": {
             "shortBio": "Association member",
             "longBio": {
@@ -312,6 +341,21 @@ export default class Team extends Vue {
                 "1": "I am Liliána Tóth, 26. I studied International Relations at the University of Corvinus in Budapest. My main research area is the functioning of non-political civil organizations, and the possibilities and limits of reaching their aims in the 21st century. I put a great emphasis on the protection of children, women and vulnerable social groups and the improvement of their situation within the public sphere (e.g., social discussion, education etc.) and everyday life.",
                 "2": "During the past few years, I had the opportunity to get to know cultures that differ from the European ones. I have lived in Vietnam for 6 months in 2018, and I participated in research focusing on law and anthropology in Zambia during the fall of 2019. During this research we investigated the country’s social and political arrangements, and we documented the local people’s everyday life, culture etc. via film, voice and photo which are rarely documented so far. This African ground research experience was exceptionally determining in my way of thinking about Africa and reinforced my desire to make an impact and improvement there. ",
                 "3": "Until Spring 2020 I have lived in Turkey, where I worked for a civil organization in improving the relations between Europe and the Mediterranean Region."
+            }
+        },
+        "mpanna": {
+            "shortBio": "Association member",
+            "longBio": {
+              "1": "I am Panna Makó, graphic designer, web developer, entrepreneur, and traveller.",
+              "2": "I joined „Africa Born in my Heart” as a volunteer: it was love at first sight. I have drifted to many places, met with so many communities. In all my work, which I have been doing up to do now and still, I consider the community, who surrounds me during my work, to be of the highest priority; the value system with which they operate; as well as the goal they set for themselves.",
+              "3": "Getting to know the culture and community of Africa has attracted me from the beginning, and I am also particularly interested in the role of women in different societies. I believe that people should connect with each other, cultures should meet each other, and I believe that sustainable development can only be achieved if we support each other in the transfer of different knowledge - this is the direction in which I feel I can join the organization's values and activities."            }
+        },
+        "njuli": {
+            "shortBio": "Association member",
+            "longBio": {
+              "1": "My name is Júlia Németh, associate member and coordinator of the Association’s child support and Graduate a Girl programmes. I joined „Africa Born in my Heart” in early 2022, however, I have been following the Association’s work from the very beginning.",
+              "2": "I hold a BA degree in International Studies and an MA degree in Political Science which I obtained at Corvinus University Budapest and the University of Vienna, respectively. At the moment, I am working in the field of education management.",
+              "3": "I developed an interest in Africa during my university studies. After graduation, I had the opportunity to spend six months in Ghana interning for a German development agency. Even though my professional path took me in another direction – at least for the time being – I know that Africa will always play a part in my life one way or another."
             }
         }
     }
