@@ -18,14 +18,23 @@
         <div class="sub-heading">{{ $t('2.title') }}</div>
         <p>{{ $t('2.p1') }}</p>
         <ul>
-          <li>{{ $t('2.p2.li1.1') }}<a href="mailto:onkentes@szivembenafrika.org">onkentes@szivembenafrika.org</a>{{ $t('2.p2.li1.2') }}</li>
-          <li>{{ $t('2.p2.li2') }}</li>
+          <li>
+            {{ $t('2.p2.li1.1') }}
+            <a href="/files/Infopack_Onkentesseg_SzivembenAfrika.pdf">Infopackünket</a>
+            {{ $t('2.p2.li1.2') }}
+          </li>
+          <li>
+            {{ $t('2.p2.li2.1') }}
+            <a href="https://forms.gle/kaTAhGQpjYXyTt4EA">Jelentkezési formot</a>
+            {{ $t('2.p2.li2.2') }}
+          </li>
           <li>{{ $t('2.p2.li3') }}</li>
           <li>{{ $t('2.p2.li4') }}</li>
           <li>{{ $t('2.p2.li5') }}</li>
+          <li>{{ $t('2.p2.li6') }}</li>
         </ul>
         <p>{{ $t('2.p3') }}</p>
-        <div class="sub-heading"></div>
+        <div class="sub-heading">{{ $t('3.title') }}</div>
         <p>{{ $t('3.p1') }}</p>
         <ul>
           <li>{{ $t('3.li1') }}</li>
@@ -34,7 +43,6 @@
           <li>{{ $t('3.li4') }}</li>
           <li>{{ $t('3.li5') }}</li>
           <li>{{ $t('3.li6') }}</li>
-          <li>{{ $t('3.li7') }}</li>
         </ul>
       </section>
     </container>
@@ -92,29 +100,31 @@ export default class Volunteering extends Vue {}
             "title": "Az önkéntessé válás menete",
             "p1": "Ahhoz, hogy a Szívemben Született Afrika önkéntese lehess, a következő lépések megtétele szükséges:",
             "p2": {
-                "li1": {
-                    "1": "Küldd el nekünk önéletrajzodat és egy motivációs levelet az ",
-                    "2": " email címre."
-                },
-                "li2": "Ezt követően egy személyes találkozásra hívunk majd, hogy megismerkedhessünk veled.",
-                "li3": "Ezzel bekerülsz az önkéntes csapatunkba és folyamatosan értesítünk majd azokról az eseményekről és feladatokról, amikbe be lehet kapcsolódni.",
-                "li4": "Nagyjából 4 havonta tartunk csapatépítéssel egybekötött képzéseket. Egy ilyenen a jelentkezésedet követően egy éven belül részt kell venned. Az afrikai önkéntesség csak a képzésen való részvételt követően történhet meg. ( A képzés nem évül el, ha egy adott évben részt veszel az érvényes lesz egy akár több évvel későbbi kiutazáshoz is.)",
-                "li5": "Az afrikai önkéntesség előfeltétele minden esetben minimum 1 év aktív hazai önkéntesség. Erre azért van szükség, hogy te is kellőképpen megismerhesd a szervezetünket, filozófiánkat és mi is alaposan megismerhessünk téged és láthassuk, hogy hogyan vagy jelen a különböző helyzetekben. Így mindenki a legfelkészültebben tud belekezdeni egy misszióba."
+              "li1": {
+                "1": "Olvasd el ",
+                "2": ", mely Önkénteseinknek készült és minden fontos információt tartalmaz, amire első körben szükséged lehet."
+              },
+              "li2": {
+                "1": "Amennyiben egyetértesz az Infopackben leírtakkal, kérjük töltsd ki a ",
+                "2": ". Erre azért van szükség, hogy jobban megismerhessünk, átlássuk milyen céllal és motivációval érkeztél szervezetünkhöz, milyen tevékenységgel foglalkoznál szívesen. A kérdőív kitöltése több időt vesz igénybe, mert motivációs kérdések is szerepelnek benne, így ezt kérjük vedd figyelembe, mielőtt belevágsz."
+              },
+              "li3": "Ezt követően egy személyes találkozásra hívunk majd, hogy megismerkedhessünk veled.",
+              "li4": "Ezzel bekerülsz az önkéntes csapatunkba és folyamatosan értesítünk majd azokról az eseményekről és feladatokról, amikbe be lehet kapcsolódni.",
+              "li5": "Évente kétszer tartunk egy csapatépítéssel egybekötött képzést. Egy ilyenen a jelentkezésedet követően egy éven belül részt kell venned. Az afrikai önkéntesség csak a képzésen való részvételt követően történhet meg. (A képzés nem évül el, ha egy adott évben részt veszel az érvényes lesz egy akár több évvel későbbi kiutazáshoz is.)",
+              "li6": "Az afrikai önkéntesség előfeltétele minden esetben minimum 1 év aktív hazai önkéntesség. Erre azért van szükség, hogy te is kellőképpen megismerhesd a szervezetünket, filozófiánkat és mi is alaposan megismerhessünk téged és láthassuk, hogy hogyan vagy jelen a különböző helyzetekben. Így mindenki a legfelkészültebben tud belekezdeni egy misszióba."
             },
-            "p3": "Fontos, hogy tudd, az, ha jelentkezel és bekerülsz az önkéntes csapatunkba, nem jelenti automatikusan azt, hogy egyből a soron következő kiutazással lehetőséged lesz Ugandába menni. Egy misszió megszervezésénél nagyon sok szempontot figyelembe kell vennünk az adott misszió kitűzött céljától kezdve, a csapatösszeállításon át az olyan operatív és logisztikai kérdésekig, mint az Ugandán belüli utazás, férőhelyek a szálláson stb."
+            "p3": "Fontos, hogy tudd, az, ha jelentkezel és bekerülsz az önkéntes csapatunkba, nem jelenti automatikusan azt, hogy egyből a soron következő kiutazással lehetőséged lesz Afrikába menni. Egy misszió megszervezésénél nagyon sok szempontot figyelembe kell vennünk az adott misszió kitűzött céljától kezdve, a csapatösszeállításon át az olyan operatív és logisztikai kérdésekig, mint az országon, településen belüli utazás, férőhelyek a szálláson stb."
         },
         "3": {
             "title": "A „tökéletes” önkéntes",
             "p1": "Tudjuk, hogy senki sem tökéletes, de mindenki tökéletes valamilyen feladatra, csak meg kell találni a leginkább hozzáillőt. A Szívemben Született Afrika önkéntese:",
-            "li1": "megérti és támogatja az egyesületünk filozófiáját, értékeit és céljait",
-            "li2": "elfogadja és betartja egyesületünk Önkéntes Kódexét",
-            "li3": "rugalmas és felelősségteljes",
-            "li4": "nyitott és elfogadó embertársai iránt",
-            "li5": "proaktív és érdeklődő",
-            "li6": "folyamatos önreflexiónak köszönhetően fel tudja mérni és jelzi, ha szakmai segítségre vagy az esetleges lelki nehézségek átbeszélésére van szüksége",
-            "li7": "megérti, hogy önkéntesként gyakorlatilag a szervezet nagykövete is, hiszen feladatai elvégzése közben minket képvisel. Mindig ezt észben tartva cselekszik."
+            "li1": "Megérti és támogatja az egyesületünk filozófiáját, értékeit és céljait",
+            "li2": "Rugalmas és felelősségteljes",
+            "li3": "Nyitott és elfogadó embertársai iránt",
+            "li4": "Proaktív és érdeklődő",
+            "li5": "Folyamatos önreflexiónak köszönhetően fel tudja mérni és jelzi, ha szakmai segítségre vagy az esetleges lelki nehézségek átbeszélésére van szüksége",
+            "li6": "Megérti, hogy önkéntesként gyakorlatilag a szervezet nagykövete is, hiszen feladatai elvégzése közben minket képvisel. Mindig ezt észben tartva cselekszik."
         }
-
     },
     "en": {
         "main": "Volunteering",
