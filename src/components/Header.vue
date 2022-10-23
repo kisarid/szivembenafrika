@@ -192,7 +192,7 @@
     display: none;
   }
 
-  @media (min-width: 1180px) {
+  @media (min-width: 1350px) {
     display: flex;
 
     .desktop {
@@ -224,20 +224,14 @@ import container from '@/components/moyo/container.vue'
 import menuItem from '@/components/moyo/menu-item.vue'
 import LanguageSelector from '@/components/moyo/language-selector.vue'
 import menuButton from '@/assets/icons/menu-button.svg'
-import { Bio } from '@/interfaces/bio'
-
-export interface MenuItemI {
-  text: string
-  route?: string
-  submenu?: MenuItemI[]
-}
+import { MenuItem } from '@/interfaces/menu-item'
 
 @Component({
   name: 'Header',
   components: { container, menuItem, Slide, menuButton, LanguageSelector },
 })
 export default class Header extends Vue {
-  @Prop() menuItems: Bio[]
+  @Prop() menuItems: MenuItem[]
   isMenuOpen = false
 
   setMenuOpen(val: boolean) {

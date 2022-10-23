@@ -147,17 +147,6 @@
 </template>
 
 <style lang="scss" scoped>
-.pic-grid {
-  display: grid;
-  grid-template: auto / 1fr;
-  gap: 15px;
-  margin-bottom: 30px;
-
-  @media (min-width: 768px) {
-    grid-template: auto / 1fr 1fr;
-  }
-}
-
 .text-and-pic {
   margin-bottom: 30px;
 }
