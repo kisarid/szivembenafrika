@@ -10,13 +10,12 @@
 <script lang="ts">
 import { Component, Vue, Watch } from 'vue-property-decorator'
 
-import Header, { MenuItemI } from '@/components/Header.vue'
+import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import container from '@/components/moyo/container.vue'
 import heading from '@/components/moyo/heading.vue'
 import modal from '@/components/moyo/modal.vue'
-import { Bio } from './interfaces/bio'
-import AfrikaDayInfo from './afrika-day'
+import { MenuItem } from '@/interfaces/menu-item'
 
 @Component({
   name: 'App',
@@ -32,7 +31,7 @@ export default class App extends Vue {
     return this.$i18n.t(path) as string
   }
 
-  get menuItems(): MenuItemI[] {
+  get menuItems(): MenuItem[] {
     return [
       {
         text: this.getTranslation('1.menu'),
@@ -60,8 +59,9 @@ export default class App extends Vue {
         ],
       },
       { text: this.getTranslation('4.menu'), route: 'media' },
-      { text: this.getTranslation('5.menu'), route: 'tamogatok' },
-      { text: this.getTranslation('6.menu'), route: 'kapcsolat' },
+      { text: this.getTranslation('5.menu'), route: 'blog' },
+      { text: this.getTranslation('6.menu'), route: 'tamogatok' },
+      { text: this.getTranslation('7.menu'), route: 'kapcsolat' },
     ]
   }
 }
@@ -141,6 +141,17 @@ section {
     &.three-two {
       grid-template: auto / 3fr 2fr;
     }
+  }
+}
+
+.pic-grid {
+  display: grid;
+  grid-template: auto / 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    grid-template: auto / 1fr 1fr;
   }
 }
 
@@ -239,9 +250,12 @@ svg {
       "menu": "Média"
     },
     "5": {
-      "menu": "Támogatók"
+      "menu": "Blog"
     },
     "6": {
+      "menu": "Támogatók"
+    },
+    "7": {
       "menu": "Kapcsolat"
     }
   },
@@ -269,9 +283,12 @@ svg {
       "menu": "Media"
     },
     "5": {
-      "menu": "Supporters"
+      "menu": "Blog"
     },
     "6": {
+      "menu": "Supporters"
+    },
+    "7": {
       "menu": "Contact"
     }
   }

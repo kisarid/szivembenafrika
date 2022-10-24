@@ -12,11 +12,11 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator'
-import { MenuItemI } from '../Header.vue'
+import { MenuItem } from '@/interfaces/menu-item'
 
 @Component
 export default class SubmenuItem extends Vue {
-  @Prop() items: MenuItemI[]
+  @Prop() items: MenuItem[]
 }
 </script>
 

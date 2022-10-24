@@ -21,7 +21,7 @@
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
 import chevron from '@/assets/icons/chevron.svg'
 import SubmenuItem from './submenu-item.vue'
-import { MenuItemI } from '../Header.vue'
+import { MenuItem as MenuItemI } from '@/interfaces/menu-item'
 
 @Component({
   components: { SubmenuItem, chevron },

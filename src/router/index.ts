@@ -14,7 +14,7 @@ import Events from '@/views/how-you-help/Events.vue'
 import Supporters from '@/views/Supporters.vue'
 import Statement from '@/views/Statement.vue'
 import Media from '@/views/Media.vue'
-import AfrikaDay from '@/views/AfrikaDay.vue'
+import Blog from '@/views/Blog.vue'
 
 Vue.use(VueRouter)
 
@@ -83,6 +83,16 @@ const routes = [
     path: '/media',
     name: 'media',
     component: Media
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: Blog
+  },
+  {
+    path: '/blog/:article',
+    name: 'blog-article',
+    component: Blog
   },
   {
     path: '/tamogatok',
