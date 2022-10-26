@@ -38,8 +38,8 @@
       <div class="article-extract" v-for="(article, index) in articles" :key="index">
         <div class="pic">
           <img
-            :src="require(`@/assets/images/blog/${article.img[0].name}`)"
-            v-bind:style="{ 'object-position': article.img[0].objectPosition }"
+            :src="require(`@/assets/images/blog/${article.cover ? article.cover.name : article.img[0].name}`)"
+            v-bind:style="{ 'object-position': article.cover ? article.cover.objectPosition : article.img[0].objectPosition }"
             alt="">
         </div>
         <div class="text">
@@ -152,9 +152,6 @@ import { Article } from '@/interfaces/article'
   components: { container, heading },
 })
 export default class Blog extends Vue {
-  articlesList = [
-    '2022-10-23',
-  ]
   articles: Article[]
   selectedArticle: Article
 
@@ -165,7 +162,19 @@ export default class Blog extends Vue {
   }
 
   created() {
-    this.articles = this.articlesList.map(title => require(`@/blog/${title}.json`))
+    const today = new Date().getTime()
+    const articlesList = [
+      '2022-10-26',
+      '2022-10-23',
+    ]
+    if (today > new Date('2022-10-29 08:00:00').getTime()) {
+      articlesList.unshift('2022-10-29')
+    }
+    if (today > new Date('2022-11-01 08:00:00').getTime()) {
+      articlesList.unshift('2022-11-01')
+    }
+
+    this.articles = articlesList.map(title => require(`@/blog/${title}.json`))
 
     if (this.$route.params.article) {
       this.selectedArticle = this.articles.find(v => v.id === this.$route.params.article)!

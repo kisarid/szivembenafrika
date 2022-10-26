@@ -5,4 +5,5 @@ export interface Article {
     author: string
     text: string[]
     img: { name: string, objectPosition: string }[]
+    cover?: { name: string, objectPosition: string }
 }
