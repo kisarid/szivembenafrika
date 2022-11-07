@@ -199,8 +199,8 @@ export default class SupportChildren extends Vue {
 {
     "hu": {
         "main": "Gyermektámogatás",
-        "p1": "Hiszünk abban, hogy minden gyermeknek jár a boldog, biztonságos gyerekkor, az oktatás és az esély egy jó életre. Ugandában sajnos nem ingyenes az oktatás és mivel a családok nagy része a szegénységi küszöb alatt él, az, hogy iskolába járjon egy gyerek luxusnak számít. Gyermektámogatási programunk keretében havi 5000Ft-os adományért a támogató jelképes örökbefogadó szülővé válhat. Ez az az összeg, amely fedezi egy gyerkőc oktatását, tanszereit, étkezését és szükség esetén az orvosi ellátását. Mi pedig rendszeres időközönként hírt adunk a gyerkőc fejlődéséről, tanulmányi eredményeiről, fontosabb életeseményeiről, valamint küldünk róla fotókat, videókat.",
-        "p2": "Csatlakozz hozzánk és segíts! Váltsuk valóra az álmaikat, változtassunk életeket! A havi támogatás összege 5000 forint, amely magában foglalja a kiválasztott gyermek tandíját, egyenruháját, tanszereit, étkezését és szükség esetén az orvosi ellátását.",
+        "p1": "Hiszünk abban, hogy minden gyermeknek jár a boldog, biztonságos gyerekkor, az oktatás és az esély egy jó életre. Ugandában sajnos nem ingyenes az oktatás és mivel a családok nagy része a szegénységi küszöb alatt él, az, hogy iskolába járjon egy gyerek luxusnak számít. Gyermektámogatási programunk keretében havi 6000Ft-os adományért a támogató jelképes örökbefogadó szülővé válhat. Ez az az összeg, amely fedezi egy gyerkőc oktatását, tanszereit, étkezését és szükség esetén az orvosi ellátását. Mi pedig rendszeres időközönként hírt adunk a gyerkőc fejlődéséről, tanulmányi eredményeiről, fontosabb életeseményeiről, valamint küldünk róla fotókat, videókat.",
+        "p2": "Csatlakozz hozzánk és segíts! Váltsuk valóra az álmaikat, változtassunk életeket! A havi támogatás összege 6000 forint, amely magában foglalja a kiválasztott gyermek tandíját, egyenruháját, tanszereit, étkezését és szükség esetén az orvosi ellátását.",
         "p3": {
             "1": "Kérdés esetén fordulj bizalommal hozzánk az ",
             "2": " email címen."
@@ -208,8 +208,8 @@ export default class SupportChildren extends Vue {
     },
     "en": {
         "main": "Supporting a Child",
-        "p1": "We believe that every child deserves a happy and safe childhood, education and a chance for a better life. In Uganda unfortunately the education is not free of tuition-fees, and as most of the families live under the threshold of poverty, the possibility for a child to attend school is a luxury. By our child-support program for a 5000 HUF donation/month you can symbolically adopt a child. This donation covers the kids’ education, school supplies, feeding and if needed medical attendance. We will periodically inform you of the kids’ growth, educational results, life events, and send photos and videos of the kid.",
-        "p2": "Join us and help! Lets make their dreams come true, and changes their lives! The amount of monthly donation is 5000 HUF, which includes the chosen girls’ tuition-fees, school supplies, and medical attendance if needed.",
+        "p1": "We believe that every child deserves a happy and safe childhood, education and a chance for a better life. In Uganda unfortunately the education is not free of tuition-fees, and as most of the families live under the threshold of poverty, the possibility for a child to attend school is a luxury. By our child-support program for a 6000 HUF donation/month you can symbolically adopt a child. This donation covers the kids’ education, school supplies, feeding and if needed medical attendance. We will periodically inform you of the kids’ growth, educational results, life events, and send photos and videos of the kid.",
+        "p2": "Join us and help! Lets make their dreams come true, and changes their lives! The amount of monthly donation is 6000 HUF, which includes the chosen girls’ tuition-fees, school supplies, and medical attendance if needed.",
         "p3": {
             "1": "If you have any question do not hesitate to contact us at ",
             "2": "."
