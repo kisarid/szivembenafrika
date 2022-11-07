@@ -164,15 +164,12 @@ export default class Blog extends Vue {
   created() {
     const today = new Date().getTime()
     const articlesList = [
+      '2022-11-08',
+      '2022-11-01',
+      '2022-10-29',
       '2022-10-26',
       '2022-10-23',
-    ]
-    if (today > new Date('2022-10-29 08:00:00').getTime()) {
-      articlesList.unshift('2022-10-29')
-    }
-    if (today > new Date('2022-11-01 08:00:00').getTime()) {
-      articlesList.unshift('2022-11-01')
-    }
+    ].filter(v => new Date(v).getTime() < today)
 
     this.articles = articlesList.map(title => require(`@/blog/${title}.json`))
 
