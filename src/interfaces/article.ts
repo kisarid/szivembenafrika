@@ -3,7 +3,13 @@ export interface Article {
     title: string
     date: string
     author: string
-    text: string[]
-    img: { name: string, objectPosition: string }[]
-    cover?: { name: string, objectPosition: string }
+    blocks: ({ type: 'text', content: string } | {type: 'img', content: Img[]})[]
+    cover: Img
+    innerCover?: Img
+}
+
+interface Img {
+    name: string
+    style: {}
+    wrapperStyle?: {}
 }

@@ -12,40 +12,42 @@
     </heading>
     <container v-if="selectedArticle">
       <div class="article-view">
-        <div class="pic">
+        <div class="pic" :style="(selectedArticle.innerCover || selectedArticle.cover).wrapperStyle">
           <img
-            :src="require(`@/assets/images/blog/${selectedArticle.img[0].name}`)"
-            v-bind:style="{ 'object-position': selectedArticle.img[0].objectPosition }"
+            :src="require(`@/assets/images/blog/${(selectedArticle.innerCover || selectedArticle.cover).name}`)"
+            :style="(selectedArticle.innerCover || selectedArticle.cover).style"
             alt="">
         </div>
         <div class="blog-text">
-          <p v-for="(p, index) in selectedArticle.text" :key="index">{{ p }}</p>
+          <template v-for="(block, index) in selectedArticle.blocks">
+            <p v-if="block.type === 'text'" :key="index">{{ block.content }}</p>
+            <div v-if="block.type === 'img'" :key="index" class="pic-flex">
+              <div class="pic" v-for="(img, index) in block.content" :key="index" :style="img.wrapperStyle">
+                <img
+                  :src="require(`@/assets/images/blog/${img.name}`)"
+                  :style="img.style"
+                  alt="">
+              </div>
+            </div>
+          </template>
         </div>
-        <div class="pic-grid">
-          <div class="pic" v-for="(img, index) in selectedArticle.img.slice(1)" :key="index">
-            <img
-              :src="require(`@/assets/images/blog/${img.name}`)"
-              v-bind:style="{ 'object-position': img.objectPosition }"
-              alt="">
-          </div>
-        </div>
-        <div class="back" style="margin-bottom: 30px;">
+        <div class="back" style="margin-block: 30px;">
           <router-link :to="'/blog'">← Vissza</router-link> 
         </div>
       </div>
     </container>
     <container class="articles-list" v-if="!selectedArticle">
       <div class="article-extract" v-for="(article, index) in articles" :key="index">
-        <div class="pic">
+        <div class="pic" :style="article.cover.wrapperStyle">
           <img
-            :src="require(`@/assets/images/blog/${article.cover ? article.cover.name : article.img[0].name}`)"
-            v-bind:style="{ 'object-position': article.cover ? article.cover.objectPosition : article.img[0].objectPosition }"
+            :src="require(`@/assets/images/blog/${article.cover.name}`)"
+            :style="article.cover.style"
             alt="">
         </div>
         <div class="text">
           <div class="title sub-heading">{{ article.title }}</div>
           <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }} | <span class="author">{{ article.author }}</span></div>
-          <div class="blog-text">{{ article.text.join(' ').slice(0, 500) }}</div>
+          <div class="blog-text">{{ article.blocks.filter(b => b.type === 'text').map(b => b.content).join(' ').slice(0, 500) }}</div>
         </div>
         <div class="to-article">
           <router-link :to="`/blog/${article.id}`">Tovább →</router-link> 
@@ -67,7 +69,7 @@
 
 .blog-text {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 24px;
 }
 
 .article-header {
@@ -162,14 +164,15 @@ export default class Blog extends Vue {
   }
 
   created() {
-    const today = new Date().getTime()
+    const now = new Date().getTime()
     const articlesList = [
+      '2022-11-09',
       '2022-11-08',
       '2022-11-01',
       '2022-10-29',
       '2022-10-26',
       '2022-10-23',
-    ].filter(v => new Date(v).getTime() < today)
+    ].filter(v => new Date(`${v} 08:00:00`).getTime() < now)
 
     this.articles = articlesList.map(title => require(`@/blog/${title}.json`))
 
