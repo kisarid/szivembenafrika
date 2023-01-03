@@ -56,6 +56,7 @@ export default class Supporters extends Vue {
     { link: 'https://hooplasewing.com/', logo: require('@/assets/icons/logo-hoopla.jpg') },
     { link: 'https://www.purelifefoundation.eu/', logo: require('@/assets/icons/logo-purelife.jpg') },
     { link: 'https://www.facebook.com/dorinkastudiohungary/', logo: require('@/assets/icons/logo-dorinka.png') },
+    { link: 'https://zsolya.com/', logo: require('@/assets/icons/logo-zsolya.png') },
   ]
 }
 </script>
