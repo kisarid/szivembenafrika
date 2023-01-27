@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-    <container class="content" :wider="true">
+    <div class="content">
       <div class="logo" @click="navigate('home')">
         <div class="icon">
           <img src="@/assets/icons/logo.png" alt="" />
@@ -18,6 +18,7 @@
           <div slot="text">{{ menuItem.text }}</div>
         </menuItem>
       </div>
+      <LanguageSelector class="tablet" :theme="'dark'"></LanguageSelector>
       <div class="menu-button" @click="setMenuOpen(true)">
         <menuButton></menuButton>
       </div>
@@ -33,6 +34,7 @@
         :isOpen="isMenuOpen"
         @closeMenu="setMenuOpen(false)"
       >
+        <LanguageSelector class="mobile" :theme="'light'"></LanguageSelector>
         <template v-for="menuItem of menuItems">
           <router-link
             class="menu-item-mobile"
@@ -57,14 +59,12 @@
             </router-link>
           </div>
         </template>
-        <LanguageSelector :theme="'light'"></LanguageSelector>
       </Slide>
-    </container>
-    <LanguageSelector class="desktop" :theme="'dark'"></LanguageSelector>
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #header {
   position: fixed;
   top: 0;
@@ -73,10 +73,12 @@
   z-index: 100;
 
   .content {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 
     .logo {
       display: flex;
@@ -122,13 +124,41 @@
         }
       }
     }
+    
+    #language-selector {
+      &.mobile {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      &.tablet {
+        display: none;
+        margin-left: auto;
+      }
+      
+      @media (min-width: 768px) {
+        &.mobile {
+          display: none;
+        }
+
+        &.tablet {
+          display: flex;
+        }
+      }
+    }
 
     .menu-button {
       display: flex;
       align-items: center;
       margin-left: auto;
       margin-right: 10px;
+      padding-left: 10px;
       cursor: pointer;
+
+      @media (min-width: 768px) {
+        margin-left: 0;
+      }
     }
 
     .menu {
@@ -147,6 +177,15 @@
     .menu-mobile {
       white-space: nowrap;
       user-select: none;
+
+      .bm-menu {
+        padding-top: 0;
+      }
+
+      .bm-item-list {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
 
       .bm-item-list > * {
         margin-bottom: 10px;
@@ -188,16 +227,15 @@
     }
   }
 
-  .desktop {
-    display: none;
+  @media (min-width: 500px) {
+    .content {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
-  @media (min-width: 1350px) {
+  @media (min-width: 1400px) {
     display: flex;
-
-    .desktop {
-      display: flex;
-    }
 
     .content .menu-button {
       display: none;
