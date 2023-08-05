@@ -3,13 +3,26 @@ export interface Article {
     title: string
     date: string
     author: string
-    blocks: ({ type: 'text', content: string } | {type: 'img', content: Img[]})[]
+    blocks: Block[]
     cover: Img
     innerCover?: Img
 }
 
-interface Img {
+export type Block = {
+    type: 'text'
+    content: string
+} | {
+    type: 'list'
+    content: string[]
+    listType: 'ul' | 'ol'
+} | {
+    type: 'img'
+    content: Img[]
+}
+
+export type Img = {
     name: string
     style: {}
-    wrapperStyle?: {}
+    caption?: string
+    class?: string
 }
