@@ -12,23 +12,31 @@
     </heading>
     <container v-if="selectedArticle">
       <div class="article-view">
-        <div class="pic" :style="(selectedArticle.innerCover || selectedArticle.cover).wrapperStyle">
+        <div class="pic">
           <img
             :src="require(`@/assets/images/blog/${(selectedArticle.innerCover || selectedArticle.cover).name}`)"
             :style="(selectedArticle.innerCover || selectedArticle.cover).style"
             alt="">
+            <span v-if="(selectedArticle.innerCover || selectedArticle.cover).caption" class="caption">{{ (selectedArticle.innerCover || selectedArticle.cover).caption }}</span>
         </div>
         <div class="blog-text">
-          <template v-for="(block, index) in selectedArticle.blocks">
-            <p v-if="block.type === 'text'" :key="index">{{ block.content }}</p>
-            <div v-if="block.type === 'img'" :key="index" class="pic-flex">
-              <div class="pic" v-for="(img, index) in block.content" :key="index" :style="img.wrapperStyle">
+          <template v-for="(block, i) in selectedArticle.blocks">
+            <p v-if="block.type === 'text'">{{ block.content }}</p>
+            <div v-if="block.type === 'img'" class="blog-pics">
+              <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j">
                 <img
                   :src="require(`@/assets/images/blog/${img.name}`)"
                   :style="img.style"
                   alt="">
+                  <span v-if="img.caption" class="caption">{{ img.caption }}</span>
               </div>
             </div>
+            <ul v-if="block.type === 'list' && block.listType === 'ul'">
+              <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
+            </ul>
+            <ol v-if="block.type === 'list' && block.listType === 'ol'">
+              <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
+            </ol>
           </template>
         </div>
         <div class="back" style="margin-block: 30px;">
@@ -38,11 +46,13 @@
     </container>
     <container class="articles-list" v-if="!selectedArticle">
       <div class="article-extract" v-for="(article, index) in articles" :key="index">
-        <div class="pic" :style="article.cover.wrapperStyle">
-          <img
-            :src="require(`@/assets/images/blog/${article.cover.name}`)"
-            :style="article.cover.style"
-            alt="">
+        <div class="pic">
+          <router-link :to="`/blog/${article.id}`">
+            <img
+              :src="require(`@/assets/images/blog/${article.cover.name}`)"
+              :style="article.cover.style"
+              alt="">
+          </router-link>
         </div>
         <div class="text">
           <div class="title sub-heading">{{ article.title }}</div>
@@ -67,9 +77,34 @@
   font-size: 16px;
 }
 
+.pic .caption {
+  font-size: 11px;
+  font-style: italic;
+  line-height: normal;
+}
+
 .blog-text {
   font-size: 16px;
   line-height: 24px;
+}
+
+.blog-pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+
+  .pic {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+      @media (min-width: 768px) {
+        &.small {
+          grid-column: span 1;
+        }
+      }
+  }
 }
 
 .article-header {
@@ -95,6 +130,7 @@
       'button' auto
       / auto;
     gap: 10px 20px;
+
     .pic {
       grid-area: pic;
       max-height: 300px;

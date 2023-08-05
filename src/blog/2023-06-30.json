@@ -9,7 +9,7 @@
         { "type": "text", "content": "Az eltelt időben több nonprofit szervezet munkájában vettem részt, állandó jelleggel vagy alkalmanként." },
         { "type": "text", "content": "Minden évben kétszer csatlakozom a megrendezett szabadtéri matematika versenyhez, voltam többször sporteseményeken önkéntes, itt a vizes világbajnokságot emelem ki, hiszen nekem is mindennapjaim része az úszás. A koronavírus miatti korlátozásokig, régi vágyam teljesült, és kórházban önkénteskedtem segítőként, illetve többször csatlakozok, egy vakokat és látássérülteket összeölelő szervezet programjaihoz." },
         { "type": "img", "content": [
-            { "name": "20230628_185819.jpeg", "style": { "object-position": "center bottom" }, "wrapperStyle": "" }
+            { "name": "20230628_185819.jpeg", "style": { "object-position": "center bottom" } }
         ] },
         { "type": "text", "content": "Érzem, és a közeli környezetemben lévők is elmondták, hogyan változott a személyiségem, ismertem meg jobban önmagam, amikor részt vettem az önkéntes alkalmakon, és mindezzel együtt lett élesebb, valódibb, hogy Afrikában szeretnék egyszer önkéntes munkában közreműködni." },
         { "type": "text", "content": "A bejegyzésem azért született meg, mert úgy látom, hogy biztosan könnyebb egy-egy tapasztalatot, véleményt tartalmazó írást, olvasva érezni, hogy „én is meg tudom csinálni” és „szeretnék önkénteskedni”." },
@@ -28,6 +28,6 @@
         { "type": "text", "content": "Jómagam, álmaimat követve, tavaly újra elkezdtem keresgélni, hogyan is történik az afrikai önkéntes munka, weboldalakat kerestem fel, a közösségi felületen csoportokat követtem, melyek ehhez kapcsolódnak." },
         { "type": "text", "content": "2022. augusztusában került elém a bejegyzés, ahol önkénteseket keresett a Szívemben Született Afrika Egyesület, már a jelentkezésemben is leírtam, hogy ezt égi jelnek tekintem és csatlakozni szeretnék." }
     ],
-    "cover": { "name": "PB_Afrika nap_097-2~2.jpeg", "style": { "object-position":  "center bottom" }, "wrapperStyle": "" }
+    "cover": { "name": "PB_Afrika nap_097-2~2.jpeg", "style": { "object-position":  "center bottom" } }
 }
 

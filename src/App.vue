@@ -144,25 +144,15 @@ section {
   }
 }
 
-.pic-grid,
-.pic-flex {
-  gap: 15px;
-}
-
 .pic-grid {
   display: grid;
   grid-template: auto / 1fr;
+  gap: 15px;
   margin-bottom: 30px;
 
   @media (min-width: 768px) {
     grid-template: auto / 1fr 1fr;
   }
-}
-
-.pic-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .pic img {

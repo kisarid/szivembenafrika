@@ -15,25 +15,25 @@
         { "type": "text", "content": "A protein" },
         { "type": "text", "content": "Ottlétünk alatt kétféle húst kóstolhattunk meg: kecskét és csirkét. Manafwában sokan tartanak kecskét, és nagyon szeretik is. Megkóstoltam a helyiek nagy örömére, de szerintem itthon nem kerül bele a repertoárba (bár a mája egész finom). Ami viszont nagy kedvenc volt, az a tilápia. Manafwában (a hal méretéhez képest) kisebb szeletekben, szószban főzték puhára ennek a nílusi halnak a húsát, de a fővárosban grillezett változatát is kóstolhattuk. A másik halfajta, ami az asztalra került, a fentebb említett silverfish. Ez egy pici édesvízi hal, amely fontos szerepet játszik az alultáplált gyerekek ellátásában, mivel magas a tápértéke. Elsősorban a padlizsánszószban találkozhattunk vele." },
         { "type": "img", "content": [
-            { "name": "photo_2023-05-16 19.14.40.jpeg", "style": { "object-position": "center bottom" }, "wrapperStyle": "" }
+            { "name": "photo_2023-05-16 19.14.40.jpeg", "style": { "object-position": "center bottom" } }
         ] },
         { "type": "text", "content": "Reggeli/desszert" },
         { "type": "text", "content": "Reggelire, illetve desszert gyanánt mindig finomabbnál finomabb gyümölcsöket ehettünk: Ananászt, mangót, maracuját, görögdinnyét, avokádót. Ebéd és vacsi mellé friss dzsúszt is készítettek nekünk a ház körül segítő nők <3 Leírhatatlan, hogy mennyivel finomabbak ott a déli-gyümölcsök, sokkal édesebbek, mint nálunk. Még ha Európában minden is kapható a boltban, ezt az ízt sajnos nem lehet importálni." },
         { "type": "img", "content": [
-            { "name": "photo_2023-05-16 19.14.45.jpeg", "style": { "object-position": "center bottom" }, "wrapperStyle": "" }
+            { "name": "photo_2023-05-16 19.14.45.jpeg", "style": { "object-position": "center bottom" } }
         ] },
         { "type": "text", "content": "Streetfood" },
         { "type": "text", "content": "Még nem esett említés a chapatiról, ami eredetileg egy indiai lepénykenyér, de Ugandában is előszeretettel fogyasztják. Egy helyi továbbfejlesztése a rolex, ami nem más, mint egy chapatiba tekert omlett. A neve az angol rolled eggs-ből származik. Az ugandaiak nagyon büszkék rá, még saját fesztiválja is van 😊 Ízlés szerint fel lehet dobni sajttal, baconnel, avokádóval." },
         { "type": "img", "content": [
-            { "name": "photo_2023-05-16 19.14.51.jpeg", "style": { "object-position": "center bottom" }, "wrapperStyle": { "flex-basis": "calc(50% - 15px)" } },
-            { "name": "photo_2023-05-16 19.15.02.jpeg", "style": { "object-position": "center bottom" }, "wrapperStyle": { "flex-basis": "calc(50% - 15px)" } }
+            { "name": "photo_2023-05-16 19.14.51.jpeg", "style": { "object-position": "center bottom" }, "class": "small" },
+            { "name": "photo_2023-05-16 19.15.02.jpeg", "style": { "object-position": "center bottom" }, "class": "small" }
         ] },
         { "type": "text", "content": "Az igazán bátraknak" },
         { "type": "text", "content": "Az eddig leírtak egy átlagos európai utazó gyomrának nem jelentenek túl nagy kihívást. Az ételek fűszerezése is kellemes volt. Ám akinek mindez túl unalmas, annak az ugandai konyha tartogat extrém falatokat is. Szezonális ínyencség például a rántott szöcske (helyi nevén nsenene), amivel az esős időszakban lehet találkozni. Mi nem láttuk sehol – nem is kerestük – viszont Pannával sokáig tűnődtünk azon, hogy mi történik azokkal a rovarokkal, amelyeknek csak a szárnyuk hevert mindenfelé a ház körül. A misszió vége felé kiderült, hogy nem valami állat eszi meg a szárnyak szerencsétlen tulajdonosait, hanem a helyiek vadásszák le őket, majd megpörkölik és egy kis sóval fogyasztják snack gyanánt. Én most nem voltam elég bátor, hogy megkóstoljam, de talán legközelebb :D" },
         { "type": "img", "content": [
-            { "name": "photo_2023-05-16 19.14.57.jpeg", "style": { "object-position": "center bottom" }, "wrapperStyle": "" }
+            { "name": "photo_2023-05-16 19.14.57.jpeg", "style": { "object-position": "center bottom" } }
         ] }
     ],
-    "cover": { "name": "photo_2023-05-16 19.14.37.jpeg", "style": { "object-position":  "center bottom" }, "wrapperStyle": "" }
+    "cover": { "name": "photo_2023-05-16 19.14.37.jpeg", "style": { "object-position":  "center bottom" } }
 }
 

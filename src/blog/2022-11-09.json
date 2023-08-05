@@ -11,8 +11,8 @@
         {
             "type": "img",
             "content": [
-                { "name": "photo_2022-11-09_18-32-21.jpg", "style": { "object-position": "center bottom" }, "wrapperStyle": { "flex-basis": "calc(50% - 15px)" } },
-                { "name": "photo_2022-11-09_18-32-25.jpg", "style": { "object-position": "center bottom" }, "wrapperStyle": { "flex-basis": "calc(50% - 15px)" } }
+                { "name": "photo_2022-11-09_18-32-21.jpg", "style": { "object-position": "center bottom" }, "class": "small" },
+                { "name": "photo_2022-11-09_18-32-25.jpg", "style": { "object-position": "center bottom" }, "class": "small" }
             ]
         },
         { "type": "text", "content": "Akik régóta követik a Szívemben Született Afrikát, talán még abból az időből, amikor csak egy blog volt, tudhatják, hogy sokat emlegetem, hogy mennyire magától értetődő, természetes és otthonos volt megérkezni Manafwába, hogy kérdés sem fért ahhoz, hogy ott vagyok, ahol lennem kell és dolgom van itt. Nos, azt hiszem, hogy 5 és fél évvel később újra ezt érzem. Megérkeztem egy helyre, ahol magától értetődő, természetes és otthonos lenni és, hogy kérdés sem fér hozzá, hogy ott vagyok, ahol lennem kell és dolgom van itt. Nehéz terep, sok és alapos felkészülést igényel és vitathatatlanul több és másabb jellegű veszélyeket rejthet, mint a manafwai munka, de nagy szükség van a segítségre és mi nem rettenünk meg a kihívásoktól, hanem inkább még nagyobb lelkesedéssel és erőfeszítéssel vetjük bele magunkat." },
