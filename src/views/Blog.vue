@@ -4,7 +4,7 @@
       <div slot="main">Blog</div>
       <div v-if="selectedArticle" slot="description" class="article-header">
         <div class="sub-heading">{{ selectedArticle.title }}</div>
-        <div class="meta">{{ new Date(selectedArticle.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }} | <span class="author">{{ selectedArticle.author }}</span></div>
+        <div class="meta">{{ new Date(selectedArticle.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }}<span class="author" v-if="selectedArticle.author"> | {{ selectedArticle.author }}</span></div>
         <div class="back">
           <router-link :to="'/blog'">← Vissza</router-link> 
         </div>
@@ -12,7 +12,7 @@
     </heading>
     <container v-if="selectedArticle">
       <div class="article-view">
-        <div class="pic">
+        <div class="pic" v-if="selectedArticle.innerCover !== null">
           <img
             :src="require(`@/assets/images/blog/${(selectedArticle.innerCover || selectedArticle.cover).name}`)"
             :style="(selectedArticle.innerCover || selectedArticle.cover).style"
@@ -21,7 +21,7 @@
         </div>
         <div class="blog-text">
           <template v-for="(block, i) in selectedArticle.blocks">
-            <p v-if="block.type === 'text'">{{ block.content }}</p>
+            <p v-if="block.type === 'text'" :class="block.classes" v-html="block.content"></p>
             <div v-if="block.type === 'img'" class="blog-pics">
               <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j">
                 <img
@@ -83,9 +83,23 @@
   line-height: normal;
 }
 
+.blog-header {
+  font-weight: bold;
+}
+
 .blog-text {
   font-size: 16px;
   line-height: 24px;
+}
+
+.quote {
+  padding-left: min(10vw, 4em);
+  padding-right: min(10vw, 4em);
+  font-style: italic;
+}
+
+.j-right {
+  text-align: right;
 }
 
 .blog-pics {
@@ -202,6 +216,11 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2023-08-10f',
+      '2023-08-10e',
+      '2023-08-10d',
+      '2023-08-10c',
+      '2023-08-10b',
       '2023-08-10',
       '2023-07-11',
       '2023-06-30',
@@ -219,13 +238,14 @@ export default class Blog extends Vue {
       '2022-10-29',
       '2022-10-26',
       '2022-10-23',
-    ].filter(v => new Date(`${v} 08:00:00`).getTime() < now)
+    ].filter(v => new Date(`${v.slice(0, 10)} 08:00:00`).getTime() < now)
 
     this.articles = articlesList.map(title => require(`@/blog/${title}.json`))
 
     if (this.$route.params.article) {
       this.selectedArticle = this.articles.find(v => v.id === this.$route.params.article)!
     }
+
     this.$watch(() => this.$route.params.article, (articleId) => {
       this.selectedArticle = this.articles.find(v => v.id === articleId)!
     })

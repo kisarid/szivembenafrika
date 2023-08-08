@@ -11,6 +11,7 @@ export interface Article {
 export type Block = {
     type: 'text'
     content: string
+    classes?: string[]
 } | {
     type: 'list'
     content: string[]
