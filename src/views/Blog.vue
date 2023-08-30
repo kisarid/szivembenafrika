@@ -56,7 +56,7 @@
         </div>
         <div class="text">
           <div class="title sub-heading">{{ article.title }}</div>
-          <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }} | <span class="author">{{ article.author }}</span></div>
+          <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }}<span class="author" v-if="article.author"> | {{ article.author }}</span></div>
           <div class="blog-text">{{ article.blocks.filter(b => b.type === 'text').map(b => b.content).join(' ').slice(0, 500) }}</div>
         </div>
         <div class="to-article">
@@ -216,6 +216,9 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2023-08-31',
+      '2023-08-27',
+      '2023-08-25',
       '2023-08-10f',
       '2023-08-10e',
       '2023-08-10d',
