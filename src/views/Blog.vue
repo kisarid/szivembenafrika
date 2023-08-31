@@ -4,7 +4,7 @@
       <div slot="main">Blog</div>
       <div v-if="selectedArticle" slot="description" class="article-header">
         <div class="sub-heading">{{ selectedArticle.title }}</div>
-        <div class="meta">{{ new Date(selectedArticle.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }}<span class="author" v-if="selectedArticle.author"> | {{ selectedArticle.author }}</span></div>
+        <div class="meta">{{ new Date(selectedArticle.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }}<span v-if="selectedArticle.author"> | </span><span class="author" v-if="selectedArticle.author">{{ selectedArticle.author }}</span></div>
         <div class="back">
           <router-link :to="'/blog'">← Vissza</router-link> 
         </div>
@@ -56,7 +56,7 @@
         </div>
         <div class="text">
           <div class="title sub-heading">{{ article.title }}</div>
-          <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }}<span class="author" v-if="article.author"> | {{ article.author }}</span></div>
+          <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }}<span v-if="article.author"> | </span><span class="author" v-if="article.author">{{ article.author }}</span></div>
           <div class="blog-text">{{ article.blocks.filter(b => b.type === 'text').map(b => b.content).join(' ').slice(0, 500) }}</div>
         </div>
         <div class="to-article">
