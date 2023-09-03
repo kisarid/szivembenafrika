@@ -51,6 +51,7 @@ import { Bio } from '@/interfaces/bio'
 export default class GraduateAGirl extends Vue {
   girls: Bio[] = [
     {
+      id: 'hmoureen',
       name: 'Hasacha Moureen',
       image: 'graduate-a-girl/girls/Hasacha-Moureen.jpeg',
       shortBio: [
@@ -64,6 +65,7 @@ export default class GraduateAGirl extends Vue {
       objectPosition: '50% 10%',
     },
     {
+      id: 'anicholas',
       name: 'Ariho Nicholas',
       image: 'graduate-a-girl/girls/Ariho-Nicholas.jpeg',
       shortBio: [
@@ -79,6 +81,7 @@ export default class GraduateAGirl extends Vue {
       objectPosition: '50% 20%',
     },
     {
+      id: 'njudith',
       name: 'Nasike Judith',
       image: 'graduate-a-girl/girls/Nasike-Judith.jpeg',
       shortBio: [

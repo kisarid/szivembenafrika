@@ -1,4 +1,5 @@
 export interface Bio {
+  id: string
   name: string
   image: string
   imageSmall?: string

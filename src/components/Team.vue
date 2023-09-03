@@ -1,20 +1,39 @@
 <template>
-  <div id="team">
-    <swiper class="swiper" :options="swiperOptions" ref="swiperRef">
-      <swiper-slide v-for="(member, index) in teamMembers" :key="index"
-        ><card
-          :imageName="member.imageSmall || member.image"
-          :title="member.name"
-          :objectPosition="member.objectPosition"
-          v-on:show-modal="showModal(index)"
-          ><div slot="short-bio">{{ member.shortBio }}</div></card
-        ></swiper-slide
-      >
-      <div class="swiper-pagination" slot="pagination"></div>
-      <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
-    </swiper>
-    <div class="modals"></div>
+  <div>
+    <div class="sub-heading">{{ $t('title1') }}</div>
+    <div id="team">
+      <swiper class="swiper" :options="swiperOptions" ref="swiperRef">
+        <swiper-slide v-for="(member, index) in teamMembers" :key="member.id"
+          ><card
+            :imageName="member.imageSmall || member.image"
+            :title="member.name"
+            :objectPosition="member.objectPosition"
+            v-on:show-modal="showModal(member.id)"
+            ><div slot="short-bio">{{ member.shortBio }}</div></card
+          ></swiper-slide
+        >
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
+    </div>
+    <div class="sub-heading">{{ $t('title2') }}</div>
+    <div id="team">
+      <swiper class="swiper" :options="swiperOptions" ref="swiperRef">
+        <swiper-slide v-for="(member, index) in volunteers" :key="member.id"
+          ><card
+            :imageName="member.imageSmall || member.image"
+            :title="member.name"
+            :objectPosition="member.objectPosition"
+            v-on:show-modal="showModal(member.id)"
+            ><div slot="short-bio">{{ member.shortBio }}</div></card
+          ></swiper-slide
+        >
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
+    </div>
   </div>
 </template>
 
@@ -81,13 +100,13 @@ export default class Team extends Vue {
     },
   }
 
-  showModal(index: number) {
+  showModal(id: string) {
     const swiperRef = (this.$refs.swiperRef as any).$swiper
     const isMobile = window.innerWidth < 768
     swiperRef.autoplay.stop()
     this.$modal.show(
       modal,
-      { bio: this.teamMembers[index], index },
+      { bio: [...this.teamMembers, ...this.volunteers].find(m => m.id === id), id },
       {
         width: isMobile ? '90%' : '700px',
         height: 'auto',
@@ -102,6 +121,7 @@ export default class Team extends Vue {
   get teamMembers(): Bio[] {
     return [
       {
+        id: 'kzsofi',
         name: 'Könczöl Zsófi',
         image: 'team/Zsofi.jpg',
         shortBio: this.$i18n.t('kzsofi.shortBio') as string,
@@ -109,6 +129,7 @@ export default class Team extends Vue {
         objectPosition: 'auto',
       },
       {
+        id: 'szbalazs',
         name: 'Szilágyi Balázs',
         image: 'team/Balazs.jpg',
         shortBio: this.$i18n.t('szbalazs.shortBio') as string,
@@ -116,6 +137,7 @@ export default class Team extends Vue {
         objectPosition: '50% 70%',
       },
       {
+        id: 'perzsa',
         name: 'Pocsai Erzsa',
         image: 'team/Erzsa.jpg',
         shortBio: this.$i18n.t('perzsa.shortBio') as string,
@@ -123,6 +145,7 @@ export default class Team extends Vue {
         objectPosition: '50% 20%',
       },
       {
+        id: 'ffbalazs',
         name: 'dr. Farkas Ferenc Balázs',
         image: 'team/FFBalazs.jpg',
         shortBio: this.$i18n.t('ffbalazs.shortBio') as string,
@@ -130,6 +153,7 @@ export default class Team extends Vue {
         objectPosition: 'auto',
       },
       {
+        id: 'vmarci',
         name: 'dr. Végh Marcell',
         image: 'team/Marci.jpg',
         shortBio: this.$i18n.t('vmarci.shortBio') as string,
@@ -137,6 +161,7 @@ export default class Team extends Vue {
         objectPosition: '50% 45%',
       },
       {
+        id: 'kpeter',
         name: 'Király Péter',
         image: 'team/Peti.jpg',
         shortBio: this.$i18n.t('kpeter.shortBio') as string,
@@ -144,6 +169,7 @@ export default class Team extends Vue {
         objectPosition: '50% 25%',
       },
       {
+        id: 'kanna',
         name: 'Kiss Anna',
         image: 'team/Anna.jpg',
         shortBio: this.$i18n.t('kanna.shortBio') as string,
@@ -151,6 +177,7 @@ export default class Team extends Vue {
         objectPosition: '50% 40%',
       },
       {
+        id: 'tklaudia',
         name: 'Tóth Klaudia',
         image: 'team/Klaudia.jpg',
         shortBio: this.$i18n.t('tklaudia.shortBio') as string,
@@ -158,6 +185,7 @@ export default class Team extends Vue {
         objectPosition: '50% 30%',
       },
       {
+        id: 'tliliana',
         name: 'Tóth Liliána',
         image: 'team/Liliana.jpg',
         shortBio: this.$i18n.t('tliliana.shortBio') as string,
@@ -165,6 +193,7 @@ export default class Team extends Vue {
         objectPosition: 'auto',
       },
       {
+        id: 'mpanna',
         name: 'Makó Panna',
         image: 'team/Panna.jpg',
         imageSmall: 'team/Panna_s.jpg',
@@ -173,11 +202,81 @@ export default class Team extends Vue {
         objectPosition: 'center bottom',
       },
       {
+        id: 'njuli',
         name: 'Németh Júlia',
         image: 'team/Juli.jpg',
         shortBio: this.$i18n.t('njuli.shortBio') as string,
         longBio: this.getLongBio('njuli'),
         objectPosition: '50% 40%',
+      }
+    ]
+  }
+
+  get volunteers(): Bio[] {
+    return [
+      {
+        id: 'ibarbi',
+        name: 'Illyés Györfi Barbi',
+        image: 'team/illyes_barbi.jpg',
+        shortBio: this.$i18n.t('ibarbi.shortBio') as string,
+        longBio: this.getLongBio('ibarbi'),
+        objectPosition: 'center 25%',
+      },
+      {
+        id: 'kdori',
+        name: 'Kozári Dóra Tímea',
+        image: 'team/kozari_dori.jpg',
+        shortBio: this.$i18n.t('kdori.shortBio') as string,
+        longBio: this.getLongBio('kdori'),
+        objectPosition: 'center 14%',
+      },
+      {
+        id: 'btunde',
+        name: 'Balogh Tünde',
+        image: 'team/balogh_tunde.jpg',
+        shortBio: this.$i18n.t('btunde.shortBio') as string,
+        longBio: this.getLongBio('btunde'),
+        objectPosition: 'center 30%',
+      },
+      {
+        id: 'sdani',
+        name: 'Steigler Dániel',
+        image: 'team/steigler_dani.jpg',
+        shortBio: this.$i18n.t('sdani.shortBio') as string,
+        longBio: this.getLongBio('sdani'),
+        objectPosition: 'center 25%',
+      },
+      {
+        id: 'magi',
+        name: 'Dr. Musicz Ágnes',
+        image: 'team/musicz_agi.jpg',
+        shortBio: this.$i18n.t('magi.shortBio') as string,
+        longBio: this.getLongBio('magi'),
+        objectPosition: 'center center',
+      },
+      {
+        id: 'zcsenge',
+        name: 'Záhoczky Csenge',
+        image: 'team/zahoczky_csenge.jpg',
+        shortBio: this.$i18n.t('zcsenge.shortBio') as string,
+        longBio: this.getLongBio('zcsenge'),
+        objectPosition: 'center 30%',
+      },
+      {
+        id: 'vjuli',
+        name: 'Vető Julianna',
+        image: 'team/veto_juli.jpg',
+        shortBio: this.$i18n.t('vjuli.shortBio') as string,
+        longBio: this.getLongBio('vjuli'),
+        objectPosition: 'center 30%',
+      },
+      {
+        id: 'dklaudia',
+        name: 'Dankai Klaudia',
+        image: 'team/dankai_klaudia.jpg',
+        shortBio: this.$i18n.t('dklaudia.shortBio') as string,
+        longBio: this.getLongBio('dklaudia'),
+        objectPosition: 'center top',
       }
     ]
   }
@@ -187,6 +286,8 @@ export default class Team extends Vue {
 <i18n>
 {
     "hu": {
+        "title1": "Csapattagok",
+        "title2": "Önkénteseink",
         "kzsofi": {
             "shortBio": "Elnök",
             "longBio": {
@@ -271,9 +372,86 @@ export default class Team extends Vue {
               "2": "A Corvinus Egyetemen végeztem nemzetközi tanulmányok szakon, majd a Bécsi Egyetem politológia mesterszakán szereztem diplomát. Jelenleg a felsőoktatásban dolgozom.",
               "3": "Afrikával az egyetemi éveim alatt kezdtem el foglalkozni, tanulmányaim befejezése után pedig Ghánában tölthettem hat hónapot egy német fejlesztési szervezet gyakornokaként. Bár szakmai pályám egyelőre másképp alakult, tudom, hogy Afrika valamilyen formában mindig szerepet fog játszani az életemben."
             }
+        },
+        "ibarbi": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Illyés Györfi Barbi vagyok, lassan 3 éve a szervezet követője, 1 éve pedig aktív önkéntese. Érdekelnek a kultúrák, a köztük lévő hasonlóságok/különbségek és az emberek. Utóbbira válaszként pszichológiát tanulok, előbbi kíváncsiságot etetve pedig lehetőségeimhez mérten utazok, felfedezek. Na meg olvasok. Bár még sosem jártam Afrikában, valamilyen okból kifolyólag gyerekkorom óta szerelmese vagyok. A kultúra, a minták, az emberek önfeledtsége, a ritmus, amely felér egy szívdobogással… minden vonz. Bízom benne, hogy amíg reggelente szemeim kinyílnak, addig tehetek is valamit az emberiségért, egy szebb jövőjért. Szabad lélek vagyok, amit néha sajnos elfelejtek, de mindig gyorsan visszatalálok magamhoz. Az álmaim nagyok, ambícióim sose hagytak cserben, s ha egyszer kijutok Afrikába, lehet haza sem jövök többé. Magunkba nézni, nyitni mások felé, kíváncsinak lenni és önkénteskedni menő!"
+            }
+        },
+        "kdori": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Az a típusú ember vagyok, aki minden reggel újabb lehetőséget lát a napban és minden este hálával a szívében hajtja álomra a fejét. A szerencse lányának gondolom magam, emellett nagyon tudatosan élem az életem. Megtalálom azokat a dolgokat, amikben ki tudok teljesedni, és azokat az embereket, közösségeket, akik inspirálnak. Az életem egy ilyen csodadarabkája a Szívemben Született Afrika Egyesület is.",
+              "2": "Számomra fontos, hogy olyan önkéntes tevékenységet végezzek, ahol találkoznak az adó és a fogadó fél szükségletei, ezáltal az \"adok-kapok\" kapcsolat kölcsönössé válik. Imádok utazni, nyitott szemmel járni, vonzanak a különböző kultúrák, Afrika világa különösen. A gyermekekkel való foglalkozás pedig a mindennapjaim része, ez éltet igazán. És mikor olyan gyermekeknek adhatok magamból, akiknek igazán szüksége van rá, az felülmúlhatatlan öröm számomra. Nem csupán az egyesület küldetésével és projektjeivel, de működésükkel, elveikkel is teljes mértékben tudok azonosulni. Hiszen valójában nem egy szervezetet választottam, ahova csatlakozni szerettem volna, hanem azokat az embereket, akik azt éltetik. 2022. októberében csatlakoztam az önkéntes csapathoz, de már most úgy érzem, hogy sokkal többet kaptam általuk, mint, amit adhatok."
+            }
+        },
+        "btunde": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Balogh Tünde vagyok, a hétköznapokban könyvelő, de inkább a sokszor mosolygó önkéntes, aki hiszi, hogy ha igazán szeretnénk valamit elérni az életünkben, azt megteremtjük.",
+              "2": "2022. szeptemberében csatlakoztam a Szívemben Született Afrika Egyesülethez. ",
+              "3": "Az önkéntesség körülbelül 7 éve mindennapjaim része, úgy érzem minden egyes ilyen esemény, tevékenység többé tesz az életemben, és előrevisz álmaim megvalósításában. ",
+              "4": "Egy idézet melyet próbálok követni:",
+              "5": "\"Önmagunk megtalálásának legjobb módja, ha elveszünk mások szolgálatában\" /Gandhi/",
+              "6": "Gyerekként arról ábrándoztam, hogy egyszer Afrikában leszek önkéntes, az élet más irányba sodort, de úgy érzem sosem késő teljesíteni a vágyainkat. ",
+              "7": "Az évek alatt több nonprofit szervezettel volt kapcsolatom, ezért tudatosan kerestem egy olyan közösséget, ahol családias a környezet, emberi kapcsolatok alakulnak ki, és fizikailag is láthatom, ahogy megvalósulnak a támogatások. ",
+              "8": "Már az első találkozásoknál éreztem, hogy a legjobbat választottam, és amikor eljön, az ideje biztosan afrikai misszióban veszek részt."
+            }
+        },
+        "sdani": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Steigler Dániel vagyok, és 6 hónapja lehetek tagja ennek a csodás közösségnek.",
+              "2": "Több éves külföldi életem során megtapasztaltam, hogy mennyire szép az emberek sokszínűsége, vallástól, bőrszíntől, nemtől és társadalmi rétegtől függetlenül, ezért is szerettem volna itthon egy hasonlóan nyitott szervezetnek a része lenni.",
+              "3": "Mindig is szerettem volna Önkéntesként támogatni egy magasztosabb cél ügyét, de mindeddig ez háttérbe szorult.",
+              "4": "Afrika a maga pezsgő színes életérzésével, csodálatos állat és növényvilágával, kultúrájával már kisgyerekként lenyűgözött.",
+              "5": "Ebből is adódott, hogy a tenni akarást és az életérzést összekomponálva kötöttem ki a Szívemben Született Afrika közösségénél.",
+              "6": "Hiszem, hogy ezzel a csapattal mind felkészültségünk mind motiváltságunk miatt, ha egy kicsivel is, de jobbá tehetjük a világot."
+            }
+        },
+        "magi": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Életünk igazán nagy dolgainak van egy olyan dimenziója, ami szavakkal csak körbeírható. Az érzések, illatok, gondolatok élménnyé összesűrűsödve adják azokat a mérföldköveket, melyek több év, évtized után is meghatározóak, egy- egy pillanatba összesűrűsödve később is visszahívhatja egy személy, dallam, szó, bármi.",
+              "2": "A novemberi ugandai missziós úttól sok ilyen pillanatot várok. Annyira nagy biztonságérzetet ad a rendszeres afrikai missziós akadémiai nap, ahol havonta találkozhatunk egymással, közvetetten átélhetjük korábbi missziók történetét, az önismereti feladatok nekem nagyon megerősítőek.",
+              "3": "Miért pont Afrika? Mert egzotikus, távoli, ahol nagy a szükség, ahol talán könnyebben elfeledkezhet önmagáról az ember. Ahol materialista mérce szerint szegénység van, mégis megtapasztalható az ott élő emberek derűje, hálája az apró, mindennapi dolgokért. ",
+              "4": "Gyermekorvosként, nőként nagyon érdekel, hogy a szülést, anyaságot, gyermeknevelést hogyan élik meg az ugandai nők. Hogy a sok különbözőség, távolság mellett mi az, ami közös bennünk.",
+              "5": "Miért önkéntesség? Azért, mert “ Nagyobb boldogság adni, mint kapni”. (Apostolok Cselekedetei 20:35)"
+            }
+        },
+        "zcsenge": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Valamit tenni kell… Valamit muszáj – gondolta a hatéves énem, és összegyűjtötte az összes zsebpénzét, hogy az Ökumenikus Segélyszervezeten keresztül eljuttassa az árvíz károsultjainak.",
+              "2": "Záhoczky Csenge vagyok, külpolitikai és nemzetközi biztonság- és védelempolitikai szakértő, a gyerekek csodálója, örök idealista.",
+              "3": "A környezetem mindig is egyfajta „gyereksuttogónak” tartott, már nagyobbacska koromtól kezdve tapadtak rám a gyerekek. Sokáig mindenki azt hitte, egyszer majd óvónő leszek. A mindig is bennem motoszkáló segíteni akarás, az emberek iránti elhivatottság azonban úgy érzem, jobban ki tud teljesedni a humanitárius segítségnyújtásban, egy gyermek- és nőjogokkal foglalkozó életútban.",
+              "4": "Zsófival még évekkel ezelőtt, egy másik szervezet önkénteseiként ismertük meg egymást. Amikor megtudtam, hogy megalapította a Szívemben Született Afrika Egyesületet, kétség sem férhetett hozzá, hogy az ő csapatának tagja szeretnék lenni. Úgy érzem ugyanis, hogy Zsófi és az én szívemben ugyanaz lakozik: ugyanaz a szeretet az emberek iránt, ugyanaz a belső késztetés, hogy mások életét, ha csak egy hajszálnyival is, de jobbá, könnyebbé, szebbé, békésebbé tegyük. ",
+              "5": "Hiszen ahogy a Talmud mondja: aki egy embert megment, az egész világot menti meg."
+            }
+        },
+        "vjuli": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Vető Julianna vagyok, és két és fél éve önkénteskedek a Szívemben Született Afrika csapatánál. Ezalatt a rövid idő alatt, nagyon sok élményben részesültem, és rengeteg fantasztikus embert ismertem meg.",
+              "2": "Gyerekkori álmom volt, hogy egyszer afrikai gyerekekkel foglalkozzak, de sosem gondoltam, hogy erre tényleg van lehetőségem. A Covid alatt találkoztam a szervezettel, amikor jelképes örökbefogadó szülőket kerestek. Akkor már nem volt kérdés, hogy csatlakozzak a csapathoz, és örökbefogadják egy gyermeket. Nagyon szerencsés vagyok, mert egy év önkénteskedés után sikerült kijutnom a Szervezettel Manafwába és megismerkedni az örökbefogadott kislánnyommal, és a közösség valamennyi tagjával. Ez egy életre szóló élmény volt számomra, és azóta is mindig emlékeztet arra, hogy ne adjuk fel az álmainkat.",
+              "3": "A családommal, egy kis vegetáriánus éttermet üzemeltetünk Buda szívében, a Szelence Cafét. Az étterem a gyerekkori lakásunkból lett átalakítva, és mi továbbra is a házban élünk. Nagyon fontos számomra a barátságos, otthonos környezet és a család összetartása. Ezért is szívügyem a jövőben minél több manafwai családot segíteni, hogy minél kevesebb családnak kelljen szétszakadni.",
+              "4": "A szervezetnek köszönhetően rengeteg fantasztikus embert ismerhettem meg, amikből mára szoros barátságok, baráti társaságok alakultak ki. És ennél fantasztikusabb dolog nincs számomra, mint amikor egy közös cél érdekében, különböző emberek össze tudnak kapcsolódni."
+            }
+        },
+        "dklaudia": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Azzal, hogy valaki önkéntessé válik, megvan a remény arra, hogy jobbá, szebbé tegyük a világot! <3",
+              "2": "Több mint egy éve kezdtem el keresni egy olyan szervezetet, akik Afrikában élő gyerekeknek segítenek. Mindig is érdekelt Afrika, emiatt a terveim között szerepelt, hogy egyszer az életben mindenképpen szeretnék oda eljutni és segíteni az ott élő gyerekeknek amiben tudok. Februárban csatlakoztam ehhez a csodálatos csapathoz, ahol már az első alkalommal éreztem, hogy nagyon jó helyre csöppentem. Jó érezni, hogy mennyire fontos a szervezetnek, hogy folyamatosan foglalkoznak azzal, hogy felkészítsenek minket egy lehetséges misszióra, emellett pedig oda figyelnek arra is, hogy tényleg egy nagyon jó közösség részévé váljunk. ",
+              "3": "Biztosan felmerült benned is a kérdés, hogy miért pont a Szívemben Született Afrika csapatához jelentkezz önkéntesnek?",
+              "4": "A válasz egyszerű: Ha szeretnél egy szuper csapat részévé válni, ahol szívvel-lélekkel minden nap azon dolgozunk, hogy segítsünk a gyerekeknek egy szebb jövőt elérni, akkor ne habozz, itt a helyed! 😊"
+            }
         }
     },
     "en": {
+        "title1": "Team Members",
+        "title2": "Our Volunteers",
         "kzsofi": {
             "shortBio": "President",
             "longBio": {
@@ -356,6 +534,81 @@ export default class Team extends Vue {
               "1": "My name is Júlia Németh, associate member and coordinator of the Association’s child support and Graduate a Girl programmes. I joined „Africa Born in my Heart” in early 2022, however, I have been following the Association’s work from the very beginning.",
               "2": "I hold a BA degree in International Studies and an MA degree in Political Science which I obtained at Corvinus University Budapest and the University of Vienna, respectively. At the moment, I am working in the field of education management.",
               "3": "I developed an interest in Africa during my university studies. After graduation, I had the opportunity to spend six months in Ghana interning for a German development agency. Even though my professional path took me in another direction – at least for the time being – I know that Africa will always play a part in my life one way or another."
+            }
+        },
+        "ibarbi": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Illyés Györfi Barbi vagyok, lassan 3 éve a szervezet követője, 1 éve pedig aktív önkéntese. Érdekelnek a kultúrák, a köztük lévő hasonlóságok/különbségek és az emberek. Utóbbira válaszként pszichológiát tanulok, előbbi kíváncsiságot etetve pedig lehetőségeimhez mérten utazok, felfedezek. Na meg olvasok. Bár még sosem jártam Afrikában, valamilyen okból kifolyólag gyerekkorom óta szerelmese vagyok. A kultúra, a minták, az emberek önfeledtsége, a ritmus, amely felér egy szívdobogással… minden vonz. Bízom benne, hogy amíg reggelente szemeim kinyílnak, addig tehetek is valamit az emberiségért, egy szebb jövőjért. Szabad lélek vagyok, amit néha sajnos elfelejtek, de mindig gyorsan visszatalálok magamhoz. Az álmaim nagyok, ambícióim sose hagytak cserben, s ha egyszer kijutok Afrikába, lehet haza sem jövök többé. Magunkba nézni, nyitni mások felé, kíváncsinak lenni és önkénteskedni menő!"
+            }
+        },
+        "kdori": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Az a típusú ember vagyok, aki minden reggel újabb lehetőséget lát a napban és minden este hálával a szívében hajtja álomra a fejét. A szerencse lányának gondolom magam, emellett nagyon tudatosan élem az életem. Megtalálom azokat a dolgokat, amikben ki tudok teljesedni, és azokat az embereket, közösségeket, akik inspirálnak. Az életem egy ilyen csodadarabkája a Szívemben Született Afrika Egyesület is.",
+              "2": "Számomra fontos, hogy olyan önkéntes tevékenységet végezzek, ahol találkoznak az adó és a fogadó fél szükségletei, ezáltal az \"adok-kapok\" kapcsolat kölcsönössé válik. Imádok utazni, nyitott szemmel járni, vonzanak a különböző kultúrák, Afrika világa különösen. A gyermekekkel való foglalkozás pedig a mindennapjaim része, ez éltet igazán. És mikor olyan gyermekeknek adhatok magamból, akiknek igazán szüksége van rá, az felülmúlhatatlan öröm számomra. Nem csupán az egyesület küldetésével és projektjeivel, de működésükkel, elveikkel is teljes mértékben tudok azonosulni. Hiszen valójában nem egy szervezetet választottam, ahova csatlakozni szerettem volna, hanem azokat az embereket, akik azt éltetik. 2022. októberében csatlakoztam az önkéntes csapathoz, de már most úgy érzem, hogy sokkal többet kaptam általuk, mint, amit adhatok."
+            }
+        },
+        "btunde": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Balogh Tünde vagyok, a hétköznapokban könyvelő, de inkább a sokszor mosolygó önkéntes, aki hiszi, hogy ha igazán szeretnénk valamit elérni az életünkben, azt megteremtjük.",
+              "2": "2022. szeptemberében csatlakoztam a Szívemben Született Afrika Egyesülethez. ",
+              "3": "Az önkéntesség körülbelül 7 éve mindennapjaim része, úgy érzem minden egyes ilyen esemény, tevékenység többé tesz az életemben, és előrevisz álmaim megvalósításában. ",
+              "4": "Egy idézet melyet próbálok követni:",
+              "5": "\"Önmagunk megtalálásának legjobb módja, ha elveszünk mások szolgálatában\" /Gandhi/",
+              "6": "Gyerekként arról ábrándoztam, hogy egyszer Afrikában leszek önkéntes, az élet más irányba sodort, de úgy érzem sosem késő teljesíteni a vágyainkat.",
+              "7": "Az évek alatt több nonprofit szervezettel volt kapcsolatom, ezért tudatosan kerestem egy olyan közösséget, ahol családias a környezet, emberi kapcsolatok alakulnak ki, és fizikailag is láthatom, ahogy megvalósulnak a támogatások. ",
+              "8": "Már az első találkozásoknál éreztem, hogy a legjobbat választottam, és amikor eljön, az ideje biztosan afrikai misszióban veszek részt."
+            }
+        },
+        "sdani": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Steigler Dániel vagyok, és 6 hónapja lehetek tagja ennek a csodás közösségnek.",
+              "2": "Több éves külföldi életem során megtapasztaltam, hogy mennyire szép az emberek sokszínűsége, vallástól, bőrszíntől, nemtől és társadalmi rétegtől függetlenül, ezért is szerettem volna itthon egy hasonlóan nyitott szervezetnek a része lenni.",
+              "3": "Mindig is szerettem volna Önkéntesként támogatni egy magasztosabb cél ügyét, de mindeddig ez háttérbe szorult.",
+              "4": "Afrika a maga pezsgő színes életérzésével, csodálatos állat és növényvilágával, kultúrájával már kisgyerekként lenyűgözött.",
+              "5": "Ebből is adódott, hogy a tenni akarást és az életérzést összekomponálva kötöttem ki a Szívemben Született Afrika közösségénél.",
+              "6": "Hiszem, hogy ezzel a csapattal mind felkészültségünk mind motiváltságunk miatt, ha egy kicsivel is, de jobbá tehetjük a világot."
+            }
+        },
+        "magi": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Életünk igazán nagy dolgainak van egy olyan dimenziója, ami szavakkal csak körbeírható. Az érzések, illatok, gondolatok élménnyé összesűrűsödve adják azokat a mérföldköveket, melyek több év, évtized után is meghatározóak, egy- egy pillanatba összesűrűsödve később is visszahívhatja egy személy, dallam, szó, bármi.",
+              "2": "A novemberi ugandai missziós úttól sok ilyen pillanatot várok. Annyira nagy biztonságérzetet ad a rendszeres afrikai missziós akadémiai nap, ahol havonta találkozhatunk egymással, közvetetten átélhetjük korábbi missziók történetét, az önismereti feladatok nekem nagyon megerősítőek.",
+              "3": "Miért pont Afrika? Mert egzotikus, távoli, ahol nagy a szükség, ahol talán könnyebben elfeledkezhet önmagáról az ember. Ahol materialista mérce szerint szegénység van, mégis megtapasztalható az ott élő emberek derűje, hálája az apró, mindennapi dolgokért. ",
+              "4": "Gyermekorvosként, nőként nagyon érdekel, hogy a szülést, anyaságot, gyermeknevelést hogyan élik meg az ugandai nők. Hogy a sok különbözőség, távolság mellett mi az, ami közös bennünk.",
+              "5": "Miért önkéntesség? Azért, mert “ Nagyobb boldogság adni, mint kapni”. ( Apostolok Cselekedetei 20:35)"
+            }
+        },
+        "zcsenge": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Valamit tenni kell… Valamit muszáj – gondolta a hatéves énem, és összegyűjtötte az összes zsebpénzét, hogy az Ökumenikus Segélyszervezeten keresztül eljuttassa az árvíz károsultjainak.",
+              "2": "Záhoczky Csenge vagyok, külpolitikai és nemzetközi biztonság- és védelempolitikai szakértő, a gyerekek csodálója, örök idealista.",
+              "3": "A környezetem mindig is egyfajta „gyereksuttogónak” tartott, már nagyobbacska koromtól kezdve tapadtak rám a gyerekek. Sokáig mindenki azt hitte, egyszer majd óvónő leszek. A mindig is bennem motoszkáló segíteni akarás, az emberek iránti elhivatottság azonban úgy érzem, jobban ki tud teljesedni a humanitárius segítségnyújtásban, egy gyermek- és nőjogokkal foglalkozó életútban.",
+              "4": "Zsófival még évekkel ezelőtt, egy másik szervezet önkénteseiként ismertük meg egymást. Amikor megtudtam, hogy megalapította a Szívemben Született Afrika Egyesületet, kétség sem férhetett hozzá, hogy az ő csapatának tagja szeretnék lenni. Úgy érzem ugyanis, hogy Zsófi és az én szívemben ugyanaz lakozik: ugyanaz a szeretet az emberek iránt, ugyanaz a belső késztetés, hogy mások életét, ha csak egy hajszálnyival is, de jobbá, könnyebbé, szebbé, békésebbé tegyük. ",
+              "5": "Hiszen ahogy a Talmud mondja: aki egy embert megment, az egész világot menti meg."
+            }
+        },
+        "vjuli": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Vető Julianna vagyok, és két és fél éve önkénteskedek a Szívemben Született Afrika csapatánál. Ezalatt a rövid idő alatt, nagyon sok élményben részesültem, és rengeteg fantasztikus embert ismertem meg.",
+              "2": "Gyerekkori álmom volt, hogy egyszer afrikai gyerekekkel foglalkozzak, de sosem gondoltam, hogy erre tényleg van lehetőségem. A Covid alatt találkoztam a szervezettel, amikor jelképes örökbefogadó szülőket kerestek. Akkor már nem volt kérdés, hogy csatlakozzak a csapathoz, és örökbefogadják egy gyermeket. Nagyon szerencsés vagyok, mert egy év önkénteskedés után sikerült kijutnom a Szervezettel Manafwába és megismerkedni az örökbefogadott kislánnyommal, és a közösség valamennyi tagjával. Ez egy életre szóló élmény volt számomra, és azóta is mindig emlékeztet arra, hogy ne adjuk fel az álmainkat.",
+              "3": "A családommal, egy kis vegetáriánus éttermet üzemeltetünk Buda szívében, a Szelence Cafét. Az étterem a gyerekkori lakásunkból lett átalakítva, és mi továbbra is a házban élünk. Nagyon fontos számomra a barátságos, otthonos környezet és a család összetartása. Ezért is szívügyem a jövőben minél több manafwai családot segíteni, hogy minél kevesebb családnak kelljen szétszakadni.",
+              "4": "A szervezetnek köszönhetően rengeteg fantasztikus embert ismerhettem meg, amikből mára szoros barátságok, baráti társaságok alakultak ki. És ennél fantasztikusabb dolog nincs számomra, mint amikor egy közös cél érdekében, különböző emberek össze tudnak kapcsolódni."
+            }
+        },
+        "dklaudia": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Azzal, hogy valaki önkéntessé válik, megvan a remény arra, hogy jobbá, szebbé tegyük a világot! <3",
+              "2": "Több mint egy éve kezdtem el keresni egy olyan szervezetet, akik Afrikában élő gyerekeknek segítenek. Mindig is érdekelt Afrika, emiatt a terveim között szerepelt, hogy egyszer az életben mindenképpen szeretnék oda eljutni és segíteni az ott élő gyerekeknek amiben tudok. Februárban csatlakoztam ehhez a csodálatos csapathoz, ahol már az első alkalommal éreztem, hogy nagyon jó helyre csöppentem. Jó érezni, hogy mennyire fontos a szervezetnek, hogy folyamatosan foglalkoznak azzal, hogy felkészítsenek minket egy lehetséges misszióra, emellett pedig oda figyelnek arra is, hogy tényleg egy nagyon jó közösség részévé váljunk. ",
+              "3": "Biztosan felmerült benned is a kérdés, hogy miért pont a Szívemben Született Afrika csapatához jelentkezz önkéntesnek?",
+              "4": "A válasz egyszerű: Ha szeretnél egy szuper csapat részévé válni, ahol szívvel-lélekkel minden nap azon dolgozunk, hogy segítsünk a gyerekeknek egy szebb jövőt elérni, akkor ne habozz, itt a helyed! 😊"
             }
         }
     }
