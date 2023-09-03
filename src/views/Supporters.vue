@@ -49,7 +49,6 @@ import heading from '@/components/moyo/heading.vue'
 export default class Supporters extends Vue {
   supporters = [
     { link: 'https://hungaryhelps.gov.hu/', logo: require('@/assets/icons/logo-hunhelps.png') },
-    { link: 'https://www.onkentesliga.hu/', logo: require('@/assets/icons/logo-mol.png') },
     { link: 'https://emilla.me/', logo: require('@/assets/icons/logo-emilla.png') },
     { link: 'https://poloneked.hu/', logo: require('@/assets/icons/logo-poloneked.png') },
     { link: 'https://www.digitalpress.hu/', logo: require('@/assets/icons/logo-digitalpress.png') },
@@ -57,6 +56,10 @@ export default class Supporters extends Vue {
     { link: 'https://www.purelifefoundation.eu/', logo: require('@/assets/icons/logo-purelife.jpg') },
     { link: 'https://www.facebook.com/dorinkastudiohungary/', logo: require('@/assets/icons/logo-dorinka.png') },
     { link: 'https://zsolya.com/', logo: require('@/assets/icons/logo-zsolya.png') },
+    { link: 'https://wanderergraphic.com/', logo: require('@/assets/icons/logo_wanderergraphic.png') },
+    { link: 'https://www.czikkcakkdesign.com/', logo: require('@/assets/icons/logo_panni.png') },
+    { link: 'https://www.szelencecafe.hu/', logo: require('@/assets/icons/logo_szelence.png') },
+    { link: 'https://zugmuhely.com/', logo: require('@/assets/icons/logo-zug.png') },
   ]
 }
 </script>
