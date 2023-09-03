@@ -13,7 +13,7 @@
           />
         </div>
         <p>{{ $t('p2') }}</p>
-        <p>{{ $t('p3.1') }}<a href="mailto:info@szivembenafrika.org">info@szivembenafrika.org</a>{{ $t('p3.2') }}</p>
+        <p>{{ $t('p3.1') }}<a href="mailto:gyermektamogatas@szivembenafrika.org">gyermektamogatas@szivembenafrika.org</a>{{ $t('p3.2') }}</p>
         <div class="pic">
           <img
             src="@/assets/images/support-children/gyermektamogatas-2.jpg"

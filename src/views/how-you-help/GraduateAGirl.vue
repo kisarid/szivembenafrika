@@ -12,7 +12,7 @@
             <p>{{ $t('p2') }}</p>
             <p>{{ $t('p3') }}</p>
             <p>{{ $t('p4') }}</p>
-            <p>{{ $t('p5.1') }}<a href="mailto:info@szivembenafrika.org">info@szivembenafrika.org</a>{{ $t('p5.2') }}</p>
+            <p>{{ $t('p5.1') }}<a href="mailto:gyermektamogatas@szivembenafrika.org">gyermektamogatas@szivembenafrika.org</a>{{ $t('p5.2') }}</p>
           </div>
           <div class="pic">
             <img
