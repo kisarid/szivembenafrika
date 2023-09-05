@@ -25,8 +25,8 @@
         </div>
         <div>
           <b>Email: </b
-          ><a href="mailto:info@szivembenafrika.org"
-            >info@szivembenafrika.org</a
+          ><a href="mailto:szivembenafrika.official@gmail.com"
+            >szivembenafrika.official@gmail.com</a
           >
         </div>
         <div>

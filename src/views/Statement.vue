@@ -7,6 +7,7 @@
       <section>
         <div class="sub-heading">A kettős könyvvitelt vezető egyéb szervezet egyszerűsített éves
           beszámolója és közhasznúsági melléklet</div>
+        <a href="/files/szivembenafrika_beszamolo_2022.pdf">2022</a>
         <a href="/files/szivembenafrika_beszamolo_2021.pdf">2021</a>
         <a href="/files/szivembenafrika_beszamolo_2020.pdf">2020</a>
       </section>

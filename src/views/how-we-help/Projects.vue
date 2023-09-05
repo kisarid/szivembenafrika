@@ -71,7 +71,6 @@
         <p>{{ $t('5.p3') }}</p>
         <div class="sub-heading center">{{ $t('6.title') }}</div>
         <p>{{ $t('6.p1') }}</p>
-        <p>{{ $t('6.p2') }}</p>
         <div class="pic-grid">
           <div class="pic">
             <img
@@ -214,8 +213,7 @@ export default class Projects extends Vue {}
         },
         "6": {
             "title": "Gyermektámogatási program",
-            "p1": "Hiszünk abban, hogy minden gyermeknek jár a boldog, biztonságos gyerekkor, az oktatás és az esély egy jó életre. Ugandában sajnos nem ingyenes az oktatás és mivel a családok nagy része a szegénységi küszöb alatt él, az, hogy iskolába járjon, egy gyerek luxusnak számít. Gyermektámogatási programunk keretében havi 5000Ft-os adományért a támogató jelképes örökbefogadó szülővé válhat. Ez az az összeg, amely fedezi egy gyerkőc oktatását, tanszereit, étkezését és szükség esetén az orvosi ellátását. Mi pedig rendszeres időközönként hírt adunk a gyerkőc fejlődéséről, tanulmányi eredményeiről, fontosabb életeseményeiről, valamint küldünk róla fotókat, videókat.",
-            "p2": "A jelképes örökbefogadó szülőkre váró gyermekek fotóit és történeteit a „Gyermektámogatás” menüpont alatt találod."
+            "p1": "Hiszünk abban, hogy minden gyermeknek jár a boldog, biztonságos gyerekkor, az oktatás és az esély egy jó életre. Ugandában sajnos nem ingyenes az oktatás és mivel a családok nagy része a szegénységi küszöb alatt él, az, hogy iskolába járjon, egy gyerek luxusnak számít. Gyermektámogatási programunk keretében havi 6000Ft-os adományért a támogató jelképes örökbefogadó szülővé válhat. Ez az az összeg, amely fedezi egy gyerkőc oktatását, tanszereit, étkezését és szükség esetén az orvosi ellátását. Mi pedig rendszeres időközönként hírt adunk a gyerkőc fejlődéséről, tanulmányi eredményeiről, fontosabb életeseményeiről, valamint küldünk róla fotókat, videókat."
         },
         "7": {
             "title": "„Shine” Iskolafejlesztési program",
@@ -226,8 +224,8 @@ export default class Projects extends Vue {}
         },
         "8": {
             "title": "Graduate a Girl - oktatástámogatási program",
-            "p1": "A lányok oktatása az egyik legerősebb és leghatékonyabb fegyver, amit bevethetünk a globális szegénység felszámolására. Manafwában jelenleg a lányok többsége maximum az általános iskola 5.- 6. osztályáig jut el. 13 -14 évesen kell feleséggé válniuk és nem sokkal idősebbek akkor sem, amikor első gyermekükkel várandósak lesznek. A program azzal a céllal indul útjára, hogy megakadályozzuk, hogy ezeknek a lányoknak az élete és sorsa megpecsételődjön pusztán az által, hogy hová születtek, hogy segítsük őket abban, hogy eljuthassanak a középiskolai érettségiig. Havi 6500Ft-os adománnyal segítheti a támogató egy kamasz lány oktatását. Ez az összeg fedezi az oktatását és szükség esetén az orvosi ellátását.",
-            "p2": "A programról bővebben a „Graduate a Girl” menüpont alatt olvashatsz, és itt találod a támogatóra váró lányoknak a fotóját és történetét."
+            "p1": "A lányok oktatása az egyik legerősebb és leghatékonyabb fegyver, amit bevethetünk a globális szegénység felszámolására. Manafwában jelenleg a lányok többsége maximum az általános iskola 5.- 6. osztályáig jut el. 13 -14 évesen kell feleséggé válniuk és nem sokkal idősebbek akkor sem, amikor első gyermekükkel várandósak lesznek. A program azzal a céllal indul útjára, hogy megakadályozzuk, hogy ezeknek a lányoknak az élete és sorsa megpecsételődjön pusztán az által, hogy hová születtek, hogy segítsük őket abban, hogy eljuthassanak a középiskolai érettségiig. Havi 7800Ft-os adománnyal segítheti a támogató egy kamasz lány oktatását. Ez az összeg fedezi az oktatását és szükség esetén az orvosi ellátását.",
+            "p2": "A programról bővebben a „Graduate a Girl” menüpont alatt olvashatsz."
         },
         "9": {
             "title": "Egészségügyi program",
@@ -295,8 +293,7 @@ export default class Projects extends Vue {}
         },
         "6": {
             "title": "Child sponsorship programme",
-            "p1": "We believe in that all children should have a happy and safe childhood, and all should have access to education and have a chance for a better life. Unfortunately, the education is not free in Uganda and because most of the families live in poverty, it’s a luxury to send the children to school. As a part of this project, the sponsor can become symbolically the adoptive parent of a child, for a monthly 5000 HUF donation. This donation will cover the child’s education, books, meals and their healthcare as and when it’s necessary. In return, we will send regular updates about the child’s development, grades, important life events and we will also send photos and videos of them.",
-            "p2": "You can find the kids, who are still waiting for sponsors, in the “Sponsor a child” section of the website."
+            "p1": "We believe in that all children should have a happy and safe childhood, and all should have access to education and have a chance for a better life. Unfortunately, the education is not free in Uganda and because most of the families live in poverty, it’s a luxury to send the children to school. As a part of this project, the sponsor can become symbolically the adoptive parent of a child, for a monthly 6000 HUF donation. This donation will cover the child’s education, books, meals and their healthcare as and when it’s necessary. In return, we will send regular updates about the child’s development, grades, important life events and we will also send photos and videos of them."
         },
         "7": {
             "title": "“Shine” school development project",
@@ -307,8 +304,8 @@ export default class Projects extends Vue {}
         },
         "8": {
             "title": "Graduate a Girl – education sponsorship programme",
-            "p1": "The girls’ education is one of the most powerful weapon we can use to put a stop to global poverty. The majority of girls in Manafwa only finishes Year 9 - at the most - in school. They have to get married when they are only 13-14 year of age, and not much older when they become pregnant with their first child. We started this programme with the aim to stop the burden of where they were born to, will decide the faith of their future, and to help them get to their A-levels. You can help the girls with a monthly 6500 HUF sponsorship. This amount will cover their education and health care as and when it’s needed.",
-            "p2": "You can read more about the programme under the “Graduate a Girl” section on the website, and you can also find the photos and background information of the girls who are still waiting for a sponsor."
+            "p1": "The girls’ education is one of the most powerful weapon we can use to put a stop to global poverty. The majority of girls in Manafwa only finishes Year 9 - at the most - in school. They have to get married when they are only 13-14 year of age, and not much older when they become pregnant with their first child. We started this programme with the aim to stop the burden of where they were born to, will decide the faith of their future, and to help them get to their A-levels. You can help the girls with a monthly 7800 HUF sponsorship. This amount will cover their education and health care as and when it’s needed.",
+            "p2": "You can read more about the programme under the “Graduate a Girl” section on the website."
         },
         "9": {
             "title": "Healthcare project",

@@ -13,7 +13,7 @@
           />
         </div>
         <p>{{ $t('p2') }}</p>
-        <p>{{ $t('p3.1') }}<a href="mailto:info@szivembenafrika.org">info@szivembenafrika.org</a>{{ $t('p3.2') }}</p>
+        <p>{{ $t('p3.1') }}<a href="mailto:gyermektamogatas@szivembenafrika.org">gyermektamogatas@szivembenafrika.org</a>{{ $t('p3.2') }}</p>
         <div class="pic">
           <img
             src="@/assets/images/support-children/gyermektamogatas-2.jpg"
@@ -55,6 +55,7 @@ import { ChildBio } from '@/interfaces/bio'
 export default class SupportChildren extends Vue {
   children: ChildBio[] = [
     {
+      id: '',
       name: 'Khainza Willian',
       image: 'support-children/children/Khainza-Willian.jpg',
       shortBio: [
@@ -71,6 +72,7 @@ export default class SupportChildren extends Vue {
       isSupported: true
     },
     {
+      id: '',
       name: 'Kitutu Marion',
       image: 'support-children/children/Kitutu-Marion.jpg',
       shortBio: ['Kor: 9', 'Óvodai csoport: nagycsoport', 'Testvérek száma: 7'],
@@ -83,6 +85,7 @@ export default class SupportChildren extends Vue {
       isSupported: true
     },
     {
+      id: '',
       name: 'Khatete Nathan',
       image: 'support-children/children/Khatete-Nathan.jpg',
       shortBio: [
@@ -100,6 +103,7 @@ export default class SupportChildren extends Vue {
       isSupported: true
     },
     {
+      id: '',
       name: 'Maloba Morgan',
       image: 'support-children/children/Maloba-Morgan.jpg',
       shortBio: [
@@ -118,6 +122,7 @@ export default class SupportChildren extends Vue {
       isSupported: true
     },
     {
+      id: '',
       name: 'Wanganga Tob',
       image: 'support-children/children/Wanganga-Tob.jpg',
       shortBio: ['Kor: 4', 'Óvodai csoport: kis csoport', 'Testvérek száma: 1'],
@@ -131,6 +136,7 @@ export default class SupportChildren extends Vue {
       isSupported: true
     },
     {
+      id: '',
       name: 'Khatete Nathan Lule',
       image: 'support-children/children/Nathan-Lule.jpg',
       shortBio: [
@@ -147,6 +153,7 @@ export default class SupportChildren extends Vue {
       isSupported: true
     },
     {
+      id: '',
       name: 'Katete Nathan',
       image: 'support-children/children/Katete-Nathan.jpg',
       shortBio: ['Kor: 4', 'Óvodai csoport: kis csoport', 'Testvérek száma: 1'],
@@ -160,6 +167,7 @@ export default class SupportChildren extends Vue {
       isSupported: true
     },
     {
+      id: '',
       name: 'Natsambi Raymond',
       image: 'support-children/children/Natsambi-Raymond.jpg',
       shortBio: [
@@ -176,6 +184,7 @@ export default class SupportChildren extends Vue {
       isSupported: true
     },
     {
+      id: '',
       name: 'Waneluba Isiah',
       image: 'support-children/children/Waneluba-Isiah.jpg',
       shortBio: [

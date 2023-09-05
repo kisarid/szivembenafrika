@@ -12,7 +12,7 @@
             <p>{{ $t('p2') }}</p>
             <p>{{ $t('p3') }}</p>
             <p>{{ $t('p4') }}</p>
-            <p>{{ $t('p5.1') }}<a href="mailto:info@szivembenafrika.org">info@szivembenafrika.org</a>{{ $t('p5.2') }}</p>
+            <p>{{ $t('p5.1') }}<a href="mailto:gyermektamogatas@szivembenafrika.org">gyermektamogatas@szivembenafrika.org</a>{{ $t('p5.2') }}</p>
           </div>
           <div class="pic">
             <img
@@ -51,6 +51,7 @@ import { Bio } from '@/interfaces/bio'
 export default class GraduateAGirl extends Vue {
   girls: Bio[] = [
     {
+      id: 'hmoureen',
       name: 'Hasacha Moureen',
       image: 'graduate-a-girl/girls/Hasacha-Moureen.jpeg',
       shortBio: [
@@ -64,6 +65,7 @@ export default class GraduateAGirl extends Vue {
       objectPosition: '50% 10%',
     },
     {
+      id: 'anicholas',
       name: 'Ariho Nicholas',
       image: 'graduate-a-girl/girls/Ariho-Nicholas.jpeg',
       shortBio: [
@@ -79,6 +81,7 @@ export default class GraduateAGirl extends Vue {
       objectPosition: '50% 20%',
     },
     {
+      id: 'njudith',
       name: 'Nasike Judith',
       image: 'graduate-a-girl/girls/Nasike-Judith.jpeg',
       shortBio: [
