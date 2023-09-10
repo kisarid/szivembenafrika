@@ -16,9 +16,11 @@ export type Block = {
     type: 'list'
     content: string[]
     listType: 'ul' | 'ol'
+    classes?: string[]
 } | {
     type: 'img'
     content: Img[]
+    classes?: string[]
 }
 
 export type Img = {

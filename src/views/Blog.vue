@@ -22,7 +22,7 @@
         <div class="blog-text">
           <template v-for="(block, i) in selectedArticle.blocks">
             <p v-if="block.type === 'text'" :class="block.classes" v-html="block.content"></p>
-            <div v-if="block.type === 'img'" class="blog-pics">
+            <div v-if="block.type === 'img'" class="blog-pics" :class="block.classes">
               <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j">
                 <img
                   :src="require(`@/assets/images/blog/${img.name}`)"
@@ -31,10 +31,10 @@
                   <span v-if="img.caption" class="caption">{{ img.caption }}</span>
               </div>
             </div>
-            <ul v-if="block.type === 'list' && block.listType === 'ul'">
+            <ul v-if="block.type === 'list' && block.listType === 'ul'" :class="block.classes">
               <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
             </ul>
-            <ol v-if="block.type === 'list' && block.listType === 'ol'">
+            <ol v-if="block.type === 'list' && block.listType === 'ol'" :class="block.classes">
               <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
             </ol>
           </template>
@@ -107,17 +107,23 @@
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 
+  &.keep-size {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+
   .pic {
     grid-column: span 2;
     display: flex;
     flex-direction: column;
     gap: 4px;
 
-      @media (min-width: 768px) {
-        &.small {
-          grid-column: span 1;
-        }
+    @media (min-width: 768px) {
+      &.small {
+        grid-column: span 1;
       }
+    }
   }
 }
 
@@ -216,6 +222,8 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2023-09-13',
+      '2023-09-11',
       '2023-09-09',
       '2023-09-06',
       '2023-08-31',
