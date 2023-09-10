@@ -116,7 +116,7 @@ export default class GraduateAGirl extends Vue {
             "1": "Kérdés esetén fordulj bizalommal hozzánk az ",
             "2": " email címen."
         },
-        "p6": "Ha szívesen támogatnád havi 7800 forinttal egy lány oktatását, szintén írj a fenti email címre, küldd el a kiválasztott lány nevét, mi pedig küldünk neked minden további szükséges információt."
+        "p6": "Ha szívesen támogatnád havi 7800 forinttal egy lány oktatását, szintén írj a fenti email címre, mi pedig küldünk neked minden további szükséges információt."
     },
     "en": {
         "main": {
@@ -131,7 +131,7 @@ export default class GraduateAGirl extends Vue {
             "1": "If you have any question do not hesitate to contact us at ",
             "2": "."
         },
-        "p6": "If you would like to support the education of a girl by donating 7800 HUF, please send an e-mail to the address above, telling us the chosen girls’ name, and we will get back to you with all the needed information."
+        "p6": "If you would like to support the education of a girl by donating 7800 HUF, please send an e-mail to the address above and we will get back to you with all the needed information."
     }
 }
 </i18n>
