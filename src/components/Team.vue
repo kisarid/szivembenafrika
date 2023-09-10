@@ -277,6 +277,14 @@ export default class Team extends Vue {
         shortBio: this.$i18n.t('dklaudia.shortBio') as string,
         longBio: this.getLongBio('dklaudia'),
         objectPosition: 'center top',
+      },
+      {
+        id: 'pbadel',
+        name: 'Pribelszki-Balatincz Adél',
+        image: 'team/pbadel.jpg',
+        shortBio: this.$i18n.t('pbadel.shortBio') as string,
+        longBio: this.getLongBio('pbadel'),
+        objectPosition: 'center 55%',
       }
     ]
   }
@@ -447,6 +455,14 @@ export default class Team extends Vue {
               "3": "Biztosan felmerült benned is a kérdés, hogy miért pont a Szívemben Született Afrika csapatához jelentkezz önkéntesnek?",
               "4": "A válasz egyszerű: Ha szeretnél egy szuper csapat részévé válni, ahol szívvel-lélekkel minden nap azon dolgozunk, hogy segítsünk a gyerekeknek egy szebb jövőt elérni, akkor ne habozz, itt a helyed! 😊"
             }
+        },
+        "pbadel": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Pribelszki-Balatincz Adél vagyok, lassan másfél éve önkénteskedem a szervezetnél. Jelenlegi feladatom, hogy elkészítsem, a támogatási programokban résztvevő gyerekek adatlapjait. Gimnazista korom óta szerettem volna önkénteskedni. Egyetem alatt találtam rá a szervezetre Instagrammon és azonnal csatlakoztam.",
+              "2": "Formatervezőként, fontos számomra, hogy minél több embert és helyzetet megismerjek. Szeretném a munkámmal támogatni másokat és könnyebbé tenni az életüket.",
+              "3": "A legboldogabb pillanat számomra, önkénteskedésem során, az volt, amikor megláttam, hogy az első általam készített adatlapokon szereplő gyerekek támogatóra találtak. Nagyon jó érzés volt látni, a munkám eredményét."
+            }
         }
     },
     "en": {
@@ -609,6 +625,14 @@ export default class Team extends Vue {
               "2": "Több mint egy éve kezdtem el keresni egy olyan szervezetet, akik Afrikában élő gyerekeknek segítenek. Mindig is érdekelt Afrika, emiatt a terveim között szerepelt, hogy egyszer az életben mindenképpen szeretnék oda eljutni és segíteni az ott élő gyerekeknek amiben tudok. Februárban csatlakoztam ehhez a csodálatos csapathoz, ahol már az első alkalommal éreztem, hogy nagyon jó helyre csöppentem. Jó érezni, hogy mennyire fontos a szervezetnek, hogy folyamatosan foglalkoznak azzal, hogy felkészítsenek minket egy lehetséges misszióra, emellett pedig oda figyelnek arra is, hogy tényleg egy nagyon jó közösség részévé váljunk. ",
               "3": "Biztosan felmerült benned is a kérdés, hogy miért pont a Szívemben Született Afrika csapatához jelentkezz önkéntesnek?",
               "4": "A válasz egyszerű: Ha szeretnél egy szuper csapat részévé válni, ahol szívvel-lélekkel minden nap azon dolgozunk, hogy segítsünk a gyerekeknek egy szebb jövőt elérni, akkor ne habozz, itt a helyed! 😊"
+            }
+        },
+        "pbadel": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Pribelszki-Balatincz Adél vagyok, lassan másfél éve önkénteskedem a szervezetnél. Jelenlegi feladatom, hogy elkészítsem, a támogatási programokban résztvevő gyerekek adatlapjait. Gimnazista korom óta szerettem volna önkénteskedni. Egyetem alatt találtam rá a szervezetre Instagrammon és azonnal csatlakoztam.",
+              "2": "Formatervezőként, fontos számomra, hogy minél több embert és helyzetet megismerjek. Szeretném a munkámmal támogatni másokat és könnyebbé tenni az életüket.",
+              "3": "A legboldogabb pillanat számomra, önkénteskedésem során, az volt, amikor megláttam, hogy az első általam készített adatlapokon szereplő gyerekek támogatóra találtak. Nagyon jó érzés volt látni, a munkám eredményét."
             }
         }
     }
