@@ -224,6 +224,12 @@ export default class Blog extends Vue {
     const articlesList = [
       '2023-09-13',
       '2023-09-11',
+      // '2023-09-10f', internet afrikában?
+      '2023-09-10e',
+      '2023-09-10d',
+      '2023-09-10c',
+      // '2023-09-10b', önkéntes akadémia?
+      '2023-09-10',
       '2023-09-09',
       '2023-09-06',
       '2023-08-31',
