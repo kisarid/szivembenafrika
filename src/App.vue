@@ -54,8 +54,9 @@ export default class App extends Vue {
           { text: this.getTranslation('3.submenu1'), route: 'onkentesseg' },
           { text: this.getTranslation('3.submenu2'), route: 'gyermektamogatas' },
           { text: this.getTranslation('3.submenu3'), route: 'graduate-a-girl' },
-          { text: this.getTranslation('3.submenu4'), route: 'adomanyozas' },
-          { text: this.getTranslation('3.submenu5'), route: 'esemenyek' },
+          { text: this.getTranslation('3.submenu4'), route: 'oktatasi-tamogatas' },
+          { text: this.getTranslation('3.submenu5'), route: 'adomanyozas' },
+          { text: this.getTranslation('3.submenu6'), route: 'esemenyek' },
         ],
       },
       { text: this.getTranslation('4.menu'), route: 'media' },
@@ -104,6 +105,20 @@ body {
 
   @media (min-width: 768px) {
     height: 80px;
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
   }
 }
 
@@ -160,6 +175,18 @@ section {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.pic.float {
+  img {
+    float: right;
+    max-width: 600px;
+    margin: 10px;
+    margin-top: 0;
+  }
+}
+.pic.float.left img {
+  float: left;
 }
 
 a {
@@ -243,8 +270,9 @@ svg {
       "submenu1": "Önkéntesség",
       "submenu2": "Gyermektámogatás",
       "submenu3": "Graduate a Girl!",
-      "submenu4": "Adományozás",
-      "submenu5": "Események"
+      "submenu4": "Oktatás támogatás Kenyában",
+      "submenu5": "Adományozás",
+      "submenu6": "Események"
     },
     "4": {
       "menu": "Média"
@@ -276,8 +304,9 @@ svg {
       "submenu1": "Volunteering",
       "submenu2": "Child support",
       "submenu3": "Graduate a Girl!",
-      "submenu4": "Donation",
-      "submenu5": "Events"
+      "submenu4": "Education support in Kenya",
+      "submenu5": "Donation",
+      "submenu6": "Events"
     },
     "4": {
       "menu": "Media"

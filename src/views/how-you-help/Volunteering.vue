@@ -46,28 +46,7 @@
 </template>
 
 <style lang="scss" scoped>
-.float {
-  img {
-    float: right;
-    max-width: 600px;
-    margin: 10px;
-    margin-top: 0;
-  }
-}
 
-.desktop {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .desktop {
-    display: block;
-  }
-
-  .mobile {
-    display: none;
-  }
-}
 </style>
 
 <script lang="ts">

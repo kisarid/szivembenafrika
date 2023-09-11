@@ -8,6 +8,7 @@ import Projects from '@/views/how-we-help/Projects.vue'
 import WhereWeHelp from '@/views/how-we-help/WhereWeHelp.vue'
 import Donations from '@/views/how-you-help/Donations.vue'
 import GraduateAGirl from '@/views/how-you-help/GraduateAGirl.vue'
+import EducationProgramKenya from '@/views/how-you-help/EducationProgramKenya.vue'
 import SupportChildren from '@/views/how-you-help/SupportChildren.vue'
 import Volunteering from '@/views/how-you-help/Volunteering.vue'
 import Events from '@/views/how-you-help/Events.vue'
@@ -68,6 +69,11 @@ const routes = [
     path: '/graduate-a-girl',
     name: 'graduate-a-girl',
     component: GraduateAGirl
+  },
+  {
+    path: '/oktatasi-tamogatas',
+    name: 'oktatasi-tamogatas',
+    component: EducationProgramKenya
   },
   {
     path: '/gyermektamogatas',
