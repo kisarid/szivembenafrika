@@ -2,11 +2,26 @@
   <div class="content">
     <heading>
       <div slot="main">{{ $t('main.title') }}</div>
-      <div slot="description">{{ $t('main.text') }}</div>
+      <div v-if="!selectedCardId" slot="description">{{ $t('main.text') }}</div>
     </heading>
     <container>
-      <section>
-        <div class="sub-heading center">{{ $t('1.title') }}</div>
+      <div v-if="!selectedCardId" style="margin-bottom: 30px; font-style: italic;">{{ $t('main.desc')
+      }}</div>
+      <section class="topic-selector" v-if="!selectedCardId">
+        <div class="topic-card" v-for="(card, index) in cards" :key="index" @click="selectedCardId = card.id">
+          <div class="title sub-heading">{{ card.title }}</div>
+          <div class="pic">
+            <img :src="require(`@/assets/images/projects/${card.cover}`)" alt="" :style="card.imgStyle" />
+          </div>
+          <div class="text">{{ card.shortDesc }}</div>
+        </div>
+      </section>
+      <section v-if="selectedCardId">
+        <div @click="selectedCardId = ''" class="link" style="margin-top: -30px; text-align: right;">← Vissza</div>
+        <div class="sub-heading center">{{ selectedCard.title }}</div>
+      </section>
+
+      <section v-if="selectedCardId === '1'">
         <p>{{ $t('1.p1') }}</p>
         <p>{{ $t('1.p2') }}</p>
         <p>{{ $t('1.p3') }}</p>
@@ -26,70 +41,66 @@
             <img src="@/assets/images/projects/noi-program-4.jpg" alt="" />
           </div>
         </div>
-        <div class="sub-heading center">{{ $t('2.title') }}</div>
+      </section>
+      <section v-if="selectedCardId === '2'">
         <div class="text-and-pic three-two">
           <div class="text">
             <p>{{ $t('2.p1') }}</p>
             <p>{{ $t('2.p2') }}</p>
           </div>
           <div class="pic" style="display: flex; justify-content: center">
-            <img
-              src="@/assets/images/projects/84-nap-logo.png"
-              alt=""
-              style="max-width: 300px"
-            />
+            <img src="@/assets/images/projects/84-nap-logo.png" alt="" style="max-width: 300px" />
           </div>
         </div>
         <p>{{ $t('2.p3') }}</p>
         <p>{{ $t('2.p4') }}</p>
         <div class="text-and-pic">
           <div class="text">
-            <div class="sub-heading">{{ $t('3.title') }}</div>
+            <div class="sub-heading">{{ $t('2a.title') }}</div>
             <ul>
-              <li>{{ $t('3.p1.li1') }}</li>
-              <li>{{ $t('3.p1.li2') }}</li>
-              <li>{{ $t('3.p1.li3') }}</li>
-              <li>{{ $t('3.p1.li4') }}</li>
+              <li>{{ $t('2a.p1.li1') }}</li>
+              <li>{{ $t('2a.p1.li2') }}</li>
+              <li>{{ $t('2a.p1.li3') }}</li>
+              <li>{{ $t('2a.p1.li4') }}</li>
             </ul>
-            <div class="sub-heading">{{ $t('4.title') }}</div>
-            <p>{{ $t('4.p1') }}</p>
-            <p>{{ $t('4.p2') }}</p>
-            <p>{{ $t('4.p3') }}</p>
-            <p>{{ $t('4.p4') }}</p>
-            <p>{{ $t('4.p5') }}</p>
-            <p>{{ $t('4.p6') }}</p>
+            <div class="sub-heading">{{ $t('2b.title') }}</div>
+            <p>{{ $t('2b.p1') }}</p>
+            <p>{{ $t('2b.p2') }}</p>
+            <p>{{ $t('2b.p3') }}</p>
+            <p>{{ $t('2b.p4') }}</p>
+            <p>{{ $t('2b.p5') }}</p>
+            <p>{{ $t('2b.p6') }}</p>
           </div>
           <div class="pic">
             <img src="@/assets/images/projects/84-nap-1.jpg" alt="" />
           </div>
         </div>
-        <p>{{ $t('4.p7') }}</p>
-        <p>{{ $t('4.p8') }}</p>
-        <div class="sub-heading">{{ $t('5.title') }}</div>
-        <p>{{ $t('5.p1') }}</p>
-        <p>{{ $t('5.p2') }}</p>
-        <p>{{ $t('5.p3') }}</p>
-        <div class="sub-heading center">{{ $t('6.title') }}</div>
-        <p>{{ $t('6.p1') }}</p>
+        <p>{{ $t('2b.p7') }}</p>
+        <p>{{ $t('2b.p8') }}</p>
+        <div class="sub-heading">{{ $t('2c.title') }}</div>
+        <p>{{ $t('2c.p1') }}</p>
+        <p>{{ $t('2c.p2') }}</p>
+        <p>{{ $t('2c.p3') }}</p>
+        <div class="sub-heading">{{ $t('2d.title') }}</div>
+        <p>{{ $t('2d.p1') }}</p>
+        <p>{{ $t('2d.p2') }}</p>
+      </section>
+      <section v-if="selectedCardId === '3'">
+        <p>{{ $t('3.p1') }}</p>
         <div class="pic-grid">
           <div class="pic">
-            <img
-              src="@/assets/images/projects/gyermektamogatas-projekt-1.jpg"
-              alt=""
-            />
+            <img src="@/assets/images/projects/gyermektamogatas-projekt-1.jpg" alt="" />
           </div>
           <div class="pic">
-            <img
-              src="@/assets/images/projects/gyermektamogatas-projekt-2.jpg"
-              alt=""
-            />
+            <img src="@/assets/images/projects/gyermektamogatas-projekt-2.jpg" alt="" />
           </div>
         </div>
-        <div class="sub-heading center">{{ $t('7.title') }}</div>
-        <p>{{ $t('7.p1') }}</p>
-        <p>{{ $t('7.p2') }}</p>
-        <p>{{ $t('7.p3') }}</p>
-        <p>{{ $t('7.p4') }}</p>
+      </section>
+      <section v-if="selectedCardId === '4'">
+        <p>{{ $t('4.p1') }}</p>
+        <p>{{ $t('4.p2') }}</p>
+        <p>{{ $t('4.p3') }}</p>
+        <p>{{ $t('4.p4') }}</p>
         <div class="pic-grid">
           <div class="pic">
             <img src="@/assets/images/projects/iskolafejlesztes-1.jpg" alt="" />
@@ -98,33 +109,36 @@
             <img src="@/assets/images/projects/iskolafejlesztes-2.jpg" alt="" />
           </div>
         </div>
-        <div class="sub-heading center">{{ $t('8.title') }}</div>
+      </section>
+      <section v-if="selectedCardId === '5'">
         <div class="text-and-pic">
           <div class="text">
-            <p>{{ $t('8.p1') }}</p>
-            <p>{{ $t('8.p2') }}</p>
+            <p>{{ $t('5.p1') }}</p>
+            <p>{{ $t('5.p2') }}</p>
           </div>
           <div class="pic">
-            <img
-              src="@/assets/images/projects/graduate-a-girl-projekt-1.jpg"
-              alt=""
-            />
+            <img src="@/assets/images/projects/graduate-a-girl-projekt-1.jpg" alt="" />
           </div>
         </div>
-        <div class="sub-heading center">{{ $t('9.title') }}</div>
-        <p>{{ $t('9.p1') }}</p>
-        <p>{{ $t('9.p2') }}</p>
+        <div class="sub-heading">{{ $t('5a.title') }}</div>
+        <p>{{ $t('5a.p1') }}</p>
+        <p>{{ $t('5a.p2') }}</p>
+        <p>{{ $t('5a.p3.1') }}<a href="mailto:gyermektamogatas@szivembenafrika.org">gyermektamogatas@szivembenafrika.org</a>{{ $t('5a.p3.2') }}</p>
+      </section>
+      <section v-if="selectedCardId === '6'">
+        <p>{{ $t('6.p1') }}</p>
+        <p>{{ $t('6.p2') }}</p>
         <ul style="margin-bottom: 25px;">
-          <li>{{ $t('9.p3.li1') }}</li>
-          <li>{{ $t('9.p3.li2') }}</li>
-          <li>{{ $t('9.p3.li3') }}</li>
-          <li>{{ $t('9.p3.li4') }}</li>
-          <li>{{ $t('9.p3.li5') }}</li>
-          <li>{{ $t('9.p3.li6') }}</li>
-          <li>{{ $t('9.p3.li7') }}</li>
-          <li>{{ $t('9.p3.li8') }}</li>
-          <li>{{ $t('9.p3.li9') }}</li>
-          <li>{{ $t('9.p3.li10') }}</li>
+          <li>{{ $t('6.p3.li1') }}</li>
+          <li>{{ $t('6.p3.li2') }}</li>
+          <li>{{ $t('6.p3.li3') }}</li>
+          <li>{{ $t('6.p3.li4') }}</li>
+          <li>{{ $t('6.p3.li5') }}</li>
+          <li>{{ $t('6.p3.li6') }}</li>
+          <li>{{ $t('6.p3.li7') }}</li>
+          <li>{{ $t('6.p3.li8') }}</li>
+          <li>{{ $t('6.p3.li9') }}</li>
+          <li>{{ $t('6.p3.li10') }}</li>
         </ul>
         <div class="pic-grid">
           <div class="pic">
@@ -149,18 +163,80 @@
 .text-and-pic {
   margin-bottom: 30px;
 }
+
+@media (min-width: 768px) {
+  .topic-selector {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .topic-card .pic {
+      margin-top: auto;
+    }
+  }
+}
 </style>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import container from '@/components/moyo/container.vue'
 import heading from '@/components/moyo/heading.vue'
+import { ThemeSelectorCard } from '@/interfaces/theme-selector'
 
 @Component({
   name: 'Projects',
   components: { container, heading },
 })
-export default class Projects extends Vue {}
+export default class Projects extends Vue {
+  cid: string = ''
+
+  get selectedCard(): ThemeSelectorCard {
+    return this.cards.find(c => c.id === this.selectedCardId)!
+  }
+
+  get selectedCardId() {
+    return this.cid
+  }
+
+  set selectedCardId(v) {
+    this.cid = v
+    window.scrollTo(0, 0)
+  }
+
+  cards: ThemeSelectorCard[] = [
+    {
+      id: '1',
+      title: 'Női program',
+      cover: 'noi-program-3.jpg',
+      imgStyle: { 'object-position': '30%' }
+    },
+    {
+      id: '2',
+      title: '84 nap projekt',
+      cover: '84-nap-logo.png'
+    },
+    {
+      id: '3',
+      title: 'Gyermektámogatási program',
+      cover: 'gyermektamogatas-projekt-2.jpg',
+      imgStyle: { 'object-position': '60%' }
+    },
+    {
+      id: '4',
+      title: '„Shine” Iskolafejlesztési program',
+      cover: 'iskolafejlesztes-1.jpg'
+    },
+    {
+      id: '5',
+      title: 'Graduate a Girl - oktatástámogatási program',
+      cover: 'graduate-a-girl-projekt-1.jpg'
+    },
+    {
+      id: '6',
+      title: 'Egészségügyi program',
+      cover: 'eu-2.jpg',
+      imgStyle: { 'object-position': 'top' }
+    },
+  ]
+}
 </script>
 
 <i18n>
@@ -168,7 +244,8 @@ export default class Projects extends Vue {}
     "hu": {
         "main": {
             "title": "Projektjeink",
-            "text": "Mi a Szívemben Született Afrika Egyesületnél sokan vagyunk és különbözőek, de mindannyian ugyanazért a célért dolgozunk: hogy embereknek ne csak hosszabb, de minőségi, méltóságteljes életük lehessen. Hiszünk abban, hogy a hatékony segítségnyújtás elengedhetetlen alappillére a megismerés, így minden programunkat a terepen begyűjtött szakmai tapasztalatokra építve dolgozzuk ki."
+            "text": "Mi a Szívemben Született Afrika Egyesületnél sokan vagyunk és különbözőek, de mindannyian ugyanazért a célért dolgozunk: hogy embereknek ne csak hosszabb, de minőségi, méltóságteljes életük lehessen. Hiszünk abban, hogy a hatékony segítségnyújtás elengedhetetlen alappillére a megismerés, így minden programunkat a terepen begyűjtött szakmai tapasztalatokra építve dolgozzuk ki.",
+            "desc": "Bővebb információkért kattints a képekre!"
         },
         "1": {
             "title": "Női program",
@@ -185,7 +262,7 @@ export default class Projects extends Vue {}
             "p3": "Felmerülhet bennetek a kérdés, hogy miért választottuk ezt a főleg a menstruációs szegénységre reflektáló 84 nap elnevezést egy ilyen szerteágazó programnak?! A válasz egyszerű: hiszünk abban, hogy a fentiekben felsorolt problémák nagyon sok esetben közös tőről fakadnak, és nem tudunk az egyik területen segíteni úgy, hogy egy másikat figyelmen kívül hagyunk. A munkánk egyik legfontosabb alapelve mindig is az volt, hogy összetett problémára, összetett megoldást kell kínálni.",
             "p4": "Hiszünk abban, hogy tabukat le kell dönteni, a stigmatizálást fel kell számolni és meg kell teremtenünk azt a békés, biztonságos és bátorító  közeget, ahol ezek a fantasztikus, okos és bátor lányok és nők nem élnek többé félelemben, nem élnek többé kiszolgáltatottan, nem járnakleszegett fejjel, hanem megérzik és elhiszik a bennük rejlő képességet és végtelen lehetőséget arra, hogy a hozzájuk méltó életet élhessék."
         },
-        "3": {
+        "2a": {
             "title": "Menstruációs szegénység felszámolása",
             "p1": {
                 "li1": "Testtudat",
@@ -194,7 +271,7 @@ export default class Projects extends Vue {}
                 "li4": "Tabuk ledöntése: férfiak oktatása is"
             }
         },
-        "4": {
+        "2b": {
             "title": "Nők és lánygyermekek elleni erőszak",
             "p1": "A nők és lánygyermekek elleni erőszak bármilyen formája megsértése és semmibevétele az alapvető emberi jogoknak, és ez a probléma világszerte minden harmadik nőt érint.",
             "p2": "Nők milliói szenvednek el valamilyen erőszakot az életük során, ideértve a fizikai vagy mentális bántalmazást, szexuális erőszakot, szexuális kizsákmányolást, gyermekházasságot vagy akár a leányanyaságot is.",
@@ -205,29 +282,43 @@ export default class Projects extends Vue {}
             "p7": "A bántalmazás a lányok, nők mindennapjainak az elfogadott része. Célunk egy olyan védőháló létrehozása, amely védelmet és segítséget nyújt számukra már az áldozattá válás előtt.",
             "p8": "Szemlélet formálással és oktatással pedig szeretnénk, ha a fent említett problémák nem csak visszaszorulnának, de meg is szűnnének a közösségen belül."
         },
-        "5": {
+        "2c": {
             "title": "Gyermekházasság és leányanyaság felszámolása",
             "p1": "Azok a lányok, akik gyermekként házasságra kényszerülnek sokkal nagyobb eséllyel válnak családon belüli erőszak áldoza azok akik felnőttként, szabad választással házasodnak.",
             "p2": "A gyermekházasság ellopja a gyerekkorukat, a tanulási lehetőségüket, az egészségüket és a szabadságukat és a legtöbb esetben egész hátralévő életükre erőszak áldozatává teszi őket. A házasságot pedig rövid időn belül az követi, hogy leányanyává kell válniuk. Ezek a lányok egyszerűen még sem fizikailag, sem érzelmileg nem állnak készen a szexuális életre, a várandósságra és a szülésre.",
             "p3": "Szeretnénk, ha a közösségben ahol dolgozunk, a gyermekházasság tradíciója véget érne, ezért edukáljuk a közösség tagjait, rangidős döntéshozóit, a szülőket és magukat a fiatal lányokat és fiúkat is a gyermekházasság negatív hatásairól. Bíztatjuk a lányokat arra, hogy találjanak rá a hangjukra és merjenek nem-et mondani."
         },
-        "6": {
+        "2d": {
+            "title": "Emberkereskedelem elleni küzdelem",
+            "p1": "Figyelemfelhívó, úgynevezett “community awerness” programokat szervezünk és tartunk Ugandában és Kenyában, amelyek keretében gyerekeket és fiatalokat tanítunk a gyermekjogokról, emberi jogokról, biztonságos kapcsolatokról, női csoportokat és felnőtt közösségeket az emberi jogokról, a biztonságos migrációról és az emberkereskedelem természetéről és veszélyeiről. Emellett szakmai partnereinkkel együttműködve dolgozunk az áldozatul esett - többnyire - nők feltérképezésén, mentésén, rehabilitálásán(egészségügyi és mentális értelemben is) és reintegrálásán.",
+            "p2": "A jövőben szeretnénk védett házakat kialakítani Manafwában (Uganda) és Karamojában (Uganda) is."
+        },
+        "3": {
             "title": "Gyermektámogatási program",
             "p1": "Hiszünk abban, hogy minden gyermeknek jár a boldog, biztonságos gyerekkor, az oktatás és az esély egy jó életre. Ugandában sajnos nem ingyenes az oktatás és mivel a családok nagy része a szegénységi küszöb alatt él, az, hogy iskolába járjon, egy gyerek luxusnak számít. Gyermektámogatási programunk keretében havi 6000Ft-os adományért a támogató jelképes örökbefogadó szülővé válhat. Ez az az összeg, amely fedezi egy gyerkőc oktatását, tanszereit, étkezését és szükség esetén az orvosi ellátását. Mi pedig rendszeres időközönként hírt adunk a gyerkőc fejlődéséről, tanulmányi eredményeiről, fontosabb életeseményeiről, valamint küldünk róla fotókat, videókat."
         },
-        "7": {
+        "4": {
             "title": "„Shine” Iskolafejlesztési program",
             "p1": "Manafwában 2020.februárjára felépült egyesületünk iskolája – Shine Nursery and Primary School - ahol a vidéki környezetben egyedülállóan jó színvonalon tanulhatnak a falubeli gyerekek. Jelenleg 3 óvodai csoport és két általános iskolai osztály van. Az iskola építése folyamatosan zajlik, a jövőben megépítésre kerülnek tovább tantermek, illetve nagy vágyunk, hogy játszótér, konyhakert és könyvtár is kialakításra kerülhessen.",
             "p2": "Nagyon fontosnak tartjuk, hogy a gyerekek kezdettől minőségi alapfokú oktatásban részesülhessenek.",
             "p3": "Jelenleg kidolgozás alatt áll egy sporttehetség gondozó programunk az iskola diákja körében, hiszen a sportnak megtartó ereje van és az időben felfedezett és gondozott tehetség kitörést jelenthet a nehéz sorsból.",
             "p4": "Nagyon sokat érdeklődnek Magyarországról és mi fontosnak tartjuk, hogy öregbítsük országunk hírnevét, úgyhogy ezek a gyermekek tudják, hogy hogy néz ki a Balaton, mi az a puli és ettek már Pilóta kekszet."
         },
-        "8": {
+        "5": {
             "title": "Graduate a Girl - oktatástámogatási program",
             "p1": "A lányok oktatása az egyik legerősebb és leghatékonyabb fegyver, amit bevethetünk a globális szegénység felszámolására. Manafwában jelenleg a lányok többsége maximum az általános iskola 5.- 6. osztályáig jut el. 13 -14 évesen kell feleséggé válniuk és nem sokkal idősebbek akkor sem, amikor első gyermekükkel várandósak lesznek. A program azzal a céllal indul útjára, hogy megakadályozzuk, hogy ezeknek a lányoknak az élete és sorsa megpecsételődjön pusztán az által, hogy hová születtek, hogy segítsük őket abban, hogy eljuthassanak a középiskolai érettségiig. Havi 7800Ft-os adománnyal segítheti a támogató egy kamasz lány oktatását. Ez az összeg fedezi az oktatását és szükség esetén az orvosi ellátását.",
             "p2": "A programról bővebben a „Graduate a Girl” menüpont alatt olvashatsz."
         },
-        "9": {
+        "5a": {
+            "title": "Oktatás támogatás Mtwapaban",
+            "p1": "A programban szereplő összes fiatal Mtwapából és a környékéről került a programba. Ez a régió súlyosan érintett az emberkereskedelem, a szexturizmus és a gyermekek szexuális célú kizsákmányolásával, így a programban szereplő összes fiatal vagy érintettje - korábbi áldozata - valamelyik felsorolt problémának vagy pedig családi vagy szociokultúrális, gazdaság közege és helyzete  miatt fokozottan kitett a veszélynek.",
+            "p2": "Támogatóként rengeteget tehetsz a kiválasztott fiatalért. Ebben a programban havi 8500 forintos adományoddal támogatójává válhatsz egy fiatalnak, amely biztosítja számára a tandíjat, napi étkezést az iskolában ahová jár, a tanszereit és szükség esetén orvosi ellátást.",
+            "p3": {
+              "1": "Kérdés esetén fordulj bizalommal hozzánk a ",
+              "2": " email címen."
+            }
+        },
+        "6": {
             "title": "Egészségügyi program",
             "p1": "Hiszünk abban, hogy minden embernek jár, hogy a lehető legegészségesebb életet élje, és amikor megbetegszik, megkapja a számára szükséges segítséget. Rendszeres orvosi misszióink alkalmával a gyógyítás mellett nagy hangsúlyt fektetünk az oktatásra, betegedukációra és megelőzés különböző formáira, illetve helyi egészségügyi dolgozók képzésére is, hogy akkor se késsen a segítség, ha mi nem vagyunk ott.",
             "p2": "Egészségügyi programunk legfőbb elemei:",
@@ -248,7 +339,8 @@ export default class Projects extends Vue {}
     "en": {
         "main": {
             "title": "Our projects",
-            "text": "We, at the Szívemben Született Afrika organisation, are all different, however we all work towards the same goal: to enable people to have a graceful, quality life, not just to live longer. We believe, the base of giving help is knowledge, therefore we develop our projects using the knowledge and experiences we have gathered on the field."
+            "text": "We, at the Szívemben Született Afrika organisation, are all different, however we all work towards the same goal: to enable people to have a graceful, quality life, not just to live longer. We believe, the base of giving help is knowledge, therefore we develop our projects using the knowledge and experiences we have gathered on the field.",
+            "desc": "Bővebb információkért kattints a képekre!"
         },
         "1": {
             "title": "Women’s programme",

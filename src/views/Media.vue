@@ -2,142 +2,150 @@
   <div class="content">
     <heading>
       <div slot="main">{{ $t('main') }}</div>
-      <div slot="description">VLOG</div>
     </heading>
     <container>
-      <section>
-        <div class="sub-heading">{{ $t('1.title') }}</div>
-        <p>{{ $t('1.description') }}</p>
-        <div class="vlog-heading">{{ $t('1.p1') }}</div>
-        <div class="embed-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/-9CmuP4lB88"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <div class="sub-heading" style="font-size: 24px;">VLOG</div>
+      <section v-for="(gallery, gIndex) in galleries" :key="gIndex">
+        <div class="sub-heading">{{ gallery.title }}</div>
+        <p>{{ gallery.desc }}</p>
+        <div class="video-gallery">
+          <div v-for="(ep, eIndex) of gallery.eps.slice(0, 3)" :key="eIndex">
+            <div class="vlog-heading">{{ eIndex + 1 }}. rész</div>
+            <YoutubeVideo v-bind:url="ep" />
+          </div>
         </div>
-        <div class="vlog-heading">{{ $t('1.p2') }}</div>
-        <div class="embed-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/2kppsBe8vss"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="vlog-heading">{{ $t('1.p3') }}</div>
-        <div class="embed-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/k-QZu2GQafU"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="vlog-heading">{{ $t('1.p4') }}</div>
-        <div class="embed-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/jeaF2EjEPmQ"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="vlog-heading">{{ $t('1.p5') }}</div>
-        <div class="embed-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/ucEJRKE8cHQ"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="vlog-heading">{{ $t('1.p6') }}</div>
-        <div class="embed-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/PrHcf30Sfic"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <b-collapse v-bind:id="'gallery-' + gIndex">
+          <div class="video-gallery">
+            <div v-for="(ep, oIndex) of gallery.eps.slice(3)" :key="oIndex">
+              <div class="vlog-heading">{{ oIndex + 4 }}. rész</div>
+              <YoutubeVideo v-bind:url="ep" />
+            </div>
+          </div>
+        </b-collapse>
+        <div v-if="gallery.eps.length > 3" class="more-button link" v-b-toggle="'gallery-' + gIndex" variant="primary">
+          <span class="when-open">Kevesebb Rész...</span>
+          <span class="when-closed">További Részek...</span>
         </div>
       </section>
+      <div class="sub-heading" style="font-size: 24px;">Külső Médiamegjelenések</div>
+      <p v-for="(link, index) of mediaAppearances" :key="index">
+        <a :href="link.url">{{ link.name }}</a>
+      </p>
     </container>
   </div>
 </template>
 
-<style lang="css" scoped>
-  .vlog-heading {
-    font-weight: bold;
-    margin-block: 8px;
-  }
+<style lang="scss" scoped>
+section>div {
+  margin-bottom: 0;
+}
 
-  .embed-container {
-    position: relative;
-    margin-bottom: 24px;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-  }
+.vlog-heading {
+  font-weight: bold;
+  margin-block: 8px;
+}
 
-  .embed-container iframe,
-  .embed-container object,
-  .embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.more-button {
+  text-align: right;
+}
+
+.collapsed > .when-open,
+.not-collapsed > .when-closed {
+  display: none;
+}
+@media (min-width: 768px) {
+  .video-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
   }
+}
 </style>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import container from '@/components/moyo/container.vue'
 import heading from '@/components/moyo/heading.vue'
+import YoutubeVideo from '@/components/moyo/youtube-video.vue';
 
 @Component({
   name: 'Media',
-  components: { container, heading },
+  components: { container, heading, YoutubeVideo },
 })
-export default class Media extends Vue {}
+export default class Media extends Vue {
+  galleries = [
+    {
+      title: '2023. tavasz, Uganda',
+      desc: 'És ismét adományok begyűjtve, csomagok készen, hiszen Panna, Juli és Zsófi Uganda felé vették az irányt, hogy a jelképes örökbefogadó szülők ajándékait és kedves üzeneteit továbbítsák az általuk támogatott gyerekeknek és összegyűjtsék az aktuális híreket a manafwai suli lurkóiról.',
+      eps: [
+        'https://www.youtube-nocookie.com/embed/eiIDIQg1BmU',
+      ]
+    },
+    {
+      title: '2023. január, Kenya',
+      desc: 'Zsófi, Balázs és Dr. Balázs januárban hosszas előkészítéseket követően útnak indultak az első önálló, nagyobb ívű kenyai missziónkra, amely során az idő első felében Mombassában és a tengerparti térségben voltak, majd pedig Nairobi nyomornegyedei felé vették az irányt.',
+      eps: [
+        'https://www.youtube-nocookie.com/embed/4xD-M7rfHUw',
+        'https://www.youtube-nocookie.com/embed/UPjEr1Z5H4k',
+      ]
+    },
+    {
+      title: '2022. ősz, Uganda és Kenya',
+      desc: 'Zsófi és Dr. Balázs hosszú útra pakoltak, ugyanis egy egy hónapig tartó misszióra utaztak Ugandába. Az eredeti úticél Manafwa volt, de aztán egy pár napos kitérőt tettek Karamojába is, ahol izgalmas új dolgok vették kezdetüket. Végül pedig Zsófi még egy hétre Kenyába is átutazott.',
+      eps: [
+        'https://www.youtube-nocookie.com/embed/j3hXOyV-JWE',
+        'https://www.youtube-nocookie.com/embed/VMrP_GksjXc',
+        'https://www.youtube-nocookie.com/embed/4EF3cgYQYkc',
+        'https://www.youtube-nocookie.com/embed/8PVEAFqv8dc',
+      ]
+    },
+    {
+      title: '2022. tavasz, Uganda',
+      desc: 'Juli, Móni, Zoli és Zsófi Ugandába utaztak, ahol 3 hetet töltöttek Manafwában majd pedig felkerekedtek Uganda – ha nem a világ – egyik legszebb pontjára, a Murchinson Falls Nemzeti Parkba, sőt útközben még egy orrszarvú rezervátumot is meglátogattak.',
+      eps: [
+        'https://www.youtube-nocookie.com/embed/0eSG6uV1YWM',
+        'https://www.youtube-nocookie.com/embed/rQzr0upAi3E',
+        'https://www.youtube-nocookie.com/embed/SKjz8qx0RH0',
+        'https://www.youtube-nocookie.com/embed/l_9sHjbe3YM',
+      ]
+    },
+    {
+      title: '2021. ősz, Uganda',
+      desc: 'Zsófi és Czikkcakk Panni egy hónapra Ugandába utaztak és ebben a vlog sorozatban mutatják meg nektek, hogyan telnek a missziós mindennapjaik Manafwában.',
+      eps: [
+        'https://www.youtube-nocookie.com/embed/-9CmuP4lB88',
+        'https://www.youtube-nocookie.com/embed/2kppsBe8vss',
+        'https://www.youtube-nocookie.com/embed/k-QZu2GQafU',
+        'https://www.youtube-nocookie.com/embed/jeaF2EjEPmQ',
+        'https://www.youtube-nocookie.com/embed/ucEJRKE8cHQ',
+        'https://www.youtube-nocookie.com/embed/PrHcf30Sfic',
+        'https://www.youtube-nocookie.com/embed/p2LVw95V8Pc',
+        'https://www.youtube-nocookie.com/embed/ooAEdnu6CKY',
+      ]
+    },
+  ]
+
+  mediaAppearances = [
+    { name: 'WMN', url: 'https://wmn.hu/ugy/58214-a-nok-nem-a-bunuktol-tisztulnak-a-menstruacioval--moshato-betet-varrasat-tanitjak-magyarok-afrikaban?fbclid=IwAR3Sr4qmt2EPG9zm76QAR9zVSAtsvdlpiWo_4fPY2XQH2ko1liNC9GY50c4' },
+    { name: 'VIP', url: 'https://thevip.hu/2022/01/24/magyarok-kelet-afrikaban-hetente-ketszer-haromszor-ettek-de-boldogok-es-eletvidamak-voltak/' },
+    { name: 'Vous', url: 'https://vous.hu/20180612-uganda-szivemben-szuletett-afrika-blog/' },
+    { name: 'Női váltó',  url: 'https://noivalto.hu/az-en-tortenetem/afrika-onkentes-czikkely-panni/' },
+    { name: 'Hoopla Sewing', url: 'https://hooplasewing.com/blogs/news/adomanyozz-hoopla-moshato-betetet' },
+    { name: 'Szimpatika', url: 'https://szimpatika.hu/cikkek/7674/fekete-oves-onkentes' },
+    { name: 'Femina', url: 'https://femina.hu/gyerek/irene-orokbefogadas-afrika/' },
+    { name: 'Szabad Föld', url: 'https://szabadfold.hu/orszag-vilag/lelkeben-afrikaval-indult-utnak-283126/' },
+    { name: 'Emilla', url: 'https://emilla.me/szivemben' },
+  ]
+}
 </script>
 
 <i18n>
 {
   "hu": {
-    "main": "Média",
-    "1": {
-      "title": "Szívemben Született Afrika x Czikkcakk ugandai misszió",
-      "description": "Zsófi és Czikkcakk Panni egy hónapra Ugandába utaztak és ebben a vlog sorozatban mutatják meg nektek, hogyan telnek a missziós mindennapjaik Manafwában.",
-      "p1": "1. rész",
-      "p2": "2. rész",
-      "p3": "3. rész",
-      "p4": "4. rész",
-      "p5": "5. rész",
-      "p6": "6. rész"
-    }
+    "main": "Média"
   },
   "en": {
-    "main": "Media",
-    "1": {
-      "title": "Szívemben Született Afrika x Czikkcakk Uganda mission",
-      "description": "Zsófi and Czikkcakk Panni traveled to Uganda for a month, and they will show you how they spend their mission days through this vlog series.",
-      "p1": "Part 1",
-      "p2": "Part 2",
-      "p3": "Part 3",
-      "p4": "Part 4",
-      "p5": "Part 5",
-      "p6": "Part 6"
-    }
+    "main": "Media"
   }
 }
 </i18n>

@@ -33,6 +33,7 @@
         :burgerIcon="false"
         :isOpen="isMenuOpen"
         @closeMenu="setMenuOpen(false)"
+        width="350"
       >
         <LanguageSelector class="mobile" :theme="'light'"></LanguageSelector>
         <template v-for="menuItem of menuItems">

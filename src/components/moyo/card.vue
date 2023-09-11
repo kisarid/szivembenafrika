@@ -1,5 +1,5 @@
 <template>
-  <div class="card" v-on:click="$emit('show-modal')">
+  <div class="moyo-card" v-on:click="$emit('show-modal')">
     <div class="image" v-bind:class="{ 'without-sign': !sign }">
       <img
         :src="require(`@/assets/images/${imageName}`)"
@@ -18,7 +18,7 @@
 </template>
 
 <style lang="scss" scoped>
-.card {
+.moyo-card {
   margin: var(--card-margin, 0 40px 40px);
   cursor: pointer;
 
@@ -58,4 +58,5 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
   name: 'card',
   props: ['imageName', 'title', 'objectPosition', 'sign'],
 })
-export default class Card extends Vue {}</script>
+export default class Card extends Vue {}
+</script>

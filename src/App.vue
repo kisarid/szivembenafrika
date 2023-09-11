@@ -54,8 +54,9 @@ export default class App extends Vue {
           { text: this.getTranslation('3.submenu1'), route: 'onkentesseg' },
           { text: this.getTranslation('3.submenu2'), route: 'gyermektamogatas' },
           { text: this.getTranslation('3.submenu3'), route: 'graduate-a-girl' },
-          { text: this.getTranslation('3.submenu4'), route: 'adomanyozas' },
-          { text: this.getTranslation('3.submenu5'), route: 'esemenyek' },
+          { text: this.getTranslation('3.submenu4'), route: 'oktatasi-tamogatas' },
+          { text: this.getTranslation('3.submenu5'), route: 'adomanyozas' },
+          { text: this.getTranslation('3.submenu6'), route: 'esemenyek' },
         ],
       },
       { text: this.getTranslation('4.menu'), route: 'media' },
@@ -105,6 +106,21 @@ body {
   @media (min-width: 768px) {
     height: 80px;
   }
+}
+
+@media (max-width: 1023.99px) {
+  .desktop {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+}
+
+p {
+  margin-top: 1rem;
 }
 
 section {
@@ -162,13 +178,27 @@ section {
   border-radius: 8px;
 }
 
-a {
-  color: var(--moyo-font-deep-dark);
+.pic.float {
+  img {
+    float: right;
+    max-width: 600px;
+    margin: 10px;
+    margin-top: 0;
+  }
+}
+.pic.float.left img {
+  float: left;
 }
 
-a:hover {
-  color: var(--moyo-highlight);
+a, .link {
+  color: var(--moyo-font-deep-dark);
   transition: color 300ms ease;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:hover, .link:hover {
+  color: var(--moyo-highlight);
 }
 
 svg {
@@ -222,6 +252,34 @@ svg {
 .swiper-wrapper {
   z-index: auto !important;
 }
+
+.topic-selector {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  gap: 30px;
+
+  .topic-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    text-align: center;
+
+    .title {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .pic {
+      height: 300px;
+    }
+
+    .text {
+      font-style: italic;
+    }
+  }
+}
 </style>
 
 <i18n>
@@ -243,8 +301,9 @@ svg {
       "submenu1": "Önkéntesség",
       "submenu2": "Gyermektámogatás",
       "submenu3": "Graduate a Girl!",
-      "submenu4": "Adományozás",
-      "submenu5": "Események"
+      "submenu4": "Oktatás támogatás Kenyában",
+      "submenu5": "Adományozás",
+      "submenu6": "Események"
     },
     "4": {
       "menu": "Média"
@@ -276,8 +335,9 @@ svg {
       "submenu1": "Volunteering",
       "submenu2": "Child support",
       "submenu3": "Graduate a Girl!",
-      "submenu4": "Donation",
-      "submenu5": "Events"
+      "submenu4": "Education support in Kenya",
+      "submenu5": "Donation",
+      "submenu6": "Events"
     },
     "4": {
       "menu": "Media"
