@@ -7,7 +7,7 @@
       <div v-if="!selectedCardId" style="margin-top: -30px; margin-bottom: 30px; font-style: italic;">{{ $t('main.desc')
       }}</div>
       <section class="topic-selector" v-if="!selectedCardId">
-        <div class="card" v-for="(card, index) in cards" :key="index" @click="selectedCardId = card.id">
+        <div class="topic-card" v-for="(card, index) in cards" :key="index" @click="selectedCardId = card.id">
           <div class="title sub-heading">{{ card.title }}</div>
           <div class="pic">
             <img :src="require(`@/assets/images/where-we-help/${card.cover}.jpg`)" alt="" />

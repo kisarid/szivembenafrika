@@ -119,6 +119,10 @@ body {
   }
 }
 
+p {
+  margin-top: 1rem;
+}
+
 section {
   margin-bottom: 20px;
 }
@@ -255,7 +259,7 @@ svg {
   grid-auto-flow: row;
   gap: 30px;
 
-  .card {
+  .topic-card {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -264,6 +268,7 @@ svg {
 
     .title {
       text-align: center;
+      margin-bottom: 0;
     }
 
     .pic {
