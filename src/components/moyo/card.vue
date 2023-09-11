@@ -58,4 +58,5 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
   name: 'card',
   props: ['imageName', 'title', 'objectPosition', 'sign'],
 })
-export default class Card extends Vue {}</script>
+export default class Card extends Vue {}
+</script>

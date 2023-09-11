@@ -5,7 +5,7 @@
     </heading>
     <container>
       <p>Jelenleg nem várható esemény.</p>
-      <p>Új események bejelentésééig látogass el <a href="https://www.facebook.com/szivembenszuletettafrika">Facebook oldalunkra</a>!</p>
+      <p>Új események bejelentéséig látogass el <a href="https://www.facebook.com/szivembenszuletettafrika">Facebook oldalunkra</a>!</p>
     </container>
   </div>
 </template>

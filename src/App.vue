@@ -108,15 +108,12 @@ body {
   }
 }
 
-.desktop {
-  display: none;
-}
-
-@media (min-width: 1024px) {
+@media (max-width: 1023.99px) {
   .desktop {
-    display: block;
+    display: none;
   }
-
+}
+@media (min-width: 1024px) {
   .mobile {
     display: none;
   }
@@ -189,13 +186,15 @@ section {
   float: left;
 }
 
-a {
+a, .link {
   color: var(--moyo-font-deep-dark);
+  transition: color 300ms ease;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-a:hover {
+a:hover, .link:hover {
   color: var(--moyo-highlight);
-  transition: color 300ms ease;
 }
 
 svg {
@@ -248,6 +247,33 @@ svg {
 
 .swiper-wrapper {
   z-index: auto !important;
+}
+
+.topic-selector {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  gap: 30px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    text-align: center;
+
+    .title {
+      text-align: center;
+    }
+
+    .pic {
+      height: 300px;
+    }
+
+    .text {
+      font-style: italic;
+    }
+  }
 }
 </style>
 
