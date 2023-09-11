@@ -21,7 +21,7 @@
         </div>
         <div class="blog-text">
           <template v-for="(block, i) in selectedArticle.blocks">
-            <p v-if="block.type === 'text'" :class="block.classes" v-html="block.content"></p>
+            <p v-if="block.type === 'text'" :class="block.classes" :style="block.style" v-html="block.content"></p>
             <div v-if="block.type === 'img'" class="blog-pics" :class="block.classes">
               <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j">
                 <img
@@ -224,11 +224,11 @@ export default class Blog extends Vue {
     const articlesList = [
       '2023-09-13',
       '2023-09-11',
-      // '2023-09-10f', internet afrikában?
+      '2023-09-10f',
       '2023-09-10e',
       '2023-09-10d',
       '2023-09-10c',
-      // '2023-09-10b', önkéntes akadémia?
+      '2023-09-10b',
       '2023-09-10',
       '2023-09-09',
       '2023-09-06',
