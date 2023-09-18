@@ -278,6 +278,10 @@ svg {
     .text {
       font-style: italic;
     }
+
+    &:hover .link {
+      color: var(--moyo-highlight);
+    }
   }
 }
 </style>

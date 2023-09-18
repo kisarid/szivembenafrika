@@ -13,6 +13,7 @@
             <img :src="require(`@/assets/images/where-we-help/${card.cover}.jpg`)" alt="" />
           </div>
           <div class="text">{{ card.shortDesc }}</div>
+          <div class="link" style="margin-top: auto; text-align: right;">Tovább →</div>
         </div>
       </section>
       <section v-if="selectedCardId">
