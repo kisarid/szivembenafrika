@@ -2,9 +2,9 @@
   <div class="content">
     <heading>
       <div slot="main">{{ $t('main.title') }}</div>
-      <div slot="description">{{ $t('main.text') }}</div>
     </heading>
     <container>
+      <div class="sub-heading">{{ $t('main.text') }}</div>
       <section>
         <div class="donation-info">
           <div class="title">{{ $t('1.title') }}</div>

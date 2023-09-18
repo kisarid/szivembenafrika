@@ -16,6 +16,7 @@ import Supporters from '@/views/Supporters.vue'
 import Statement from '@/views/Statement.vue'
 import Media from '@/views/Media.vue'
 import Blog from '@/views/Blog.vue'
+import Vlog from '@/views/Vlog.vue'
 
 Vue.use(VueRouter)
 
@@ -89,6 +90,11 @@ const routes = [
     path: '/media',
     name: 'media',
     component: Media
+  },
+  {
+    path: '/vlog',
+    name: 'vlog',
+    component: Vlog
   },
   {
     path: '/blog',

@@ -1,34 +1,33 @@
 <template>
   <div class="content">
     <heading>
-      <div slot="main">Blog</div>
+      <div slot="main" v-if="!selectedArticle">Blog</div>
+      <div slot="main-small" v-if="selectedArticle">{{ selectedArticle.title }}</div>
       <div v-if="selectedArticle" slot="description" class="article-header">
-        <div class="sub-heading">{{ selectedArticle.title }}</div>
-        <div class="meta">{{ new Date(selectedArticle.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }}<span v-if="selectedArticle.author"> | </span><span class="author" v-if="selectedArticle.author">{{ selectedArticle.author }}</span></div>
-        <div class="back">
-          <router-link :to="'/blog'">← Vissza</router-link> 
+        <div class="meta">{{ new Date(selectedArticle.date).toLocaleDateString($i18n.locale, { dateStyle: 'long' }) }}
+          <span v-if="selectedArticle.author"> | </span>
+          <span class="author" v-if="selectedArticle.author">{{ selectedArticle.author }}</span>
+        </div>
+        <div class="link">
+          <router-link :to="'/blog'">← Vissza</router-link>
         </div>
       </div>
     </heading>
     <container v-if="selectedArticle">
       <div class="article-view">
         <div class="pic" v-if="selectedArticle.innerCover !== null">
-          <img
-            :src="require(`@/assets/images/blog/${(selectedArticle.innerCover || selectedArticle.cover).name}`)"
-            :style="(selectedArticle.innerCover || selectedArticle.cover).style"
-            alt="">
-            <span v-if="(selectedArticle.innerCover || selectedArticle.cover).caption" class="caption">{{ (selectedArticle.innerCover || selectedArticle.cover).caption }}</span>
+          <img :src="require(`@/assets/images/blog/${(selectedArticle.innerCover || selectedArticle.cover).name}`)"
+            :style="(selectedArticle.innerCover || selectedArticle.cover).style" alt="">
+          <span v-if="(selectedArticle.innerCover || selectedArticle.cover).caption" class="caption">{{
+            (selectedArticle.innerCover || selectedArticle.cover).caption }}</span>
         </div>
         <div class="blog-text">
           <template v-for="(block, i) in selectedArticle.blocks">
             <p v-if="block.type === 'text'" :class="block.classes" :style="block.style" v-html="block.content"></p>
             <div v-if="block.type === 'img'" class="blog-pics" :class="block.classes">
               <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j">
-                <img
-                  :src="require(`@/assets/images/blog/${img.name}`)"
-                  :style="img.style"
-                  alt="">
-                  <span v-if="img.caption" class="caption">{{ img.caption }}</span>
+                <img :src="require(`@/assets/images/blog/${img.name}`)" :style="img.style" alt="">
+                <span v-if="img.caption" class="caption">{{ img.caption }}</span>
               </div>
             </div>
             <ul v-if="block.type === 'list' && block.listType === 'ul'" :class="block.classes">
@@ -39,28 +38,24 @@
             </ol>
           </template>
         </div>
-        <div class="back" style="margin-block: 30px;">
-          <router-link :to="'/blog'">← Vissza</router-link> 
-        </div>
       </div>
     </container>
     <container class="articles-list" v-if="!selectedArticle">
       <div class="article-extract" v-for="(article, index) in articles" :key="index">
         <div class="pic">
           <router-link :to="`/blog/${article.id}`">
-            <img
-              :src="require(`@/assets/images/blog/${article.cover.name}`)"
-              :style="article.cover.style"
-              alt="">
+            <img :src="require(`@/assets/images/blog/${article.cover.name}`)" :style="article.cover.style" alt="">
           </router-link>
         </div>
         <div class="text">
           <div class="title sub-heading">{{ article.title }}</div>
-          <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale,  { dateStyle: 'long' }) }}<span v-if="article.author"> | </span><span class="author" v-if="article.author">{{ article.author }}</span></div>
-          <div class="blog-text">{{ article.blocks.filter(b => b.type === 'text').map(b => b.content).join(' ').slice(0, 500) }}</div>
+          <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale, { dateStyle: 'long' }) }}<span
+              v-if="article.author"> | </span><span class="author" v-if="article.author">{{ article.author }}</span></div>
+          <div class="blog-text">{{ article.blocks.filter(b => b.type === 'text').map(b => b.content).join(' ').slice(0,
+            500) }}</div>
         </div>
         <div class="to-article">
-          <router-link :to="`/blog/${article.id}`">Tovább →</router-link> 
+          <router-link :to="`/blog/${article.id}`">Tovább →</router-link>
         </div>
       </div>
     </container>
@@ -72,8 +67,7 @@
   font-style: italic;
 }
 
-.meta,
-.back {
+.meta {
   font-size: 16px;
 }
 
@@ -129,10 +123,24 @@
 
 .article-header {
   display: grid;
-  grid-template: auto auto / 1fr auto;
+  grid-template: auto / 1fr auto;
   grid-auto-flow: column;
-  .sub-heading {
-    margin-bottom: 5px;
+  gap: 10px;
+  padding-bottom: 5px;
+  font-size: 16px;
+
+  .meta {
+    font-size: 14px;
+
+    .author {
+      white-space: nowrap;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .meta {
+      font-size: 16px;
+    }
   }
 }
 

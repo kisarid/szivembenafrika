@@ -59,10 +59,16 @@ export default class App extends Vue {
           { text: this.getTranslation('3.submenu6'), route: 'esemenyek' },
         ],
       },
-      { text: this.getTranslation('4.menu'), route: 'media' },
-      { text: this.getTranslation('5.menu'), route: 'blog' },
-      { text: this.getTranslation('6.menu'), route: 'tamogatok' },
-      { text: this.getTranslation('7.menu'), route: 'kapcsolat' },
+      {
+        text: this.getTranslation('4.menu'),
+        submenu: [
+          { text: this.getTranslation('4.submenu1'), route: 'media' },
+          { text: this.getTranslation('4.submenu2'), route: 'vlog' },
+          { text: this.getTranslation('4.submenu3'), route: 'blog' },
+        ],
+      },
+      { text: this.getTranslation('5.menu'), route: 'tamogatok' },
+      { text: this.getTranslation('6.menu'), route: 'kapcsolat' },
     ]
   }
 }
@@ -278,6 +284,10 @@ svg {
     .text {
       font-style: italic;
     }
+
+    &:hover .link {
+      color: var(--moyo-highlight);
+    }
   }
 }
 </style>
@@ -306,15 +316,15 @@ svg {
       "submenu6": "Események"
     },
     "4": {
-      "menu": "Média"
+      "menu": "Megjelenések",
+      "submenu1": "Média",
+      "submenu2": "Vlog",
+      "submenu3": "Blog"
     },
     "5": {
-      "menu": "Blog"
-    },
-    "6": {
       "menu": "Támogatók"
     },
-    "7": {
+    "6": {
       "menu": "Kapcsolat"
     }
   },
@@ -340,15 +350,15 @@ svg {
       "submenu6": "Events"
     },
     "4": {
-      "menu": "Media"
+      "menu": "Appearances",
+      "submenu1": "Media",
+      "submenu2": "Vlog",
+      "submenu3": "Blog"
     },
     "5": {
-      "menu": "Blog"
-    },
-    "6": {
       "menu": "Supporters"
     },
-    "7": {
+    "6": {
       "menu": "Contact"
     }
   }
