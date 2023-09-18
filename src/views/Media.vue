@@ -2,9 +2,9 @@
   <div class="content">
     <heading>
       <div slot="main">Média</div>
-      <div slot="description">Külső Médiamegjelenések</div>
     </heading>
     <container>
+      <div class="sub-heading">Külső Médiamegjelenések</div>
       <p v-for="(link, index) of mediaAppearances" :key="index">
         <span>{{ link.desc }} | </span><a :href="link.url">{{ link.name }}</a>
       </p>

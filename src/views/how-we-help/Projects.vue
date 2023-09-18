@@ -1,10 +1,12 @@
 <template>
   <div class="content">
     <heading>
-      <div slot="main">{{ $t('main.title') }}</div>
-      <div v-if="!selectedCardId" slot="description">{{ $t('main.text') }}</div>
+      <div slot="main" v-if="!selectedCardId">{{ $t('main.title') }}</div>
+      <div slot="main-small" v-if="selectedCard">{{ selectedCard.title }}</div>
+      <div slot="description" v-if="selectedCardId" @click="selectedCardId = ''" class="link">← Vissza</div>
     </heading>
     <container>
+      <div v-if="!selectedCardId" style="margin-bottom: 10px;">{{ $t('main.text') }}</div>
       <div v-if="!selectedCardId" style="margin-bottom: 30px; font-style: italic;">{{ $t('main.desc')
       }}</div>
       <section class="topic-selector" v-if="!selectedCardId">
@@ -16,10 +18,6 @@
           <div class="text">{{ card.shortDesc }}</div>
           <div class="link" style="margin-top: auto; text-align: right;">Tovább →</div>
         </div>
-      </section>
-      <section v-if="selectedCardId">
-        <div @click="selectedCardId = ''" class="link" style="margin-top: -30px; text-align: right;">← Vissza</div>
-        <div class="sub-heading center">{{ selectedCard.title }}</div>
       </section>
 
       <section v-if="selectedCardId === 'womenprogram'">
