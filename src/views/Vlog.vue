@@ -4,7 +4,6 @@
       <div slot="main">Vlog</div>
     </heading>
     <container>
-      <div class="sub-heading" style="font-size: 24px;">VLOG</div>
       <section v-for="(gallery, gIndex) in galleries" :key="gIndex">
         <div class="sub-heading">{{ gallery.title }}</div>
         <p>{{ gallery.desc }}</p>
