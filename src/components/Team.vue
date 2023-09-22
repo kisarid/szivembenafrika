@@ -285,6 +285,22 @@ export default class Team extends Vue {
         shortBio: this.$i18n.t('pbadel.shortBio') as string,
         longBio: this.getLongBio('pbadel'),
         objectPosition: 'center 55%',
+      },
+      {
+        id: 'knori',
+        name: 'Kárász Nóra',
+        image: 'team/karasz_nori.jpg',
+        shortBio: this.$i18n.t('knori.shortBio') as string,
+        longBio: this.getLongBio('knori'),
+        objectPosition: 'center center',
+      },
+      {
+        id: 'bdora',
+        name: 'Barabás Dóra',
+        image: 'team/barabas_dora.jpg',
+        shortBio: this.$i18n.t('bdora.shortBio') as string,
+        longBio: this.getLongBio('bdora'),
+        objectPosition: 'center center',
       }
     ]
   }
@@ -463,6 +479,23 @@ export default class Team extends Vue {
               "2": "Formatervezőként, fontos számomra, hogy minél több embert és helyzetet megismerjek. Szeretném a munkámmal támogatni másokat és könnyebbé tenni az életüket.",
               "3": "A legboldogabb pillanat számomra, önkénteskedésem során, az volt, amikor megláttam, hogy az első általam készített adatlapokon szereplő gyerekek támogatóra találtak. Nagyon jó érzés volt látni, a munkám eredményét."
             }
+        },
+        "knori": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Mosoly, energia, gyermekek, hit, egészségügy… csupán néhány szó, ez mégis mind én lennék. ",
+              "2": "Hivatalosabb bemutatkozásként: Kárász Nóra vagyok, orvos, táncos, világjáró, illetve 2021 őszétől a Szívemben Született Afrika Egyesület önkéntese.",
+              "3": "Mindig is az az ember voltam, aki képtelen megülni egy helyben, valamit állandóan tennem kell, hogy hasznosnak érezzem magam. Életem egyik legfőbb mottója, hogy a nap minden percét használjam ki, és soha ne vesztegessem el az időmet… Hasonló gondolatok kavarogtak bennem akkor is, amikor az egyetemi élet mókuskerekében rám tört a segíteni akarás vágya. Ekkor kezdtem el igazán Afrika iránt érdeklődni és találtam rá a Szívemben Született Afrika Egyesületre. A szervezet mentalitása, hozzáállása, a „nem segélyezünk, hanem fejlesztünk” elv azonnal meggyőzött, és tudtam, hogy itt mindig elmúlik az az érzés, hogy netán nem vagyok hasznos ember.",
+              "4": "Habár az anatómián tanultakat meghazudtolom, de szerintem egy embernek nem kettő, hanem ha akarja, többszáz, többezer karja is van, amelyeket az arra rászoruló emberek felé nyújthat. Hiszek abban, hogy habár a ruhaméretem nem ezt sugallja, a karjaim mégis elég hosszúak ahhoz, hogy képesek legyenek kontinenseken átnyúlni és egészen Afrikáig elérni. Szeretném, hogy ezek között a karok között mindenki biztonságban és szeretetben érezze magát.",
+              "5": "Nagyon szeretek a kis összetartó csapatunk tagja lenni, hiszen közösen sokkal nagyobb boldogság a sikerek elérése és megélése. Köszönöm az önkénteseknek, hogy állandóan motiválnak és bízom benne, hogy energikus, vidám és mindig mosolygós énem viszonozza mindezt."
+            }
+        },
+        "bdora": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Barabás Dóra vagyok, egy éve önkénteskedem a Szívemben Született Afrikánál. Régóta érdekel Afrika, melynek sokszínűségét lenyűgözőnek találom. Emellett, amikor a humanitárius fejlesztésről először hallottam a tanulmányaim során, elhatároztam, hogy erről szeretnék többet megtudni. Mivel a szervezet Ugandában számos, szakmailag megalapozott projektet vitt már véghez sikerrel, az önkéntességre való felhívásukat olvasva nem volt kétséges, hogy csatlakozom.",
+              "2": "Az önkéntesként eltöltött egy évben bepillantást nyertem a Szívemben Született Afrika Egyesület működésébe, sok részletet megtudhattam a projektek hátteréről. Aktívan bekapcsolódhattam olyan feladatokba, mint az Afrika Nap lebonyolítása vagy középiskolás diákok oktatása a klímaváltozás Afrikára gyakorolt hatásairól, melyekből én is sokat tanultam. Nagyon jó érzés számomra, hogy tevékenységemmel segíthetek a szervezetnek céljai elérésében. Emellett egy fantasztikus közösség részévé válhattam, amelynek tagjait összeköti a közös érdeklődés és a tenni akarás vágya. Mindenkit arra bíztatok, hogy csatlakozzon. :)"
+            }
         }
     },
     "en": {
@@ -633,6 +666,23 @@ export default class Team extends Vue {
               "1": "Pribelszki-Balatincz Adél vagyok, lassan másfél éve önkénteskedem a szervezetnél. Jelenlegi feladatom, hogy elkészítsem, a támogatási programokban résztvevő gyerekek adatlapjait. Gimnazista korom óta szerettem volna önkénteskedni. Egyetem alatt találtam rá a szervezetre Instagrammon és azonnal csatlakoztam.",
               "2": "Formatervezőként, fontos számomra, hogy minél több embert és helyzetet megismerjek. Szeretném a munkámmal támogatni másokat és könnyebbé tenni az életüket.",
               "3": "A legboldogabb pillanat számomra, önkénteskedésem során, az volt, amikor megláttam, hogy az első általam készített adatlapokon szereplő gyerekek támogatóra találtak. Nagyon jó érzés volt látni, a munkám eredményét."
+            }
+        },
+        "knori": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Mosoly, energia, gyermekek, hit, egészségügy… csupán néhány szó, ez mégis mind én lennék. ",
+              "2": "Hivatalosabb bemutatkozásként: Kárász Nóra vagyok, orvos, táncos, világjáró, illetve 2021 őszétől a Szívemben Született Afrika Egyesület önkéntese.",
+              "3": "Mindig is az az ember voltam, aki képtelen megülni egy helyben, valamit állandóan tennem kell, hogy hasznosnak érezzem magam. Életem egyik legfőbb mottója, hogy a nap minden percét használjam ki, és soha ne vesztegessem el az időmet… Hasonló gondolatok kavarogtak bennem akkor is, amikor az egyetemi élet mókuskerekében rám tört a segíteni akarás vágya. Ekkor kezdtem el igazán Afrika iránt érdeklődni és találtam rá a Szívemben Született Afrika Egyesületre. A szervezet mentalitása, hozzáállása, a „nem segélyezünk, hanem fejlesztünk” elv azonnal meggyőzött, és tudtam, hogy itt mindig elmúlik az az érzés, hogy netán nem vagyok hasznos ember.",
+              "4": "Habár az anatómián tanultakat meghazudtolom, de szerintem egy embernek nem kettő, hanem ha akarja, többszáz, többezer karja is van, amelyeket az arra rászoruló emberek felé nyújthat. Hiszek abban, hogy habár a ruhaméretem nem ezt sugallja, a karjaim mégis elég hosszúak ahhoz, hogy képesek legyenek kontinenseken átnyúlni és egészen Afrikáig elérni. Szeretném, hogy ezek között a karok között mindenki biztonságban és szeretetben érezze magát.",
+              "5": "Nagyon szeretek a kis összetartó csapatunk tagja lenni, hiszen közösen sokkal nagyobb boldogság a sikerek elérése és megélése. Köszönöm az önkénteseknek, hogy állandóan motiválnak és bízom benne, hogy energikus, vidám és mindig mosolygós énem viszonozza mindezt."
+            }
+        },
+        "bdora": {
+            "shortBio": "Önkéntes",
+            "longBio": {
+              "1": "Barabás Dóra vagyok, egy éve önkénteskedem a Szívemben Született Afrikánál. Régóta érdekel Afrika, melynek sokszínűségét lenyűgözőnek találom. Emellett, amikor a humanitárius fejlesztésről először hallottam a tanulmányaim során, elhatároztam, hogy erről szeretnék többet megtudni. Mivel a szervezet Ugandában számos, szakmailag megalapozott projektet vitt már véghez sikerrel, az önkéntességre való felhívásukat olvasva nem volt kétséges, hogy csatlakozom.",
+              "2": "Az önkéntesként eltöltött egy évben bepillantást nyertem a Szívemben Született Afrika Egyesület működésébe, sok részletet megtudhattam a projektek hátteréről. Aktívan bekapcsolódhattam olyan feladatokba, mint az Afrika Nap lebonyolítása vagy középiskolás diákok oktatása a klímaváltozás Afrikára gyakorolt hatásairól, melyekből én is sokat tanultam. Nagyon jó érzés számomra, hogy tevékenységemmel segíthetek a szervezetnek céljai elérésében. Emellett egy fantasztikus közösség részévé válhattam, amelynek tagjait összeköti a közös érdeklődés és a tenni akarás vágya. Mindenkit arra bíztatok, hogy csatlakozzon. :)"
             }
         }
     }

@@ -3,7 +3,7 @@
     <div class="header-holder"></div>
     <Header :menuItems="menuItems" />
     <router-view />
-    <Footer />
+    <Footer style="margin-top: 20px;"/>
   </div>
 </template>
 
