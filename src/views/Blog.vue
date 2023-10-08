@@ -18,8 +18,8 @@
         <div class="pic" v-if="selectedArticle.innerCover !== null">
           <img :src="require(`@/assets/images/blog/${(selectedArticle.innerCover || selectedArticle.cover).name}`)"
             :style="(selectedArticle.innerCover || selectedArticle.cover).style" alt="">
-          <span v-if="(selectedArticle.innerCover || selectedArticle.cover).caption" class="caption">{{
-            (selectedArticle.innerCover || selectedArticle.cover).caption }}</span>
+          <span v-if="(selectedArticle.innerCover || selectedArticle.cover).caption"
+            v-html="(selectedArticle.innerCover || selectedArticle.cover).caption" class="caption"></span>
         </div>
         <div class="blog-text">
           <template v-for="(block, i) in selectedArticle.blocks">
@@ -230,6 +230,11 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2023-10-09e',
+      '2023-10-09d',
+      '2023-10-09c',
+      '2023-10-09b',
+      '2023-10-09a',
       '2023-09-22',
       '2023-09-13',
       '2023-09-11',
