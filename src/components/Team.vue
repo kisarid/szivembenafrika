@@ -170,7 +170,7 @@ export default class Team extends Vue {
       },
       {
         id: 'kanna',
-        name: 'Kiss Anna',
+        name: 'Dr. Kiss Anna',
         image: 'team/Anna.jpg',
         shortBio: this.$i18n.t('kanna.shortBio') as string,
         longBio: this.getLongBio('kanna'),
