@@ -48,7 +48,7 @@ export default class About extends Vue {}
     "en": {
         "main": "Our team",
         "title1": "Our mission",
-        "p1": "We believe that every people are equal, and everyone should have the same chances in life. That someone can not end up in a bad situation just based on where they were born to live. We are working with the aims of ending poverty, reaching social justice and gender equality and for every child and woman to have a chance to build the future they want to have. We believe that through our work we are able to reach a world of justice and sustainability, where everyone is able to enjoy their rights to a dignified life without oppression and deprivation."
+        "p1": "We believe that everyone is equal and should have equal opportunities. That put simply: because of where you were born, you shouldn't be put in a bad situation.  We work for the eradication of poverty, social justice and gender equality, and for every child and woman to have the opportunity to create the future they aspire for. We believe that through our work, we can contribute to a just and sustainable world in which all people enjoy the right to live in dignity, free from deprivation and oppression."
     }
 }
 </i18n>

@@ -218,7 +218,7 @@ export default class Team extends Vue {
         id: 'ibarbi',
         name: 'Illyés Györfi Barbi',
         image: 'team/illyes_barbi.jpg',
-        shortBio: this.$i18n.t('ibarbi.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('ibarbi'),
         objectPosition: 'center 25%',
       },
@@ -226,7 +226,7 @@ export default class Team extends Vue {
         id: 'kdori',
         name: 'Kozári Dóra Tímea',
         image: 'team/kozari_dori.jpg',
-        shortBio: this.$i18n.t('kdori.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('kdori'),
         objectPosition: 'center 14%',
       },
@@ -234,7 +234,7 @@ export default class Team extends Vue {
         id: 'btunde',
         name: 'Balogh Tünde',
         image: 'team/balogh_tunde.jpg',
-        shortBio: this.$i18n.t('btunde.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('btunde'),
         objectPosition: 'center 30%',
       },
@@ -242,7 +242,7 @@ export default class Team extends Vue {
         id: 'sdani',
         name: 'Steigler Dániel',
         image: 'team/steigler_dani.jpg',
-        shortBio: this.$i18n.t('sdani.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('sdani'),
         objectPosition: 'center 25%',
       },
@@ -250,7 +250,7 @@ export default class Team extends Vue {
         id: 'magi',
         name: 'Dr. Musicz Ágnes',
         image: 'team/musicz_agi.jpg',
-        shortBio: this.$i18n.t('magi.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('magi'),
         objectPosition: 'center center',
       },
@@ -258,7 +258,7 @@ export default class Team extends Vue {
         id: 'zcsenge',
         name: 'Záhoczky Csenge',
         image: 'team/zahoczky_csenge.jpg',
-        shortBio: this.$i18n.t('zcsenge.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('zcsenge'),
         objectPosition: 'center 30%',
       },
@@ -266,7 +266,7 @@ export default class Team extends Vue {
         id: 'vjuli',
         name: 'Vető Julianna',
         image: 'team/veto_juli.jpg',
-        shortBio: this.$i18n.t('vjuli.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('vjuli'),
         objectPosition: 'center 30%',
       },
@@ -274,7 +274,7 @@ export default class Team extends Vue {
         id: 'dklaudia',
         name: 'Dankai Klaudia',
         image: 'team/dankai_klaudia.jpg',
-        shortBio: this.$i18n.t('dklaudia.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('dklaudia'),
         objectPosition: 'center top',
       },
@@ -282,7 +282,7 @@ export default class Team extends Vue {
         id: 'pbadel',
         name: 'Pribelszki-Balatincz Adél',
         image: 'team/pbadel.jpg',
-        shortBio: this.$i18n.t('pbadel.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('pbadel'),
         objectPosition: 'center 55%',
       },
@@ -290,7 +290,7 @@ export default class Team extends Vue {
         id: 'knori',
         name: 'Kárász Nóra',
         image: 'team/karasz_nori.jpg',
-        shortBio: this.$i18n.t('knori.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('knori'),
         objectPosition: 'center center',
       },
@@ -298,7 +298,7 @@ export default class Team extends Vue {
         id: 'bdora',
         name: 'Barabás Dóra',
         image: 'team/barabas_dora.jpg',
-        shortBio: this.$i18n.t('bdora.shortBio') as string,
+        shortBio: '',
         longBio: this.getLongBio('bdora'),
         objectPosition: 'center center',
       }
@@ -384,117 +384,117 @@ export default class Team extends Vue {
         "mpanna": {
             "shortBio": "Egyesületi tag",
             "longBio": {
-              "1": "Makó Panna vagyok, grafikus, webfejlesztő, vállalkozó és világvándor.",
-              "2": "Önkéntesként csatlakoztam a Szívemben Született Afrika csapatához: szerelem volt első látásra. Sok helyre sodródtam már, megannyi közösséggel foglalkoztam. Minden munkám során, amivel eddig és jelenleg is foglalkozom elsőrendűnek tartom a közösséget, akik munkám közben körbevesznek; az értékrendet, amivel működnek; valamint a célt, amit kitűznek maguk elé.",
-              "3": "Afrika kultúrája és közösségének megismerése vonz már a kezdetektől, továbbá kiemelten foglalkoztat a nők szerepe különböző társadalmakban. Vallom, hogy az embereknek kapcsolódniuk kell egymáshoz, kultúráknak találkoznia kell egymással, és hiszem, hogy fenntartható fejlődés csak úgy érhető el, ha támogatjuk egymást a különböző tudások átadásában - ez az az irány, amivel úgy érzem csatlakozni tudok a szervezet értékeihez és tevékenységeihez."
+                "1": "Makó Panna vagyok, grafikus, webfejlesztő, vállalkozó és világvándor.",
+                "2": "Önkéntesként csatlakoztam a Szívemben Született Afrika csapatához: szerelem volt első látásra. Sok helyre sodródtam már, megannyi közösséggel foglalkoztam. Minden munkám során, amivel eddig és jelenleg is foglalkozom elsőrendűnek tartom a közösséget, akik munkám közben körbevesznek; az értékrendet, amivel működnek; valamint a célt, amit kitűznek maguk elé.",
+                "3": "Afrika kultúrája és közösségének megismerése vonz már a kezdetektől, továbbá kiemelten foglalkoztat a nők szerepe különböző társadalmakban. Vallom, hogy az embereknek kapcsolódniuk kell egymáshoz, kultúráknak találkoznia kell egymással, és hiszem, hogy fenntartható fejlődés csak úgy érhető el, ha támogatjuk egymást a különböző tudások átadásában - ez az az irány, amivel úgy érzem csatlakozni tudok a szervezet értékeihez és tevékenységeihez."
             }
         },
         "njuli": {
             "shortBio": "Egyesületi tag",
             "longBio": {
-              "1": "Németh Júlia vagyok, az Egyesület pártolói tagja és a gyermektámogatási valamint a Graduate a Girl programok koordinátora. 2022 elején csatlakoztam a Szívemben Született Afrikához, de az Egyesület munkáját már azelőtt is figyelemmel kísértem.",
-              "2": "A Corvinus Egyetemen végeztem nemzetközi tanulmányok szakon, majd a Bécsi Egyetem politológia mesterszakán szereztem diplomát. Jelenleg a felsőoktatásban dolgozom.",
-              "3": "Afrikával az egyetemi éveim alatt kezdtem el foglalkozni, tanulmányaim befejezése után pedig Ghánában tölthettem hat hónapot egy német fejlesztési szervezet gyakornokaként. Bár szakmai pályám egyelőre másképp alakult, tudom, hogy Afrika valamilyen formában mindig szerepet fog játszani az életemben."
+                "1": "Németh Júlia vagyok, az Egyesület pártolói tagja és a gyermektámogatási valamint a Graduate a Girl programok koordinátora. 2022 elején csatlakoztam a Szívemben Született Afrikához, de az Egyesület munkáját már azelőtt is figyelemmel kísértem.",
+                "2": "A Corvinus Egyetemen végeztem nemzetközi tanulmányok szakon, majd a Bécsi Egyetem politológia mesterszakán szereztem diplomát. Jelenleg a felsőoktatásban dolgozom.",
+                "3": "Afrikával az egyetemi éveim alatt kezdtem el foglalkozni, tanulmányaim befejezése után pedig Ghánában tölthettem hat hónapot egy német fejlesztési szervezet gyakornokaként. Bár szakmai pályám egyelőre másképp alakult, tudom, hogy Afrika valamilyen formában mindig szerepet fog játszani az életemben."
             }
         },
         "ibarbi": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Illyés Györfi Barbi vagyok, lassan 3 éve a szervezet követője, 1 éve pedig aktív önkéntese. Érdekelnek a kultúrák, a köztük lévő hasonlóságok/különbségek és az emberek. Utóbbira válaszként pszichológiát tanulok, előbbi kíváncsiságot etetve pedig lehetőségeimhez mérten utazok, felfedezek. Na meg olvasok. Bár még sosem jártam Afrikában, valamilyen okból kifolyólag gyerekkorom óta szerelmese vagyok. A kultúra, a minták, az emberek önfeledtsége, a ritmus, amely felér egy szívdobogással… minden vonz. Bízom benne, hogy amíg reggelente szemeim kinyílnak, addig tehetek is valamit az emberiségért, egy szebb jövőjért. Szabad lélek vagyok, amit néha sajnos elfelejtek, de mindig gyorsan visszatalálok magamhoz. Az álmaim nagyok, ambícióim sose hagytak cserben, s ha egyszer kijutok Afrikába, lehet haza sem jövök többé. Magunkba nézni, nyitni mások felé, kíváncsinak lenni és önkénteskedni menő!"
+                "1": "Illyés Györfi Barbi vagyok, lassan 3 éve a szervezet követője, 1 éve pedig aktív önkéntese. Érdekelnek a kultúrák, a köztük lévő hasonlóságok/különbségek és az emberek. Utóbbira válaszként pszichológiát tanulok, előbbi kíváncsiságot etetve pedig lehetőségeimhez mérten utazok, felfedezek. Na meg olvasok. Bár még sosem jártam Afrikában, valamilyen okból kifolyólag gyerekkorom óta szerelmese vagyok. A kultúra, a minták, az emberek önfeledtsége, a ritmus, amely felér egy szívdobogással… minden vonz. Bízom benne, hogy amíg reggelente szemeim kinyílnak, addig tehetek is valamit az emberiségért, egy szebb jövőjért. Szabad lélek vagyok, amit néha sajnos elfelejtek, de mindig gyorsan visszatalálok magamhoz. Az álmaim nagyok, ambícióim sose hagytak cserben, s ha egyszer kijutok Afrikába, lehet haza sem jövök többé. Magunkba nézni, nyitni mások felé, kíváncsinak lenni és önkénteskedni menő!"
             }
         },
         "kdori": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Az a típusú ember vagyok, aki minden reggel újabb lehetőséget lát a napban és minden este hálával a szívében hajtja álomra a fejét. A szerencse lányának gondolom magam, emellett nagyon tudatosan élem az életem. Megtalálom azokat a dolgokat, amikben ki tudok teljesedni, és azokat az embereket, közösségeket, akik inspirálnak. Az életem egy ilyen csodadarabkája a Szívemben Született Afrika Egyesület is.",
-              "2": "Számomra fontos, hogy olyan önkéntes tevékenységet végezzek, ahol találkoznak az adó és a fogadó fél szükségletei, ezáltal az \"adok-kapok\" kapcsolat kölcsönössé válik. Imádok utazni, nyitott szemmel járni, vonzanak a különböző kultúrák, Afrika világa különösen. A gyermekekkel való foglalkozás pedig a mindennapjaim része, ez éltet igazán. És mikor olyan gyermekeknek adhatok magamból, akiknek igazán szüksége van rá, az felülmúlhatatlan öröm számomra. Nem csupán az egyesület küldetésével és projektjeivel, de működésükkel, elveikkel is teljes mértékben tudok azonosulni. Hiszen valójában nem egy szervezetet választottam, ahova csatlakozni szerettem volna, hanem azokat az embereket, akik azt éltetik. 2022. októberében csatlakoztam az önkéntes csapathoz, de már most úgy érzem, hogy sokkal többet kaptam általuk, mint, amit adhatok."
+                "1": "Az a típusú ember vagyok, aki minden reggel újabb lehetőséget lát a napban és minden este hálával a szívében hajtja álomra a fejét. A szerencse lányának gondolom magam, emellett nagyon tudatosan élem az életem. Megtalálom azokat a dolgokat, amikben ki tudok teljesedni, és azokat az embereket, közösségeket, akik inspirálnak. Az életem egy ilyen csodadarabkája a Szívemben Született Afrika Egyesület is.",
+                "2": "Számomra fontos, hogy olyan önkéntes tevékenységet végezzek, ahol találkoznak az adó és a fogadó fél szükségletei, ezáltal az \"adok-kapok\" kapcsolat kölcsönössé válik. Imádok utazni, nyitott szemmel járni, vonzanak a különböző kultúrák, Afrika világa különösen. A gyermekekkel való foglalkozás pedig a mindennapjaim része, ez éltet igazán. És mikor olyan gyermekeknek adhatok magamból, akiknek igazán szüksége van rá, az felülmúlhatatlan öröm számomra. Nem csupán az egyesület küldetésével és projektjeivel, de működésükkel, elveikkel is teljes mértékben tudok azonosulni. Hiszen valójában nem egy szervezetet választottam, ahova csatlakozni szerettem volna, hanem azokat az embereket, akik azt éltetik. 2022. októberében csatlakoztam az önkéntes csapathoz, de már most úgy érzem, hogy sokkal többet kaptam általuk, mint, amit adhatok."
             }
         },
         "btunde": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Balogh Tünde vagyok, a hétköznapokban könyvelő, de inkább a sokszor mosolygó önkéntes, aki hiszi, hogy ha igazán szeretnénk valamit elérni az életünkben, azt megteremtjük.",
-              "2": "2022. szeptemberében csatlakoztam a Szívemben Született Afrika Egyesülethez. ",
-              "3": "Az önkéntesség körülbelül 7 éve mindennapjaim része, úgy érzem minden egyes ilyen esemény, tevékenység többé tesz az életemben, és előrevisz álmaim megvalósításában. ",
-              "4": "Egy idézet melyet próbálok követni:",
-              "5": "\"Önmagunk megtalálásának legjobb módja, ha elveszünk mások szolgálatában\" /Gandhi/",
-              "6": "Gyerekként arról ábrándoztam, hogy egyszer Afrikában leszek önkéntes, az élet más irányba sodort, de úgy érzem sosem késő teljesíteni a vágyainkat. ",
-              "7": "Az évek alatt több nonprofit szervezettel volt kapcsolatom, ezért tudatosan kerestem egy olyan közösséget, ahol családias a környezet, emberi kapcsolatok alakulnak ki, és fizikailag is láthatom, ahogy megvalósulnak a támogatások. ",
-              "8": "Már az első találkozásoknál éreztem, hogy a legjobbat választottam, és amikor eljön, az ideje biztosan afrikai misszióban veszek részt."
+                "1": "Balogh Tünde vagyok, a hétköznapokban könyvelő, de inkább a sokszor mosolygó önkéntes, aki hiszi, hogy ha igazán szeretnénk valamit elérni az életünkben, azt megteremtjük.",
+                "2": "2022. szeptemberében csatlakoztam a Szívemben Született Afrika Egyesülethez. ",
+                "3": "Az önkéntesség körülbelül 7 éve mindennapjaim része, úgy érzem minden egyes ilyen esemény, tevékenység többé tesz az életemben, és előrevisz álmaim megvalósításában. ",
+                "4": "Egy idézet melyet próbálok követni:",
+                "5": "\"Önmagunk megtalálásának legjobb módja, ha elveszünk mások szolgálatában\" /Gandhi/",
+                "6": "Gyerekként arról ábrándoztam, hogy egyszer Afrikában leszek önkéntes, az élet más irányba sodort, de úgy érzem sosem késő teljesíteni a vágyainkat. ",
+                "7": "Az évek alatt több nonprofit szervezettel volt kapcsolatom, ezért tudatosan kerestem egy olyan közösséget, ahol családias a környezet, emberi kapcsolatok alakulnak ki, és fizikailag is láthatom, ahogy megvalósulnak a támogatások. ",
+                "8": "Már az első találkozásoknál éreztem, hogy a legjobbat választottam, és amikor eljön, az ideje biztosan afrikai misszióban veszek részt."
             }
         },
         "sdani": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Steigler Dániel vagyok, és 6 hónapja lehetek tagja ennek a csodás közösségnek.",
-              "2": "Több éves külföldi életem során megtapasztaltam, hogy mennyire szép az emberek sokszínűsége, vallástól, bőrszíntől, nemtől és társadalmi rétegtől függetlenül, ezért is szerettem volna itthon egy hasonlóan nyitott szervezetnek a része lenni.",
-              "3": "Mindig is szerettem volna Önkéntesként támogatni egy magasztosabb cél ügyét, de mindeddig ez háttérbe szorult.",
-              "4": "Afrika a maga pezsgő színes életérzésével, csodálatos állat és növényvilágával, kultúrájával már kisgyerekként lenyűgözött.",
-              "5": "Ebből is adódott, hogy a tenni akarást és az életérzést összekomponálva kötöttem ki a Szívemben Született Afrika közösségénél.",
-              "6": "Hiszem, hogy ezzel a csapattal mind felkészültségünk mind motiváltságunk miatt, ha egy kicsivel is, de jobbá tehetjük a világot."
+                "1": "Steigler Dániel vagyok, és 6 hónapja lehetek tagja ennek a csodás közösségnek.",
+                "2": "Több éves külföldi életem során megtapasztaltam, hogy mennyire szép az emberek sokszínűsége, vallástól, bőrszíntől, nemtől és társadalmi rétegtől függetlenül, ezért is szerettem volna itthon egy hasonlóan nyitott szervezetnek a része lenni.",
+                "3": "Mindig is szerettem volna Önkéntesként támogatni egy magasztosabb cél ügyét, de mindeddig ez háttérbe szorult.",
+                "4": "Afrika a maga pezsgő színes életérzésével, csodálatos állat és növényvilágával, kultúrájával már kisgyerekként lenyűgözött.",
+                "5": "Ebből is adódott, hogy a tenni akarást és az életérzést összekomponálva kötöttem ki a Szívemben Született Afrika közösségénél.",
+                "6": "Hiszem, hogy ezzel a csapattal mind felkészültségünk mind motiváltságunk miatt, ha egy kicsivel is, de jobbá tehetjük a világot."
             }
         },
         "magi": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Életünk igazán nagy dolgainak van egy olyan dimenziója, ami szavakkal csak körbeírható. Az érzések, illatok, gondolatok élménnyé összesűrűsödve adják azokat a mérföldköveket, melyek több év, évtized után is meghatározóak, egy- egy pillanatba összesűrűsödve később is visszahívhatja egy személy, dallam, szó, bármi.",
-              "2": "A novemberi ugandai missziós úttól sok ilyen pillanatot várok. Annyira nagy biztonságérzetet ad a rendszeres afrikai missziós akadémiai nap, ahol havonta találkozhatunk egymással, közvetetten átélhetjük korábbi missziók történetét, az önismereti feladatok nekem nagyon megerősítőek.",
-              "3": "Miért pont Afrika? Mert egzotikus, távoli, ahol nagy a szükség, ahol talán könnyebben elfeledkezhet önmagáról az ember. Ahol materialista mérce szerint szegénység van, mégis megtapasztalható az ott élő emberek derűje, hálája az apró, mindennapi dolgokért. ",
-              "4": "Gyermekorvosként, nőként nagyon érdekel, hogy a szülést, anyaságot, gyermeknevelést hogyan élik meg az ugandai nők. Hogy a sok különbözőség, távolság mellett mi az, ami közös bennünk.",
-              "5": "Miért önkéntesség? Azért, mert “ Nagyobb boldogság adni, mint kapni”. (Apostolok Cselekedetei 20:35)"
+                "1": "Életünk igazán nagy dolgainak van egy olyan dimenziója, ami szavakkal csak körbeírható. Az érzések, illatok, gondolatok élménnyé összesűrűsödve adják azokat a mérföldköveket, melyek több év, évtized után is meghatározóak, egy- egy pillanatba összesűrűsödve később is visszahívhatja egy személy, dallam, szó, bármi.",
+                "2": "A novemberi ugandai missziós úttól sok ilyen pillanatot várok. Annyira nagy biztonságérzetet ad a rendszeres afrikai missziós akadémiai nap, ahol havonta találkozhatunk egymással, közvetetten átélhetjük korábbi missziók történetét, az önismereti feladatok nekem nagyon megerősítőek.",
+                "3": "Miért pont Afrika? Mert egzotikus, távoli, ahol nagy a szükség, ahol talán könnyebben elfeledkezhet önmagáról az ember. Ahol materialista mérce szerint szegénység van, mégis megtapasztalható az ott élő emberek derűje, hálája az apró, mindennapi dolgokért. ",
+                "4": "Gyermekorvosként, nőként nagyon érdekel, hogy a szülést, anyaságot, gyermeknevelést hogyan élik meg az ugandai nők. Hogy a sok különbözőség, távolság mellett mi az, ami közös bennünk.",
+                "5": "Miért önkéntesség? Azért, mert “ Nagyobb boldogság adni, mint kapni”. (Apostolok Cselekedetei 20:35)"
             }
         },
         "zcsenge": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Valamit tenni kell… Valamit muszáj – gondolta a hatéves énem, és összegyűjtötte az összes zsebpénzét, hogy az Ökumenikus Segélyszervezeten keresztül eljuttassa az árvíz károsultjainak.",
-              "2": "Záhoczky Csenge vagyok, külpolitikai és nemzetközi biztonság- és védelempolitikai szakértő, a gyerekek csodálója, örök idealista.",
-              "3": "A környezetem mindig is egyfajta „gyereksuttogónak” tartott, már nagyobbacska koromtól kezdve tapadtak rám a gyerekek. Sokáig mindenki azt hitte, egyszer majd óvónő leszek. A mindig is bennem motoszkáló segíteni akarás, az emberek iránti elhivatottság azonban úgy érzem, jobban ki tud teljesedni a humanitárius segítségnyújtásban, egy gyermek- és nőjogokkal foglalkozó életútban.",
-              "4": "Zsófival még évekkel ezelőtt, egy másik szervezet önkénteseiként ismertük meg egymást. Amikor megtudtam, hogy megalapította a Szívemben Született Afrika Egyesületet, kétség sem férhetett hozzá, hogy az ő csapatának tagja szeretnék lenni. Úgy érzem ugyanis, hogy Zsófi és az én szívemben ugyanaz lakozik: ugyanaz a szeretet az emberek iránt, ugyanaz a belső késztetés, hogy mások életét, ha csak egy hajszálnyival is, de jobbá, könnyebbé, szebbé, békésebbé tegyük. ",
-              "5": "Hiszen ahogy a Talmud mondja: aki egy embert megment, az egész világot menti meg."
+                "1": "Valamit tenni kell… Valamit muszáj – gondolta a hatéves énem, és összegyűjtötte az összes zsebpénzét, hogy az Ökumenikus Segélyszervezeten keresztül eljuttassa az árvíz károsultjainak.",
+                "2": "Záhoczky Csenge vagyok, külpolitikai és nemzetközi biztonság- és védelempolitikai szakértő, a gyerekek csodálója, örök idealista.",
+                "3": "A környezetem mindig is egyfajta „gyereksuttogónak” tartott, már nagyobbacska koromtól kezdve tapadtak rám a gyerekek. Sokáig mindenki azt hitte, egyszer majd óvónő leszek. A mindig is bennem motoszkáló segíteni akarás, az emberek iránti elhivatottság azonban úgy érzem, jobban ki tud teljesedni a humanitárius segítségnyújtásban, egy gyermek- és nőjogokkal foglalkozó életútban.",
+                "4": "Zsófival még évekkel ezelőtt, egy másik szervezet önkénteseiként ismertük meg egymást. Amikor megtudtam, hogy megalapította a Szívemben Született Afrika Egyesületet, kétség sem férhetett hozzá, hogy az ő csapatának tagja szeretnék lenni. Úgy érzem ugyanis, hogy Zsófi és az én szívemben ugyanaz lakozik: ugyanaz a szeretet az emberek iránt, ugyanaz a belső késztetés, hogy mások életét, ha csak egy hajszálnyival is, de jobbá, könnyebbé, szebbé, békésebbé tegyük. ",
+                "5": "Hiszen ahogy a Talmud mondja: aki egy embert megment, az egész világot menti meg."
             }
         },
         "vjuli": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Vető Julianna vagyok, és két és fél éve önkénteskedek a Szívemben Született Afrika csapatánál. Ezalatt a rövid idő alatt, nagyon sok élményben részesültem, és rengeteg fantasztikus embert ismertem meg.",
-              "2": "Gyerekkori álmom volt, hogy egyszer afrikai gyerekekkel foglalkozzak, de sosem gondoltam, hogy erre tényleg van lehetőségem. A Covid alatt találkoztam a szervezettel, amikor jelképes örökbefogadó szülőket kerestek. Akkor már nem volt kérdés, hogy csatlakozzak a csapathoz, és örökbefogadják egy gyermeket. Nagyon szerencsés vagyok, mert egy év önkénteskedés után sikerült kijutnom a Szervezettel Manafwába és megismerkedni az örökbefogadott kislánnyommal, és a közösség valamennyi tagjával. Ez egy életre szóló élmény volt számomra, és azóta is mindig emlékeztet arra, hogy ne adjuk fel az álmainkat.",
-              "3": "A családommal, egy kis vegetáriánus éttermet üzemeltetünk Buda szívében, a Szelence Cafét. Az étterem a gyerekkori lakásunkból lett átalakítva, és mi továbbra is a házban élünk. Nagyon fontos számomra a barátságos, otthonos környezet és a család összetartása. Ezért is szívügyem a jövőben minél több manafwai családot segíteni, hogy minél kevesebb családnak kelljen szétszakadni.",
-              "4": "A szervezetnek köszönhetően rengeteg fantasztikus embert ismerhettem meg, amikből mára szoros barátságok, baráti társaságok alakultak ki. És ennél fantasztikusabb dolog nincs számomra, mint amikor egy közös cél érdekében, különböző emberek össze tudnak kapcsolódni."
+                "1": "Vető Julianna vagyok, és két és fél éve önkénteskedek a Szívemben Született Afrika csapatánál. Ezalatt a rövid idő alatt, nagyon sok élményben részesültem, és rengeteg fantasztikus embert ismertem meg.",
+                "2": "Gyerekkori álmom volt, hogy egyszer afrikai gyerekekkel foglalkozzak, de sosem gondoltam, hogy erre tényleg van lehetőségem. A Covid alatt találkoztam a szervezettel, amikor jelképes örökbefogadó szülőket kerestek. Akkor már nem volt kérdés, hogy csatlakozzak a csapathoz, és örökbefogadják egy gyermeket. Nagyon szerencsés vagyok, mert egy év önkénteskedés után sikerült kijutnom a Szervezettel Manafwába és megismerkedni az örökbefogadott kislánnyommal, és a közösség valamennyi tagjával. Ez egy életre szóló élmény volt számomra, és azóta is mindig emlékeztet arra, hogy ne adjuk fel az álmainkat.",
+                "3": "A családommal, egy kis vegetáriánus éttermet üzemeltetünk Buda szívében, a Szelence Cafét. Az étterem a gyerekkori lakásunkból lett átalakítva, és mi továbbra is a házban élünk. Nagyon fontos számomra a barátságos, otthonos környezet és a család összetartása. Ezért is szívügyem a jövőben minél több manafwai családot segíteni, hogy minél kevesebb családnak kelljen szétszakadni.",
+                "4": "A szervezetnek köszönhetően rengeteg fantasztikus embert ismerhettem meg, amikből mára szoros barátságok, baráti társaságok alakultak ki. És ennél fantasztikusabb dolog nincs számomra, mint amikor egy közös cél érdekében, különböző emberek össze tudnak kapcsolódni."
             }
         },
         "dklaudia": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Azzal, hogy valaki önkéntessé válik, megvan a remény arra, hogy jobbá, szebbé tegyük a világot! <3",
-              "2": "Több mint egy éve kezdtem el keresni egy olyan szervezetet, akik Afrikában élő gyerekeknek segítenek. Mindig is érdekelt Afrika, emiatt a terveim között szerepelt, hogy egyszer az életben mindenképpen szeretnék oda eljutni és segíteni az ott élő gyerekeknek amiben tudok. Februárban csatlakoztam ehhez a csodálatos csapathoz, ahol már az első alkalommal éreztem, hogy nagyon jó helyre csöppentem. Jó érezni, hogy mennyire fontos a szervezetnek, hogy folyamatosan foglalkoznak azzal, hogy felkészítsenek minket egy lehetséges misszióra, emellett pedig oda figyelnek arra is, hogy tényleg egy nagyon jó közösség részévé váljunk. ",
-              "3": "Biztosan felmerült benned is a kérdés, hogy miért pont a Szívemben Született Afrika csapatához jelentkezz önkéntesnek?",
-              "4": "A válasz egyszerű: Ha szeretnél egy szuper csapat részévé válni, ahol szívvel-lélekkel minden nap azon dolgozunk, hogy segítsünk a gyerekeknek egy szebb jövőt elérni, akkor ne habozz, itt a helyed! 😊"
+                "1": "Azzal, hogy valaki önkéntessé válik, megvan a remény arra, hogy jobbá, szebbé tegyük a világot! <3",
+                "2": "Több mint egy éve kezdtem el keresni egy olyan szervezetet, akik Afrikában élő gyerekeknek segítenek. Mindig is érdekelt Afrika, emiatt a terveim között szerepelt, hogy egyszer az életben mindenképpen szeretnék oda eljutni és segíteni az ott élő gyerekeknek amiben tudok. Februárban csatlakoztam ehhez a csodálatos csapathoz, ahol már az első alkalommal éreztem, hogy nagyon jó helyre csöppentem. Jó érezni, hogy mennyire fontos a szervezetnek, hogy folyamatosan foglalkoznak azzal, hogy felkészítsenek minket egy lehetséges misszióra, emellett pedig oda figyelnek arra is, hogy tényleg egy nagyon jó közösség részévé váljunk. ",
+                "3": "Biztosan felmerült benned is a kérdés, hogy miért pont a Szívemben Született Afrika csapatához jelentkezz önkéntesnek?",
+                "4": "A válasz egyszerű: Ha szeretnél egy szuper csapat részévé válni, ahol szívvel-lélekkel minden nap azon dolgozunk, hogy segítsünk a gyerekeknek egy szebb jövőt elérni, akkor ne habozz, itt a helyed! 😊"
             }
         },
         "pbadel": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Pribelszki-Balatincz Adél vagyok, lassan másfél éve önkénteskedem a szervezetnél. Jelenlegi feladatom, hogy elkészítsem, a támogatási programokban résztvevő gyerekek adatlapjait. Gimnazista korom óta szerettem volna önkénteskedni. Egyetem alatt találtam rá a szervezetre Instagrammon és azonnal csatlakoztam.",
-              "2": "Formatervezőként, fontos számomra, hogy minél több embert és helyzetet megismerjek. Szeretném a munkámmal támogatni másokat és könnyebbé tenni az életüket.",
-              "3": "A legboldogabb pillanat számomra, önkénteskedésem során, az volt, amikor megláttam, hogy az első általam készített adatlapokon szereplő gyerekek támogatóra találtak. Nagyon jó érzés volt látni, a munkám eredményét."
+                "1": "Pribelszki-Balatincz Adél vagyok, lassan másfél éve önkénteskedem a szervezetnél. Jelenlegi feladatom, hogy elkészítsem, a támogatási programokban résztvevő gyerekek adatlapjait. Gimnazista korom óta szerettem volna önkénteskedni. Egyetem alatt találtam rá a szervezetre Instagrammon és azonnal csatlakoztam.",
+                "2": "Formatervezőként, fontos számomra, hogy minél több embert és helyzetet megismerjek. Szeretném a munkámmal támogatni másokat és könnyebbé tenni az életüket.",
+                "3": "A legboldogabb pillanat számomra, önkénteskedésem során, az volt, amikor megláttam, hogy az első általam készített adatlapokon szereplő gyerekek támogatóra találtak. Nagyon jó érzés volt látni, a munkám eredményét."
             }
         },
         "knori": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Mosoly, energia, gyermekek, hit, egészségügy… csupán néhány szó, ez mégis mind én lennék. ",
-              "2": "Hivatalosabb bemutatkozásként: Kárász Nóra vagyok, orvos, táncos, világjáró, illetve 2021 őszétől a Szívemben Született Afrika Egyesület önkéntese.",
-              "3": "Mindig is az az ember voltam, aki képtelen megülni egy helyben, valamit állandóan tennem kell, hogy hasznosnak érezzem magam. Életem egyik legfőbb mottója, hogy a nap minden percét használjam ki, és soha ne vesztegessem el az időmet… Hasonló gondolatok kavarogtak bennem akkor is, amikor az egyetemi élet mókuskerekében rám tört a segíteni akarás vágya. Ekkor kezdtem el igazán Afrika iránt érdeklődni és találtam rá a Szívemben Született Afrika Egyesületre. A szervezet mentalitása, hozzáállása, a „nem segélyezünk, hanem fejlesztünk” elv azonnal meggyőzött, és tudtam, hogy itt mindig elmúlik az az érzés, hogy netán nem vagyok hasznos ember.",
-              "4": "Habár az anatómián tanultakat meghazudtolom, de szerintem egy embernek nem kettő, hanem ha akarja, többszáz, többezer karja is van, amelyeket az arra rászoruló emberek felé nyújthat. Hiszek abban, hogy habár a ruhaméretem nem ezt sugallja, a karjaim mégis elég hosszúak ahhoz, hogy képesek legyenek kontinenseken átnyúlni és egészen Afrikáig elérni. Szeretném, hogy ezek között a karok között mindenki biztonságban és szeretetben érezze magát.",
-              "5": "Nagyon szeretek a kis összetartó csapatunk tagja lenni, hiszen közösen sokkal nagyobb boldogság a sikerek elérése és megélése. Köszönöm az önkénteseknek, hogy állandóan motiválnak és bízom benne, hogy energikus, vidám és mindig mosolygós énem viszonozza mindezt."
+                "1": "Mosoly, energia, gyermekek, hit, egészségügy… csupán néhány szó, ez mégis mind én lennék. ",
+                "2": "Hivatalosabb bemutatkozásként: Kárász Nóra vagyok, orvos, táncos, világjáró, illetve 2021 őszétől a Szívemben Született Afrika Egyesület önkéntese.",
+                "3": "Mindig is az az ember voltam, aki képtelen megülni egy helyben, valamit állandóan tennem kell, hogy hasznosnak érezzem magam. Életem egyik legfőbb mottója, hogy a nap minden percét használjam ki, és soha ne vesztegessem el az időmet… Hasonló gondolatok kavarogtak bennem akkor is, amikor az egyetemi élet mókuskerekében rám tört a segíteni akarás vágya. Ekkor kezdtem el igazán Afrika iránt érdeklődni és találtam rá a Szívemben Született Afrika Egyesületre. A szervezet mentalitása, hozzáállása, a „nem segélyezünk, hanem fejlesztünk” elv azonnal meggyőzött, és tudtam, hogy itt mindig elmúlik az az érzés, hogy netán nem vagyok hasznos ember.",
+                "4": "Habár az anatómián tanultakat meghazudtolom, de szerintem egy embernek nem kettő, hanem ha akarja, többszáz, többezer karja is van, amelyeket az arra rászoruló emberek felé nyújthat. Hiszek abban, hogy habár a ruhaméretem nem ezt sugallja, a karjaim mégis elég hosszúak ahhoz, hogy képesek legyenek kontinenseken átnyúlni és egészen Afrikáig elérni. Szeretném, hogy ezek között a karok között mindenki biztonságban és szeretetben érezze magát.",
+                "5": "Nagyon szeretek a kis összetartó csapatunk tagja lenni, hiszen közösen sokkal nagyobb boldogság a sikerek elérése és megélése. Köszönöm az önkénteseknek, hogy állandóan motiválnak és bízom benne, hogy energikus, vidám és mindig mosolygós énem viszonozza mindezt."
             }
         },
         "bdora": {
             "shortBio": "Önkéntes",
             "longBio": {
-              "1": "Barabás Dóra vagyok, egy éve önkénteskedem a Szívemben Született Afrikánál. Régóta érdekel Afrika, melynek sokszínűségét lenyűgözőnek találom. Emellett, amikor a humanitárius fejlesztésről először hallottam a tanulmányaim során, elhatároztam, hogy erről szeretnék többet megtudni. Mivel a szervezet Ugandában számos, szakmailag megalapozott projektet vitt már véghez sikerrel, az önkéntességre való felhívásukat olvasva nem volt kétséges, hogy csatlakozom.",
-              "2": "Az önkéntesként eltöltött egy évben bepillantást nyertem a Szívemben Született Afrika Egyesület működésébe, sok részletet megtudhattam a projektek hátteréről. Aktívan bekapcsolódhattam olyan feladatokba, mint az Afrika Nap lebonyolítása vagy középiskolás diákok oktatása a klímaváltozás Afrikára gyakorolt hatásairól, melyekből én is sokat tanultam. Nagyon jó érzés számomra, hogy tevékenységemmel segíthetek a szervezetnek céljai elérésében. Emellett egy fantasztikus közösség részévé válhattam, amelynek tagjait összeköti a közös érdeklődés és a tenni akarás vágya. Mindenkit arra bíztatok, hogy csatlakozzon. :)"
+                "1": "Barabás Dóra vagyok, egy éve önkénteskedem a Szívemben Született Afrikánál. Régóta érdekel Afrika, melynek sokszínűségét lenyűgözőnek találom. Emellett, amikor a humanitárius fejlesztésről először hallottam a tanulmányaim során, elhatároztam, hogy erről szeretnék többet megtudni. Mivel a szervezet Ugandában számos, szakmailag megalapozott projektet vitt már véghez sikerrel, az önkéntességre való felhívásukat olvasva nem volt kétséges, hogy csatlakozom.",
+                "2": "Az önkéntesként eltöltött egy évben bepillantást nyertem a Szívemben Született Afrika Egyesület működésébe, sok részletet megtudhattam a projektek hátteréről. Aktívan bekapcsolódhattam olyan feladatokba, mint az Afrika Nap lebonyolítása vagy középiskolás diákok oktatása a klímaváltozás Afrikára gyakorolt hatásairól, melyekből én is sokat tanultam. Nagyon jó érzés számomra, hogy tevékenységemmel segíthetek a szervezetnek céljai elérésében. Emellett egy fantasztikus közösség részévé válhattam, amelynek tagjait összeköti a közös érdeklődés és a tenni akarás vágya. Mindenkit arra bíztatok, hogy csatlakozzon. :)"
             }
         }
     },
@@ -504,185 +504,185 @@ export default class Team extends Vue {
         "kzsofi": {
             "shortBio": "President",
             "longBio": {
-              "1": "I am Zsófi Könczöl, the dreamer and founder of Szívemben Született Afrika – “Africa Born in my Heart”.",
-              "2": "I studied political science at the University of ELTE, where I researched the social and security aspects of child soldiery. Then I studied international studies at the University of Corvinus on the academic specialisation of diplomacy, where I researched womens’ role in aid efficiency with a case study in Uganda.",
-              "3": "Donating and volunteer work have taken an important place in my life ever since childhood. The main focus of my professional interest is: social responsibility, humanitarian assistance, development politics, security politics and the civil sphere, civilian responsibility. I put a great emphasis, furthermore, on human rights, womens’ and children’s rights, the possibilities of improving their situation. It is my deep conviction, that in today's globalized world, when everything is linked to everything, one should not ignore events happening beyond the borders of their country and continent. ",
-              "4": "It has almost been 15 years, since I first heard a lecture in school which proved to be crucial for my future. I decided that in my future career, I will deal with Africa by any means. I had been to Africa first 4 years ago, I spent there a month then. After that single month, a part of my heart was left there for eternity. When I first stepped out of the plane, I felt an infinitely comforting familiarity feeling, I fell in love with the country, into the landscape, the people. I felt like Uganda is a beautiful place, full of people who are beautiful in every sense. On my first morning in Manafwa, I woke up to see a goat hang his head through my window and chewing on the curtains, the room full of bright sunshine, children’s playful laughter ringing outside and – to me unintelligible – talking coming through the window. As I stepped out, there they stood dirtily, in their shabby clothes, and I thought they were the most beautiful ones after all. Despite their young age, their eyes were full of meaning and a sense of wisdom I have rarely encountered before. I felt like this is happiness itself, and I knew, instantly, that I have arrived. I have a job to do here, I have a mission here. During my time there I got to know the locals, got invited into their homes, I got to look into their everyday lives, their challenges, and their opportunities.I decided that I would like to help, that I will come back. And so I have: I have been there several times since then, and now, whenever I travel there, I’m feeling like “leaving home to go home”.",
-              "5": "It is my truly great pleasure that such an amazing team have formed and that we have been able to found the project of “Africa Born in my Heart” with these unique and quick-to-act people. We are trusting to make big impact upon the life of the local people, working together with them toward this goal."
+                "1": "I am Zsófi Könczöl, the creator of Africa Born in My Heart.",
+                "2": "I graduated in Political Science at ELTE - where I studied the social and security policy aspects of child soldiers in Africa - and then continued my studies in International Studies, Diplomacy specialization at University Corvinus, where I conducted a case study on the role of women in aid effectiveness in Uganda.",
+                "3": "Donating and volunteering has been an important part of my life since childhood. The main focus of my professional interests is social responsibility, humanitarian aid, development policy, security policy and the civil sector, civic engagement. I also have a special interest in human rights, women's and children's rights and how to improve their situation. It is my firm belief that in today's globalised world, where everything is interconnected, people cannot ignore what is happening beyond national borders and across continents.",
+                "4": "It is now almost 15 years since I heard a lecture at school that was a turning point for me. I decided that, come hell or high water, I was going to study Africa. The first time I visited Africa was 4 years ago, when I spent a month there. After that one month, a part of my heart stayed there forever. From the moment I stepped off the plane, I had an infinitely comforting feeling of home, of falling in love with the country, the landscape, the people. I felt that Uganda is a beautiful place, full of (metaphorically speaking) beautiful people. On one of my first mornings in Manafwa, I woke up to a goat hanging its head from the window and nibbling on the curtains, the room filled with bright sunlight and the sound of children laughing and talking playfully outside in a language I couldn't understand. As I stepped out, they stood around me, dirty in their little torn clothes, and yet I saw them at their most beautiful. Despite their young age, their eyes were full of depth and a wisdom I had not, or rarely, seen before. I felt that this was happiness itself and I knew that I had arrived, that I had a task and a mission here. During my time there, I got to know the people, I was invited into their homes, I got a glimpse into their daily lives, I saw the challenges and opportunities they had. I decided that I wanted to help, that I would go back. I did, I've been there several times since and now when I go, I feel like I'm \"going home from home\".",
+                "5": "I'm delighted that such a fantastic team has come together and with these unconventional minds and willingness to do things, we have formed the Africa Born in My Heart Association, confident that together with the local people we can make a big difference to their lives."
             }
         },
         "szbalazs": {
-            "shortBio": "Vice President",
+            "shortBio": "Vice President for Economic Affairs",
             "longBio": {
-                "1": "I am Balázs Szilágyi, the association's vice president.",
-                "2": "I graduated as an economist at the College of Kodolányi János Főiskola. The first time I have been to Africa was during my childhood, in 2001, and the very first breath I took there carried me with it. The years went by, and some time after the acquisition of my degree as an economist, I got linked to Africa once more, this time on a professional reason. That was when I started to work as a foreign trader for a Hungarian informatics company. 2014 meant the breakthrough to me therefore: when I started dealing with the challenges of the place in a professional way.",
-                "3": "Last but not least, for the first time in my life I got to go to the Sub-Sahara thanks to this job. This was where I saw the “real” Africa for the first time. My interest is unbroken; during the last 6 years I have been to several African countries, and I deal with the opportunities residing in the continent resolutely. My life arrived at another milestone this year; I decided to work within the association of “Africa Born in my Heart”, to make use of my experience for the aims of the organisation. I believe that through champing and a new approach, we can provide serious, sustainable help in those areas where we are present."
+                "1": "I am Balázs Szilágyi, Vice President of the Association.",
+                "2": "I graduated from the Kodolányi János College as an economist. I visited the African continent for the first time as a child in 2001 and was captivated from the first breath. Years went by and shortly after graduating in economics, I was reconnected with Africa, but this time on a professional basis. That year I started working as a foreign trader for a Hungarian IT company. For me, the breakthrough came in 2014, when I started to deal with the challenges there professionally.",
+                "3": "Last but not least, it was through this work that I first visited sub-Saharan Africa, where I saw the \"real\" face of Africa. My interest is undiminished, I have spent the last 6 years in many African countries and I am determined to explore the continent's potential. This year, I have reached another milestone in my life; I have decided to use my experience to work towards the goals of the organisation, under the auspices of the Africa Born in My Heart Association. I believe that by joining forces and adopting a new approach, we can provide serious help and sustainable development in the areas where we are present."
             }
         },
         "perzsa": {
             "shortBio": "Board member, administration and communications",
             "longBio": {
-                "1": "I am Erzsa Pocsai, board member of the association.",
-                "2": "I pursued my university studies at the University of Debrecen and the Faculty of Social Studies at ELTE, and I am working in public administration currently.",
-                "3": "I am fortunate to have been present from the birth of the association of “Africa Born in my Heart”. I am especially grateful for this, and for being able to actively participate in the organization’s work.",
-                "4": "It is my conviction, that education gives real power to people, therefore I feel every initiation and activity of the organization that aims at passing on knowledge especially close to myself."
+                "1": "I am Erzsa Pocsai, member of the Association's Board.",
+                "2": "I studied at the University of Debrecen and at the Faculty of Social Sciences of ELTE, currently I work in public administration.",
+                "3": "I have had the privilege of getting to know the Africa Born in My Heart initiative from the very beginning, and I am particularly grateful to be a member of the Association and to be actively involved in its work.",
+                "4": "I am convinced that education is what puts real power in the hands of the people, and I feel particularly close to all the initiatives and activities of the Organisation aimed at knowledge transfer."
             }
         },
         "ffbalazs": {
             "shortBio": "Board member, medical projects",
             "longBio": {
-                "1": "I am Ferenc Farkas Balázs, the association's board member and a medical student approaching the end of university. I started volunteer work during my high school years, then, in 2016, I decided to help where it is most needed: in Africa.",
-                "2": "I have been on a mission to Manafwa for the first time in March 2019, and I was carried away by the magic of the “Black Continent” instantly. In my chosen profession I consider humility, innovative approach, and adapting to the evidence very important. I am particularly interested in the healing of infectious diseases and in the questions and problems of national health in Africa."
+                "1": "I am Ferenc Balázs Farkas, member of the Association's Board, a medical doctor coming to the end of my studies. I started volunteering during my high school years and in 2016 I decided to help where it is needed the most; in Africa.",
+                "2": "I visited Manafwa Mission for the first time in March 2019 and was immediately captivated by the magic of the black continent. In my chosen vocation, I value humility and an innovative, evidence-based approach that is adaptable to the situation. I am particularly interested in the treatment of infectious diseases and public health problems and issues in Africa."
             }
         },
         "vmarci": {
             "shortBio": "Board member",
             "longBio": {
-                "1": "I am dr. Marcell Végh, jurist. I am working in a Budapest lawyer's office currently, as an attorney-candidate. I have been preoccupied with Africa ever since my childhood. I am currently supporting the legal background of the association, and I trust that within the near future I will be able to participate in the humanitarian activity in Uganda as well."
+                "1": "I am Marcell Végh, lawyer. I am currently working as a trainee lawyer in a law firm in Budapest. Africa has been a constant preoccupation of mine since childhood. Currently I am supporting the legal background of the association and I am looking forward to being involved in the humanitarian activities of the association in Uganda in the near future."
             }
         },
         "kpeter": {
             "shortBio": "Association member",
             "longBio": {
-                "1": "I am Péter Király, association member, political scientist, international relations and economic diplomacy expert. During my university years and my internships in Paris and Prague, I dealt with the questions of security policy of Africa and the relationships between Hungary and the African continent. Currently I am working in the Hungarian public administration, in an international area.",
-                "2": "I had an opportunity to attend an African College at the school of Lakitelki Népfőiskola in 2017/19. The people I met here only reinforced my intention to deal with the challenges and opportunities of Hungarian-African connections more sincerely."
+                "1": "I am Péter Király, member of the Association, political scientist, international relations and economic diplomacy expert. During my university years and my internships in Paris and Prague, I dealt with security policy issues in the African region and relations between the African continent and Hungary. I am currently working in the Hungarian administration in the international field.",
+                "2": "In 2017/19, I had the opportunity to participate in the Africa College of the Lakitelk People's College, and the people I met there only strengthened my will to deal more seriously with the challenges and opportunities of Hungarian-African relations."
             }
         },
         "kanna": {
             "shortBio": "Association member",
             "longBio": {
-                "1": "I am Anna Kiss, I’m working as a researcher at the Library and Information Centre of the Hungarian Academy of Sciences, Department of Science Policy and Scientometrics. My qualification is dietetics specialist, I am a PhD student at the University of Szent István. The focus of my dissertation is obesity and the definition of the social burdens originating from the different forms of it.",
-                "2": "I have been to Uganda many times, I have taught dietetics within an agrarian training at the University of Kyambogo. The emphasized focus of my African work is the optimalization of nourishment of women and children, and the improvement of knowledge regarding the right perinatal nourishment."
+                "1": "I am Anna Kiss and I work as a researcher in the Department of Science Policy and Science Metrics at the Hungarian Academy of Sciences, Library and Information Centre. I am a nutrition scientist, a PhD candidate at the Faculty of Food Science of Szent István University, and my dissertation is on obesity and the definition of the social burden of obesity in different forms.",
+                "2": "I have been to Uganda several times, teaching Nutrition Science at Kyambogo University in the context of an agricultural degree course. My work in Africa has a particular focus on optimising nutrition for women and children and increasing knowledge of good perinatal nutrition among women."
             }
         },
         "tklaudia": {
             "shortBio": "Association member",
             "longBio": {
-                "1": "I am Klaudia Tóth, 26, currently studying at the University of Public Service.",
-                "2": "My interest towards Africa has been already showing back in my childhood when I was a regular visitor of the African Museum in Balatonederics. Later, during my BA studies, I participated in several researches and publications which focused on the security policies of Africa. I am following the Great Green Wall initiative, the connection points of climate change and migration trends in the Sahel region, and the activity of jihadist organizations with great interest."
+                "1": "I am Klaudia Tóth, 26 years old and I am currently studying at the National University of Public Service.",
+                "2": "My interest in Africa was already evident at an early age, as I was a diligent visitor to the Africa Museum in Balatonederics. Later on, during my undergraduate studies, I was involved in several research and publication projects dealing with the security situation in Africa. I have been following with particular interest the Great Green Wall initiative, the interlinkages between climate change and migration trends in the Sahel region, and the activities of jihadist organisations in the region."
             }
         },
         "tliliana": {
             "shortBio": "Association member",
             "longBio": {
-                "1": "I am Liliána Tóth, 26. I studied International Relations at the University of Corvinus in Budapest. My main research area is the functioning of non-political civil organizations, and the possibilities and limits of reaching their aims in the 21st century. I put a great emphasis on the protection of children, women and vulnerable social groups and the improvement of their situation within the public sphere (e.g., social discussion, education etc.) and everyday life.",
-                "2": "During the past few years, I had the opportunity to get to know cultures that differ from the European ones. I have lived in Vietnam for 6 months in 2018, and I participated in research focusing on law and anthropology in Zambia during the fall of 2019. During this research we investigated the country’s social and political arrangements, and we documented the local people’s everyday life, culture etc. via film, voice and photo which are rarely documented so far. This African ground research experience was exceptionally determining in my way of thinking about Africa and reinforced my desire to make an impact and improvement there. ",
-                "3": "Until Spring 2020 I have lived in Turkey, where I worked for a civil organization in improving the relations between Europe and the Mediterranean Region."
+                "1": "I am Liliána Tóth, 26 years old. I graduated from Corvinus University of Budapest, majoring in International Studies. My main field of research is the functioning of non-political NGOs, their opportunities, scope and constraints in implementing their programmes and objectives in the 21st century. A particular area of interest for me is the protection of children, women, vulnerable groups and minorities and the improvement of their situation in public life (e.g. through social dialogue, education, awareness-raising, sensitisation programmes) and in everyday life.",
+                "2": "In recent years I have had the opportunity to get to know cultures that are in many respects different from European ones. I spent 6 months in Vietnam in 2018, and in the autumn of 2019 I took part in a legal-anthropological research in Zambia, where we investigated the social and political system of the South African country, and documented in film, audio and visual material aspects of the life and cultures of the tribal population that are difficult to find in other sources. This experience of fieldwork in Africa has been extremely influential in my thinking about Africa, and has strengthened my desire to do something, to improve it.",
+                "3": "Until the spring of 2020, I lived in Turkey, where I worked for an NGO working on the development of cultural relations between Europe and the Mediterranean."
             }
         },
         "mpanna": {
             "shortBio": "Association member",
             "longBio": {
-              "1": "I am Panna Makó, graphic designer, web developer, entrepreneur, and traveller.",
-              "2": "I joined „Africa Born in my Heart” as a volunteer: it was love at first sight. I have drifted to many places, met with so many communities. In all my work, which I have been doing up to do now and still, I consider the community, who surrounds me during my work, to be of the highest priority; the value system with which they operate; as well as the goal they set for themselves.",
-              "3": "Getting to know the culture and community of Africa has attracted me from the beginning, and I am also particularly interested in the role of women in different societies. I believe that people should connect with each other, cultures should meet each other, and I believe that sustainable development can only be achieved if we support each other in the transfer of different knowledge - this is the direction in which I feel I can join the organization's values and activities."            }
+                "1": "I joined the Africa Born in My Heart team as a volunteer: it was love at first sight. I've drifted to many places, engaged with many communities. In all the work that I have done and continue to do, I have always put first the community that surrounds me in my work; the values that they operate by; and the purpose that they set for themselves.",
+                "2": "I have been drawn to the culture of Africa and its communities from the very beginning, and I am particularly interested in the role of women in different societies. I believe that people need to connect, cultures need to meet, and I believe that sustainable development can only be achieved by supporting each other in the transfer of different knowledge - this is the direction in which I feel I can join the values and activities of the organisation."
+            }
         },
         "njuli": {
             "shortBio": "Association member",
             "longBio": {
-              "1": "My name is Júlia Németh, associate member and coordinator of the Association’s child support and Graduate a Girl programmes. I joined „Africa Born in my Heart” in early 2022, however, I have been following the Association’s work from the very beginning.",
-              "2": "I hold a BA degree in International Studies and an MA degree in Political Science which I obtained at Corvinus University Budapest and the University of Vienna, respectively. At the moment, I am working in the field of education management.",
-              "3": "I developed an interest in Africa during my university studies. After graduation, I had the opportunity to spend six months in Ghana interning for a German development agency. Even though my professional path took me in another direction – at least for the time being – I know that Africa will always play a part in my life one way or another."
+                "1": "I'm Júlia Németh, a member of the Association's Patrons and coordinator of the Child Support and Graduate a Girl programmes.I joined Africa Born in My Heart in early 2022, but I have been following the work of the Association since before that.",
+                "2": "I graduated from Corvinus University with a degree in International Studies and a Master's degree in Political Science from the University of Vienna. I am currently working in higher education.",
+                "3": "I started working on Africa during my university years and after my studies I spent six months in Ghana as an intern for a German development organisation. Although my professional career has taken a different path for the time being, I know that Africa will always play a role in my life in some form."
             }
         },
         "ibarbi": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Illyés Györfi Barbi vagyok, lassan 3 éve a szervezet követője, 1 éve pedig aktív önkéntese. Érdekelnek a kultúrák, a köztük lévő hasonlóságok/különbségek és az emberek. Utóbbira válaszként pszichológiát tanulok, előbbi kíváncsiságot etetve pedig lehetőségeimhez mérten utazok, felfedezek. Na meg olvasok. Bár még sosem jártam Afrikában, valamilyen okból kifolyólag gyerekkorom óta szerelmese vagyok. A kultúra, a minták, az emberek önfeledtsége, a ritmus, amely felér egy szívdobogással… minden vonz. Bízom benne, hogy amíg reggelente szemeim kinyílnak, addig tehetek is valamit az emberiségért, egy szebb jövőjért. Szabad lélek vagyok, amit néha sajnos elfelejtek, de mindig gyorsan visszatalálok magamhoz. Az álmaim nagyok, ambícióim sose hagytak cserben, s ha egyszer kijutok Afrikába, lehet haza sem jövök többé. Magunkba nézni, nyitni mások felé, kíváncsinak lenni és önkénteskedni menő!"
+                "1": "I'm Barbi Illyés Györfi, I've been a follower of the organisation for 3 years and an active volunteer for 1 year. I am interested in cultures, their similarities/differences and people. In response to the latter, I study psychology, and feeding the curiosity of the former, I travel and explore as much as I can. And I read. Although I have never been to Africa, for some reason I have been a lover since childhood. The culture, the patterns, the exuberance of the people, the rhythm that can make your heart beat... everything attracts me. I trust that as long as my eyes open in the morning, I can do something for humanity, for a better future. I am a free spirit, which I sometimes forget, but I always find my way back quickly. My dreams are big, my ambitions have never let me down, and once I get to Africa, I may never come home again. Looking within ourselves, opening up to others, being curious and volunteering is cool!"
             }
         },
         "kdori": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Az a típusú ember vagyok, aki minden reggel újabb lehetőséget lát a napban és minden este hálával a szívében hajtja álomra a fejét. A szerencse lányának gondolom magam, emellett nagyon tudatosan élem az életem. Megtalálom azokat a dolgokat, amikben ki tudok teljesedni, és azokat az embereket, közösségeket, akik inspirálnak. Az életem egy ilyen csodadarabkája a Szívemben Született Afrika Egyesület is.",
-              "2": "Számomra fontos, hogy olyan önkéntes tevékenységet végezzek, ahol találkoznak az adó és a fogadó fél szükségletei, ezáltal az \"adok-kapok\" kapcsolat kölcsönössé válik. Imádok utazni, nyitott szemmel járni, vonzanak a különböző kultúrák, Afrika világa különösen. A gyermekekkel való foglalkozás pedig a mindennapjaim része, ez éltet igazán. És mikor olyan gyermekeknek adhatok magamból, akiknek igazán szüksége van rá, az felülmúlhatatlan öröm számomra. Nem csupán az egyesület küldetésével és projektjeivel, de működésükkel, elveikkel is teljes mértékben tudok azonosulni. Hiszen valójában nem egy szervezetet választottam, ahova csatlakozni szerettem volna, hanem azokat az embereket, akik azt éltetik. 2022. októberében csatlakoztam az önkéntes csapathoz, de már most úgy érzem, hogy sokkal többet kaptam általuk, mint, amit adhatok."
+                "1": "I'm the type of person who sees new opportunities for the day every morning and goes to sleep every night with gratitude in my heart. I think of myself as “a daughter of luck”, and I live my life very consciously. I find the things I can fulfill myself in and the people and communities that inspire me. One of those gems in my life is the Africa Born in My Heart Association.",
+                "2": "For me, it is important to do volunteer work where the needs of the giver and the receiver meet, making the give-and-take relationship reciprocal. I love to travel, to keep my eyes open and I am attracted by different cultures, especially the world of Africa. And working with children is part of my everyday life, it really makes me feel alive. And when I am able to give of myself to children who really need it, it is an unsurpassed joy for me. I can fully identify not only with the mission and projects of the association, but also with the way it works and its principles. In fact, I didn't choose an organisation to join, but the people who make it come alive. I joined the volunteer team in October 2022, but I already feel that I have received much more from them than I have to give."
             }
         },
         "btunde": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Balogh Tünde vagyok, a hétköznapokban könyvelő, de inkább a sokszor mosolygó önkéntes, aki hiszi, hogy ha igazán szeretnénk valamit elérni az életünkben, azt megteremtjük.",
-              "2": "2022. szeptemberében csatlakoztam a Szívemben Született Afrika Egyesülethez. ",
-              "3": "Az önkéntesség körülbelül 7 éve mindennapjaim része, úgy érzem minden egyes ilyen esemény, tevékenység többé tesz az életemben, és előrevisz álmaim megvalósításában. ",
-              "4": "Egy idézet melyet próbálok követni:",
-              "5": "\"Önmagunk megtalálásának legjobb módja, ha elveszünk mások szolgálatában\" /Gandhi/",
-              "6": "Gyerekként arról ábrándoztam, hogy egyszer Afrikában leszek önkéntes, az élet más irányba sodort, de úgy érzem sosem késő teljesíteni a vágyainkat.",
-              "7": "Az évek alatt több nonprofit szervezettel volt kapcsolatom, ezért tudatosan kerestem egy olyan közösséget, ahol családias a környezet, emberi kapcsolatok alakulnak ki, és fizikailag is láthatom, ahogy megvalósulnak a támogatások. ",
-              "8": "Már az első találkozásoknál éreztem, hogy a legjobbat választottam, és amikor eljön, az ideje biztosan afrikai misszióban veszek részt."
+                "1": "I'm Tünde Balogh, an accountant in everyday life, but more of a volunteer with a smile on her face, who believes that if we really want to achieve something in life, we can make it happen.",
+                "2": "In September 2022, I joined the Africa Born in My Heart Association.",
+                "3": "Volunteering has been a part of my everyday life for about 7 years, I feel every one of these events and activities makes me feel more fulfilled in my life and moves me forward in achieving my dreams.",
+                "4": "A quote I try to follow:",
+                "5": "\"The best way to find oneself is to lose oneself in the service of others\" /Gandhi/",
+                "6": "As a child I dreamed of volunteering in Africa one day, life took me in a different direction but I feel it's never too late to fulfill our dreams.",
+                "7": "Over the years, I have been involved with several non-profit organizations, so I consciously sought out a community where I could have a family environment, develop human connections and physically see the grants being implemented.",
+                "8": "From the first meetings, I felt I had chosen the best one, and when the time comes, I will definitely be involved in missions in Africa."
             }
         },
         "sdani": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Steigler Dániel vagyok, és 6 hónapja lehetek tagja ennek a csodás közösségnek.",
-              "2": "Több éves külföldi életem során megtapasztaltam, hogy mennyire szép az emberek sokszínűsége, vallástól, bőrszíntől, nemtől és társadalmi rétegtől függetlenül, ezért is szerettem volna itthon egy hasonlóan nyitott szervezetnek a része lenni.",
-              "3": "Mindig is szerettem volna Önkéntesként támogatni egy magasztosabb cél ügyét, de mindeddig ez háttérbe szorult.",
-              "4": "Afrika a maga pezsgő színes életérzésével, csodálatos állat és növényvilágával, kultúrájával már kisgyerekként lenyűgözött.",
-              "5": "Ebből is adódott, hogy a tenni akarást és az életérzést összekomponálva kötöttem ki a Szívemben Született Afrika közösségénél.",
-              "6": "Hiszem, hogy ezzel a csapattal mind felkészültségünk mind motiváltságunk miatt, ha egy kicsivel is, de jobbá tehetjük a világot."
+                "1": "I am Daniel Steigler and I have been a member of this wonderful community for 6 months.",
+                "2": "During my years of living abroad, I have experienced the beauty of diversity of people, regardless of religion, colour, gender and social class, which is why I wanted to be part of a similarly open organisation at home.",
+                "3": "I've always wanted to volunteer for a greater cause, but so far it has taken a back seat.",
+                "3": "Africa, with its vibrant colourful sense of life, its wonderful flora and fauna and its culture, fascinated me as a child.",
+                "4": "This is how I ended up with the Africa Born in My Heart community, a combination of a desire to do something and a sense of life.",
+                "5": "I believe that with this team, we can make the world a better place, if only a little, because of our skills and motivation."
             }
         },
         "magi": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Életünk igazán nagy dolgainak van egy olyan dimenziója, ami szavakkal csak körbeírható. Az érzések, illatok, gondolatok élménnyé összesűrűsödve adják azokat a mérföldköveket, melyek több év, évtized után is meghatározóak, egy- egy pillanatba összesűrűsödve később is visszahívhatja egy személy, dallam, szó, bármi.",
-              "2": "A novemberi ugandai missziós úttól sok ilyen pillanatot várok. Annyira nagy biztonságérzetet ad a rendszeres afrikai missziós akadémiai nap, ahol havonta találkozhatunk egymással, közvetetten átélhetjük korábbi missziók történetét, az önismereti feladatok nekem nagyon megerősítőek.",
-              "3": "Miért pont Afrika? Mert egzotikus, távoli, ahol nagy a szükség, ahol talán könnyebben elfeledkezhet önmagáról az ember. Ahol materialista mérce szerint szegénység van, mégis megtapasztalható az ott élő emberek derűje, hálája az apró, mindennapi dolgokért. ",
-              "4": "Gyermekorvosként, nőként nagyon érdekel, hogy a szülést, anyaságot, gyermeknevelést hogyan élik meg az ugandai nők. Hogy a sok különbözőség, távolság mellett mi az, ami közös bennünk.",
-              "5": "Miért önkéntesség? Azért, mert “ Nagyobb boldogság adni, mint kapni”. ( Apostolok Cselekedetei 20:35)"
+                "1": "The really big things in our lives have a dimension that can only be described in words. Feelings, smells, thoughts, condensed into experiences, provide the milestones that are still defining after many years, decades, and can be recalled later by a person, a melody, a word, anything, even if condensed into a moment.",
+                "2": "I expect many such moments from the mission trip to Uganda in November. There is such a sense of security in the regular African mission academy day, where we can meet each other every month, relive the stories of previous missions indirectly, the self-awareness exercises are very empowering for me.",
+                "3": "Why Africa? Because it is exotic, remote, where there is a great need, where it is perhaps easier to forget oneself. Where there is poverty by materialistic standards, yet you can experience the serenity and gratitude of the people who live there for the small, everyday things.",
+                "4": "As a paediatrician, as a woman, I am very interested in how Ugandan women experience childbirth, motherhood and child-rearing. What we have in common, despite all the differences and distances.",
+                "5": "Why volunteering? Because \"It is more blessed to give than to receive\" (Acts of Apostles 20:35)."
             }
         },
         "zcsenge": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Valamit tenni kell… Valamit muszáj – gondolta a hatéves énem, és összegyűjtötte az összes zsebpénzét, hogy az Ökumenikus Segélyszervezeten keresztül eljuttassa az árvíz károsultjainak.",
-              "2": "Záhoczky Csenge vagyok, külpolitikai és nemzetközi biztonság- és védelempolitikai szakértő, a gyerekek csodálója, örök idealista.",
-              "3": "A környezetem mindig is egyfajta „gyereksuttogónak” tartott, már nagyobbacska koromtól kezdve tapadtak rám a gyerekek. Sokáig mindenki azt hitte, egyszer majd óvónő leszek. A mindig is bennem motoszkáló segíteni akarás, az emberek iránti elhivatottság azonban úgy érzem, jobban ki tud teljesedni a humanitárius segítségnyújtásban, egy gyermek- és nőjogokkal foglalkozó életútban.",
-              "4": "Zsófival még évekkel ezelőtt, egy másik szervezet önkénteseiként ismertük meg egymást. Amikor megtudtam, hogy megalapította a Szívemben Született Afrika Egyesületet, kétség sem férhetett hozzá, hogy az ő csapatának tagja szeretnék lenni. Úgy érzem ugyanis, hogy Zsófi és az én szívemben ugyanaz lakozik: ugyanaz a szeretet az emberek iránt, ugyanaz a belső késztetés, hogy mások életét, ha csak egy hajszálnyival is, de jobbá, könnyebbé, szebbé, békésebbé tegyük. ",
-              "5": "Hiszen ahogy a Talmud mondja: aki egy embert megment, az egész világot menti meg."
+                "1": "Something has to be done... Something has to be done - my six-year-old self thought, and collected all her pocket money to deliver it to the flood victims through the Ecumenical Relief Organisation.",
+                "2": "I'm Csenge Záhoczky, an expert in foreign policy and international security and defence, an admirer of children and an eternal idealist.",
+                "3": "I've always been considered a \"child whisperer\" by my peers, who have been clinging to me since I was a baby. For a long time, everyone thought I would be a kindergarten teacher. However, I feel that the desire to help and the dedication to people that I have always had can be better fulfilled in humanitarian aid, in a life of work for children and women's rights.",
+                "4": "Zsófi and I met years ago as volunteers for another organisation. When I found out that she had founded the Africa Born in My Heart Association, there was no doubt in my mind that I wanted to be part of her team. Because I feel that Zsófi and I share the same heart: the same love for people, the same inner urge to make the lives of others better, easier, more beautiful, more peaceful, even if only by a hair's breadth.",
+                "5": "Because, as the Talmud says: whoever saves one person saves the whole world."
             }
         },
         "vjuli": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Vető Julianna vagyok, és két és fél éve önkénteskedek a Szívemben Született Afrika csapatánál. Ezalatt a rövid idő alatt, nagyon sok élményben részesültem, és rengeteg fantasztikus embert ismertem meg.",
-              "2": "Gyerekkori álmom volt, hogy egyszer afrikai gyerekekkel foglalkozzak, de sosem gondoltam, hogy erre tényleg van lehetőségem. A Covid alatt találkoztam a szervezettel, amikor jelképes örökbefogadó szülőket kerestek. Akkor már nem volt kérdés, hogy csatlakozzak a csapathoz, és örökbefogadják egy gyermeket. Nagyon szerencsés vagyok, mert egy év önkénteskedés után sikerült kijutnom a Szervezettel Manafwába és megismerkedni az örökbefogadott kislánnyommal, és a közösség valamennyi tagjával. Ez egy életre szóló élmény volt számomra, és azóta is mindig emlékeztet arra, hogy ne adjuk fel az álmainkat.",
-              "3": "A családommal, egy kis vegetáriánus éttermet üzemeltetünk Buda szívében, a Szelence Cafét. Az étterem a gyerekkori lakásunkból lett átalakítva, és mi továbbra is a házban élünk. Nagyon fontos számomra a barátságos, otthonos környezet és a család összetartása. Ezért is szívügyem a jövőben minél több manafwai családot segíteni, hogy minél kevesebb családnak kelljen szétszakadni.",
-              "4": "A szervezetnek köszönhetően rengeteg fantasztikus embert ismerhettem meg, amikből mára szoros barátságok, baráti társaságok alakultak ki. És ennél fantasztikusabb dolog nincs számomra, mint amikor egy közös cél érdekében, különböző emberek össze tudnak kapcsolódni."
+                "1": "I am Julianna Vető and I have been volunteering with the Africa Born in My Heart team for two and a half years. In this short time, I have had a lot of experiences and met a lot of fantastic people.",
+                "2": "It was a childhood dream of mine to work with African children, but I never thought that I would really have the opportunity to do so. During Covid, I met the organisation when they were looking for token adoptive parents. At the time, there was no question of me joining the team and adopting a child. I was very lucky because after a year of volunteering, I managed to get out to Manafwa with the organisation and meet my adopted baby girl and all the members of the community. It was an experience of a lifetime for me and since then it has been a constant reminder to never give up on our dreams.",
+                "3": "With my family, I run a small vegetarian restaurant in the heart of Buda, the Szelence Café. The restaurant was converted from our childhood home and we still live in the house. It is very important to me to have a friendly, homely environment and to keep the family together. That's why it's a matter of my heart to help as many Manafwa families as possible in the future, so that as few families as possible have to be torn apart.",
+                "4": "Thanks to the organisation, I have met so many fantastic people who have now become close friends and friendships. And there is nothing more fantastic for me than when different people can come together for a common goal."
             }
         },
         "dklaudia": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Azzal, hogy valaki önkéntessé válik, megvan a remény arra, hogy jobbá, szebbé tegyük a világot! <3",
-              "2": "Több mint egy éve kezdtem el keresni egy olyan szervezetet, akik Afrikában élő gyerekeknek segítenek. Mindig is érdekelt Afrika, emiatt a terveim között szerepelt, hogy egyszer az életben mindenképpen szeretnék oda eljutni és segíteni az ott élő gyerekeknek amiben tudok. Februárban csatlakoztam ehhez a csodálatos csapathoz, ahol már az első alkalommal éreztem, hogy nagyon jó helyre csöppentem. Jó érezni, hogy mennyire fontos a szervezetnek, hogy folyamatosan foglalkoznak azzal, hogy felkészítsenek minket egy lehetséges misszióra, emellett pedig oda figyelnek arra is, hogy tényleg egy nagyon jó közösség részévé váljunk. ",
-              "3": "Biztosan felmerült benned is a kérdés, hogy miért pont a Szívemben Született Afrika csapatához jelentkezz önkéntesnek?",
-              "4": "A válasz egyszerű: Ha szeretnél egy szuper csapat részévé válni, ahol szívvel-lélekkel minden nap azon dolgozunk, hogy segítsünk a gyerekeknek egy szebb jövőt elérni, akkor ne habozz, itt a helyed! 😊"
+                "1": "By becoming a volunteer, we have the hope to make the world a better, more beautiful place! <3",
+                "2": "More than a year ago I started looking for an organization that helps children in Africa. I've always been interested in Africa, so one of my plans was to definitely go there at some point in my life and help the children there in any way I could. I joined this amazing team in February and from the first time I felt I had found a great place. It's good to feel how important it is to the organization that they are constantly working to prepare us for a possible mission, and also that they are looking to make sure we are part of a really good community.",
+                "3": "You must have wondered why you chose to volunteer with the Africa Born in My Heart team?",
+                "4": "The answer is simple: If you want to be part of a super team where we work with our hearts and souls every day to help children achieve a better future, then don't hesitate, this is the place for you! 😊"
             }
         },
         "pbadel": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Pribelszki-Balatincz Adél vagyok, lassan másfél éve önkénteskedem a szervezetnél. Jelenlegi feladatom, hogy elkészítsem, a támogatási programokban résztvevő gyerekek adatlapjait. Gimnazista korom óta szerettem volna önkénteskedni. Egyetem alatt találtam rá a szervezetre Instagrammon és azonnal csatlakoztam.",
-              "2": "Formatervezőként, fontos számomra, hogy minél több embert és helyzetet megismerjek. Szeretném a munkámmal támogatni másokat és könnyebbé tenni az életüket.",
-              "3": "A legboldogabb pillanat számomra, önkénteskedésem során, az volt, amikor megláttam, hogy az első általam készített adatlapokon szereplő gyerekek támogatóra találtak. Nagyon jó érzés volt látni, a munkám eredményét."
+                "1": "My name is Adél Pribelszki-Balatincz, I have been volunteering with the organisation for almost a year and a half. My current task is to prepare the data sheets of the children participating in the support programmes. I have wanted to volunteer since I was in high school. I found the organisation on Instagram during university and joined immediately.",
+                "2": "As a designer, it's important for me to get to know as many people and situations as possible. I want to use my work to support others and make their lives easier.",
+                "3": "The happiest moment for me, during my volunteering, was when I saw that the children on the first data sheets I created had found a sponsor. It was a great feeling to see the results of my work."
             }
         },
         "knori": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Mosoly, energia, gyermekek, hit, egészségügy… csupán néhány szó, ez mégis mind én lennék. ",
-              "2": "Hivatalosabb bemutatkozásként: Kárász Nóra vagyok, orvos, táncos, világjáró, illetve 2021 őszétől a Szívemben Született Afrika Egyesület önkéntese.",
-              "3": "Mindig is az az ember voltam, aki képtelen megülni egy helyben, valamit állandóan tennem kell, hogy hasznosnak érezzem magam. Életem egyik legfőbb mottója, hogy a nap minden percét használjam ki, és soha ne vesztegessem el az időmet… Hasonló gondolatok kavarogtak bennem akkor is, amikor az egyetemi élet mókuskerekében rám tört a segíteni akarás vágya. Ekkor kezdtem el igazán Afrika iránt érdeklődni és találtam rá a Szívemben Született Afrika Egyesületre. A szervezet mentalitása, hozzáállása, a „nem segélyezünk, hanem fejlesztünk” elv azonnal meggyőzött, és tudtam, hogy itt mindig elmúlik az az érzés, hogy netán nem vagyok hasznos ember.",
-              "4": "Habár az anatómián tanultakat meghazudtolom, de szerintem egy embernek nem kettő, hanem ha akarja, többszáz, többezer karja is van, amelyeket az arra rászoruló emberek felé nyújthat. Hiszek abban, hogy habár a ruhaméretem nem ezt sugallja, a karjaim mégis elég hosszúak ahhoz, hogy képesek legyenek kontinenseken átnyúlni és egészen Afrikáig elérni. Szeretném, hogy ezek között a karok között mindenki biztonságban és szeretetben érezze magát.",
-              "5": "Nagyon szeretek a kis összetartó csapatunk tagja lenni, hiszen közösen sokkal nagyobb boldogság a sikerek elérése és megélése. Köszönöm az önkénteseknek, hogy állandóan motiválnak és bízom benne, hogy energikus, vidám és mindig mosolygós énem viszonozza mindezt."
+                "1": "Smile, energy, children, faith, healthcare... just a few words, but that would be me.",
+                "2": "I'm Nóra Kárász, doctor, dancer, globetrotter and, from autumn 2021, volunteer at the Africa Born in My Heart Association.",
+                "3": "I have always been the kind of person who can't sit still, I have to do something all the time to feel useful. One of the main mottos of my life is to make the most of every minute of the day and never waste my time... Similar thoughts were also stirring in my mind when the desire to help came over me in the merry-go-round of university life. It was then that I became really interested in Africa and found the Africa Born in My Heart Association. I was immediately convinced by the mentality and attitude of the organisation, the principle of \"we don't help, we develop\", and I knew that here I would always get rid of the feeling that I was not a useful person.",
+                "4": "Although I disbelieve what I learned in anatomy, I believe that a person has not two, but hundreds or thousands of arms that he can extend to people in need. I believe that, although my dress size does not suggest it, my arms are long enough to reach across continents and all the way to Africa. I want everyone to feel safe and loved between these arms.",
+                "5": "I really like being part of our small, close-knit team, as it is much happier to achieve and experience success together. I thank the volunteers for their constant motivation and trust that my energetic, cheerful and always smiling self will reciprocate."
             }
         },
         "bdora": {
-            "shortBio": "Önkéntes",
+            "shortBio": "",
             "longBio": {
-              "1": "Barabás Dóra vagyok, egy éve önkénteskedem a Szívemben Született Afrikánál. Régóta érdekel Afrika, melynek sokszínűségét lenyűgözőnek találom. Emellett, amikor a humanitárius fejlesztésről először hallottam a tanulmányaim során, elhatároztam, hogy erről szeretnék többet megtudni. Mivel a szervezet Ugandában számos, szakmailag megalapozott projektet vitt már véghez sikerrel, az önkéntességre való felhívásukat olvasva nem volt kétséges, hogy csatlakozom.",
-              "2": "Az önkéntesként eltöltött egy évben bepillantást nyertem a Szívemben Született Afrika Egyesület működésébe, sok részletet megtudhattam a projektek hátteréről. Aktívan bekapcsolódhattam olyan feladatokba, mint az Afrika Nap lebonyolítása vagy középiskolás diákok oktatása a klímaváltozás Afrikára gyakorolt hatásairól, melyekből én is sokat tanultam. Nagyon jó érzés számomra, hogy tevékenységemmel segíthetek a szervezetnek céljai elérésében. Emellett egy fantasztikus közösség részévé válhattam, amelynek tagjait összeköti a közös érdeklődés és a tenni akarás vágya. Mindenkit arra bíztatok, hogy csatlakozzon. :)"
+                "1": "My name is Dóra Barabás, I have been volunteering with Africa Born in My Heart for a year. I have been interested in Africa for a long time and find its diversity fascinating. Besides, when I first heard about humanitarian development during my studies, I decided I wanted to learn more about it. As the organisation had already successfully implemented a number of professionally sound projects in Uganda, there was no doubt in my mind that I would join after reading their call for volunteers.",
+                "2": "During my one year as a volunteer, I gained an insight into the workings of the Africa Born in My Heart Association and learned a lot of details about the background of the projects. I have been actively involved in activities such as running Africa Day and educating secondary school students about the impact of climate change on Africa, from which I have learned a lot. It is a great feeling for me to be able to help the organisation achieve its goals. I have also been able to be part of a fantastic community of people united by a common interest and desire to do something. I encourage everyone to join :)"
             }
         }
     }

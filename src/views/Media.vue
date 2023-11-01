@@ -1,10 +1,10 @@
 <template>
   <div class="content">
     <heading>
-      <div slot="main">Média</div>
+      <div slot="main">{{ $t('title') }}</div>
     </heading>
     <container>
-      <div class="sub-heading">Külső Médiamegjelenések</div>
+      <div class="sub-heading">{{ $t('sub-title') }}</div>
       <p v-for="(link, index) of mediaAppearances" :key="index">
         <span>{{ link.desc }} | </span><a :href="link.url">{{ link.name }}</a>
       </p>
@@ -51,3 +51,16 @@ export default class Media extends Vue {
   ]
 }
 </script>
+
+<i18n>
+  {
+    "hu": {
+      "title": "Média",
+      "sub-title": "Külső Médiamegjelenések"
+    },
+    "en": {
+      "title": "Media",
+      "sub-title": "External Media Appearances"
+    }
+  }
+</i18n>
