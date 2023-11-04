@@ -6,6 +6,7 @@ export interface Article {
     blocks: Block[]
     cover: Img
     innerCover?: Img
+    snippet?: string
 }
 
 export type Block = {

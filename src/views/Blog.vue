@@ -27,7 +27,7 @@
             <div v-if="block.type === 'img'" class="blog-pics" :class="block.classes">
               <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j">
                 <img :src="require(`@/assets/images/blog/${img.name}`)" :style="img.style" alt="">
-                <span v-if="img.caption" class="caption">{{ img.caption }}</span>
+                <span v-if="img.caption" class="caption" v-html="img.caption"></span>
               </div>
             </div>
             <ul v-if="block.type === 'list' && block.listType === 'ul'" :class="block.classes">
@@ -51,8 +51,7 @@
           <div class="title sub-heading">{{ article.title }}</div>
           <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale, { dateStyle: 'long' }) }}<span
               v-if="article.author"> | </span><span class="author" v-if="article.author">{{ article.author }}</span></div>
-          <div class="blog-text">{{ article.blocks.filter(b => b.type === 'text').map(b => b.content).join(' ').slice(0,
-            500) }}</div>
+          <div class="blog-text" v-html="article.snippet || article.blocks.filter(b => b.type === 'text').map(b => b.content).join(' ').slice(0, 500)"></div>
         </div>
         <div class="to-article">
           <router-link :to="`/blog/${article.id}`">Tovább →</router-link>
@@ -166,7 +165,11 @@
 
     .text {
       grid-area: text;
+      display: flex;
+      flex-direction: column;
       font-size: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       .title {
         margin-bottom: 5px;
@@ -230,6 +233,11 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2023-11-07e',
+      '2023-11-07d',
+      '2023-11-07c',
+      '2023-11-07b',
+      '2023-11-07a',
       '2023-10-26',
       '2023-10-20',
       '2023-10-13',
