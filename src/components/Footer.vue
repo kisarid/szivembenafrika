@@ -2,20 +2,13 @@
   <div id="footer">
     <container>
       <div class="content">
-        <div class="title">Szívemben Született Afrika Egyesület</div>
+        <div class="title">{{ $t('name') }}</div>
         <div class="logos">
-          <a
-            href="https://www.facebook.com/szivembenszuletettafrika"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div class="link" @click="showNewsletterModal()">{{ $t('newsletter') }}</div>
+          <a href="https://www.facebook.com/szivembenszuletettafrika" target="_blank" rel="noopener noreferrer">
             <fb></fb>
           </a>
-          <a
-            href="https://www.instagram.com/szivembenszuletettafrika"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.instagram.com/szivembenszuletettafrika" target="_blank" rel="noopener noreferrer">
             <insta></insta>
           </a>
         </div>
@@ -29,12 +22,21 @@ import { Component, Vue } from 'vue-property-decorator'
 import container from '@/components/moyo/container.vue'
 import fb from '@/assets/icons/facebook-logo.svg'
 import insta from '@/assets/icons/instagram-logo.svg'
+import NewsletterForm from './moyo/newsletter-form.vue'
 
 @Component({
   name: 'Footer',
   components: { container, fb, insta },
 })
-export default class Footer extends Vue {}
+export default class Footer extends Vue {
+  showNewsletterModal() {
+    const width = Math.min(window.innerWidth, 400)
+    this.$modal.show(NewsletterForm, {}, {
+      width: `${width}px`,
+      height: 'auto',
+    });
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -55,8 +57,16 @@ export default class Footer extends Vue {}
     }
 
     .logos {
-      a:not(:last-child) {
-        margin-right: 40px;
+      a, .link {
+        display: inline-block;
+
+        &:not(:hover) {
+          color: var(--moyo-light);
+        }
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
       }
 
       svg {
@@ -75,3 +85,16 @@ export default class Footer extends Vue {}
   }
 }
 </style>
+
+<i18n>
+  {
+    "hu": {
+      "name": "Szívemben Született Afrika Egyesület",
+      "newsletter": "Hírlevél"
+    },
+    "en": {
+      "name": "Africa Born in my Heart Association",
+      "newsletter": "Newsletter"
+    }
+  }
+</i18n>

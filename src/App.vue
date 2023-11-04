@@ -3,7 +3,7 @@
     <div class="header-holder"></div>
     <Header :menuItems="menuItems" />
     <router-view />
-    <Footer style="margin-top: 20px;"/>
+    <Footer style="margin-top: 20px;" />
   </div>
 </template>
 
@@ -14,17 +14,28 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import container from '@/components/moyo/container.vue'
 import heading from '@/components/moyo/heading.vue'
-import modal from '@/components/moyo/modal.vue'
 import { MenuItem } from '@/interfaces/menu-item'
+import NewsletterForm from '@/components/moyo/newsletter-form.vue'
 
 @Component({
   name: 'App',
-  components: { Header, Footer, container, heading, modal },
+  components: { Header, Footer, container, heading, NewsletterForm },
 })
 export default class App extends Vue {
   @Watch('$route', { immediate: true, deep: true })
   onUrlChange() {
     window.scrollTo(0, 0)
+  }
+
+  mounted() {
+    const width = Math.min(window.innerWidth, 400)
+    if (window.localStorage.getItem('newsletter-modal-seen') !== 'true') {
+      this.$modal.show(NewsletterForm, {}, {
+        width: `${width}px`,
+        height: 'auto',
+      });
+      window.localStorage.setItem('newsletter-modal-seen', 'true');
+    }
   }
 
   getTranslation(path: string): string {
@@ -119,6 +130,7 @@ body {
     display: none;
   }
 }
+
 @media (min-width: 1024px) {
   .mobile {
     display: none;
@@ -192,18 +204,21 @@ section {
     margin-top: 0;
   }
 }
+
 .pic.float.left img {
   float: left;
 }
 
-a, .link {
+a,
+.link {
   color: var(--moyo-font-deep-dark);
   transition: color 300ms ease;
   cursor: pointer;
   text-decoration: underline;
 }
 
-a:hover, .link:hover {
+a:hover,
+.link:hover {
   color: var(--moyo-highlight);
 }
 
