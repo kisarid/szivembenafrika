@@ -100,13 +100,16 @@ body {
   // colors
   --moyo-font-deep-dark: #53504c;
   --moyo-font-dark: #6f6a66;
+  --moyo-font-dark-fade: rgba(111, 106, 102, 0.3);
   --moyo-font-light: #ccc0c0;
+  --moyo-font-light-fade: #ccc0c04d;
 
   --moyo-light: #f9f1e6;
   --moyo-highlight: #e95d00;
 
   --moyo-yellow: #ffc55f;
   --moyo-orange: #e7ad47;
+  --moyo-orange-fade: #e7ac4733;
   --moyo-grey: #53504c;
 }
 
@@ -302,6 +305,30 @@ svg {
 
     &:hover .link {
       color: var(--moyo-highlight);
+    }
+  }
+}
+
+.b-pagination {
+
+  .page-item {
+    .page-link {
+      color: var(--moyo-font-dark);
+      background-color: var(--moyo-light);
+      border-color: var(--moyo-font-light-fade);
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        background-color: var(--moyo-orange-fade);
+      }
+    }
+
+    &.active .page-link {
+      background-color: var(--moyo-orange);
+      border-color: var(--moyo-font-dark-fade);
     }
   }
 }
