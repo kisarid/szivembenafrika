@@ -41,7 +41,7 @@
       </div>
     </container>
     <container class="articles-list" v-if="!selectedArticle">
-      <div class="article-extract" v-for="(article, index) in articles" :key="index">
+      <div class="article-extract" v-for="(article, index) in articlesInPage" :key="index">
         <div class="pic">
           <router-link :to="`/blog/${article.id}`">
             <img :src="require(`@/assets/images/blog/${article.cover.name}`)" :style="article.cover.style" alt="">
@@ -57,6 +57,14 @@
           <router-link :to="`/blog/${article.id}`">Tovább →</router-link>
         </div>
       </div>
+      <b-pagination
+        v-model="currentPage"
+        :total-rows="articles.length"
+        :per-page="articlesPerPage"
+        :align="'center'"
+        :limit="10"
+        v-on:change="onPageChange"
+      ></b-pagination>
     </container>
   </div>
 </template>
@@ -223,6 +231,16 @@ import { Article } from '@/interfaces/article'
 export default class Blog extends Vue {
   articles: Article[]
   selectedArticle: Article
+  currentPage = 1
+  articlesPerPage = 8
+  get articlesInPage(): Article[] {
+    const start = (this.currentPage - 1) * this.articlesPerPage
+    return this.articles.slice(start, start + this.articlesPerPage)
+  }
+
+  onPageChange() {
+    window.scrollTo(0, 0)
+  }
 
   data() {
     return {
@@ -233,6 +251,7 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2023-11-18',
       '2023-11-07e',
       '2023-11-07d',
       '2023-11-07c',

@@ -5,13 +5,14 @@ import App from "./App.vue"
 import router from "./router"
 import VModal from 'vue-js-modal'
 import i18n from './i18n'
-import { CollapsePlugin } from 'bootstrap-vue'
+import { CollapsePlugin, PaginationPlugin } from 'bootstrap-vue'
 
 
 Vue.config.productionTip = false
 
 Vue.use(VModal)
 Vue.use(CollapsePlugin)
+Vue.use(PaginationPlugin)
 
 new Vue({
   router,
