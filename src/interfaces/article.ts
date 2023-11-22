@@ -32,4 +32,5 @@ export type Img = {
     style: {}
     caption?: string
     class?: string
+    wrapperStyle?: {}
 }

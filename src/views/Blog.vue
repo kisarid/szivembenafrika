@@ -25,7 +25,7 @@
           <template v-for="(block, i) in selectedArticle.blocks">
             <p v-if="block.type === 'text'" :class="block.classes" :style="block.style" v-html="block.content"></p>
             <div v-if="block.type === 'img'" class="blog-pics" :class="block.classes">
-              <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j">
+              <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j" :style="img.wrapperStyle">
                 <img :src="require(`@/assets/images/blog/${img.name}`)" :style="img.style" alt="">
                 <span v-if="img.caption" class="caption" v-html="img.caption"></span>
               </div>
@@ -119,11 +119,23 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+  }
 
-    @media (min-width: 768px) {
-      &.small {
-        grid-column: span 1;
+  @media (min-width: 768px) {
+    &.trio .pic {
+      &:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1 / 3;
       }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-column: 2;
+      }
+    }
+
+    .pic.small {
+      grid-column: span 1;
     }
   }
 }
@@ -251,6 +263,8 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2023-11-22',
+      '2023-11-21',
       '2023-11-18',
       '2023-11-07e',
       '2023-11-07d',
