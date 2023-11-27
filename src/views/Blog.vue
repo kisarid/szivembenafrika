@@ -107,6 +107,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  margin: 1rem 0;
 
   &.keep-size {
     display: flex;
@@ -263,6 +264,8 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2023-11-26',
+      '2023-11-24',
       '2023-11-22',
       '2023-11-21',
       '2023-11-18',
