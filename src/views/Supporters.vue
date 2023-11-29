@@ -60,6 +60,8 @@ export default class Supporters extends Vue {
     { link: 'https://www.czikkcakkdesign.com/', logo: require('@/assets/icons/logo_panni.png') },
     { link: 'https://www.szelencecafe.hu/', logo: require('@/assets/icons/logo_szelence.png') },
     { link: 'https://zugmuhely.com/', logo: require('@/assets/icons/logo-zug.png') },
+    { link: 'https://harrerchocolat.com/', logo: require('@/assets/icons/logo_harrer.png') },
+    { link: 'https://chococard.hu/', logo: require('@/assets/icons/logo_beantobear.jpg') },
   ]
 }
 </script>
