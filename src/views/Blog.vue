@@ -2,11 +2,20 @@
   <div class="content">
     <heading>
       <div slot="main" v-if="!selectedArticle">Blog</div>
-      <div slot="main-small" v-if="selectedArticle">{{ selectedArticle.title }}</div>
+      <div slot="main-small" v-if="selectedArticle">
+        {{ selectedArticle.title }}
+      </div>
       <div v-if="selectedArticle" slot="description" class="article-header">
-        <div class="meta">{{ new Date(selectedArticle.date).toLocaleDateString($i18n.locale, { dateStyle: 'long' }) }}
+        <div class="meta">
+          {{
+            new Date(selectedArticle.date).toLocaleDateString($i18n.locale, {
+              dateStyle: 'long',
+            })
+          }}
           <span v-if="selectedArticle.author"> | </span>
-          <span class="author" v-if="selectedArticle.author">{{ selectedArticle.author }}</span>
+          <span class="author" v-if="selectedArticle.author">{{
+            selectedArticle.author
+          }}</span>
         </div>
         <div class="link">
           <router-link :to="'/blog'">← Vissza</router-link>
@@ -16,24 +25,65 @@
     <container v-if="selectedArticle">
       <div class="article-view">
         <div class="pic" v-if="selectedArticle.innerCover !== null">
-          <img :src="require(`@/assets/images/blog/${(selectedArticle.innerCover || selectedArticle.cover).name}`)"
-            :style="(selectedArticle.innerCover || selectedArticle.cover).style" alt="">
-          <span v-if="(selectedArticle.innerCover || selectedArticle.cover).caption"
-            v-html="(selectedArticle.innerCover || selectedArticle.cover).caption" class="caption"></span>
+          <img
+            :src="
+              require(`@/assets/images/blog/${
+                (selectedArticle.innerCover || selectedArticle.cover).name
+              }`)
+            "
+            :style="(selectedArticle.innerCover || selectedArticle.cover).style"
+            alt=""
+          />
+          <span
+            v-if="(selectedArticle.innerCover || selectedArticle.cover).caption"
+            v-html="
+              (selectedArticle.innerCover || selectedArticle.cover).caption
+            "
+            class="caption"
+          ></span>
         </div>
         <div class="blog-text">
           <template v-for="(block, i) in selectedArticle.blocks">
-            <p v-if="block.type === 'text'" :class="block.classes" :style="block.style" v-html="block.content"></p>
-            <div v-if="block.type === 'img'" class="blog-pics" :class="block.classes">
-              <div class="pic" :class="img.class" v-for="(img, j) in block.content" :key="j" :style="img.wrapperStyle">
-                <img :src="require(`@/assets/images/blog/${img.name}`)" :style="img.style" alt="">
-                <span v-if="img.caption" class="caption" v-html="img.caption"></span>
+            <p
+              v-if="block.type === 'text'"
+              :class="block.classes"
+              :style="block.style"
+              v-html="block.content"
+            ></p>
+            <div
+              v-if="block.type === 'img'"
+              class="blog-pics"
+              :class="block.classes"
+            >
+              <div
+                class="pic"
+                :class="img.class"
+                v-for="(img, j) in block.content"
+                :key="j"
+                :style="img.wrapperStyle"
+              >
+                <img
+                  :src="require(`@/assets/images/blog/${img.name}`)"
+                  :style="img.style"
+                  alt=""
+                />
+                <span
+                  v-if="img.caption"
+                  class="caption"
+                  v-html="img.caption"
+                ></span>
               </div>
             </div>
-            <ul v-if="block.type === 'list' && block.listType === 'ul'" :class="block.classes">
+            <ul
+              v-if="block.type === 'list' && block.listType === 'ul'"
+              :class="block.classes"
+            >
               <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
             </ul>
-            <ol v-if="block.type === 'list' && block.listType === 'ol'" :class="block.classes">
+            <ol
+              v-if="block.type === 'list' && block.listType === 'ol'"
+              :class="block.classes"
+            >
               <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
             </ol>
           </template>
@@ -41,17 +91,43 @@
       </div>
     </container>
     <container class="articles-list" v-if="!selectedArticle">
-      <div class="article-extract" v-for="(article, index) in articlesInPage" :key="index">
+      <div
+        class="article-extract"
+        v-for="(article, index) in articlesInPage"
+        :key="index"
+      >
         <div class="pic">
           <router-link :to="`/blog/${article.id}`">
-            <img :src="require(`@/assets/images/blog/${article.cover.name}`)" :style="article.cover.style" alt="">
+            <img
+              :src="require(`@/assets/images/blog/${article.cover.name}`)"
+              :style="article.cover.style"
+              alt=""
+            />
           </router-link>
         </div>
         <div class="text">
           <div class="title sub-heading">{{ article.title }}</div>
-          <div class="meta">{{ new Date(article.date).toLocaleDateString($i18n.locale, { dateStyle: 'long' }) }}<span
-              v-if="article.author"> | </span><span class="author" v-if="article.author">{{ article.author }}</span></div>
-          <div class="blog-text" v-html="article.snippet || article.blocks.filter(b => b.type === 'text').map(b => b.content).join(' ').slice(0, 500)"></div>
+          <div class="meta">
+            {{
+              new Date(article.date).toLocaleDateString($i18n.locale, {
+                dateStyle: 'long',
+              })
+            }}<span v-if="article.author"> | </span
+            ><span class="author" v-if="article.author">{{
+              article.author
+            }}</span>
+          </div>
+          <div
+            class="blog-text"
+            v-html="
+              article.snippet ||
+              article.blocks
+                .filter((b) => b.type === 'text')
+                .map((b) => b.content)
+                .join(' ')
+                .slice(0, 500)
+            "
+          ></div>
         </div>
         <div class="to-article">
           <router-link :to="`/blog/${article.id}`">Tovább →</router-link>
@@ -251,19 +327,24 @@ export default class Blog extends Vue {
     return this.articles.slice(start, start + this.articlesPerPage)
   }
 
-  onPageChange() {
+  onPageChange() {
     window.scrollTo(0, 0)
   }
 
   data() {
     return {
-      selectedArticle: undefined
+      selectedArticle: undefined,
     }
   }
 
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2024-01-09e',
+      '2024-01-09d',
+      '2024-01-09c',
+      '2024-01-09b',
+      '2024-01-09a',
       '2023-12-12d',
       '2023-12-12c',
       '2023-12-12b',
@@ -324,17 +405,22 @@ export default class Blog extends Vue {
       '2022-10-29',
       '2022-10-26',
       '2022-10-23',
-    ].filter(v => new Date(`${v.slice(0, 10)} 08:00:00`).getTime() < now)
+    ].filter((v) => new Date(`${v.slice(0, 10)} 08:00:00`).getTime() < now)
 
-    this.articles = articlesList.map(title => require(`@/blog/${title}.json`))
+    this.articles = articlesList.map((title) => require(`@/blog/${title}.json`))
 
     if (this.$route.params.article) {
-      this.selectedArticle = this.articles.find(v => v.id === this.$route.params.article)!
+      this.selectedArticle = this.articles.find(
+        (v) => v.id === this.$route.params.article
+      )!
     }
 
-    this.$watch(() => this.$route.params.article, (articleId) => {
-      this.selectedArticle = this.articles.find(v => v.id === articleId)!
-    })
+    this.$watch(
+      () => this.$route.params.article,
+      (articleId) => {
+        this.selectedArticle = this.articles.find((v) => v.id === articleId)!
+      }
+    )
   }
 }
 </script>
