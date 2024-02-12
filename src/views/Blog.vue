@@ -49,11 +49,13 @@
               :class="block.classes"
               :style="block.style"
               v-html="block.content"
+              :key="i"
             ></p>
             <div
               v-if="block.type === 'img'"
               class="blog-pics"
               :class="block.classes"
+              :key="i"
             >
               <div
                 class="pic"
@@ -77,12 +79,14 @@
             <ul
               v-if="block.type === 'list' && block.listType === 'ul'"
               :class="block.classes"
+              :key="i"
             >
               <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
             </ul>
             <ol
               v-if="block.type === 'list' && block.listType === 'ol'"
               :class="block.classes"
+              :key="i"
             >
               <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
             </ol>
@@ -340,6 +344,12 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2024-02-13f',
+      '2024-02-13e',
+      '2024-02-13d',
+      '2024-02-13c',
+      '2024-02-13b',
+      '2024-02-13a',
       '2024-01-09e',
       '2024-01-09d',
       '2024-01-09c',
