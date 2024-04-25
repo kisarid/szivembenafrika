@@ -26,7 +26,7 @@
               media="(min-width: 768px)"
               srcset="@/assets/images/home/hero-3.jpg"
             />
-            <img src="@/assets/images/home/hero-3-mobile.jpg" alt=""/>
+            <img src="@/assets/images/home/hero-3-mobile.jpg" alt="" />
           </picture>
         </swiper-slide>
         <swiper-slide>
@@ -35,7 +35,7 @@
               media="(min-width: 768px)"
               srcset="@/assets/images/home/hero-4.jpg"
             />
-            <img src="@/assets/images/home/hero-4-mobile.jpg" alt=""/>
+            <img src="@/assets/images/home/hero-4-mobile.jpg" alt="" />
           </picture>
         </swiper-slide>
         <swiper-slide>
@@ -44,7 +44,7 @@
               media="(min-width: 768px)"
               srcset="@/assets/images/home/hero-5.jpg"
             />
-            <img src="@/assets/images/home/hero-5-mobile.jpg" alt=""/>
+            <img src="@/assets/images/home/hero-5-mobile.jpg" alt="" />
           </picture>
         </swiper-slide>
       </swiper>
@@ -129,12 +129,12 @@ export default class Home extends Vue {
     },
     "en": {
         "title": "Dear Inquirer!",
-        "p1": "Welcome to the website of Szívemben Született Afrika – “Africa Born in my Heart”. We are so happy to see you here!",
-        "p2": "I am Zsófi Könczöl, dreamer and founder of project “Africa Born in my Heart”. At 14 years old, I decided to have a career revolving around Africa, then, following a 10-year long wait and preparation, I managed to travel to the continent in 2017. My first trip there took me to Eastern Uganda, specifically to a village called Manafwa, which has since become my “second home”. I have travelled there to help, to give, and I did not expect for a second for these trips and these people to change my whole life in return as well.",
-        "p3": "With each and every trip to Uganda, I am always learning new things about life and about myself. I have learned to dare to dream big, and that every person has a place somewhere in the world there they are truly needed. I have learned that “Africa” does not need for us to just go there and “repair” things, “save” people without consciousness toward its people, but to be humble, to get to know them, to understand and to love. Because this is the only real way to help. I have learned I can not save the whole world, but I can take part in helping a seemingly far-away village and its people to have a better, more human way to live.",
-        "p4": "I am ever so proud of my team, of those participating and working with me toward this goal, on this journey. There are many of us and all different, but we are united in believing Africa to be the “continent of possibilities”, and Uganda to be – as they say – “the pearl of Africa”. A beautiful country, full of beautiful people, and it is a true honour and pure joy to work with and for them.",
-        "p5": "I hereby invite you to have a look around our website, get to know our work and practises! Should you feel touched and drawn by any of our programmes, we would be happy to receive your inquiry! Feel free to ask us questions, let’s have a discussion, and apply to us as a volunteer or support our work with a donation. We already know: cooperation makes wonders!",
-        "p6": " "
+        "p1": "I warmly welcome you to the website of Szívemben Született Afrika – “Africa Born in My Heart”. We are delighted to have you here!",
+        "p2": "My name is Zsófi Szilágyi-Könczöl, the dreamer and founder of the „Africa Born in My Heart”. At the age of 14, I decided that come what may, I would be involved with Africa. After ten years of anticipation and preparation, I managed to visit the continent for the first time in 2017. My journey led me to a village called Manafwa in the eastern part of Uganda, which I now consider as my second home. I went there to help, to give and I never imagined that these journeys and these people would profoundly change my life.",
+        "p3": "Since then, the organization has expanded geographically and in its activities. Since 2022, we have been working in the poorest region of Uganda, Karamoja, which was completely isolated until a few years ago and it is still captivated by active tribal conflicts. Additionally, we work in the slums of Nairobi, the capital of Kenya, and in the wider known areas of Mombasa and its surroundings.",
+        "p4": "During each of my journeys to Africa, I learn new things about life and myself. I have learned to dare to dream big and that everyone has a place in the world where they are truly needed. I have learned that Africa doesn't need us to go and "fix" things, to "save" people without consciousness toward its people, but it needs us to be humble, to understand and to love them. Because that's the only way to help and it's the only way it's worth it. I have learned that I cannot save the whole world, but I can contribute to improving the quality and dignity of life for these people in these seemingly distant lands.",
+        "p5": "I am very proud of my team of those participating and working with me toward this goal, on this journey. We are many and diverse, but we all believe that Africa is the „continent of opportunities”, and Uganda and Kenya are wonderful countries full of amazing people, with whom and for whom it is a joy and an honor to work.",
+        "p6": "I encourage you to take a look around our website, get to know our activities. Shoud you feel called by any of our programs, please contact us. Let's ask questions, let's talk, join us as a volunteer or support our work with your donations. We already know: cooperation makes wonders!"
     }
 }
 </i18n>
