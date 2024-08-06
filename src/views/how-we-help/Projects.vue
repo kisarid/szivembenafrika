@@ -3,20 +3,44 @@
     <heading>
       <div slot="main" v-if="!selectedCardId">{{ $t('main.title') }}</div>
       <div slot="main-small" v-if="selectedCard">{{ selectedCard.title }}</div>
-      <div slot="description" v-if="selectedCardId" @click="selectedCardId = ''" class="link">← {{ $t('back') }}</div>
+      <div
+        slot="description"
+        v-if="selectedCardId"
+        @click="selectedCardId = ''"
+        class="link"
+      >
+        ← {{ $t('back') }}
+      </div>
     </heading>
     <container>
-      <div v-if="!selectedCardId" style="margin-bottom: 10px;">{{ $t('main.text') }}</div>
-      <div v-if="!selectedCardId" style="margin-bottom: 30px; font-style: italic;">{{ $t('main.desc')
-      }}</div>
+      <div v-if="!selectedCardId" style="margin-bottom: 10px">
+        {{ $t('main.text') }}
+      </div>
+      <div
+        v-if="!selectedCardId"
+        style="margin-bottom: 30px; font-style: italic"
+      >
+        {{ $t('main.desc') }}
+      </div>
       <section class="topic-selector" v-if="!selectedCardId">
-        <div class="topic-card" v-for="(card, index) in cards" :key="index" @click="selectedCardId = card.id">
+        <div
+          class="topic-card"
+          v-for="(card, index) in cards"
+          :key="index"
+          @click="selectedCardId = card.id"
+        >
           <div class="title sub-heading" v-html="card.title"></div>
           <div class="pic">
-            <img :src="require(`@/assets/images/projects/${card.cover}`)" alt="" :style="card.imgStyle" />
+            <img
+              :src="require(`@/assets/images/projects/${card.cover}`)"
+              alt=""
+              :style="card.imgStyle"
+            />
           </div>
-          <div class="text">{{ card.shortDesc }}</div>
-          <div class="link" style="margin-top: auto; text-align: right;">{{ $t('read-more') }} →</div>
+          <div class="text" v-html="card.shortDesc"></div>
+          <div class="link" style="margin-top: auto; text-align: right">
+            {{ $t('read-more') }} →
+          </div>
         </div>
       </section>
 
@@ -48,7 +72,11 @@
             <p>{{ $t('84days.p2') }}</p>
           </div>
           <div class="pic" style="display: flex; justify-content: center">
-            <img src="@/assets/images/projects/84-nap-logo.png" alt="" style="max-width: 300px" />
+            <img
+              src="@/assets/images/projects/84-nap-logo.png"
+              alt=""
+              style="max-width: 300px"
+            />
           </div>
         </div>
         <p>{{ $t('84days.p3') }}</p>
@@ -88,10 +116,16 @@
         <p>{{ $t('supportchildren.p1') }}</p>
         <div class="pic-grid">
           <div class="pic">
-            <img src="@/assets/images/projects/gyermektamogatas-projekt-1.jpg" alt="" />
+            <img
+              src="@/assets/images/projects/gyermektamogatas-projekt-1.jpg"
+              alt=""
+            />
           </div>
           <div class="pic">
-            <img src="@/assets/images/projects/gyermektamogatas-projekt-2.jpg" alt="" />
+            <img
+              src="@/assets/images/projects/gyermektamogatas-projekt-2.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>
@@ -116,7 +150,10 @@
             <p>{{ $t('graduateagirl.p2') }}</p>
           </div>
           <div class="pic">
-            <img src="@/assets/images/projects/graduate-a-girl-projekt-1.jpg" alt="" />
+            <img
+              src="@/assets/images/projects/graduate-a-girl-projekt-1.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>
@@ -125,9 +162,12 @@
           <div class="text">
             <p>{{ $t('mtwapa.p1') }}</p>
             <p>{{ $t('mtwapa.p2') }}</p>
-            <p>{{ $t('mtwapa.p3.1') }}<a
-                href="mailto:gyermektamogatas@szivembenafrika.org">gyermektamogatas@szivembenafrika.org</a>{{
-                  $t('mtwapa.p3.2') }}</p>
+            <p>
+              {{ $t('mtwapa.p3.1')
+              }}<a href="mailto:gyermektamogatas@szivembenafrika.org"
+                >gyermektamogatas@szivembenafrika.org</a
+              >{{ $t('mtwapa.p3.2') }}
+            </p>
             <p>{{ $t('mtwapa.p4') }}</p>
           </div>
           <div class="pic">
@@ -138,7 +178,7 @@
       <section v-if="selectedCardId === 'euprogram'">
         <p>{{ $t('euprogram.p1') }}</p>
         <p>{{ $t('euprogram.p2') }}</p>
-        <ul style="margin-bottom: 25px;">
+        <ul style="margin-bottom: 25px">
           <li>{{ $t('euprogram.p3.li1') }}</li>
           <li>{{ $t('euprogram.p3.li2') }}</li>
           <li>{{ $t('euprogram.p3.li3') }}</li>
@@ -162,6 +202,52 @@
           </div>
           <div class="pic">
             <img src="@/assets/images/projects/eu-4.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section v-if="selectedCardId === 'akitogogon'">
+        <p class="sub-heading" v-html="$t('akitogogon.title2')"></p>
+        <p v-html="$t('akitogogon.p1')"></p>
+        <p v-html="$t('akitogogon.p2')"></p>
+        <p v-html="$t('akitogogon.p3')"></p>
+        <p v-html="$t('akitogogon.p4')"></p>
+        <p v-html="$t('akitogogon.p5')"></p>
+        <ul style="margin-bottom: 25px">
+          <li v-html="$t('akitogogon.p6.li1')"></li>
+          <li v-html="$t('akitogogon.p6.li2')"></li>
+          <li v-html="$t('akitogogon.p6.li3')"></li>
+        </ul>
+        <p v-html="$t('akitogogon.p7')"></p>
+        <p v-html="$t('akitogogon.p8')"></p>
+        <p v-html="$t('akitogogon.p9')"></p>
+        <ul style="margin-bottom: 25px">
+          <li v-html="$t('akitogogon.p10.li1')"></li>
+          <li v-html="$t('akitogogon.p10.li2')"></li>
+          <li v-html="$t('akitogogon.p10.li3')"></li>
+          <li v-html="$t('akitogogon.p10.li4')"></li>
+        </ul>
+        <p v-html="$t('akitogogon.p11')"></p>
+        <p v-html="$t('akitogogon.p12')" style="margin-top: 40px"></p>
+        <div class="pic-grid">
+          <div class="pic">
+            <img src="@/assets/images/projects/akitogogon-1.jpg" alt="" />
+          </div>
+          <div class="pic">
+            <img src="@/assets/images/projects/akitogogon-2.jpg" alt="" />
+          </div>
+          <div class="pic span">
+            <img src="@/assets/images/projects/akitogogon-3.jpg" alt="" />
+          </div>
+        </div>
+        <div
+          class="pic-grid"
+          style="width: 200px; margin: auto; padding-top: 40px"
+        >
+          <div class="pic">
+            <img src="@/assets/icons/logo.png" alt="" />
+          </div>
+          <div class="pic">
+            <img src="@/assets/images/projects/logo-shanita.png" alt="" />
           </div>
         </div>
       </section>
@@ -195,7 +281,7 @@ export default class Projects extends Vue {
   cid: string = ''
 
   get selectedCard(): ThemeSelectorCard {
-    return this.cards.find(c => c.id === this.selectedCardId)!
+    return this.cards.find((c) => c.id === this.selectedCardId)!
   }
 
   get selectedCardId() {
@@ -253,6 +339,13 @@ export default class Projects extends Vue {
         cover: 'eu-2.jpg',
         imgStyle: { 'object-position': 'top' },
         shortDesc: this.$i18n.t('euprogram.shortDesc') as string,
+      },
+      {
+        id: 'akitogogon',
+        title: this.$i18n.t('akitogogon.title') as string,
+        cover: 'akitogogon-1.jpg',
+        imgStyle: { 'object-position': 'top' },
+        shortDesc: this.$i18n.t('akitogogon.shortDesc') as string,
       },
     ]
   }
@@ -364,6 +457,32 @@ export default class Projects extends Vue {
         "li9": "Malária és más trópusi fertőzések szűrése, kezelése és az ezzel kapcsolatos edukáció",
         "li10": "Közhigiénés viszonyok javítása, infekció és járványkontroll technikák tanítása, bevezetése"
       }
+    },
+    "akitogogon": {
+      "title": "Akitogogon",
+      "title2": "Kiszolgáltatottból megállíthatatlan",
+      "shortDesc": "Kiszolgáltatottból megállíthatatlan<br><br>A Szívemben Született Afrika és a Shanita szervezete közös programot indít Karamojában.",
+      "p1": "<b>Karamoja:</b> Karamojában és a szomszédos kenyai és szudáni területeken találták az emberiség legősibb nyomaira utaló csontvázakat és használati tárgyakat, szóval bátran kijelenthetjük, hogy az emberiség bölcsőjének nevezett afrikai kontinensnek is arról a részéről van szó, ahonnan az emberiség fejlődése elindult. Ez az ősiség ott van a régió minden egyes szegletében, a különleges talajban, a sokat látott hegyekben, a levegő semmihez sem hasonlítható illatában, az emberek rezilienciájában és lenyűgözően sokszínű kultúrájában.",
+      "p2": "A térségben jelenlévő sok évtizedes konfliktus miatt a régió teljesen elzárttá vált az ország többi részétől és számos stigma került rá, amely igen csak megnehezíti az itt élő emberek életét. Uganda legszegényebb régiója, bizonyos szempontból azonban mégis a leggazdagabb, hiszen minden más területhez képest a legjobban itt őrzik az emberek a törzsi hagyományaikat, hitrendszerüket és ezek a mai napig meghatározzák a mindennapi szokásaikat, működésüket és társadalmi berendezkedésüket.",
+      "p3": "Karamoja Uganda északkeleti részén található, az ország egyik leggyönyörűbb, ugyanakkor legszegényebb régiója. Az oktatási lehetőségek még afrikai viszonylatban is  rendkívül korlátozottak, gyakorlatilag csodaszámba megy a minőségi oktatás és az is, ha valaki számára ez hozzáférhető. A helyi közösségek főként pásztorkodással és földműveléssel foglalkoznak, amelyet egyre nagyobb mértékben nehezít meg a szélsőséges időjárás, melynek legszembetűnőbb tünete az extrém vízhiány. Az olyan törzsi szokások, mint például a korai (gyermek-) kényszerházasság, leányanyaság és a női nemiszerv csonkítás, bár hivatalosan törvénybe ütköző, a gyakorlatban sajnos még mindig jelen vannak és a mindennapi élet részét képezik, ami tovább nehezíti a lányok életét és ellehetetleníti jövőjüket.",
+      "p4": "<b>Hogyan tudsz segíteni? Ismét nagyot mertünk álmodni és ezúttal a célunk 60 lánynak otthont, biztonságot, méltóságot, oktatást és esélyt adni Karamoja területén, a 2025 februárjában kezdődő tanévtől, ehhez keresünk támogatókat.</b>",
+      "p5": "A támogatás kétféleképpen is lehetséges: ",
+      "p6": {
+        "li1": "Havonta <b>20.000 Ft</b> egy lány teljes életét megváltoztatja: ez az összeg fedezi egy lány teljes lakhatását, oktatását, étkezését, és ellátását",
+        "li2": "Szeretnénk minden érdeklődőnek lehetőséget biztosítani, ezért alternatív konstrukcióban is lehetséges a lányok támogatása, ami havi <b>10.000 Ft</b> támogatást jelent. Ebben az esetben az adományozókat “párba” állítjuk és közösen fognak támogatni egy lányt.",
+        "li3": "A támogatóknak gyermektámogatási programjainkhoz hasonlóan évi 2 alkalommal tudunk friss híreket és fotókat szolgáltatni."
+      },
+      "p7": "<b>Projektünk:</b> A Szívemben Született Afrika és a Shanita szervezete közös programot indít Karamojában. A Shanita már évek óta sikeresen működtet a térségben hasonló, a gyermekek oktatására és biztonságának megteremtésére irányuló programot, amelyet most a szervezetünk több évnyi, a lányok és nők helyzetének javítása, az őket ért struktúláis hiányosságokból, törzsi berögződésekből eredő hátrányok csökkentése területén szerzett tapasztalataival egyesítettünk. Összefogásunk célja, hogy még több lányt tudjunk egy, a még eddiginél is magasabb szinten támogatni. Közös értékrendünk és szakmai alapelveink mentén építettük fel a programot, melynek kritikus eleme a valós helyi szükségletekre és igényekre való reflektálás, valamint a helyi közösségek kulturális és törzsi szokásainak tiszteletben tartása, a helyiekkel és az ő hosszútávú, fenntartható támogatásuk érdekében történő együttműködés. ",
+      "p8": "<b>A két szervezet hátteréről:</b> Zsófi a Szívemben Született Afrika alapítójaként, Lior pedig a Shanita első embereként egymástól függetlenül, különböző utat bejárva, de végül Ugandában találtak rá második otthonukra és hivatásukra. Bár egyesületeink is egymástól függetlenül, a világ két távoli pontjáról üzemeltetve működnek, rengeteg közös vonásra tudunk építeni az együttműködésünk során. Mind a Szívemben Született Afrika, mind a Shanita alapvető meggyőződése, hogy az emberi jóság és összefogás csodákra képes, ez hajt minket előre abban, hogy gyermekeknek, fiataloknak és felnőtt nőknek nyújtsunk fenntartható támogatást Ugandában, amely számukra sok esetben élet-halál kérdése. Munkánk során fontos szakmai alap megfontolás, hogy helyi emberek bevonásával és alkalmazásával dolgozzunk, alapos terepmunkát követően indítsuk el programjainkat, hogy tevékenységünk minden eleme azt szolgálhassa, hogy valós szükségletekre válaszoljunk. ",
+      "p9": "<b>A projekt részletei:</b>",
+      "p10": {
+        "li1": "<b>Miben más ez a projekt?</b> Célunk, hogy a 2025 februárjában induló tanévben 60 lány jövőjét tudjuk megalapozni egy általunk felújított és berendezett karamojai iskolában. Bár a lányok egy iskola területén fognak élni, az oktatás csak egy eleme a programunknak: a projektbe bekerülő lányokat olyan környezetből emelünk ki, ahol nem csupán a szegénység, hanem erőszakos és törvénytelen törzsi szokások áldozataivá válnának, így az oktatás mellett lakhatást, étkezéseket, foglalkozásokat és mentálhigiénés segítséget is nyújtunk a program keretein belül.",
+        "li2": "<b>A lányok hátteréről:</b> A projekt területén élő törzseknél a mai napig elterjedt szokás, hogy a lányok anyagi megfontolásból, már 8-12 éves korukban menyasszonyokká válnak, a vőlegény pedig egy idősebb férfi, jellemzően több feleséggel. Az első menstruációjuktól kezdve a fiatal lányokat alkalmasnak ítélik a feleség szerepre és újdonsült férjük magukkal is viszi őket. A karamojai lányokat sajnos nem ez az egy veszély fenyegeti, hiszen szintén aktív törzsi szokás a női nemiszerv csonkítás, de a térségre kimagasló mértékben jellemző a gyermekmunka és a gyermekprostitúció is.",
+        "li3": "<b>Hosszútávú, szakmai alapokon nyugvó megoldások:</b> Ebben a projektben is kiemelten fontos számunkra a holisztikus megközelítés, hiszen abban hiszünk, hogy összetett problémákra, összetett megoldással kell reagálni. Fontos, hogy a lányokat a családjuk beleegyezésével vesszük fel a programba, amihez fontos, hogy értsék és megértsék, mit jelent az oktatás, megmutassuk annak előnyeit, ezért egy, a helyiek közül választott szociális munkással érzékenyítő és edukációs programot is tartunk. A siker egy fontos tényezője, hogy a családok rövid távon kieső jövedelmét helyettesítsük, így a közösségeknek fenntartható, hosszútávú lehetőségeket kínálunk, hogy ne kelljen lányaik kiházasításából élniük: megtanítjuk őket kézműves termékek előállítására és értékesítésére, amelyekből fenntarthatják magukat.",
+        "li4": "<b>Teljes körű ellátás:</b> A kimentett lányoknak biztonságos szállást, oktatást, iskolán kívüli foglalkozásokat, étkezést, orvosi ellátást mentálhigiénés foglalkozást is biztosítunk. De a program valójában ennél sokkal többet ad számukra: biztonságot, gyermekkort, lehetőségeket, esélyt egy jobb életre, sőt sok esetben konkrétan a túlélésre. "
+      },
+      "p11": "<b>A sikerhez Rád is szükségünk van:</b> Támogasd projektünket havonta 10.000 vagy 20.000 Ft-tal, hogy együtt adhassunk jövőt és stabil alapokat Karamoja lányainak! Ha szeretnél támogatóvá válni, vagy kérdésed van,  fordulj hozzánk bizalommal a <a href=\"mailto:gyermektamogatas@szivembenafrika.org\">gyermektamogatas@szivembenafrika.org</a> e-mail címen.",
+      "p12": "<i>A képeket a Shanita készítette.</i>"
     }
   },
   "en": {
@@ -469,6 +588,32 @@ export default class Projects extends Vue {
         "li9": "Screening, treatment and education for malaria and other tropical infections",
         "li10": "Improving public hygiene, teaching and introducing infection and epidemic control techniques"
       }
+    },
+    "akitogogon": {
+      "title": "Akitogogon",
+      "title2": "Vulnerable to Unstoppable",
+      "shortDesc": "Vulnerable to Unstoppable<br><br>We are launching a joint program in Karamoja with Shanita.",
+      "p1": "<b>Karamoja:</b> The most ancient traces and evidences of human were found in Karamoja and its neighbouring regions in Sudan and Kenya. These skeletons and remainders of everyday tools suggest that Karamoja is in fact the specific place where our history began even in Africa, which is traditionally known as the ‘cradle’ of humanity.This ancient heritage is there in all nooks and crannies of Karamoja; in its extraordinary soil, its giant yet wise mountains, the scent of the air that compares to nothing, the resilience of the people and their magnificently colorful culture.",
+      "p2": "However due to decades of conflicts Karamoja became stigmatized and separated from the rest of Uganda making life here significantly more challenging. Even though Karamoja is the poorest region of Uganda financially, in comparison to the rest of the country due to its people protecting their customs and religion still influencing everyday life as well as the way the society operates, Karamoja has a sense of richness after all.",
+      "p3": "Karamoja is located in northeastern Uganda, a picturesque yet impoverished region known for its rich cultural heritage and traditional lifestyle. Educational opportunities are extremely limited, quality education is almost non-existent and the chances of anyone having access to it are very scarce. Local communities mainly engage in pastoralism and agriculture, increasingly jeopardized by extreme weather conditions, the most visible symptom being water scarcity. Tribal customs, such as early and forced (child) marriage, extremely early motherhood and female genital mutilation, although officially illegal, unfortunately, still persist in practice, further complicating the lives of girls and rendering their futures impossible.",
+      "p4": "<b>How can you help? Again we are dreaming big and this time our goal is to give home, shelter, dignity, education and a chance for a normal life for 60 girls in school in the Karamoja region from the school year starting in February 2025 - we are seeking supporters for this.</b>",
+      "p5": "There are two ways to support: ",
+      "p6": {
+        "li1": "<b>20.000 HUF per month</b> covers changing the whole life for one girl: this amount of monthly donation covers the housing, education, food and all cost of living",
+        "li2": "As we would like to make helping accessible to everyone, we have come up with an alternative construction as a secondary option: it is also possible to donate <b>10.000 HUF per month.</b> In this case we are ‘pairing up’ these donations and as a result, two people will conjointly support a girl",
+        "li3": "Similarily to our other child support programs we can provide updates and photos about the girls two times a year."
+      },
+      "p7": "<b>Our Project:</b> We are launching a joint program in Karamoja with Shanita. Shanita has been successfully running similar programs in this area for years, and now we have teamed up to support even more girls utilizing our vast experience in supporting girls and women coming with a poor background of infrastructure, being subject to unsafe tribal customs and lack of opportunity for a normal life. We built the program based on our shared values and professional principles with the aim to help even more girls with even higher quality than before. We have built this program based on our common values and approach with Shanita, with the critical element of making sure we’re responding to real local needs and demands, as well as respecting the local communities' cultural and tribal customs, and collaborating with locals for their long-term, sustainable support. Thanks to Hungary Helps, we received resources for renovation, new beds, and the construction of a water block, for which we are also grateful.",
+      "p8": "<b>Background of the two organizations:</b> Zsófi, as the founder of Africa Born in my Heart, and Lior, as the leader of Shanita, found their second home in Uganda independently, following different journeys. Although our associations operate independently from different parts of the world, we can build on many common traits in our collaboration. Both of us firmly believe that human kindness and cooperation can work wonders, driving us to provide sustainable support to children, young people, and adult women in Uganda, often a matter of life and death for them. For us, an important professional principle is to involve and employ local people, launching our programs after thorough fieldwork, ensuring that every element of our activities respond to real needs.",
+      "p9": "<b>Project Details:</b>",
+      "p10": {
+        "li1": "<b>What makes this project different?</b> Our goal is to lay the foundation for the future of 60 girls in a renovated and furnished school in Karamoja for the school year starting in February 2025. While the girls will live on a school campus, education is only one element of our program: we are enrolling girls from environments where they would otherwise not only be victims of poverty but also of violent and illegal tribal customs. In addition to education, we provide housing, meals, activities, and mental health support within the program.",
+        "li2": "<b>About the girls' background:</b> In the tribes living in the project area, it is still a common practice for girls to become brides as early as 8-12 years old for financial reasons, with the groom typically being an older man, often with multiple wives. As soon as the young girls are deemed suitable, their new husbands take them away. Unfortunately, this is not the only danger the girls of Karamoja face, as female genital mutilation is also an active tribal custom and unfortunately child marriage and child prostitution are also present.",
+        "li3": "<b>Long-term, professional solutions:</b> It is important that we enroll the girls in the program with their families' consent, for which it is essential to explain what education means and demonstrate its benefits. Therefore, we conduct awareness and educational programs with a local social worker. A key factor for success is replacing the short-term lost income of the families. Thus, we offer sustainable, long-term opportunities to the communities, so they do not have to live off marrying off their daughters: we teach them to produce and sell handicraft products, from which they can sustain themselves.",
+        "li4": "<b>Comprehensive care:</b> The rescued girls are provided with accommodation, education, extracurricular activities, meals, and mental health support. Apart from the materialistic benefits this program offers the girls much more: safety, childhood, opportunities, a chance for a better life or in a lot of cases to live at all."
+      },
+      "p11": "<b>We need you for success:</b> Support our project with 10.000 or 20.000 HUF per month to give a future and stable foundation to the girls of Karamoja together! If you would like to support a girl or you have any questions, please feel free to reach out to us at <a href=\"mailto:gyermektamogatas@szivembenafrika.org\">gyermektamogatas@szivembenafrika.org</a>.",
+      "p12": "<i>Photo credits: Shanita</i>"
     }
   }
 }
