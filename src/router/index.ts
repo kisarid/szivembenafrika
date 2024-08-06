@@ -24,106 +24,111 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
   },
   {
     path: '/rolunk',
     name: 'rolunk',
-    component: About
+    component: About,
   },
   {
     path: '/eves-beszamolok',
     name: 'eves-beszamolok',
-    component: Statement
+    component: Statement,
   },
   {
     path: '/alapelvek',
     name: 'alapelvek',
-    component: Principles
+    component: Principles,
   },
   {
     path: '/projektjeink',
     name: 'projektjeink',
-    component: Projects
+    component: Projects,
+  },
+  {
+    path: '/projektjeink/:projectId',
+    name: 'projektjeink-reszletes',
+    component: Projects,
   },
   {
     path: '/hol-segitunk',
     name: 'hol-segitunk',
-    component: WhereWeHelp
+    component: WhereWeHelp,
   },
   {
     path: '/adomanyozas',
     name: 'adomanyozas',
-    component: Donations
+    component: Donations,
   },
   {
     path: '/esemenyek',
     name: 'esemenyek',
-    component: Events
+    component: Events,
   },
   {
     path: '/esemenyek/ubuntu',
     name: 'esemenyekUbuntu',
-    component: Events
+    component: Events,
   },
   {
     path: '/graduate-a-girl',
     name: 'graduate-a-girl',
-    component: GraduateAGirl
+    component: GraduateAGirl,
   },
   {
     path: '/oktatasi-tamogatas',
     name: 'oktatasi-tamogatas',
-    component: EducationProgramKenya
+    component: EducationProgramKenya,
   },
   {
     path: '/gyermektamogatas',
     name: 'gyermektamogatas',
-    component: SupportChildren
+    component: SupportChildren,
   },
   {
     path: '/onkentesseg',
     name: 'onkentesseg',
-    component: Volunteering
+    component: Volunteering,
   },
   {
     path: '/media',
     name: 'media',
-    component: Media
+    component: Media,
   },
   {
     path: '/vlog',
     name: 'vlog',
-    component: Vlog
+    component: Vlog,
   },
   {
     path: '/blog',
     name: 'blog',
-    component: Blog
+    component: Blog,
   },
   {
     path: '/blog/:article',
     name: 'blog-article',
-    component: Blog
+    component: Blog,
   },
   {
     path: '/tamogatok',
     name: 'tamogatok',
-    component: Supporters
+    component: Supporters,
   },
   {
     path: '/kapcsolat',
     name: 'kapcsolat',
-    component: Contact
+    component: Contact,
   },
   {
     path: '*',
-    redirect: { name: 'home' }
-  }
+    redirect: { name: 'home' },
+  },
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
 })
 
 export default router

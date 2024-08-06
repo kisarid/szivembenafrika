@@ -9,7 +9,7 @@
         @click="selectedCardId = ''"
         class="link"
       >
-        ← {{ $t('back') }}
+        <router-link :to="'/projektjeink'">← {{ $t('back') }}</router-link>
       </div>
     </heading>
     <container>
@@ -23,28 +23,29 @@
         {{ $t('main.desc') }}
       </div>
       <section class="topic-selector" v-if="!selectedCardId">
-        <div
-          class="topic-card"
+        <router-link
           v-for="(card, index) in cards"
           :key="index"
-          @click="selectedCardId = card.id"
+          :to="`/projektjeink/${card.id}`"
         >
-          <div class="title sub-heading" v-html="card.title"></div>
-          <div class="pic">
-            <img
-              :src="require(`@/assets/images/projects/${card.cover}`)"
-              alt=""
-              :style="card.imgStyle"
-            />
+          <div class="topic-card">
+            <div class="title sub-heading" v-html="card.title"></div>
+            <div class="pic">
+              <img
+                :src="require(`@/assets/images/projects/${card.cover}`)"
+                alt=""
+                :style="card.imgStyle"
+              />
+            </div>
+            <div class="text" v-html="card.shortDesc"></div>
+            <div class="link" style="margin-top: auto; text-align: right">
+              {{ $t('read-more') }} →
+            </div>
           </div>
-          <div class="text" v-html="card.shortDesc"></div>
-          <div class="link" style="margin-top: auto; text-align: right">
-            {{ $t('read-more') }} →
-          </div>
-        </div>
+        </router-link>
       </section>
 
-      <section v-if="selectedCardId === 'womenprogram'">
+      <section v-if="selectedCardId === 'noi-program'">
         <p>{{ $t('womenprogram.p1') }}</p>
         <p>{{ $t('womenprogram.p2') }}</p>
         <p>{{ $t('womenprogram.p3') }}</p>
@@ -65,7 +66,7 @@
           </div>
         </div>
       </section>
-      <section v-if="selectedCardId === '84days'">
+      <section v-if="selectedCardId === '84-nap'">
         <div class="text-and-pic three-two">
           <div class="text">
             <p>{{ $t('84days.p1') }}</p>
@@ -112,7 +113,7 @@
         <p>{{ $t('84days-d.p1') }}</p>
         <p>{{ $t('84days-d.p2') }}</p>
       </section>
-      <section v-if="selectedCardId === 'supportchildren'">
+      <section v-if="selectedCardId === 'gyermektamogatas'">
         <p>{{ $t('supportchildren.p1') }}</p>
         <div class="pic-grid">
           <div class="pic">
@@ -143,7 +144,7 @@
           </div>
         </div>
       </section>
-      <section v-if="selectedCardId === 'graduateagirl'">
+      <section v-if="selectedCardId === 'graduate-a-girl'">
         <div class="text-and-pic">
           <div class="text">
             <p>{{ $t('graduateagirl.p1') }}</p>
@@ -175,7 +176,7 @@
           </div>
         </div>
       </section>
-      <section v-if="selectedCardId === 'euprogram'">
+      <section v-if="selectedCardId === 'eu-program'">
         <p>{{ $t('euprogram.p1') }}</p>
         <p>{{ $t('euprogram.p2') }}</p>
         <ul style="margin-bottom: 25px">
@@ -296,20 +297,20 @@ export default class Projects extends Vue {
   get cards(): ThemeSelectorCard[] {
     return [
       {
-        id: 'womenprogram',
+        id: 'noi-program',
         title: this.$i18n.t('womenprogram.title') as string,
         cover: 'noi-program-3.jpg',
         imgStyle: { 'object-position': '30%' },
         shortDesc: this.$i18n.t('womenprogram.shortDesc') as string,
       },
       {
-        id: '84days',
+        id: '84-nap',
         title: this.$i18n.t('84days.title') as string,
         cover: '84-nap-logo.png',
         shortDesc: this.$i18n.t('84days.shortDesc') as string,
       },
       {
-        id: 'supportchildren',
+        id: 'gyermektamogatas',
         title: this.$i18n.t('supportchildren.title') as string,
         cover: 'gyermektamogatas-projekt-2.jpg',
         imgStyle: { 'object-position': '60%' },
@@ -322,7 +323,7 @@ export default class Projects extends Vue {
         shortDesc: this.$i18n.t('shine.shortDesc') as string,
       },
       {
-        id: 'graduateagirl',
+        id: 'graduate-a-girl',
         title: this.$i18n.t('graduateagirl.title') as string,
         cover: 'graduate-a-girl-projekt-1.jpg',
         shortDesc: this.$i18n.t('graduateagirl.shortDesc') as string,
@@ -334,7 +335,7 @@ export default class Projects extends Vue {
         shortDesc: this.$i18n.t('mtwapa.shortDesc') as string,
       },
       {
-        id: 'euprogram',
+        id: 'eu-program',
         title: this.$i18n.t('euprogram.title') as string,
         cover: 'eu-2.jpg',
         imgStyle: { 'object-position': 'top' },
@@ -348,6 +349,19 @@ export default class Projects extends Vue {
         shortDesc: this.$i18n.t('akitogogon.shortDesc') as string,
       },
     ]
+  }
+
+  created() {
+    if (this.$route.params.projectId) {
+      this.selectedCardId = this.$route.params.projectId
+    }
+
+    this.$watch(
+      () => this.$route.params.projectId,
+      (projectId) => {
+        this.selectedCardId = projectId
+      }
+    )
   }
 }
 </script>
