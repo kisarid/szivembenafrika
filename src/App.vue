@@ -3,7 +3,7 @@
     <div class="header-holder"></div>
     <Header :menuItems="menuItems" />
     <router-view />
-    <Footer style="margin-top: 20px;" />
+    <Footer style="margin-top: 20px" />
   </div>
 </template>
 
@@ -30,11 +30,15 @@ export default class App extends Vue {
   mounted() {
     const width = Math.min(window.innerWidth, 400)
     if (window.localStorage.getItem('newsletter-modal-seen') !== 'true') {
-      this.$modal.show(NewsletterForm, {}, {
-        width: `${width}px`,
-        height: 'auto',
-      });
-      window.localStorage.setItem('newsletter-modal-seen', 'true');
+      this.$modal.show(
+        NewsletterForm,
+        {},
+        {
+          width: `${width}px`,
+          height: 'auto',
+        }
+      )
+      window.localStorage.setItem('newsletter-modal-seen', 'true')
     }
   }
 
@@ -63,9 +67,15 @@ export default class App extends Vue {
         text: this.getTranslation('3.menu'),
         submenu: [
           { text: this.getTranslation('3.submenu1'), route: 'onkentesseg' },
-          { text: this.getTranslation('3.submenu2'), route: 'gyermektamogatas' },
+          {
+            text: this.getTranslation('3.submenu2'),
+            route: 'gyermektamogatas',
+          },
           { text: this.getTranslation('3.submenu3'), route: 'graduate-a-girl' },
-          { text: this.getTranslation('3.submenu4'), route: 'oktatasi-tamogatas' },
+          {
+            text: this.getTranslation('3.submenu4'),
+            route: 'oktatasi-tamogatas',
+          },
           { text: this.getTranslation('3.submenu5'), route: 'adomanyozas' },
           { text: this.getTranslation('3.submenu6'), route: 'esemenyek' },
         ],
@@ -189,6 +199,10 @@ section {
 
   @media (min-width: 768px) {
     grid-template: auto / 1fr 1fr;
+
+    .pic.span {
+      grid-column: span 2;
+    }
   }
 }
 
@@ -310,7 +324,6 @@ svg {
 }
 
 .b-pagination {
-
   .page-item {
     .page-link {
       color: var(--moyo-font-dark);
