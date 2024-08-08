@@ -1,5 +1,5 @@
 export interface MenuItem {
-    text: string
-    route?: string
-    submenu?: MenuItem[]
+  text: string
+  route?: string
+  submenu?: MenuItem[]
 }

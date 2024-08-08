@@ -51,45 +51,55 @@ export default class App extends Vue {
       {
         text: this.getTranslation('1.menu'),
         submenu: [
-          { text: this.getTranslation('1.submenu1'), route: 'rolunk' },
-          { text: this.getTranslation('1.submenu2'), route: 'eves-beszamolok' },
+          { text: this.getTranslation('1.submenu1'), route: '/rolunk' },
+          {
+            text: this.getTranslation('1.submenu2'),
+            route: '/eves-beszamolok',
+          },
         ],
       },
       {
         text: this.getTranslation('2.menu'),
         submenu: [
-          { text: this.getTranslation('2.submenu1'), route: 'alapelvek' },
-          { text: this.getTranslation('2.submenu2'), route: 'hol-segitunk' },
-          { text: this.getTranslation('2.submenu3'), route: 'projektjeink' },
+          { text: this.getTranslation('2.submenu1'), route: '/alapelvek' },
+          { text: this.getTranslation('2.submenu2'), route: '/hol-segitunk' },
+          { text: this.getTranslation('2.submenu3'), route: '/projektjeink' },
+          {
+            text: this.getTranslation('2.submenu4'),
+            route: '/projektjeink/akitogogon',
+          },
         ],
       },
       {
         text: this.getTranslation('3.menu'),
         submenu: [
-          { text: this.getTranslation('3.submenu1'), route: 'onkentesseg' },
+          { text: this.getTranslation('3.submenu1'), route: '/onkentesseg' },
           {
             text: this.getTranslation('3.submenu2'),
-            route: 'gyermektamogatas',
+            route: '/gyermektamogatas',
           },
-          { text: this.getTranslation('3.submenu3'), route: 'graduate-a-girl' },
+          {
+            text: this.getTranslation('3.submenu3'),
+            route: '/graduate-a-girl',
+          },
           {
             text: this.getTranslation('3.submenu4'),
-            route: 'oktatasi-tamogatas',
+            route: '/oktatasi-tamogatas',
           },
-          { text: this.getTranslation('3.submenu5'), route: 'adomanyozas' },
-          { text: this.getTranslation('3.submenu6'), route: 'esemenyek' },
+          { text: this.getTranslation('3.submenu5'), route: '/adomanyozas' },
+          { text: this.getTranslation('3.submenu6'), route: '/esemenyek' },
         ],
       },
       {
         text: this.getTranslation('4.menu'),
         submenu: [
-          { text: this.getTranslation('4.submenu1'), route: 'media' },
-          { text: this.getTranslation('4.submenu2'), route: 'vlog' },
-          { text: this.getTranslation('4.submenu3'), route: 'blog' },
+          { text: this.getTranslation('4.submenu1'), route: '/media' },
+          { text: this.getTranslation('4.submenu2'), route: '/vlog' },
+          { text: this.getTranslation('4.submenu3'), route: '/blog' },
         ],
       },
-      { text: this.getTranslation('5.menu'), route: 'tamogatok' },
-      { text: this.getTranslation('6.menu'), route: 'kapcsolat' },
+      { text: this.getTranslation('5.menu'), route: '/tamogatok' },
+      { text: this.getTranslation('6.menu'), route: '/kapcsolat' },
     ]
   }
 }
@@ -359,7 +369,8 @@ svg {
       "menu": "Így segítünk",
       "submenu1": "Alapelvek",
       "submenu2": "Hol segítünk?",
-      "submenu3": "Projektjeink"
+      "submenu3": "Projektjeink",
+      "submenu4": "Akitogogon"
     },
     "3": {
       "menu": "Így segíthetsz",
@@ -393,7 +404,8 @@ svg {
       "menu": "How we help",
       "submenu1": "Principles",
       "submenu2": "Where do we help?",
-      "submenu3": "Our projects"
+      "submenu3": "Our projects",
+      "submenu4": "Akitogogon"
     },
     "3": {
       "menu": "How you can help",
