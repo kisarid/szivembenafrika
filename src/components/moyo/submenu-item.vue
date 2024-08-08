@@ -4,7 +4,7 @@
       class="item"
       v-for="(item, index) in items"
       :key="index"
-      :to="{ name: item.route }"
+      :to="item.route"
       >{{ item.text }}</router-link
     >
   </div>

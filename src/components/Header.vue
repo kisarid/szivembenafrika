@@ -13,9 +13,9 @@
           :key="index"
           :submenu="menuItem.submenu"
           :route="menuItem.route"
+          :text="menuItem.text"
           class="menu-item"
         >
-          <div slot="text">{{ menuItem.text }}</div>
         </menuItem>
       </div>
       <LanguageSelector class="tablet" :theme="'dark'"></LanguageSelector>
@@ -125,7 +125,7 @@
         }
       }
     }
-    
+
     #language-selector {
       &.mobile {
         position: absolute;
@@ -137,7 +137,7 @@
         display: none;
         margin-left: auto;
       }
-      
+
       @media (min-width: 768px) {
         &.mobile {
           display: none;

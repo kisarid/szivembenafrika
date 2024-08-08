@@ -45,6 +45,42 @@
         </router-link>
       </section>
 
+      <section v-if="selectedCardId === 'akitogogon'">
+        <p class="sub-heading" v-html="$t('akitogogon.title2')"></p>
+        <p v-html="$t('akitogogon.p1')"></p>
+        <p v-html="$t('akitogogon.p2')"></p>
+        <p v-html="$t('akitogogon.p3')"></p>
+        <div class="pic">
+          <img src="@/assets/images/projects/akitogogon-3.jpg" alt="" />
+        </div>
+        <p v-html="$t('akitogogon.p4')"></p>
+        <p v-html="$t('akitogogon.p5')"></p>
+        <ul style="margin-bottom: 25px">
+          <li v-html="$t('akitogogon.p6.li1')"></li>
+          <li v-html="$t('akitogogon.p6.li2')"></li>
+          <li v-html="$t('akitogogon.p6.li3')"></li>
+        </ul>
+        <p v-html="$t('akitogogon.p7')"></p>
+        <div class="pic">
+          <img src="@/assets/images/projects/akitogogon-1.jpg" alt="" />
+        </div>
+        <p v-html="$t('akitogogon.p8')"></p>
+        <p v-html="$t('akitogogon.p9')"></p>
+        <ul style="margin-bottom: 25px">
+          <li v-html="$t('akitogogon.p10.li1')"></li>
+          <li v-html="$t('akitogogon.p10.li2')"></li>
+          <div class="pic" style="margin-block: 20px">
+            <img src="@/assets/images/projects/akitogogon-2.jpg" alt="" />
+          </div>
+          <li v-html="$t('akitogogon.p10.li3')"></li>
+          <li v-html="$t('akitogogon.p10.li4')"></li>
+        </ul>
+        <p v-html="$t('akitogogon.p11')"></p>
+        <p v-html="$t('akitogogon.p12')" style="margin-top: 40px"></p>
+        <div class="pic shanita-logo">
+          <img src="@/assets/images/projects/logo-shanita.png" alt="" />
+        </div>
+      </section>
       <section v-if="selectedCardId === 'noi-program'">
         <p>{{ $t('womenprogram.p1') }}</p>
         <p>{{ $t('womenprogram.p2') }}</p>
@@ -206,52 +242,6 @@
           </div>
         </div>
       </section>
-      <section v-if="selectedCardId === 'akitogogon'">
-        <p class="sub-heading" v-html="$t('akitogogon.title2')"></p>
-        <p v-html="$t('akitogogon.p1')"></p>
-        <p v-html="$t('akitogogon.p2')"></p>
-        <p v-html="$t('akitogogon.p3')"></p>
-        <p v-html="$t('akitogogon.p4')"></p>
-        <p v-html="$t('akitogogon.p5')"></p>
-        <ul style="margin-bottom: 25px">
-          <li v-html="$t('akitogogon.p6.li1')"></li>
-          <li v-html="$t('akitogogon.p6.li2')"></li>
-          <li v-html="$t('akitogogon.p6.li3')"></li>
-        </ul>
-        <p v-html="$t('akitogogon.p7')"></p>
-        <p v-html="$t('akitogogon.p8')"></p>
-        <p v-html="$t('akitogogon.p9')"></p>
-        <ul style="margin-bottom: 25px">
-          <li v-html="$t('akitogogon.p10.li1')"></li>
-          <li v-html="$t('akitogogon.p10.li2')"></li>
-          <li v-html="$t('akitogogon.p10.li3')"></li>
-          <li v-html="$t('akitogogon.p10.li4')"></li>
-        </ul>
-        <p v-html="$t('akitogogon.p11')"></p>
-        <p v-html="$t('akitogogon.p12')" style="margin-top: 40px"></p>
-        <div class="pic-grid">
-          <div class="pic">
-            <img src="@/assets/images/projects/akitogogon-1.jpg" alt="" />
-          </div>
-          <div class="pic">
-            <img src="@/assets/images/projects/akitogogon-2.jpg" alt="" />
-          </div>
-          <div class="pic span">
-            <img src="@/assets/images/projects/akitogogon-3.jpg" alt="" />
-          </div>
-        </div>
-        <div
-          class="pic-grid"
-          style="width: 200px; margin: auto; padding-top: 40px"
-        >
-          <div class="pic">
-            <img src="@/assets/icons/logo.png" alt="" />
-          </div>
-          <div class="pic">
-            <img src="@/assets/images/projects/logo-shanita.png" alt="" />
-          </div>
-        </div>
-      </section>
     </container>
   </div>
 </template>
@@ -261,9 +251,19 @@
   margin-bottom: 30px;
 }
 
+.pic.shanita-logo {
+  width: 100px;
+  margin: auto;
+  padding-top: 40px;
+}
+
 @media (min-width: 768px) {
   .topic-selector {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .pic.shanita-logo {
+    width: 200px;
   }
 }
 </style>
@@ -296,6 +296,13 @@ export default class Projects extends Vue {
 
   get cards(): ThemeSelectorCard[] {
     return [
+      {
+        id: 'akitogogon',
+        title: this.$i18n.t('akitogogon.title') as string,
+        cover: 'akitogogon-1.jpg',
+        imgStyle: { 'object-position': 'top' },
+        shortDesc: this.$i18n.t('akitogogon.shortDesc') as string,
+      },
       {
         id: 'noi-program',
         title: this.$i18n.t('womenprogram.title') as string,
@@ -340,13 +347,6 @@ export default class Projects extends Vue {
         cover: 'eu-2.jpg',
         imgStyle: { 'object-position': 'top' },
         shortDesc: this.$i18n.t('euprogram.shortDesc') as string,
-      },
-      {
-        id: 'akitogogon',
-        title: this.$i18n.t('akitogogon.title') as string,
-        cover: 'akitogogon-1.jpg',
-        imgStyle: { 'object-position': 'top' },
-        shortDesc: this.$i18n.t('akitogogon.shortDesc') as string,
       },
     ]
   }

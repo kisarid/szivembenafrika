@@ -1,8 +1,9 @@
 <template>
   <div id="menu-item" :class="{ selected: selected }" @click="handleClick">
-    <div class="text">
-      <slot name="text"></slot>
-    </div>
+    <router-link v-if="route" :to="route" class="text"
+      ><div class="text">{{ text }}</div>
+    </router-link>
+    <div v-if="!route" class="text">{{ text }}</div>
     <div class="icon" v-if="submenu">
       <chevron />
     </div>
@@ -29,11 +30,16 @@ import { MenuItem as MenuItemI } from '@/interfaces/menu-item'
 export default class MenuItem extends Vue {
   @Prop() submenu: MenuItemI[]
   @Prop() route: string
+  @Prop() text: string
   selected = false
   open = false
   @Watch('$route', { immediate: true, deep: true })
   onUrlChange(newVal: any) {
-    this.setSelected(newVal.path.includes(this.route))
+    const submenuSelected = (this.submenu || []).some((sm) =>
+      newVal.path.includes(sm.route)
+    )
+    const menuSelected = newVal.path.includes(this.route)
+    this.setSelected(submenuSelected || menuSelected)
   }
 
   mounted() {
@@ -53,11 +59,9 @@ export default class MenuItem extends Vue {
   }
 
   handleClick(event: Event) {
-    event.preventDefault()
     if (this.submenu) {
+      event.preventDefault()
       this.setOpen(!this.open)
-    } else if (this.$router.currentRoute.name !== this.route) {
-      this.$router.push({ name: this.route })
     }
   }
 }
@@ -89,6 +93,7 @@ export default class MenuItem extends Vue {
     font-size: 14px;
     text-transform: uppercase;
     white-space: nowrap;
+    text-decoration: none;
   }
 
   .icon {
