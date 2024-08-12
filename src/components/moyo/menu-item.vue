@@ -35,8 +35,8 @@ export default class MenuItem extends Vue {
   open = false
   @Watch('$route', { immediate: true, deep: true })
   onUrlChange(newVal: any) {
-    const submenuSelected = (this.submenu || []).some((sm) =>
-      newVal.path.includes(sm.route)
+    const submenuSelected = (this.submenu || []).some(
+      (sm) => !sm.ignoreInMenuHighlight && newVal.path.includes(sm.route)
     )
     const menuSelected = newVal.path.includes(this.route)
     this.setSelected(submenuSelected || menuSelected)
