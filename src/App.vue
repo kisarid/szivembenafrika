@@ -64,10 +64,6 @@ export default class App extends Vue {
           { text: this.getTranslation('2.submenu1'), route: '/alapelvek' },
           { text: this.getTranslation('2.submenu2'), route: '/hol-segitunk' },
           { text: this.getTranslation('2.submenu3'), route: '/projektjeink' },
-          {
-            text: this.getTranslation('2.submenu4'),
-            route: '/projektjeink/akitogogon',
-          },
         ],
       },
       {
@@ -76,18 +72,23 @@ export default class App extends Vue {
           { text: this.getTranslation('3.submenu1'), route: '/onkentesseg' },
           {
             text: this.getTranslation('3.submenu2'),
-            route: '/gyermektamogatas',
+            route: '/projektjeink/akitogogon',
+            ignoreInMenuHighlight: true,
           },
           {
             text: this.getTranslation('3.submenu3'),
-            route: '/graduate-a-girl',
+            route: '/gyermektamogatas',
           },
           {
             text: this.getTranslation('3.submenu4'),
+            route: '/graduate-a-girl',
+          },
+          {
+            text: this.getTranslation('3.submenu5'),
             route: '/oktatasi-tamogatas',
           },
-          { text: this.getTranslation('3.submenu5'), route: '/adomanyozas' },
-          { text: this.getTranslation('3.submenu6'), route: '/esemenyek' },
+          { text: this.getTranslation('3.submenu6'), route: '/adomanyozas' },
+          { text: this.getTranslation('3.submenu7'), route: '/esemenyek' },
         ],
       },
       {
@@ -369,17 +370,17 @@ svg {
       "menu": "Így segítünk",
       "submenu1": "Alapelvek",
       "submenu2": "Hol segítünk?",
-      "submenu3": "Projektjeink",
-      "submenu4": "Akitogogon"
+      "submenu3": "Projektjeink"
     },
     "3": {
       "menu": "Így segíthetsz",
       "submenu1": "Önkéntesség",
-      "submenu2": "Gyermektámogatás",
-      "submenu3": "Graduate a Girl!",
-      "submenu4": "Oktatás támogatás Kenyában",
-      "submenu5": "Adományozás",
-      "submenu6": "Események"
+      "submenu2": "Akitogogon",
+      "submenu3": "Gyermektámogatás",
+      "submenu4": "Graduate a Girl!",
+      "submenu5": "Oktatás támogatás Kenyában",
+      "submenu6": "Adományozás",
+      "submenu7": "Események"
     },
     "4": {
       "menu": "Megjelenések",
@@ -410,11 +411,12 @@ svg {
     "3": {
       "menu": "How you can help",
       "submenu1": "Volunteering",
-      "submenu2": "Child support",
-      "submenu3": "Graduate a Girl!",
-      "submenu4": "Education support in Kenya",
-      "submenu5": "Donation",
-      "submenu6": "Events"
+      "submenu2": "Akitogogon",
+      "submenu3": "Child support",
+      "submenu4": "Graduate a Girl!",
+      "submenu5": "Education support in Kenya",
+      "submenu6": "Donation",
+      "submenu7": "Events"
     },
     "4": {
       "menu": "Appearances",
