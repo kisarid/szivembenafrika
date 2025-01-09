@@ -5,12 +5,12 @@ module.exports = {
       case 'production':
         return 'http://szivembenafrika.org/'
       case 'staging':
-        return 'http://david.kisari.net/szivembenafrika'
+        return 'http://david.kisari.net/'
       case 'development':
         return 'http://localhost:8080'
     }
   })(),
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     const svgRule = config.module.rule('svg')
 
     svgRule.uses.clear()
@@ -29,7 +29,7 @@ module.exports = {
       fallbackLocale: 'en',
       localeDir: 'locales',
       enableInSFC: true,
-      enableBridge: false
-    }
-  }
+      enableBridge: false,
+    },
+  },
 }
