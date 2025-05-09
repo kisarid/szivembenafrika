@@ -3,7 +3,12 @@
     <heading>
       <div slot="main" v-if="!selectedArticle">Blog</div>
       <div slot="main-small" v-if="selectedArticle">
-        {{ selectedArticle.title }}
+        <div>
+          {{ selectedArticle.title }}
+        </div>
+        <div v-if="selectedArticle.subtitle" class="article-subtitle">
+          {{ selectedArticle.subtitle }}
+        </div>
       </div>
       <div v-if="selectedArticle" slot="description" class="article-header">
         <div class="meta">
@@ -111,6 +116,9 @@
         </div>
         <div class="text">
           <div class="title sub-heading">{{ article.title }}</div>
+          <div v-if="article.subtitle" class="article-subtitle">
+            {{ article.subtitle }}
+          </div>
           <div class="meta">
             {{
               new Date(article.date).toLocaleDateString($i18n.locale, {
@@ -221,6 +229,11 @@
   }
 }
 
+.article-subtitle {
+  font-size: 80%;
+  font-weight: normal;
+}
+
 .article-header {
   display: grid;
   grid-template: auto / 1fr auto;
@@ -276,6 +289,11 @@
         margin-bottom: 5px;
       }
 
+      .article-subtitle {
+        margin-bottom: 5px;
+        font-size: 100%;
+      }
+
       .meta {
         margin-bottom: 24px;
       }
@@ -283,8 +301,20 @@
       .blog-text {
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
+      }
+
+      &:has(.article-subtitle) {
+        .title {
+          margin-bottom: 0;
+        }
+
+        .blog-text {
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        }
       }
     }
 
@@ -344,6 +374,10 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2025-05-09d',
+      '2025-05-09c',
+      '2025-05-09b',
+      '2025-05-09a',
       '2025-04-12c',
       '2025-04-12b',
       '2025-04-12a',
