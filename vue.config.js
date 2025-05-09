@@ -1,5 +1,6 @@
 module.exports = {
   lintOnSave: false,
+  filenameHashing: false,
   publicPath: (() => {
     switch (process.env.NODE_ENV) {
       case 'production':
