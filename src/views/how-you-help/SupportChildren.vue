@@ -13,7 +13,12 @@
           />
         </div>
         <p>{{ $t('p2') }}</p>
-        <p>{{ $t('p3.1') }}<a href="mailto:gyermektamogatas@szivembenafrika.org">gyermektamogatas@szivembenafrika.org</a>{{ $t('p3.2') }}</p>
+        <p>
+          {{ $t('p3.1')
+          }}<a href="mailto:gyermektamogatas@szivembenafrika.org"
+            >gyermektamogatas@szivembenafrika.org</a
+          >{{ $t('p3.2') }}
+        </p>
         <div class="pic">
           <img
             src="@/assets/images/support-children/gyermektamogatas-2.jpg"
@@ -69,7 +74,7 @@ export default class SupportChildren extends Vue {
         'A család szerény körülményei miatt a három gyerek taníttatása nagyon nagy terhet jelent a szülőknek, ahogy a mindennapi betevő előteremtése is.',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
     {
       id: '',
@@ -82,7 +87,7 @@ export default class SupportChildren extends Vue {
         'Az anya az utolsó reményük, azonban a remény lángja már halványabban ég a testvérek szemében is, hogy lehet még egyszer szebb életük. Ennek ellenére Marion jó képességekkel van megáldva, szeret olvasni, és ápolónő szeretne lenni.',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
     {
       id: '',
@@ -100,7 +105,7 @@ export default class SupportChildren extends Vue {
         'Khatete szeret krétával rajzolni és játszani a többiekkel.',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
     {
       id: '',
@@ -119,7 +124,7 @@ export default class SupportChildren extends Vue {
         'Számára a reményt fiai, Tob és Morgran jelenti.',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
     {
       id: '',
@@ -133,7 +138,7 @@ export default class SupportChildren extends Vue {
         'Számára a reményt fiai, Tob és Morgran jelenti.',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
     {
       id: '',
@@ -150,7 +155,7 @@ export default class SupportChildren extends Vue {
         'Mivel későn került az oviba, sokszor kinevették és többen tanácsolták neki, hogy hagyja ott az iskolát; szerencsére nem hallgatott rájuk...',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
     {
       id: '',
@@ -164,7 +169,7 @@ export default class SupportChildren extends Vue {
         'A kisfiú szeret focizni, sőt, tehetséges is. Társait rendszerint kicselezi, a fiúk körében Ronaldonak becézik.',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
     {
       id: '',
@@ -181,7 +186,7 @@ export default class SupportChildren extends Vue {
         'Raymond napközben a nagyapjával és féltestvéreivel tölti az időt, de a szülők hiánya nehézzé teszi a mindennapokat.',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
     {
       id: '',
@@ -198,7 +203,7 @@ export default class SupportChildren extends Vue {
         'Isiah ugyanakkor szeret iskolába járni, szeretne tanulni. Vágya, hogy a kis testvéreit segíteni tudja a későbbiekben.',
       ],
       objectPosition: '50% 0',
-      isSupported: true
+      isSupported: true,
     },
   ]
 }
@@ -208,8 +213,8 @@ export default class SupportChildren extends Vue {
 {
     "hu": {
         "main": "Gyermektámogatás",
-        "p1": "Hiszünk abban, hogy minden gyermeknek jár a boldog, biztonságos gyerekkor, az oktatás és az esély egy jó életre. Ugandában sajnos nem ingyenes az oktatás és mivel a családok nagy része a szegénységi küszöb alatt él, az, hogy iskolába járjon egy gyerek luxusnak számít. Gyermektámogatási programunk keretében havi 6000Ft-os adományért a támogató jelképes örökbefogadó szülővé válhat. Ez az az összeg, amely fedezi egy gyerkőc oktatását, tanszereit, étkezését és szükség esetén az orvosi ellátását. Mi pedig rendszeres időközönként hírt adunk a gyerkőc fejlődéséről, tanulmányi eredményeiről, fontosabb életeseményeiről, valamint küldünk róla fotókat, videókat.",
-        "p2": "Csatlakozz hozzánk és segíts! Váltsuk valóra az álmaikat, változtassunk életeket! A havi támogatás összege 6000 forint, amely magában foglalja a kiválasztott gyermek tandíját, egyenruháját, tanszereit, étkezését és szükség esetén az orvosi ellátását.",
+        "p1": "Hiszünk abban, hogy minden gyermeknek jár a boldog, biztonságos gyerekkor, az oktatás és az esély egy jó életre. Ugandában sajnos nem ingyenes az oktatás és mivel a családok nagy része a szegénységi küszöb alatt él, az, hogy iskolába járjon egy gyerek luxusnak számít. Gyermektámogatási programunk keretében havi 7500 Ft-os adományért a támogató jelképes örökbefogadó szülővé válhat. Ez az az összeg, amely fedezi egy gyerkőc oktatását, tanszereit, étkezését és szükség esetén az orvosi ellátását. Mi pedig rendszeres időközönként hírt adunk a gyerkőc fejlődéséről, tanulmányi eredményeiről, fontosabb életeseményeiről, valamint küldünk róla fotókat, videókat.",
+        "p2": "Csatlakozz hozzánk és segíts! Váltsuk valóra az álmaikat, változtassunk életeket! A havi támogatás összege 7500 Ft, amely magában foglalja a kiválasztott gyermek tandíját, egyenruháját, tanszereit, étkezését és szükség esetén az orvosi ellátását.",
         "p3": {
             "1": "Kérdés esetén fordulj bizalommal hozzánk az ",
             "2": " email címen."
@@ -217,8 +222,8 @@ export default class SupportChildren extends Vue {
     },
     "en": {
         "main": "Supporting a Child",
-        "p1": "We believe that every child deserves a happy and safe childhood, education and a chance for a better life. In Uganda unfortunately the education is not free of tuition-fees, and as most of the families live under the threshold of poverty, the possibility for a child to attend school is a luxury. By our child-support program for a 6000 HUF donation/month you can symbolically adopt a child. This donation covers the kids’ education, school supplies, feeding and if needed medical attendance. We will periodically inform you of the kids’ growth, educational results, life events, and send photos and videos of the kid.",
-        "p2": "Join us and help! Lets make their dreams come true, and changes their lives! The amount of monthly donation is 6000 HUF, which includes the chosen girls’ tuition-fees, school supplies, and medical attendance if needed.",
+        "p1": "We believe that every child deserves a happy and safe childhood, education and a chance for a better life. In Uganda unfortunately the education is not free of tuition-fees, and as most of the families live under the threshold of poverty, the possibility for a child to attend school is a luxury. By our child-support program for a 7500 HUF donation/month you can symbolically adopt a child. This donation covers the kids’ education, school supplies, feeding and if needed medical attendance. We will periodically inform you of the kids’ growth, educational results, life events, and send photos and videos of the kid.",
+        "p2": "Join us and help! Lets make their dreams come true, and changes their lives! The amount of monthly donation is 7500 HUF, which includes the chosen girls’ tuition-fees, school supplies, and medical attendance if needed.",
         "p3": {
             "1": "If you have any question do not hesitate to contact us at ",
             "2": "."
