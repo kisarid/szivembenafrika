@@ -30,6 +30,10 @@ export type Block =
       classes?: string[]
       style?: {}
     }
+  | {
+      type: 'video'
+      url: string
+    }
 
 export type Img = {
   name: string

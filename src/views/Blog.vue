@@ -95,6 +95,9 @@
             >
               <li v-for="(l, index) in block.content" :key="index">{{ l }}</li>
             </ol>
+            <div v-if="block.type === 'video'" :key="i">
+              <YoutubeVideo v-bind:url="block.url" />
+            </div>
           </template>
         </div>
       </div>
@@ -346,10 +349,11 @@ import { Component, Vue } from 'vue-property-decorator'
 import container from '@/components/moyo/container.vue'
 import heading from '@/components/moyo/heading.vue'
 import { Article } from '@/interfaces/article'
+import YoutubeVideo from '@/components/moyo/youtube-video.vue'
 
 @Component({
   name: 'Blog',
-  components: { container, heading },
+  components: { container, heading, YoutubeVideo },
 })
 export default class Blog extends Vue {
   articles: Article[]
