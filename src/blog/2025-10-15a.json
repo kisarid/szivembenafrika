@@ -124,5 +124,6 @@
   "cover": {
     "name": "2025-10-15a_6.jpg",
     "style": { "object-position": "center 25%" }
-  }
+  },
+  "innerCover": null
 }
