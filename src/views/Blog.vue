@@ -194,6 +194,10 @@
   text-align: right;
 }
 
+.clear {
+  clear: both;
+}
+
 .blog-pics {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -228,6 +232,16 @@
 
     .pic.small {
       grid-column: span 1;
+    }
+
+    &.f-right {
+      float: right;
+      padding-left: 10px;
+    }
+
+    &.f-left {
+      float: left;
+      padding-right: 10px;
     }
   }
 }
@@ -378,6 +392,10 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2025-11-17d',
+      '2025-11-17c',
+      '2025-11-17b',
+      '2025-11-17a',
       '2025-10-15d',
       '2025-10-15c',
       '2025-10-15b',
