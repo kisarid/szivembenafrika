@@ -18,6 +18,8 @@ The result should be a file containing a single JSON object with the following p
   - “type”: “img”, “content”: an array of objects with the following properties:
     - “name”: image file name, comes from the main file’s name with “\_1”, “\_2”, etc. added to the end, plus “.jpg”
     - “caption”: optional string
+  - "type": "list", "listType": "ul" or "li", "content": an array of strings that should be the list items
+    - use "list" type if you see bullets or ordered lists in the text, arrange list items that are together in a text under one block object
   - Use the “type”: “text” objects for most lines. Each line represents the full content of the “content” property of a “type”: “text” object, no matter how long.
   - Use “type”: “img” object if the line is not a human readable text, but a comma separated list of file names.
   - Convert urls to html <a> tags (escape quote marks)
