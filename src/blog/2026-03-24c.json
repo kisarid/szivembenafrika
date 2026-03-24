@@ -1,0 +1,95 @@
+{
+  "id": "2026-03-24c",
+  "title": "Hírek Afrikából",
+  "date": "2026-03-24",
+  "author": "Záhoczky Csenge",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "Újra élnek orrszarvúak a Kidepo Valley National Parkban",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "1983 - orvvadászok ekkor ölték meg az utolsó orrszarvút. Azóta több mint negyven év telt el: az orrszarvúk visszatérését támogató állatorvosok és vadőrök többsége még nem is élt akkor. Akkoriban - az ország politikai instabilitását kihasználva - a szarvval és a hússal kereskedő orvvadászok a Kidepo és a többi ugandai nemzeti park teljes orrszarvú állományát kiirtották, amely mintegy 700 egyedre rúgott."
+    },
+    {
+      "type": "text",
+      "content": "Eltűnésük a faj teljes kihalását eredményezte az ugandai vadonban. Napjainkban egy elkötelezett, új generáció dolgozik Uganda védett területeinek és vadvilágának visszaállításán, melynek részeként a tervek szerint nyolc orrszarvú fogja újra benépesíteni a nemzeti parkot. Az első két egyedet március 17-én helyezték vissza a Kidepo Valley National Parkba."
+    },
+    {
+      "type": "text",
+      "content": "Az orvvadászat továbbra is jelentős probléma Uganda vadvédelmi területein, a hatóságok gyakran állítanak bíróság elé többek között elefántcsonttal és veszélyeztetett fajokkal kereskedő elkövetőket. A Dél-Szudánhoz való közelsége, illetve a szarvasmarha-tenyésztők határon átnyúló, fegyveres rajtaütései okán a Kidepo különösen kitett az orvvadászatnak, a Uganda Wildlife Authority és más szervezetek elkötelezett munkája ugyanakkor felélesztette a reményt, hogy az egykor a park természeti örökségének részét képező orrszarvúak - és más fajok - idővel újra a vadon elválaszthatatlan részei lesznek."
+    },
+    {
+      "type": "text",
+      "content": "Uganda Nemzeti Orrszarvú-védelmi Stratégiájának részeként az év elején az Ajai Vadvédelmi Rezervátumba helyeztek át sikeresen 4 orrszarvút."
+    },
+    {
+      "type": "text",
+      "content": "Forrás: Reuters, Uganda Conservation Foundation, Uganda Wildlife Authority"
+    },
+    {
+      "type": "img",
+      "content": [
+        {
+          "name": "2026-03-24c_1.jpg",
+          "caption": "A képek forrása: Paul Hilton/Global Consevartion/UCF"
+        },
+        {
+          "name": "2026-03-24c_2.jpg",
+          "caption": "&nbsp;"
+        }
+      ],
+      "classes": ["keep-size"]
+    },
+    {
+      "type": "text",
+      "content": "&nbsp;"
+    },
+    {
+      "type": "text",
+      "content": "Az afrikai fiatalok a leginkább mentálisan stabilak az egész világon",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Egy új jelentés rámutat, hogy a jóllét nem feltétlenül jelent mentális egészséget is. Így lehet, hogy a szubszaharai afrikai országok fiataljai mentálisan stabilabbak a felmérés szerint, mint a magas jövedelmű országokban – például Egyesült Királyság, Új-Zéland, Japán – élő társaik. A világrangsor elején a nyugat-afrikai Ghána végzett. A kutatás hangsúlyozza, hogy a „fejlett” országok romló tendenciáit elsősorban olyan problémák okozzák, mint például a korai telefonhasználat, az ultra-feldolgozott élelmiszerek, és a romló családi, szociális kapcsolatok. Mindez egyértelműen mutatja, hogy a tartós és valódi mentális jóllét alapja továbbra is az erős családi kapcsolatok és közösségi struktúrák, valamint a kulturális kapcsolódás, sokkal inkább mint önmagában a pénzügyi gazdagság."
+    },
+    {
+      "type": "text",
+      "content": "Forrás: Business Insider Africa"
+    },
+    {
+      "type": "img",
+      "content": [
+        {
+          "name": "2026-03-24c_3.jpg"
+        },
+        {
+          "name": "2026-03-24c_4.jpg"
+        },
+        {
+          "name": "2026-03-24c_6.jpg"
+        }
+      ],
+      "classes": ["trio"]
+    },
+    {
+      "type": "img",
+      "content": [
+        {
+          "name": "2026-03-24c_5.jpg",
+          "caption": "A képek forrása: Dorinka Studio/Szívemben Született Afrika"
+        }
+      ]
+    }
+  ],
+  "cover": {
+    "name": "2026-03-24c_5.jpg",
+    "style": {
+      "object-position": "center left"
+    }
+  },
+  "innerCover": null
+}
