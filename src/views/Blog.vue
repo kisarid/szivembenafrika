@@ -392,6 +392,9 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2026-03-24c',
+      '2026-03-24b',
+      '2026-03-24a',
       '2026-02-27d',
       '2026-02-27c',
       '2026-02-27b',
