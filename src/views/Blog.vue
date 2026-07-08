@@ -114,6 +114,13 @@
               :src="require(`@/assets/images/blog/${article.cover.name}`)"
               :style="article.cover.style"
               alt=""
+              v-if="article.cover.name"
+            />
+            <img
+              :src="require(`@/assets/icons/logo.png`)"
+              :style="{ 'object-fit': 'contain' }"
+              alt=""
+              v-if="!article.cover.name"
             />
           </router-link>
         </div>
@@ -392,6 +399,7 @@ export default class Blog extends Vue {
   created() {
     const now = new Date().getTime()
     const articlesList = [
+      '2026-07-08',
       '2026-05-03c',
       '2026-05-03b',
       '2026-05-03a',
