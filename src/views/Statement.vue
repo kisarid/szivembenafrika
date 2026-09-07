@@ -9,6 +9,7 @@
           A kettős könyvvitelt vezető egyéb szervezet egyszerűsített éves
           beszámolója és közhasznúsági melléklet
         </div>
+        <a href="/files/szivembenafrika_beszamolo_2025.pdf">2025</a>
         <a href="/files/szivembenafrika_beszamolo_2024.pdf">2024</a>
         <a href="/files/szivembenafrika_beszamolo_2023.pdf">2023</a>
         <a href="/files/szivembenafrika_beszamolo_2022.pdf">2022</a>
