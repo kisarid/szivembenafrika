@@ -1,0 +1,62 @@
+{
+  "id": "2026-09-21c",
+  "title": "Hírek Afrikából",
+  "date": "2026-09-21",
+  "author": "Záhoczky Csenge",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "„Pearl Sweet” névre keresztelték az ugandai nyersolajat",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Ugandában a Lake Albert térségben még 2006-ban fedeztek fel kereskedelmi mennyiségű kőolajat, a kitermelhető mennyiséget nagyjából 1,65 milliárd hordónyira becsülik. A kitermelés mindeddig az infrastrukturális kihívások és az ugandai kormány, valamint a nemzetközi olajcégek közötti nézeteltérések miatt csúszott, a jelenlegi tervek szerint azonban az év végére megkezdődik a kitermelés. Az olajmezők többségi tulajdonosa a francia TotalEnergies, őt követi a kínai CNOOC, valamint az ugandai állami olajvállalat, az UNOC. A projekt csúcstermelése várhatóan 230.000 hordó/nap lesz. Mivel Uganda nem rendelkezik tengerparttal, a szállítás az 5 milliárd dollár értékű EACOP-on (East African Crude Oil Pipeline – Kelet-afrikai Nyersolaj-vezeték) keresztül fog zajlani, amely összeköti az ugandai olajmezőket az Indiai-óceán partján fekvő tanzániai Tanga kikötőjével. Érdekesség, hogy mivel a ugandai nyersolaj nagyon viaszos, a vezetéket fűteni kell, hogy az olaj folyékony maradjon. Az EACOP így a világ leghosszabb, elektromos fűtéssel ellátott nyersolajvezetéke lesz. Az elnevezést Museveni elnök jelentette be szeptember közepén: a „sweet” vagyis édes kifejezés az olaj alacsony kéntartalmára utal, míg a „pearl” (gyöngy) Uganda Winston Churchilltől származó becenevére, a „Pearl of Africa”-ra utal."
+    },
+    {
+      "type": "img",
+      "content": [
+        {
+          "name": "2026-09-21c_1.jpg"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Forrás: <a href=\"https://www.reuters.com/business/energy/uganda-names-its-crude-oil-pearl-sweet-ahead-production-2026-09-02/\">reuters.com</a>"
+    },
+    {
+      "type": "text",
+      "content": "&nbsp;"
+    },
+    {
+      "type": "text",
+      "content": "Kongó oltási kampányt indított az Ebola-járvány frontvonalában dolgozók számára",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Az oltási kampányt Ituri régió két városában, Buniában és Mongbwaluban kezdték meg, tekintve, hogy ezek a leginkább érintett területek a jelenlegi járványban. Az egészségügyi dolgozókat az Ervebo vakcinával oltják, amelyet sikerrel használtak a korábbi járványok során is. Kérdéses ugyanakkor, hogy mennyire hatékony az oltás a jelenlegi helyzetben, amelyet egy másik vírustörzs, a Bundibugyo vírus okoz. Az egészségügyi hatóságok szerint bizonyos fokú védelmet mindenképpen jelent, azt azonban még vizsgálják, hogy meg tudja-e előzni a betegséget. Az egészségügyi dolgozók mindazonáltal többnyire élnek a lehetőséggel, tekintve, hogy napi és szoros kapcsolatban vannak a vírussal fertőzött emberekkel."
+    },
+    {
+      "type": "img",
+      "content": [
+        {
+          "name": "2026-09-21c_2.jpg",
+          "caption": "Fotó: AP Photo/Dieudonne Dirole"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Forrás: <a href=\"https://www.africanews.com/2026/09/20/congo-launches-ebola-vaccination-campaign-for-frontline-workers/\">africanews.com</a>"
+    }
+  ],
+  "cover": {
+    "name": "2026-09-21c_1.jpg",
+    "style": {
+      "object-position": "center center"
+    }
+  },
+  "innerCover": null
+}
