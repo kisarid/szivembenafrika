@@ -1,0 +1,230 @@
+{
+  "id": "2026-09-21b",
+  "title": "Mi lesz a kakaóval, ha tovább változik az éghajlat?",
+  "date": "2026-09-21",
+  "author": "Tóth-Tatai Lilla",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "Amikor egy tábla csokoládét veszünk a boltban, ritkán gondolunk arra, hogy a kakaóbab, amelyből készült, milyen körülmények között termett."
+    },
+    {
+      "type": "text",
+      "content": "Pedig a csokoládé jövője szorosan összefügg az afrikai kakaótermesztők jövőjével, és azzal is, hogyan változik az éghajlat azokon a területeken, ahol a kakaó terem."
+    },
+    {
+      "type": "text",
+      "content": "A világ kakaójának közel 70%-a Afrikából származik. Elefántcsontpart és Ghána együtt a világ kakaótermelésének közel felét adják. Ez azt jelenti, hogy ami ezekben az országokban történik, az nemcsak a helyi gazdálkodók életére, hanem a teljes globális csokoládéágazatra hatással van."
+    },
+    {
+      "type": "text",
+      "content": "A kakaófa kényes növény",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "A kakaó természetes élőhelye a trópusi esőerdő. Szereti a meleg, párás környezetet, de nem mindegy számára, hogy mennyire van meleg, mennyi eső esik, mikor esik, és mennyi ideig tart a szárazság."
+    },
+    {
+      "type": "text",
+      "content": "A klímaváltozás pedig éppen ezt az egyensúlyt kezdi felborítani. Nem egyszerűen arról van szó, hogy „melegebb lesz”."
+    },
+    {
+      "type": "text",
+      "content": "A gazdálkodók számára sokkal fontosabbak az olyan változások, mint a"
+    },
+    {
+      "type": "list",
+      "listType": "ul",
+      "content": [
+        "hosszabb és intenzívebb száraz időszakok,",
+        "kiszámíthatatlanabb esőzések,",
+        "hirtelen lezúduló, nagy mennyiségű csapadék,",
+        "magasabb hőmérséklet és hőstressz,",
+        "a kártevők és növényi betegségek növekvő kockázata."
+      ]
+    },
+    {
+      "type": "text",
+      "content": "A kakaónál ráadásul nemcsak a termés mennyisége számít. A virágzás, a beporzás sikeressége (mennyi virágból lesz termés), a kakaógyümölcsök fejlődése és az érés mind érzékenyek a környezeti körülményekre."
+    },
+    {
+      "type": "text",
+      "content": "Vagyis egy rossz időjárási év nem feltétlenül azt jelenti, hogy „kevesebb kakaófa él túl”. Elég lehet az is, ha kevesebb virágból fejlődik egészséges kakaógyümölcs, illetve nehezebb a szüretelés, a kakaó kezdeti feldolgozása is (a fermentálás és a szárítás), amelyeknél szintén fontos tényező az aktuális időjárás."
+    },
+    {
+      "type": "text",
+      "content": "Ez nem csak a távoli jövő",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "A 2023/24-es szezon különösen nehéz volt a kakaóágazat számára. A világ kakaótermelése jelentősen visszaesett, miközben az ICCO becslése szerint mintegy 478 ezer tonnás termelési hiány alakult ki. A kakaó világpiaci ára ezt követően történelmi magasságokba emelkedett (a közel 50 évig stabil $2,5/tonnáról $12-13/tonnára). A következő szezonban a termés javult, és a piacon ismét többlet keletkezett, az ár jelenleg $5/tonna közelében mozog."
+    },
+    {
+      "type": "text",
+      "content": "A kakaótermelést egyszerre befolyásolja az időjárás, a betegségek, az ültetvények életkora, a gazdálkodási gyakorlat, a világpiaci ár, a gazdák döntései és számos gazdasági-társadalmi tényező. Éppen ezért nem lenne pontos azt mondani, hogy „a klímaváltozás miatt kevesebb lesz a kakaó”."
+    },
+    {
+      "type": "text",
+      "content": "Pontosabb állítás, hogy a klímaváltozás egyre kiszámíthatatlanabbá és kockázatosabbá teszi a kakaótermesztést. És ennek már most vannak kézzelfogható következményei."
+    },
+    {
+      "type": "text",
+      "content": "Ghána például 2026 júliusában arról számolt be, hogy a 2026/27-es kakaószezon termése várhatóan legalább 16%-kal alacsonyabb lehet. A visszaesés mögött több tényező áll, köztük a kedvezőtlen időjárás, növénybetegségek és az ültetvények általános állapota."
+    },
+    {
+      "type": "text",
+      "content": "Mi történik Ugandában?",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Uganda kisebb szereplő a globális kakaópiacon, mint Ghána vagy Elefántcsontpart, de a kakaóágazata gyorsan növekszik. Az ugandai mezőgazdasági minisztérium adatai szerint az ország kakaótermelése a 2019/20-as mintegy 38 570 tonnáról 51 678 tonnára nőtt 2023/24-re. Ez közel 34%-os növekedés. A kakaó egyre fontosabb exporttermék itt, és több ezer kisgazdálkodó megélhetéséhez járul hozzá."
+    },
+    {
+      "type": "text",
+      "content": "Közben Uganda is érezhetően melegszik. A Világbank adatai szerint 1970 óta az ország átlaghőmérséklete évtizedenként körülbelül 0,31 °C-kal emelkedik."
+    },
+    {
+      "type": "text",
+      "content": "A kakaótermesztők számára azonban nem csak a hőmérséklet emelkedése jelent problémát. Az ugandai mezőgazdasági minisztérium friss kakaótermesztési kézikönyve külön is említi az aszályokat, hőhullámokat, árvizeket, túlzott csapadékot, vízhiányt, kiszámíthatatlan évszakokat, valamint a kártevők és betegségek növekvő kockázatát."
+    },
+    {
+      "type": "text",
+      "content": "Vagyis Uganda kihívása az, hogy hogyan lehet növelni ezt a fontos mezőgazdasági ágazatot úgy, hogy közben az éghajlat egyre kiszámíthatatlanabbá válik?"
+    },
+    {
+      "type": "text",
+      "content": "Nagyon pozitív példa ebben az ugandai Latitude Trade Co. amely több ezer helyi kistermelőt összefogó kooperatívaként működik, miközben saját csokoládét is készítenek kampalai manufaktúrájukban."
+    },
+    {
+      "type": "text",
+      "content": "A klímaváltozás nem mindenhol ugyanazt jelenti",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Nem lehet tehát egyszerűen kijelenteni, hogy „Afrikában hamarosan egyáltalán nem lehet majd kakaót termeszteni”. A különböző régiók és éghajlati modellek eltérő jövőképeket mutatnak. Egyes területek valóban kevésbé alkalmasak lehetnek a kakaótermesztésre, míg más régiók bizonyos körülmények között kedvezőbbé válhatnak."
+    },
+    {
+      "type": "text",
+      "content": "Ez azt jelenti, hogy a jövő egyik kulcskérdése nem feltétlenül az, hogy eltűnik-e a kakaó, hanem az, hogy hol, milyen körülmények között és milyen gazdálkodási módszerekkel lesz fenntartható a termesztése."
+    },
+    {
+      "type": "text",
+      "content": "Lehet alkalmazkodni",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "A kakaótermesztők nem passzív elszenvedői ennek a folyamatnak. A kakaó természetes módon is jól érzi magát olyan rendszerekben, ahol más fák veszik körül. Az agroerdészet, vagyis a kakaó termesztése más növényekkel és fákkal együtt, segíthet mérsékelni a hőstresszt és megőrizni a talaj nedvességét."
+    },
+    {
+      "type": "text",
+      "content": "Fontos emellett:"
+    },
+    {
+      "type": "list",
+      "listType": "ul",
+      "content": [
+        "az árnyékot adó fák telepítése",
+        "a talajtakarás és talajvédelem",
+        "a vízmegőrzési technikák alkalmazása",
+        "a mezőgazdaság diverzifikálása",
+        "az ellenállóbb fajták termesztése",
+        "a kártevők és növénybetegségek hatékonyabb kezelése",
+        "a farmerek tudásának fejlesztése és alkalmazkodóképességük erősítése."
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Ezek nemcsak környezetvédelmi intézkedések, hanem egyben megélhetési kérdések is."
+    },
+    {
+      "type": "text",
+      "content": "A kakaó mögött is emberek vannak",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Amikor a kakaótermés csökken, nemcsak a csokoládé ára változik. A gazdálkodó családok bevétele is jelentősen csökkenhet. És ha egy család jövedelme kiszámíthatatlanabbá válik, az hatással lehet arra, hogy tudják-e finanszírozni gyermekeik oktatását, az egészségügyi kiadásokat, az élelmiszereket."
+    },
+    {
+      "type": "text",
+      "content": "Ezért amikor a kakaó jövőjéről beszélünk, valójában emberek, családok és közösségek jövőjéről beszélünk. Ez az egyik legfontosabb dolog, amit fogyasztóként megérthetünk."
+    },
+    {
+      "type": "text",
+      "content": "Amikor legközelebb megeszünk egy kocka csokoládét, érdemes egy pillanatra arra is gondolni, hogy a kakaónak van egy termőhelye, van egy gazdája, van egy közössége, és van egy éghajlata."
+    },
+    {
+      "type": "text",
+      "content": "A csokoládé jövője ezért nem pusztán azon múlik, hogy mennyi kakaót tudunk majd termelni. Hanem azon is, hogy képesek vagyunk-e olyan mezőgazdasági rendszereket kialakítani, amelyekben a kakaótermesztők a változó éghajlat mellett is biztonságosabban és méltó módon meg tudnak élni."
+    },
+    {
+      "type": "text",
+      "content": "Ezért fontos a klímavédelem, az alkalmazkodás. És ezért fontos, hogy amikor Afrikáról beszélünk, ne csak a problémákat lássuk, hanem azokat az embereket és közösségeket is, akik nap mint nap dolgoznak a saját jövőjükért."
+    },
+    {
+      "type": "text",
+      "content": "Mit tehetünk fogyasztóként?",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Csokoládéfogyasztóként a legtöbb, amit tehetünk, hogy pánikkeltés helyett tudatosabban választunk magunknak csokoládét. A szupermarketek polcai helyett, ha tehetjük, keressünk helyi csokoládémanufaktúrákat, akik a kakaófarmoktól közvetlenül vásárolják a kakaóbabokat. Így biztosabbak lehetünk benne, hogy a pénzünk jó helyre kerül, abból a kakaófarmokat fejleszteni tudják, a gyerekek pedig szüretelés helyett az iskolapadban ülhetnek. A családok megélhetése kiszámíthatóbbá válik."
+    },
+    {
+      "type": "text",
+      "content": "A kakaó jövője Afrikában is íródik. És ebben mindannyiunknak van szerepe."
+    },
+    {
+      "type": "text",
+      "content": "&nbsp;"
+    },
+    {
+      "type": "text",
+      "content": "Források:"
+    },
+    {
+      "type": "text",
+      "content": "International Cocoa Organization (ICCO) – Cocoa Statistics és Annual Report 2024/25"
+    },
+    {
+      "type": "text",
+      "content": "Uganda Ministry of Agriculture, Animal Industry and Fisheries – Cocoa Production Manual, 2026"
+    },
+    {
+      "type": "text",
+      "content": "World Bank – Uganda Climate Change Knowledge Portal"
+    },
+    {
+      "type": "text",
+      "content": "World Meteorological Organization (WMO) – El Niño outlook"
+    },
+    {
+      "type": "text",
+      "content": "NOAA Climate Prediction Center – ENSO outlook"
+    },
+    {
+      "type": "text",
+      "content": "Schroth et al. – Climate suitability of cocoa production in West Africa"
+    },
+    {
+      "type": "text",
+      "content": "Agricultural and Forest Meteorology – Future climate impacts on cocoa production in Africa"
+    },
+    {
+      "type": "text",
+      "content": "Reuters – Ghana cocoa production outlook, July 2026"
+    }
+  ],
+  "cover": {
+    "name": "2026-09-21b_1.jpg",
+    "style": {
+      "object-position": "center 40%"
+    }
+  },
+  "innerCover": null
+}

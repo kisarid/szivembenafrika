@@ -1,0 +1,85 @@
+{
+  "id": "2026-09-21a",
+  "title": "Mi a kapcsolat Magyarország, Karamoja és az AI között?",
+  "date": "2026-09-21",
+  "author": "Cziklin Veronika",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "Az éghajlatváltozás hatásait idén nyáron Magyarországon is a bőrünkön tapasztalhattuk a szokatlanul hosszú és erős kánikula, valamint az azt kísérő súlyos szárazság formájában. Most szeptemberben, az ősz kezdetével, a hőmérséklet némileg mérséklődni látszik, azonban túl sok csapadékot eddig nem hozott az új évszak sem. Ez intő jel nem csupán országunkkal kapcsolatban; fontos megállni és elgondolkozni, hogy ha már a mi Kárpát-medencénkben is ennyire érzékelhető a probléma, mi mehet végbe azokon a területeken, amelyeket eddig is köztudottan súlyosan veszélyeztetett a klímaváltozás?"
+    },
+    {
+      "type": "text",
+      "content": "Ilyen térség például szervezetünk egyik fókusz helyszíne, Karamoja, mely Uganda legszegényebb, és a klímaváltozásnak leginkább kitett régiója. Karamoja egy nagy kiterjedésű, akáciaerdős szavannás terület, melynek száraz folyómedrei úgy tűnik, minden évben egyre rövidebb időszakokra telnek meg vízzel. Volt idő, amikor a szárazságról Karamojában nem mint időjárásról, hanem mint problémáról beszéltünk, azonban sajnos mára már normálisnak számít, hogy Karamoja sivatagos - azonban jelenleg még a megszokottnál is súlyosabb, történelmi léptékű krónikus szárazság sújtja, súlyosbítva az egyébként is mély társadalmi és megélhetési problémákat. Ennek számos tünetét tapasztalja szervezetünk is: erősödnek a törzsek közti konfliktusok, nő az éhínség és az ebből fakadó halálozások száma, nő a gyermekmunka veszélye, valamint a kislányok kitettsége a korai kiházasításnak, valamint a női nemiszerv-csonkításnak, amely egyfajta áldozati szereppel is bír a törzsek körében ebben a kétségbeesett időszakban."
+    },
+    {
+      "type": "text",
+      "content": "Ebben a helyzetben a 21. század egyik legmeghatározóbb trendje, a mesterséges intelligencia szerepe jelentős, ugyanakkor meglehetősen kettős, ha közelebbről vizsgáljuk. Ma már szinte mindenki használ kényelmes, AI-alapú megoldásokat akár tudatosan, akár észrevétlenül, átszőve a mindennapjainkat. Csak néhány mindennapi példát említve: a chat-alapú applikációk egyre okosabbak és kényelmesebbek, meggyorsítva és megkönnyítve a problémamegoldást, információgyűjtést, tartalom generálást, emellett azonban szinte mindenhol találkozunk már AI-al, elég csak az automatikus összefoglalókra gondolni egy egyszerű böngészős keresésnél. Ennek a kényelemnek azonban ára van: ma már közismert tény, hogy az adatközpontok fenntartása és hűtése miatt a mesterséges intelligencia használata rendkívül energia- és vízigényes, emiatt nagyban hozzájárul a környezeti lábnyomunk növekedéséhez, amely pedig indukálja az éghajlatváltozás súlyosbodását. Ez a problémakör rendkívül széles és sokrétű, rengeteg kérdést nyit ki, melyekkel kapcsolatban számtalan tanulmány és cikk elérhető a témában."
+    },
+    {
+      "type": "img",
+      "content": [
+        {
+          "name": "2026-09-21a_1.jpg",
+          "caption": "A kép forrása: aiworldschool.com"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Így ha “csak” a fenntarthatósági vonulatot vesszük, tudatos felhasználóként érdemes átgondolni és edukálódni, mire használjuk jelenleg az AI-eszközöket és mérlegelni, valóban mindenhol szükségünk van-e rá, valamint ahol igen, ott elérhető-e olyan alternatíva, amely megújuló energiát használ. A Nemzetközi Energiaügynökség szerint egy AI-keresés tízszer annyi energiát fogyaszt, mint egy átlagos Google-keresés - mivel legtöbbünk sokat használja az internetet, ez egy olyan terület, ahol magánemberekként is jelentős ráhatásunk és felelősségünk van a jövőnk formálásában."
+    },
+    {
+      "type": "text",
+      "content": "Az érem másik oldala valamivel derűsebb, ugyanis a mesterséges intelligenciát számos területen már használják a pozitív változás elősegítésére. Az éghajlatváltozással kapcsolatban az AI-klímahaszna jelenleg leginkább az előrejelzések terén mutatkozik meg, valamint léteznek akciótervek az AI jelentős mértékű hatékonyságnövelésére újfajta hűtési technológiák és fejlesztések megvalósításán keresztül, ezeknek azonban jelenleg még gátat szab a költségességük, így az elérhető információk alapján egyelőre úgy tűnik, az AI karbonlábnyoma nagyobb, mint a haszna."
+    },
+    {
+      "type": "text",
+      "content": "És hogy mit érdemes mindezekből elvinni magunkkal?",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "A mesterséges intelligencia velünk van és marad is, ennyi biztos. Mivel számos előnye van, ez tulajdonképpen egy jó dolog, amennyiben felelősen használjuk, ami talán egyszerűbb is, mint elsőre gondolnánk. Ennek érdekében érdemes kritikus szemlélettel megvizsgálni, hogy végignézéssel / megosztással / kedveléssel milyen tartalmakat támogatunk, mi magunk mit generálunk, miben fordulunk az AI-eszközökhöz segítségért, szükségünk van-e mindenre, amit használunk, tudva, hogy mekkora lábnyoma van és a valóban szükséges feladatokhoz vajon van-e elérhető fenntarthatóbb megoldás."
+    },
+    {
+      "type": "text",
+      "content": "Fogyasztóként és felhasználóként szeretjük azt gondolni, hogy a nagyvállalatok és globális döntéshozók mellett a mi mindennapi döntéseink nem hozhatnak szemmel látható változást, az AI-használat azonban pont egy olyan terület, ahol a “sok kicsi sokra megy” elve hatványozottan működhet. Azáltal, hogy mely eszközöket és hogyan használjuk (vagy éppen nem használjuk), igenis jelentős szerepünk van az éghajlatváltozás alakulásában, amit a globális események, így a karamojai és magyarországi helyzetet is tekintve, nem szabad alábecsülnünk."
+    },
+    {
+      "type": "text",
+      "content": "&nbsp;"
+    },
+    {
+      "type": "text",
+      "content": "Források:"
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://szakcikkadatbazis.hu/doc/5476965\">szakcikkadatbazis.hu</a>"
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://www.portfolio.hu/gazdasag/20260905/a-tengerbe-vagy-a-fold-ala-az-adatkozpontokkal-a-letesitmenyek-aram-es-vizfogyasztasat-igy-fekeznek-meg-859450\">portfolio.hu</a>"
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://www.portfolio.hu/uzlet/20250226/hasznalod-az-ai-t-maris-ekkora-karbonlabnyomot-generaltal-743899\">portfolio.hu</a>"
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://www.bbc.com/news/articles/cvgljevwy82o\">bbc.com</a>"
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://kpmg.com/hu/hu/kommunikacio/sajtokozlemenyek/2026/02/davos-2026.html\">kpmg.com</a>"
+    }
+  ],
+  "cover": {
+    "name": "2026-09-21a_1.jpg",
+    "style": {
+      "object-position": "center center"
+    }
+  },
+  "innerCover": null
+}
