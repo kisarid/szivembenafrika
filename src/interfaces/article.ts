@@ -4,6 +4,7 @@ export interface Article {
   subtitle?: string
   date: string
   author: string
+  readTime?: string
   blocks: Block[]
   cover: Img
   innerCover?: Img

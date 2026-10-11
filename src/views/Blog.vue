@@ -28,6 +28,9 @@
       </div>
     </heading>
     <container v-if="selectedArticle">
+      <div v-if="selectedArticle.readTime" class="read-time">
+        {{ selectedArticle.readTime }}
+      </div>
       <div class="article-view">
         <div class="pic" v-if="selectedArticle.innerCover !== null">
           <img
@@ -153,6 +156,9 @@
         </div>
         <div class="to-article">
           <router-link :to="`/blog/${article.id}`">Tovább →</router-link>
+          <div v-if="article.readTime" class="read-time">
+            {{ article.readTime }}
+          </div>
         </div>
       </div>
       <b-pagination
@@ -174,6 +180,13 @@
 
 .meta {
   font-size: 16px;
+}
+
+.read-time {
+  margin-top: -15px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-style: italic;
 }
 
 .pic .caption {
@@ -344,8 +357,16 @@
 
     .to-article {
       grid-area: button;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
       align-self: end;
       font-size: 16px;
+
+      .read-time {
+        margin: 0;
+      }
     }
 
     @media (min-width: 768px) {
