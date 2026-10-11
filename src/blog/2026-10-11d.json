@@ -1,0 +1,86 @@
+{
+  "id": "2026-10-11d",
+  "title": "Hírek Afrikából",
+  "date": "2026-10-11",
+  "author": "Koppányi Ágnes",
+  "readTime": "2 perc",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "Edward Rukidi Kijanangoma lett Uganda új királya",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Az ugandai Tooro Királyság királya, IV. Oyo Nyimba Kabamba Iguru 1995-ben édesapja halála után mindössze háromévesen örökölte meg ezt a címet. Majd 2010-ben koronázták meg tizennyolc éves korában. (Természetesen Ugandában a királynak ma már nincs tényleges politikai hatalma, hiszen az államforma köztársaság.)"
+    },
+    {
+      "type": "text",
+      "content": "2026 augusztusában, betegséget követően (melynek okát nem hozták a nyilvánosságra) mindössze harmincnégy évesen meghalt."
+    },
+    {
+      "type": "text",
+      "content": "A halála után öröklési vita alakult ki, mivel Oyo végrendeletében a trónt a kisfiára hagyta. A fiú nem hivatalosan elismert örökös, ezért a királyi család huszonegy tagú tanácsa egy másik herceget, az ötvenhat éves Edward Rukidi Kijanangomát választotta királynak, aki korábban újságíróként és rádió- illetve televíziós műsorvezetőként dolgozott."
+    },
+    {
+      "type": "text",
+      "content": "Oyo édesanyja, Best Kemigisa királyné azonban nem fogadja el a döntést, és azt állítja, hogy fia kívánságát és végrendeletét figyelembe kellett volna venni. Így jelenleg vita folyik arról, hogy Oyo kisfiának kellene-e örökölnie a trónt, vagy a királyi klánnak joga van kiválasztani az új királyt."
+    },
+    {
+      "type": "text",
+      "content": "Forrás: <a href=\"https://www.bbc.com/news/articles/cx7v4glz50elo\">bbc.com</a>"
+    },
+    {
+      "type": "text",
+      "content": "&nbsp;"
+    },
+    {
+      "type": "text",
+      "content": "Uganda az Ebolával kapcsolatos utazási korlátozások feloldását szorgalmazza",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Az Ebola-járvány Ugandában és a szomszédos Kongóban idén májusban tört ki ismét. Habár Ugandát az Egészségügyi Világszervezet (WHO) 2026 júliusában hivatalosan is ebolamentes övezetnek nyilvánította, és ezt követően több ország (mint például az Arab Egyesült Emirátusok, India, Thaiföld és Mauritius) is feloldotta vagy enyhítette a beutazási korlátozásokat, az ország külügyminisztere további tárgyalásokat folytat azokkal az országokkal, amelyekben még érvényben vannak a járvány kitörését követően bevezetett utazási korlátozások."
+    },
+    {
+      "type": "text",
+      "content": "A Külügyminisztérium tájékoztatása szerint jelenleg is egyeztetések zajlanak – többek között az Egyesült Államokkal és Kanadával –, melyeknek célja a korlátozások heteken belüli feloldása."
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://ntv.co.ug/news/uganda-seeks-lifting-of-ebola-related-travel-restrictions\">ntv.co.ug</a>"
+    },
+    {
+      "type": "text",
+      "content": "&nbsp;"
+    },
+    {
+      "type": "text",
+      "content": "Ellentétes érdekek az új, szigorúbb dohánytörvény bevezetése körül",
+      "classes": ["blog-header"]
+    },
+    {
+      "type": "text",
+      "content": "Kenya új dohányzásellenes törvény bevezetését tervezi (Tobacco Control Amendment Bill), amely többek között a cigaretták, vape-ek és más dohánytermékek reklámozását és értékesítését is szigorúbban szabályozná. Az egészségügyi hatóságok és a Nemzeti Rákkutató Intézet támogatják az intézkedéseket, mellyel céljuk csökkenteni a dohányzás okozta rákos megbetegedések számát."
+    },
+    {
+      "type": "text",
+      "content": "További céljuk, hogy a dohányadókból és egyéb beszedett díjakból az összeg egy részét kifejezetten a rák megelőzésére, kezelésére, kutatására és a dohányzásról való leszokás segítésére fordítsák."
+    },
+    {
+      "type": "text",
+      "content": "A vita jelenleg arról szól, hogy ki kezelje a dohánytermékekből származó bevételeket, illetve hogyan osszák el azokat. A megyei önkormányzatok és a Pénzügyminisztérium ellentétes álláspontot vallanak, ezért a törvénytervezet még tárgyalás alatt áll."
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://nation.africa/kenya/health/governors-cancer-institute-and-treasury-pull-new-tobacco-bill-in-opposite-directions-5612162\">nation.africa</a>"
+    }
+  ],
+  "cover": {
+    "name": "2026-10-11d_1.jpg",
+    "style": {
+      "object-position": "center center"
+    }
+  }
+}

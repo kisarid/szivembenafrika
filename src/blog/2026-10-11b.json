@@ -1,0 +1,81 @@
+{
+  "id": "2026-10-11b",
+  "title": "Az Élet fája",
+  "date": "2026-10-11",
+  "author": "Steigler Dániel",
+  "readTime": "3 perc",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "Első gondolatra biztosan mindenkinek az Oroszlánkirályból ismert terebélyes akáciák vagy a hatalmas átmérőjű, törzsében rengeteg víz elraktározására képes majomkenyérfák jutnak eszébe, de Ugandában egy másik nagyon különleges fát illetnek ezzel a névvel."
+    },
+    {
+      "type": "text",
+      "content": "A Balanites aegyptiaca, közismert nevén sivatagi datolya, fontos élelmiszer-termő fa, amely Uganda száraz területein és számos más afrikai országban is megtalálható."
+    },
+    {
+      "type": "text",
+      "content": "De vajon miért érdemelte ki ezt az előkelő rangot?"
+    },
+    {
+      "type": "text",
+      "content": "A fa a száraz évszak csúcsidőszakában, amikor már szinte minden más növény kiszárad, ehető friss leveleket és gyümölcsöket termel, magjának beléből pedig étkezési olajat nyernek ki."
+    },
+    {
+      "type": "text",
+      "content": "Ezeket a termékeket a helyi közösségek egyrészt saját háztartásukban fogyasztják, másrészt kereskedelmi célokra is értékesítik."
+    },
+    {
+      "type": "img",
+      "content": [
+        {
+          "name": "2026-10-11b_1.jpg",
+          "caption": "Forrás: World Agroforestry Center"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "<i style=\"font-size: 0.8em;\">Balra: Kifejlett sivatagi datolyafák (Balanites) Uganda Adjumani körzetében. Jobbra: Helyi piacon értékesített sivatagi datolya-levelek Uganda Katakwi körzetében.</i>"
+    },
+    {
+      "type": "text",
+      "content": "A hagyományos népi gyógyászatban szerteágazóan használják mind a levelét, kérgét, gyümölcsét, esetenként pedig még a gyökerét is különböző betegségek kezelésére."
+    },
+    {
+      "type": "text",
+      "content": "Hogy megemlítsek párat a rengeteg lehetőség közül: alkalmazzák gyomorproblémák esetén, égési sérülésekre, felületi sebekre, valamint enyhébb légúti panaszok kezelésére, ezenkívül használják még himlő, sárgaláz, szifilisz, és számos egyéb megbetegedésre."
+    },
+    {
+      "type": "text",
+      "content": "Nem utolsósorban rendkívüli szívósságának és sokoldalú felhasználhatóságának köszönhetően a sivatagi datolya helyet kapott a Nagy Zöld Fal (Great Green Wall) projektben is. Ez a nagyszabású afrikai újraerdősítési program a Száhel-övezet elsivatagosodásának megállítását, valamint a helyi ökoszisztémák helyreállítását tűzte ki célul."
+    },
+    {
+      "type": "text",
+      "content": "Ezek alapján ki ne adná hát ezt a megtisztelő megnevezést a sivatagi datolyának?! 😊"
+    },
+    {
+      "type": "text",
+      "content": "&nbsp;"
+    },
+    {
+      "type": "text",
+      "content": "Források:"
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://www.kloranebotanical.foundation/en/botany/plant-guides/all-about-desert-date-palm\" target=\"_blank\">Desert date palm: benefits & uses (Balanites aegyptiaca) | Klorane Botanical Foundation</a>"
+    },
+    {
+      "type": "text",
+      "content": "<a href=\"https://www.kloranebotanical.foundation/en/projects/great-green-wall-trees-halt-desert\" target=\"_blank\">The Great Green Wall: trees to halt the desert | Klorane Botanical Foundation</a>"
+    }
+  ],
+  "cover": {
+    "name": "2026-10-11b_1.jpg",
+    "style": {
+      "object-position": "center left"
+    }
+  },
+  "innerCover": null
+}
